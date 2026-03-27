@@ -1,0 +1,5 @@
+# Python dependencies for PCRA Ch2 Foundations Demo reproduction
+numpy>=1.20
+pandas>=1.2
+matplotlib>=3.3
+scipy>=1.6

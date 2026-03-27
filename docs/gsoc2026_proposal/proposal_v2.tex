@@ -1,0 +1,1268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  GSoC 2026 Proposal — robstatpy: Python Wrappers for RobStatTM   %
+%  Author : Aakarsh Gupta                                   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article}
+
+%--------------------------------------------------------------------
+% Packages
+%--------------------------------------------------------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{mdframed}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+%--------------------------------------------------------------------
+% Colors
+%--------------------------------------------------------------------
+\definecolor{uwpurple}{HTML}{4B2E83}
+\definecolor{uwgold}{HTML}{85754D}
+\definecolor{accentblue}{HTML}{1A73E8}
+\definecolor{lightgray}{HTML}{F5F5F5}
+\definecolor{darkgray}{HTML}{2E2E2E}
+\definecolor{gsocred}{HTML}{DB4437}
+\definecolor{softyellow}{HTML}{FFF8E1}
+\definecolor{yellowborder}{HTML}{F9A825}
+
+%--------------------------------------------------------------------
+% Hyperref
+%--------------------------------------------------------------------
+\hypersetup{
+  colorlinks  = true,
+  linkcolor   = uwpurple,
+  urlcolor    = accentblue,
+  citecolor   = accentblue,
+  pdftitle    = {GSoC 2026: robstatpy, Aakarsh Gupta},
+  pdfauthor   = {Aakarsh Gupta},
+}
+
+%--------------------------------------------------------------------
+% Section styling
+%--------------------------------------------------------------------
+\titleformat{\section}
+  {\large\bfseries\color{uwpurple}}
+  {\thesection.}{0.6em}{}
+  [\vspace{-0.3em}\textcolor{uwgold}{\titlerule[1.2pt]}]
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{black}}
+  {\thesubsection.}{0.5em}{}
+
+\titlespacing{\section}{0pt}{1.6em}{0.7em}
+\titlespacing{\subsection}{0pt}{0.9em}{0.3em}
+
+%--------------------------------------------------------------------
+% Header / Footer
+%--------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{uwpurple}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\small\color{uwpurple}\textbf{GSoC 2026}
+              \textcolor{black}{$\mid$ \texttt{robstatpy}}}
+\fancyhead[R]{\small\color{black}Aakarsh Gupta}
+\fancyfoot[C]{\small\color{black}\thepage}
+
+%--------------------------------------------------------------------
+% Code listing style
+%--------------------------------------------------------------------
+\lstdefinestyle{python}{
+  language        = Python,
+  basicstyle      = \ttfamily\footnotesize,
+  keywordstyle    = \bfseries\color{accentblue},
+  commentstyle    = \itshape\color{darkgray},
+  stringstyle     = \color{gsocred},
+  numberstyle     = \tiny\color{darkgray},
+  numbers         = left,
+  numbersep       = 8pt,
+  frame           = single,
+  framerule       = 0.4pt,
+  rulecolor       = \color{uwpurple!40},
+  backgroundcolor = \color{lightgray},
+  breaklines      = true,
+  showstringspaces= false,
+  tabsize         = 4,
+}
+\lstdefinestyle{rstyle}{
+  language        = R,
+  basicstyle      = \ttfamily\footnotesize,
+  keywordstyle    = \bfseries\color{accentblue},
+  commentstyle    = \itshape\color{darkgray},
+  stringstyle     = \color{gsocred},
+  numberstyle     = \tiny\color{darkgray},
+  numbers         = left,
+  numbersep       = 8pt,
+  frame           = single,
+  framerule       = 0.4pt,
+  rulecolor       = \color{uwpurple!40},
+  backgroundcolor = \color{lightgray},
+  breaklines      = true,
+  showstringspaces= false,
+  tabsize         = 4,
+}
+\lstset{style=python}
+
+%--------------------------------------------------------------------
+% Custom environments
+%--------------------------------------------------------------------
+\newmdenv[
+  backgroundcolor  = softyellow,
+  linecolor        = yellowborder,
+  linewidth        = 1pt,
+  innerleftmargin  = 10pt,
+  innerrightmargin = 10pt,
+  innertopmargin   = 7pt,
+  innerbottommargin= 7pt,
+  skipabove        = 4pt,
+  skipbelow        = 4pt,
+]{todobox}
+
+%====================================================================
+%  DOCUMENT
+%====================================================================
+\begin{document}
+
+%--------------------------------------------------------------------
+% TITLE BLOCK
+%--------------------------------------------------------------------
+\thispagestyle{empty}
+\begin{center}
+  {\LARGE\bfseries\color{uwpurple}
+    \texttt{robstatpy}: Python Wrappers for\\[5pt]
+    Modern Robust Statistical Estimation
+  }\\[10pt]
+  {\large\color{black}
+    Google Summer of Code 2026, Project Proposal
+  }\\[5pt]
+  {\normalsize\color{black}
+    Organization: \textbf{R Project for Statistical Computing}
+    \quad $\cdot$ \quad
+    Submitted: 
+  }
+\end{center}
+
+\vspace{0.5em}
+\noindent\textcolor{uwpurple}{\rule{\linewidth}{2pt}}
+\vspace{0.3em}
+
+%--------------------------------------------------------------------
+% SECTION 1 — PROJECT TITLE & SHORT DESCRIPTION
+%--------------------------------------------------------------------
+\section{Project Title and Short Description}
+
+\subsection*{Title}
+
+\textbf{\texttt{robstatpy}: Python Wrappers for the \texttt{RobStatTM}
+Robust Statistics R~Package}
+
+\subsection*{Short Description}
+
+The \texttt{RobStatTM} R package (Maronna, Martin, Yohai \& Salibian-Barrera, 2019)
+implements state-of-the-art robust estimators, including MM-regression,
+Rocke's S-estimator for covariance matrices, robust PCA via M-scale
+minimization, and Bianco--Yohai logistic regression, none of which have a
+direct equivalent in the Python ecosystem.
+This project will produce \textbf{\texttt{robstatpy}}, a Python library that
+makes the full range of \texttt{RobStatTM} functionality available to Python users
+through lightweight \texttt{rpy2}
+wrappers, delivering a NumPy/pandas-native interface whose numerical outputs
+and graphical analytics reproduce the R originals.
+Every wrapper will ship with Python-style documentation modelled on the
+\texttt{RobStatTM} R man pages, a \texttt{pytest} validation suite, and
+reproducible Jupyter notebook examples.
+
+%--------------------------------------------------------------------
+% SECTION 2 — STUDENT INFORMATION
+%--------------------------------------------------------------------
+\section{Student Information}
+
+\subsection{Contact Details}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{} >{\bfseries}l X @{}}
+  \toprule
+  Field            & Details \\
+  \midrule
+  Full Name        & Aakarsh Gupta \\
+  Mailing Address  & Alta 101, 4735 21st Ave NE, Seattle, WA 98105 \\
+  Phone            & +1\,(313)\,663-0680 \\
+  University Email & \href{mailto:aakarshg@uw.edu}{\texttt{aakarshg@uw.edu}} \\
+  Personal Email   & \href{mailto:aakarshgupta919@gmail.com}
+                        {\texttt{aakarshgupta919@gmail.com}} \\
+  GitHub           & \href{https://github.com/Aakarsh751}
+                        {\texttt{github.com/Aakarsh751}} \\
+  Project Repo     & \href{https://github.com/Aakarsh751/robstattm-pyport-AG}
+                        {\texttt{github.com/Aakarsh751/robstattm-pyport-AG}} \\
+  LinkedIn         & \href{https://linkedin.com/in/aakarsh-gupta-128204218/}
+                        {\texttt{linkedin.com/in/aakarsh-gupta-128204218}} \\
+  Communication    & Zoom, Google Meet \\
+  Time Zone        & Pacific Time (PT,\;UTC$-$7) \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Academic Affiliation}
+
+\begin{tabularx}{\linewidth}{@{} l X r @{}}
+  \toprule
+  \textbf{Institution} & \textbf{Degree} & \textbf{Period} \\
+  \midrule
+  University of Washington, Seattle
+    & B.S.\ in Computational Finance and Risk Management (CFRM)
+    & Aug 2025 -- Mar 2027 \\[4pt]
+  University of Michigan
+    & B.S.\ in Data Science \textit{(Dean's List; International Undergraduate Scholar)}
+    & Aug 2023 -- Aug 2025 \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.6em}
+\noindent
+I am currently a \textbf{junior} with an expected graduation of \textbf{March~2027}.
+I began my undergraduate studies in Data Science at the University of Michigan,
+where I was placed on the Dean's List and was awarded the International Undergraduate
+Scholarship.
+In August~2025, I transferred to the University of Washington to pursue a
+B.S.\ in Computational Finance and Risk Management, a programme that sits at the
+intersection of mathematical statistics, numerical computation, and financial
+theory, which is exactly the disciplinary blend required to bridge rigorous
+robust-statistics research and the Python data-science ecosystem.
+
+\subsection{Relevant Coursework}
+
+The following UW courses form the academic backbone of this project:
+
+\vspace{0.3em}
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Course} & \textbf{Title and Relevance} \\
+  \midrule
+  \multicolumn{2}{@{}l}{\textit{Completed}} \\[2pt]
+  CFRM 425 & \textit{R Programming for Quantitative Finance}:
+             hands-on R package development and financial modelling in R \\
+  CFRM 410 & \textit{Probability \& Statistics for Computational Finance}:
+             estimation theory, asymptotic methods, sampling distributions \\
+  CFRM 405 & \textit{Mathematical Methods for Quantitative Finance}:
+             optimisation, convexity, and numerical root-finding \\
+  AMATH 482 & \textit{Computational Methods for Data Analysis}:
+              dimensionality reduction, PCA, and spectral methods in Python \\
+  AMATH 352 & \textit{Applied Linear Algebra \& Numerical Analysis}:
+              matrix decompositions and numerical stability \\[4pt]
+  \multicolumn{2}{@{}l}{\textit{Spring 2026 (in progress)}} \\[2pt]
+  CFRM 421 & \textit{Machine Learning with Application to Finance}:
+             Python-based ML methods applied to financial data, directly
+             mirroring the use-case of \texttt{robstatpy} \\
+  CFRM 586 & \textit{Financial Time Series Forecasting Methods}:
+             modelling heavy-tailed financial returns, a primary application
+             domain for robust estimation \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Technical Skills}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+  \item \textbf{Programming languages:} Python, R, SQL, C++
+  \item \textbf{Python ecosystem:}
+        NumPy, pandas, scikit-learn, matplotlib, PyTorch, TensorFlow,
+        Selenium; REST API development with FastAPI and Streamlit
+  \item \textbf{R ecosystem:}
+        \texttt{ggplot2}, \texttt{tidyr}, \texttt{dplyr},
+        \texttt{RobStatTM}, \texttt{robustbase};
+        DataCamp-certified in R~Programming, Data~Manipulation with dplyr,
+        and Data~Visualisation with ggplot2
+  \item \textbf{Development tools:}
+        Git/GitHub, Jupyter, RStudio, Docker, Anaconda
+  \item \textbf{Finance:}
+        Bloomberg Finance Fundamentals; quantitative equity and
+        crypto-market analysis; portfolio risk modelling
+\end{itemize}
+
+\subsection{Relevant Experience and Projects}
+
+\begin{description}[leftmargin=0pt, itemsep=8pt]
+
+  \item[\normalfont\textbf{IT Risk Management and Analyst Intern,
+        Virginia Department of Motor Vehicles}
+        ]
+  Spearheaded a proof-of-concept initiative to evaluate AI and NLP for
+  analysing call-centre interactions, assessing customer sentiment,
+  call-resolution efficiency, agent performance, and fraud-related risk
+  indicators.
+  Built FastAPI back-ends and Streamlit front-ends to deploy and interact
+  with large language models, enabling real-time inference and operational
+  decision support.
+  Designed and automated intelligent workflows using n8n to streamline
+  repetitive tasks, and processed unstructured speech data to produce
+  cost-benefit analyses guiding in-house versus outsourced AI deployment
+  decisions.
+  This role directly exercised the API-design, packaging, and data-pipeline
+  skills that are central to \texttt{robstatpy}.
+
+  \item[\normalfont\textbf{Undergraduate Research Volunteer,
+        University of Michigan -- Imitation Learning}
+        ]
+  Conducted research on Imitation Learning under faculty guidance, training
+  reinforcement-learning and human-guided agents with OpenAI Gym.
+  Implemented the DAGGER and HG-DAGGER algorithms from the primary literature
+  to improve agent performance, adaptability, and learning efficiency, and
+  evaluated all models rigorously using PyTorch.
+  This experience demonstrates the ability to read formal algorithm
+  specifications, translate them into well-tested, reproducible code,
+  and verify results against published benchmarks, a skill directly
+  applicable to wrapping the MM- and S-estimation routines in
+  \texttt{RobStatTM}.
+
+  \item[\normalfont\textbf{Deep Learning Algorithm for Asthenopia Detection}
+        ]
+  Independently conceived and developed a deep-learning image-classification
+  pipeline for the early detection of asthenopia (visual fatigue).
+  The project was recognised with a \textbf{Gold Award at the Indian Science
+  and Engineering Fair} and achieved a top-100 national selection, providing
+  evidence of the capacity to drive an independent research project from
+  initial conception through to a peer-recognised outcome.
+
+\end{description}
+
+\subsection{Why My Background Aligns with This Project}
+
+My training in Computational Finance and Risk Management (CFRM) is
+uniquely suited to this project.
+Robust statistics is not an abstract topic for me: it is central to the
+quantitative methods I am now beginning to study and apply.
+In CFRM~410 (Probability and Statistics), I learned estimation
+theory and asymptotic analysis that will allow me to understand the underpinnings of robust MM-estimators and
+S-Estimators that are covered in Maronna et al.\ (2019).
+In CFRM~425 (R Programming), I developed R packages and gained hands-on
+familiarity with the object system that \texttt{RobStatTM} uses
+internally.
+In CFRM~405 (Mathematical Methods), I studied the optimisation
+numerical algorithms that drive iterative robust estimators.
+AMATH~482 (Computational Methods for Data Analysis) gave me direct
+experience implementing PCA and dimensionality reduction in Python, the
+exact techniques that \texttt{pcaRobS} robustifies.
+
+This combination means I understand \emph{both}
+the R code base and its statistical foundations, and the Python
+ecosystem that \texttt{robstatpy} targets.
+I am not just a software engineer wrapping an unfamiliar library; I have
+the theoretical knowledge to verify correctness, interpret results, and
+extend the project into downstream applications such as robust portfolio
+construction and risk analysis (RPCRA).
+
+\subsection{Relationship with Mentors}
+
+I have been in active communication with \textbf{Prof.\ R.\ Douglas Martin}
+since \textbf{January 2026}, attending weekly meetings to discuss the project
+scope, the Python API design, and the technical challenges of bridging R's S3
+object system with Python's language model.
+These conversations have directly shaped the implementation strategy presented
+in this proposal.
+I look forward to further engaging with the full mentorship team,
+Prof.\ Matias Salibian-Barrera and Brian G.\ Peterson, as the project progresses.
+
+\subsection{Mentors}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l X @{}}
+  \toprule
+  \textbf{Name} & \textbf{Role} & \textbf{Contact} \\
+  \midrule
+  Prof.\ R.\ Douglas Martin
+    & Primary mentor
+    & \href{mailto:martinrd3d@gmail.com}{\texttt{martinrd3d@gmail.com}} \\
+  Prof.\ Matias Salibian-Barrera
+    & Co-mentor
+    & \href{mailto:matias@stat.ubc.ca}{\texttt{matias@stat.ubc.ca}} \\
+  Brian G.\ Peterson
+    & Co-mentor
+    & \href{mailto:brian@braverock.com}{\texttt{brian@braverock.com}} \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Time Commitment and Availability}
+
+I am applying for the \textbf{large project size (350~hours)}.
+I am fully dedicated and available for the entire duration of the GSoC
+coding period (late May through mid-November 2026), with
+\textbf{30--35 hours per week} committed to \texttt{robstatpy}
+development.
+I will continue attending weekly meetings with Prof.\ Martin and will be
+responsive to all three mentors via email, Zoom, and GitHub.
+
+%--------------------------------------------------------------------
+% SECTION 3 — BENEFITS TO COMMUNITY
+%--------------------------------------------------------------------
+\section{Benefits to the Community}
+
+The robust-statistics methods described in \texttt{RobStatTM}
+including MM-regression, Rocke's S-estimator, robust PCA via M-scale minimization, among others,
+are the algorithmic companions to \emph{Robust Statistics: Theory and
+Methods} (Maronna, Martin, Yohai \& Salibian-Barrera, 2nd~ed., 2019),
+a leading modern textbook in the field.
+Today, a Python practitioner who wants to reproduce a textbook example or
+apply these methods in their research or applications faces two unappealing choices:
+install and learn R, or re-implement algorithms from scratch in Python.
+
+\texttt{robstatpy} removes this barrier by providing a
+pip\footnote{\texttt{pip} is the standard Python package installer.
+Running \texttt{pip install robstatpy} downloads and installs the
+package and all its dependencies automatically.}-installable
+Python package that:
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Exposes the full \texttt{RobStatTM} API} through
+    \texttt{rpy2} wrappers, accepting NumPy arrays and pandas DataFrames
+    and returning native Python objects.
+  \item \textbf{Guarantees numerical fidelity:} every output agrees
+    with the R original to machine precision, because the R code itself
+    executes underneath.
+  \item \textbf{Lowers the maintenance burden:} because the wrappers
+    delegate to R, any upstream improvement to \texttt{RobStatTM} is
+    automatically available in Python without duplicating development
+    effort.
+  \item \textbf{Reproduces figures and numerical summaries} using
+    \texttt{matplotlib} and \texttt{plotnine}\footnote{\texttt{plotnine}
+    is a Python implementation of R's \texttt{ggplot2}
+    grammar-of-graphics, enabling near-identical plot syntax in Python.
+    See \url{https://plotnine.org/} and \url{https://realpython.com/ggplot-python/}.}
+    so that Python users can produce visualisations that closely
+    mirror the R originals.
+  \item \textbf{Provides a comparative study} of wrapper-based versus
+    direct-porting strategies, producing benchmarks and guidelines that
+    will inform future R-to-Python interoperability projects.
+\end{enumerate}
+
+\noindent
+\textbf{Who benefits:}
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item \emph{Data scientists, ML engineers, and Python-only practitioners}
+    who need a rich toolkit of modern robust estimation methods without
+    learning R. \texttt{robstatpy} provides a comprehensive, self-contained
+    Python library: users call familiar Python functions with NumPy arrays
+    and pandas DataFrames and never need to write, read, or understand any
+    R code.
+  \item \emph{Students and researchers} who study the Maronna~et~al.\
+    textbook and want to apply the methods in Jupyter rather than RStudio.
+\end{itemize}
+
+%--------------------------------------------------------------------
+% SECTION 4 — RELATED WORK
+% SECTION 4 — RELATED WORK
+%--------------------------------------------------------------------
+\section{Related Work}
+
+\subsection{Existing Python Robust-Statistics Packages}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+  \item \textbf{scikit-learn} provides \texttt{MinCovDet} (fast MCD) and
+    \texttt{HuberRegressor}, but lacks MM-regression, S-estimators for
+    covariance, and robust PCA beyond standard PCA.
+  \item \textbf{statsmodels} offers \texttt{RLM} (M-regression with
+    Huber or Tukey bisquare weights) but does not implement the
+    two-stage S+M refinement that defines MM-estimation, nor
+    \texttt{lmrobdet.control}-style tuning.
+  \item \textbf{RobPy} (Leyder et al., 2024; arXiv:2411.01954) is a
+    comprehensive Python robust-statistics package offering MM-regression,
+    S-regression, fast LTS, MCD-based covariance estimators (including
+    cellwise MCD), ROBPCA, and cellwise outlier detection, all built as
+    native re-implementations drawing from \texttt{robustbase},
+    \texttt{rrcov}, and \texttt{cellWise}. However, it does not expose
+    the \texttt{RobStatTM} function set: the DCML regression family,
+    robust logistic regression, additional multivariate scatter estimators,
+    and the SM-PCA variant, along with the full
+    \texttt{lmrobdetDCML}/\texttt{lmrobdetMM} tuning infrastructure
+    codified in Maronna et al.\ (2019), remain without a Python equivalent.
+  \item \textbf{robustats} (PyPI) provides C-backed univariate
+    estimators (median, MAD, Qn) but nothing multivariate.
+\end{itemize}
+
+%--------------------------------------------------------------------
+% SECTION 5 -- PROPOSED WORK
+%--------------------------------------------------------------------
+\section{Proposed Work}
+
+\texttt{robstatpy} pursues a clear, phased strategy: first expose the
+complete \texttt{RobStatTM} function set to Python users via lightweight
+\texttt{rpy2} wrappers for immediate, numerically exact access; then
+provide alternative approaches for flexibility and portability.
+This section describes the primary wrapper approach, presents code
+examples for key functions already implemented, and reports validation
+results confirming numerical equivalence with R.
+
+\subsection{Why Wrappers Are the Right First Step}
+
+The \texttt{RobStatTM} package is \textbf{actively maintained} by its
+original authors, the same researchers who proved the theoretical
+properties of these estimators.
+A wrapper-based approach has three decisive advantages over full
+re-implementation:
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Exact numerical equivalence.}  Because the R code
+    executes underneath, Python users get bit-identical results.
+    This is essential for textbook reproducibility and for
+    cross-validating future pure-Python ports.
+  \item \textbf{Zero duplication of maintenance.}  When the R authors
+    fix a bug or add an estimator, the Python wrapper inherits the
+    improvement immediately.
+    A pure-Python re-implementation creates a second code base that
+    must be independently maintained and validated.
+  \item \textbf{Speed of delivery.}  Wrapping a function requires
+    writing conversion glue, tests, and documentation, not
+    re-deriving the algorithm.
+    This makes it feasible to expose the \emph{entire} API within a
+    single GSoC period, rather than a subset.
+\end{enumerate}
+
+\noindent
+The project will \emph{also} produce pure-Python re-implementations,
+beginning with \texttt{locScaleM} and \texttt{scaleM} and extending
+toward a complete native Python port of the \texttt{RobStatTM} library.
+The wrapper layer serves as the validated ground truth against which
+every pure-Python function is tested: once a ported function passes
+numerical equivalence checks against the rpy2 wrapper, it can replace
+the wrapper call, progressively removing the R dependency.
+This dual-track strategy, wrappers first for correctness and coverage,
+then native ports for independence and performance, provides the most
+robust path to a fully self-contained Python library while ensuring that
+no accuracy is sacrificed along the way.
+
+\subsection{Strategy~A: \texttt{rpy2} Wrapper Layer (Primary Approach)}
+
+Every public \texttt{RobStatTM} function will be wrapped in a Python function
+that:
+\begin{enumerate}[leftmargin=2em]
+  \item Accepts NumPy arrays and/or pandas DataFrames.
+  \item Converts inputs to R objects via \texttt{rpy2.robjects} and
+    \texttt{numpy2ri}/\texttt{pandas2ri} converters.
+  \item Calls the R function inside \texttt{RobStatTM}.
+  \item Extracts named elements from the returned R list using
+    \texttt{.rx2()}.
+  \item Returns a Python dataclass (or named dict) whose fields match
+    the R return values.
+\end{enumerate}
+
+\noindent
+\textbf{Architecture diagram:}
+
+\begin{center}
+\begin{tabular}{ccccc}
+  \fbox{\texttt{Python user code}} &
+  $\xrightarrow{\text{NumPy/pandas}}$ &
+  \fbox{\texttt{robstatpy API}} &
+  $\xrightarrow{\text{rpy2 bridge}}$ &
+  \fbox{\texttt{RobStatTM (R)}} \\[6pt]
+  & & $\downarrow$ & & $\downarrow$ \\[4pt]
+  & & \fbox{\texttt{Python dataclass}} &
+  $\xleftarrow{\text{.rx2() extract}}$ &
+  \fbox{\texttt{R list}} \\
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Key design decisions:}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+  \item \textbf{Global conversion context.}
+    \texttt{rpy2}~3.6+ stores conversion rules in a
+    \texttt{contextvars.ContextVar}, which is lost across Jupyter's
+    async task boundaries.
+    We patch this by calling \texttt{set\_conversion(default\_converter)}
+    at import time, ensuring conversions persist across cells.
+  \item \textbf{R dot-to-Python underscore mapping.}
+    \texttt{importr()} automatically maps \texttt{lmrobdet.control} to
+    \texttt{lmrobdet\_control}.
+    We document both names in every docstring.
+  \item \textbf{Lazy R package loading.}
+    \texttt{RobStatTM} is loaded via \texttt{importr} only on first
+    use, so importing \texttt{robstatpy} in a pure-Python context
+    (e.g.\ for type hints or documentation builds) does not require R.
+\end{itemize}
+
+
+\noindent
+The complete \texttt{locScaleM} and \texttt{scaleM} wrapper implementations,
+pure-Python re-implementations, and detailed numerical test results are
+provided in the companion notebook in the project repository:
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}%
+{\texttt{robstatpy\_comparison\_rpy2.ipynb}}.
+
+\subsubsection*{Code Example: \texttt{rpy2} Wrapper for \texttt{lmrobdetMM}}
+
+\begin{lstlisting}[style=python, caption={rpy2 wrapper for lmrobdetMM (regression; demonstrated with mopt family, efficiency=0.95)}]
+def lmrobdet_mm(formula, data, family="mopt", efficiency=0.95):
+    """Robust MM-regression via RobStatTM::lmrobdetMM().
+
+    Parameters
+    ----------
+    formula : str
+        R-style formula, e.g. 'zinc ~ copper'.
+    data : pd.DataFrame
+        Data frame (converted to R via pandas2ri).
+    family : str
+        Psi function family for IRLS refinement.
+    efficiency : float
+        Target asymptotic efficiency.
+
+    Returns
+    -------
+    dict with 'coefficients', 'scale', 'residuals',
+         'fitted_values', 'rweights', 'r_squared'.
+    """
+    from rpy2.robjects import pandas2ri
+    pandas2ri.activate()
+    r_df = ro.conversion.py2rpy(data)
+    ctrl = robstattm.lmrobdet_control(
+        family=family, efficiency=efficiency)
+    fit = robstattm.lmrobdetMM(
+        ro.Formula(formula), data=r_df, control=ctrl)
+    return {
+        "coefficients":  np.array(fit.rx2("coefficients")),
+        "scale":         fit.rx2("scale")[0],
+        "residuals":     np.array(fit.rx2("residuals")),
+        "fitted_values": np.array(fit.rx2("fitted.values")),
+        "rweights":      np.array(fit.rx2("rweights")),
+        "r_squared":     fit.rx2("r.squared")[0],
+    }
+\end{lstlisting}
+
+\subsection{Validation Results}
+
+The following results demonstrate that the Python implementations match
+the R originals.
+All comparisons use the \texttt{flour} and \texttt{alcohol} datasets
+from \texttt{RobStatTM}.
+
+\subsection{Test 1: \texttt{locScaleM}, Bisquare and Huber Families}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l r r r c @{}}
+  \toprule
+  \textbf{Quantity} & \textbf{R value} & \textbf{Python value}
+    & \textbf{$|\Delta|$} & \textbf{Status} \\
+  \midrule
+  \multicolumn{5}{@{}l}{\textit{Bisquare, eff\,=\,0.95, alcohol data}} \\
+  \quad $\hat{\mu}$    & 3.6970 & 3.6970 & $< 10^{-4}$ & PASS \\
+  \quad std($\hat{\mu}$) & 0.2521 & 0.2521 & $< 10^{-3}$ & PASS \\
+  \quad disper         & 0.8633 & 0.8633 & $< 10^{-4}$ & PASS \\[4pt]
+  \multicolumn{5}{@{}l}{\textit{Huber, eff\,=\,0.95, alcohol data}} \\
+  \quad $\hat{\mu}$    & 3.5828 & 3.5828 & $< 10^{-4}$ & PASS \\
+  \quad std($\hat{\mu}$) & 0.2482 & 0.2482 & $< 10^{-3}$ & PASS \\
+  \quad disper         & 0.8633 & 0.8633 & $< 10^{-4}$ & PASS \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Test 2: \texttt{scaleM}, Bisquare and Huber Families}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l r r r c @{}}
+  \toprule
+  \textbf{Family} & \textbf{R value} & \textbf{Python value}
+    & \textbf{$|\Delta|$} & \textbf{Status} \\
+  \midrule
+  Bisquare (flour data) & matches & matches & $< 10^{-4}$ & PASS \\
+  Huber (flour data)    & matches & matches & $< 10^{-4}$ & PASS \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Additional Wrapped Functions (via rpy2)}
+
+The comparison notebook also validates all five core functions by calling
+R via \texttt{rpy2} and checking outputs:
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l l c @{}}
+  \toprule
+  \textbf{Function} & \textbf{Dataset} & \textbf{Validation} & \textbf{Status} \\
+  \midrule
+  \texttt{lmrobdetMM}  & mineral & Coefficients, scale, residuals, rweights & PASS \\
+  \texttt{covRobMM}    & wine    & Center vector, covariance matrix, distances & PASS \\
+  \texttt{covRobRocke} & wine    & Center vector, distances & PASS \\
+  \texttt{pcaRobS}     & bus     & Proportion of variance, eigenvectors & PASS \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\vspace{0.5em}
+\noindent\textbf{Selected numerical outputs from the rpy2 wrapper:}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l r @{}}
+  \toprule
+  \textbf{Function} & \textbf{Output Field} & \textbf{Value (via robstatpy)} \\
+  \midrule
+  \multicolumn{3}{@{}l}{\textit{lmrobdetMM (mineral, mopt, eff\,=\,0.95)}} \\
+  & Intercept          & $15.2012$ \\
+  & Slope (copper)     & $0.0126$ \\
+  & Scale              & $9.9966$ \\
+  & Robust $R^2$       & $0.0082$ \\[3pt]
+  \multicolumn{3}{@{}l}{\textit{covRobMM (wine, 13 variables)}} \\
+  & Center[1..5]       & $13.74,\; 2.01,\; 2.45,\; 17.04,\; 106.34$ \\
+  & Max robust distance & $6.09$ \\[3pt]
+  \multicolumn{3}{@{}l}{\textit{covRobRocke (wine, 13 variables)}} \\
+  & Center[1..5]       & $13.77,\; 2.03,\; 2.44,\; 17.16,\; 107.52$ \\
+  & Max robust distance & $5.79$ \\[3pt]
+  \multicolumn{3}{@{}l}{\textit{pcaRobS (bus, 3 components, desprop\,=\,0.99)}} \\
+  & propSPC[1]         & $> 0.80$ \\
+  & propex             & $> 0.85$ \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\vspace{0.3em}
+\noindent
+All tests pass: 15/15 checks in the subprocess notebook and 14/14 in the
+rpy2 notebook. Both notebooks are available in the project repository:
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison.ipynb}{\texttt{robstatpy\_comparison.ipynb}} (subprocess) and
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}{\texttt{robstatpy\_comparison\_rpy2.ipynb}} (rpy2).
+
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+% SECTION 6 -- ALTERNATIVE IMPLEMENTATION STRATEGIES
+%--------------------------------------------------------------------
+\section{Alternative Implementation Strategies}
+
+Two additional approaches were implemented as cross-checks and to
+demonstrate different trade-offs in R--Python interoperability.
+Both are described briefly here; full code is available in the
+project notebooks.
+
+\subsection{Strategy~B: Subprocess + JSON Wrappers}
+
+As a comparison baseline, the project also implements wrappers using
+\texttt{subprocess} calls to \texttt{Rscript} with
+\texttt{jsonlite}-serialised results.
+This approach:
+\begin{itemize}[leftmargin=1.5em]
+  \item Requires no compiled \texttt{rpy2} dependency (useful on systems
+    where building \texttt{rpy2} is difficult).
+  \item Incurs higher per-call overhead due to R process startup.
+  \item Serves as a cross-check: if both wrappers produce identical
+    outputs, we have high confidence in the conversion layer.
+\end{itemize}
+
+% [code available in robstatpy\_comparison.ipynb]
+
+
+\subsection{Strategy~C: Direct Python Re-implementation}
+
+For \texttt{locScaleM} and \texttt{scaleM}, the project provides
+pure-Python re-implementations to serve as the GSoC test tasks and to
+establish a methodology for future direct porting.
+
+% SECTION 7 -- FUTURE WORK: PCRA
+%--------------------------------------------------------------------
+\section{Future Work: PCRA Package Conversion}
+
+The \textbf{PCRA} (Portfolio Construction and Risk Analysis) R package,
+also authored by Prof.\ Martin, depends on \texttt{RobStatTM} for
+robust covariance inputs to portfolio optimisation and for robust
+single-factor model fitting.
+A Python equivalent of PCRA is a natural downstream application of
+\texttt{robstatpy}.
+
+\subsection{Dependency Relationships}
+
+PCRA orchestrates 12+ R packages.  The critical dependency chain is:
+
+\begin{center}
+\begin{tabular}{ccccc}
+  \fbox{PCRA} &
+  $\xrightarrow{\text{covRobMM}}$ &
+  \fbox{RobStatTM} &
+  $\xrightarrow{\text{pyinit}}$ &
+  \fbox{Fortran core} \\[6pt]
+  $\downarrow$ & & & & \\
+  \fbox{PortfolioAnalytics} &
+  $\rightarrow$ &
+  \fbox{PerformanceAnalytics} &
+  $\rightarrow$ &
+  \fbox{xts/zoo} \\
+\end{tabular}
+\end{center}
+
+\noindent
+For the Python side, the mapping is:
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l X @{}}
+  \toprule
+  \textbf{R Package} & \textbf{Python Equivalent} & \textbf{Notes} \\
+  \midrule
+  RobStatTM            & \texttt{robstatpy}        & This project \\
+  PortfolioAnalytics   & \texttt{cvxpy}            & Convex optimisation \\
+  PerformanceAnalytics & \texttt{empyrical}        & Risk/performance measures \\
+  xts / zoo            & \texttt{pandas}           & Time series indexing \\
+  ggplot2              & \texttt{matplotlib}        & Plotting \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Preliminary Results}
+
+A prototype Python reproduction of PCRA Chapter~2 has already been
+completed (\texttt{pcra/python/ch2\_foundations\_demo.py}), demonstrating:
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item Two-asset efficient frontier (Merton closed-form).
+  \item Global minimum variance portfolio computation.
+  \item Drawdown analysis and risk measures (VaR, ES).
+  \item Robust location estimation via bisquare $\psi$-function.
+\end{itemize}
+
+\noindent
+\textbf{Code example: efficient frontier computation (from the prototype):}
+
+\begin{lstlisting}[style=python, caption={PCRA Chapter 2: Merton efficient frontier in Python}]
+def math_efront_risky_mu_cov(mu_ret, vol_ret, corr_ret,
+                              npoints=100):
+    """Efficient frontier via closed-form Merton formula.
+    Reproduces R's mathEfrontRiskyMuCov() from PCRA."""
+    V = np.diag(vol_ret) @ corr_ret @ np.diag(vol_ret)
+    Vinv = np.linalg.inv(V)
+    one = np.ones(len(mu_ret))
+    a = mu_ret @ Vinv @ one
+    b = mu_ret @ Vinv @ mu_ret
+    c = one @ Vinv @ one
+    d = b * c - a ** 2
+    mu_gmv = a / c
+    sigma_gmv = 1 / np.sqrt(c)
+    mu_range = np.linspace(mu_gmv, max(mu_ret)*1.2, npoints)
+    sigma_range = np.sqrt(
+        (c*mu_range**2 - 2*a*mu_range + b) / d)
+    return mu_range, sigma_range, mu_gmv, sigma_gmv
+\end{lstlisting}
+
+% [Drawdown/VaR/ES code in pcra/python/ch2\_foundations\_demo.py]
+
+
+\noindent
+\textbf{Selected PCRA Chapter~2 results (Python vs.\ R):}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l r r c @{}}
+  \toprule
+  \textbf{Quantity} & \textbf{R} & \textbf{Python} & \textbf{Match} \\
+  \midrule
+  GMV $\sigma_P$ (2-asset, $\rho=0$)    & 0.1200 & 0.1200 & \checkmark \\
+  GMV $\mu_P$ (2-asset, $\rho=0$)       & 0.0610 & 0.0610 & \checkmark \\
+  3-asset GMV return                     & 0.0540 & 0.0540 & \checkmark \\
+  3-asset GMV volatility                 & 0.0707 & 0.0707 & \checkmark \\
+  VaR (5\%, SPY monthly)                 & matches & matches & \checkmark \\
+  ES (5\%, SPY monthly)                  & matches & matches & \checkmark \\
+  Max drawdown depth                     & matches & matches & \checkmark \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\vspace{0.3em}
+\noindent
+The complete comparison output (11~figures, 8~tables) is available in the
+project repository:
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/pcra/output/Ch2\_Comparison.pdf}{\texttt{pcra/output/Ch2\_Comparison.pdf}} (R vs.\ Python side-by-side).
+These results match the R originals and validate the feasibility of
+converting PCRA's core mathematical layer to Python.
+Full PCRA conversion is scoped as a stretch goal; the foundation
+laid by \texttt{robstatpy} makes it achievable in a follow-up
+contribution.
+
+
+\noindent
+The 	\texttt{rpy2} wrapper methodology scales directly to PCRA and other
+R packages in the robust statistics ecosystem: once conversion patterns
+are established for 	\texttt{RobStatTM}, extending them to PCRA is
+incremental. Full PCRA conversion is scoped as a stretch goal, contingent
+on completing the core 	\texttt{robstatpy} deliverables.
+
+% SECTION 8 -- EVALUATION PLAN
+%--------------------------------------------------------------------
+\section{Evaluation Plan: Comparative Benchmarks}
+
+A central deliverable is a rigorous comparison of the three implementation
+strategies across three dimensions:
+
+\subsection{Metrics}
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Accuracy.}
+    For each function, compute $\max_i |y_i^{\text{Py}} - y_i^{\text{R}}|$
+    across all return fields, for both the rpy2 wrapper (expected: $0$)
+    and the pure-Python port (expected: $< 10^{-6}$).
+  \item \textbf{Speed.}
+    Wall-clock time per call, measured with \texttt{timeit} over 100
+    repetitions on synthetic data of sizes $n \in \{100,\,1000,\,10000\}$
+    and $p \in \{5,\,20,\,50\}$.
+    Breakdown: R computation time vs.\ conversion overhead.
+  \item \textbf{Ergonomics and integration cost.}
+    Lines of glue code per function, dependency footprint, and ease of
+    installation (does the approach require R to be installed?).
+\end{enumerate}
+
+\subsection{Benchmark Protocol}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+  \item \textbf{Synthetic data generation:}
+    Gaussian base with $\varepsilon = 5\%$ contamination at 10$\sigma$
+    to exercise breakdown behaviour.
+  \item \textbf{Functions benchmarked:}
+    \texttt{locScaleM}, \texttt{scaleM}, \texttt{lmrobdetMM},
+    \texttt{covRobMM}, \texttt{covRobRocke}, \texttt{pcaRobS}.
+  \item \textbf{Comparison grid:}
+    rpy2 wrapper vs.\ subprocess wrapper vs.\ pure-Python port (where
+    available) vs.\ nearest \texttt{scikit-learn}/\texttt{statsmodels}
+    equivalent (where one exists).
+  \item \textbf{Reporting:}
+    Results will be presented in a Jupyter notebook with timing tables,
+    accuracy heat maps, and commentary.
+\end{itemize}
+
+%--------------------------------------------------------------------
+% SECTION 9 -- IMPLEMENTATION PLAN
+%--------------------------------------------------------------------
+\section{Implementation Plan and Timeline}
+
+The project follows a \textbf{22-week large-project timeline}
+(350~hours), structured around the GSoC 2026 calendar.
+
+\subsection{Community Bonding Period (May 1 -- May 24)}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item Finalise package scaffolding: \texttt{pyproject.toml},
+    \texttt{pytest} configuration, CI/CD with GitHub Actions
+    (R + Python matrix).
+  \item Set up automated testing: R installation in CI, \texttt{rpy2}
+    build, dataset fixtures.
+  \item Draft the \texttt{robstatpy} API surface with type stubs
+    and docstring templates.
+  \item Agree on code review cadence and milestone criteria with mentors.
+\end{itemize}
+
+\subsection{Phase 1: Core Univariate Wrappers (Weeks 1--3, May 25 -- Jun 14)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  1 & \texttt{locScaleM} wrapper + pure-Python port + pytest suite
+    (bisquare, huber, mopt families; eff $\in \{0.85, 0.90, 0.95\}$).
+    Numerical agreement verified to $< 10^{-8}$. \\
+  2 & \texttt{scaleM} / \texttt{mscale} wrapper + pure-Python port.
+    Subprocess wrapper as cross-check.
+    Document relationship between \texttt{scaleM} and \texttt{locScaleM}. \\
+  3 & \texttt{lmrobdet.control} wrapper exposing all tuning parameters.
+    Comparison notebook: rpy2 vs.\ subprocess vs.\ pure-Python for
+    univariate functions. \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Phase 2: Robust Regression (Weeks 4--7, Jun 15 -- Jul 12)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  4 & \texttt{lmrobdetMM} wrapper: formula interface, coefficient
+    extraction, residuals, robustness weights, scale. \\
+  5 & \texttt{lmrobdetMM} diagnostics: robust $R^2$, fitted values,
+    summary table mirroring R's \texttt{summary()} output.
+    \texttt{lmrobdetMM.RFPE} wrapper. \\
+  6 & \texttt{step.lmrobdetMM} wrapper for stepwise robust regression.
+    Reproduce mineral dataset examples (Figs~5.1--5.7). \\
+  7 & \textbf{Midterm milestone:} complete regression module with
+    full pytest coverage.
+    Prepare midterm evaluation report. \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.3em}
+\noindent\textbf{Midterm Evaluation (Jul 6--10):}
+Deliverables: univariate wrappers, regression wrappers, comparison
+notebook, $\geq 90\%$ test coverage on delivered modules.
+
+\subsection{Phase 3: Robust Covariance and PCA (Weeks 8--11, Jul 13 -- Aug 9)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  8  & \texttt{covRobMM} wrapper: center, covariance, correlation,
+     Mahalanobis distances, weights. \\
+  9  & \texttt{covRobRocke} wrapper.
+     Reproduce wine dataset examples (Fig~6.3). \\
+  10 & \texttt{pcaRobS} wrapper: eigenvectors, proportion of variance,
+     scores.
+     Reproduce bus dataset examples (Fig~6.10). \\
+  11 & \texttt{prcompRob} wrapper (convenience wrapper over \texttt{pcaRobS}).
+     Distance--distance plot utility function.
+     Scree plot utility function. \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Phase 4: Benchmarks and Comparative Study (Weeks 12--14, Aug 10 -- Aug 30)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  12 & Speed benchmarks: rpy2 vs.\ subprocess vs.\ pure-Python vs.\
+     scikit-learn/statsmodels baselines.
+     Synthetic data generator for contaminated Gaussian. \\
+  13 & Accuracy benchmarks: max absolute error across all functions,
+     all parameter combinations.
+     Tabulate conversion overhead breakdown. \\
+  14 & Write-up: comparative analysis Jupyter notebook with tables,
+     plots, and recommendations for when each approach is appropriate. \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Phase 5: Documentation, Packaging, and Polish (Weeks 15--17, Aug 31 -- Sep 20)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  15 & Complete API documentation (Sphinx + ReadTheDocs).
+     Every function has a docstring modelled on the R man page. \\
+  16 & Publish \texttt{robstatpy} on PyPI (sdist + wheel).
+     Installation guide covering R dependency setup on
+     Linux/macOS/Windows. \\
+  17 & Tutorial Jupyter notebooks reproducing key textbook chapters
+     (Chapters 2, 5, 6 of Maronna et al.). \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Phase 6: PCRA Extension and Final Deliverables (Weeks 18--22, Sep 21 -- Nov 2)}
+
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+  \toprule
+  \textbf{Week} & \textbf{Deliverables} \\
+  \midrule
+  18--19 & \textbf{PCRA exploration:}
+     Map PCRA's dependency on \texttt{RobStatTM} (calls to
+     \texttt{locScaleM}, \texttt{lmrobdetMM} in portfolio risk
+     contexts).
+     Wrap or port PCRA's core math functions (efficient frontier,
+     global minimum variance). \\
+  20 & PCRA comparison notebook: R vs.\ Python outputs for Chapter~2
+     demo (2-asset frontier, drawdown analysis, risk measures). \\
+  21 & Integration testing: end-to-end portfolio analytics workflow
+     using \texttt{robstatpy} for robust covariance input. \\
+  22 & \textbf{Final submission:}
+     Final code review, README polish, contributor guide,
+     final evaluation report. \\
+  \bottomrule
+\end{tabularx}
+
+%--------------------------------------------------------------------
+% SECTION 10 -- DELIVERABLES
+%--------------------------------------------------------------------
+\section{Deliverables}
+
+\subsection{Required Deliverables}
+
+\begin{enumerate}[leftmargin=2em, itemsep=4pt]
+  \item \textbf{\texttt{robstatpy} Python package} (pip-installable)
+    wrapping the following \texttt{RobStatTM} functions via
+    \texttt{rpy2}:
+    \begin{itemize}[leftmargin=1.5em]
+      \item \texttt{locScaleM}, \texttt{scaleM} (univariate)
+      \item \texttt{lmrobdetMM}, \texttt{lmrobdet.control},
+        \texttt{lmrobdetMM.RFPE}, \texttt{step.lmrobdetMM}
+        (regression)
+      \item \texttt{covRobMM}, \texttt{covRobRocke} (covariance)
+      \item \texttt{pcaRobS}, \texttt{prcompRob} (PCA)
+    \end{itemize}
+
+  \item \textbf{Pure-Python re-implementations} of \texttt{locScaleM}
+    and \texttt{scaleM} with verified numerical equivalence, establishing
+    the methodology for progressively porting the full library to native
+    Python.
+
+  \item \textbf{Pytest test suite} achieving $\geq 90\%$ coverage on
+    all wrapper functions, comparing Python outputs against R ground
+    truth.
+
+  \item \textbf{Comparative benchmark notebook} evaluating speed,
+    accuracy, and ergonomics across rpy2 wrappers, subprocess wrappers,
+    and pure-Python ports.
+
+  \item \textbf{Sphinx documentation} published on ReadTheDocs, with
+    docstrings modelled on the R man pages.
+
+  \item \textbf{Tutorial Jupyter notebooks} reproducing textbook
+    examples from Chapters~2, 5, and~6 of Maronna et al.\ (2019).
+\end{enumerate}
+
+\subsection{Stretch Deliverables}
+
+\begin{enumerate}[leftmargin=2em, itemsep=4pt]
+  \item \textbf{PCRA Python module} wrapping or porting core portfolio
+    analytics functions (\texttt{mathEfrontRiskyMuCov},
+    \texttt{mathGmv}, drawdown analysis, risk measures).
+  \item \textbf{Additional \texttt{RobStatTM} wrappers:}
+    \texttt{lmrobM}, \texttt{BYlogreg} (Bianco--Yohai logistic
+    regression), \texttt{rob.linear.test}.
+  \item \textbf{Complete native Python port} of the remaining
+    \texttt{RobStatTM} functions (\texttt{lmrobdetMM},
+    \texttt{covRobMM}, \texttt{covRobRocke}, \texttt{pcaRobS}),
+    validated against the rpy2 wrappers, with optional \texttt{numba}
+    JIT acceleration for performance-critical inner loops.
+\end{enumerate}
+
+%--------------------------------------------------------------------
+% SECTION 11 -- DISTRIBUTION
+%--------------------------------------------------------------------
+\section{Distribution and Packaging}
+
+\texttt{robstatpy} will be distributed through two complementary
+channels to maximise accessibility:
+
+\subsection{GitHub Installation (Development and Bleeding-Edge)}
+
+The package will be hosted on GitHub under an open-source license
+(MIT or Apache~2.0, to be confirmed with mentors).
+Users can install directly from the repository:
+
+\begin{lstlisting}[style=python, caption={GitHub installation}, numbers=none]
+pip install git+https://github.com/Aakarsh751/robstatpy.git
+\end{lstlisting}
+
+\noindent
+This channel provides access to the latest development version and
+makes it straightforward for contributors to fork, modify, and submit
+pull requests.
+The repository will include:
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item A \texttt{pyproject.toml} with full metadata and dependency
+    specifications (\texttt{rpy2 >= 3.5}, \texttt{numpy},
+    \texttt{pandas}, \texttt{scipy}, \texttt{matplotlib}).
+  \item GitHub Actions CI running the full \texttt{pytest} suite on
+    Linux, macOS, and Windows against multiple R versions (4.3, 4.4,
+    4.5).
+  \item A \texttt{CONTRIBUTING.md} with guidelines for adding new
+    wrappers or submitting pure-Python ports.
+  \item Tagged releases corresponding to each PyPI publication.
+\end{itemize}
+
+\subsection{PyPI Publication (Stable Releases)}
+
+Stable, versioned releases will be published on the Python Package Index
+(PyPI), enabling standard installation:
+
+\begin{lstlisting}[style=python, caption={PyPI installation}, numbers=none]
+pip install robstatpy
+\end{lstlisting}
+
+\noindent
+The packaging workflow uses:
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+  \item \texttt{build} to produce source distributions (\texttt{sdist})
+    and pure-Python wheels.
+  \item \texttt{twine} for secure upload to PyPI.
+  \item Semantic versioning (e.g., \texttt{0.1.0} for the initial GSoC
+    release, \texttt{0.2.0} after PCRA extension).
+  \item A GitHub Actions release workflow that automatically publishes
+    to PyPI when a new git tag is pushed.
+\end{itemize}
+
+\noindent
+\textbf{R dependency handling:}
+Since \texttt{robstatpy} requires a working R installation with
+\texttt{RobStatTM}, the package will:
+(1) detect \texttt{R\_HOME} automatically at import time,
+(2) provide a clear \texttt{ImportError} message with installation
+instructions if R is not found, and
+(3) include a \texttt{robstatpy.check\_setup()} utility that validates
+the R environment and prints version information.
+The installation guide will cover R setup on all three major platforms
+(Linux via \texttt{apt}/\texttt{conda}, macOS via Homebrew, Windows via
+the CRAN installer).
+
+%--------------------------------------------------------------------
+% SECTION 12 -- RISKS
+%--------------------------------------------------------------------
+\section{Risks and Mitigation Strategies}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\linewidth}{@{} >{\raggedright\arraybackslash}p{3.5cm}
+                                  >{\raggedright\arraybackslash}X
+                                  >{\raggedright\arraybackslash}X @{}}
+  \toprule
+  \textbf{Risk} & \textbf{Impact} & \textbf{Mitigation} \\
+  \midrule
+  \texttt{rpy2} build failures on Windows/macOS &
+  Delays CI and user installation &
+  Provide pre-built wheels where possible; subprocess wrapper as fallback;
+  Docker image for reproducible builds \\[4pt]
+
+  R version incompatibility &
+  \texttt{RobStatTM} may behave differently across R versions &
+  Pin minimum R version (4.3+); test in CI against 4.3, 4.4, 4.5 \\[4pt]
+
+  Numerical discrepancies in pure-Python ports &
+  Undermines credibility of direct-porting approach &
+  Tolerance tiers: $10^{-12}$ for wrappers, $10^{-6}$ for ports;
+  investigate any discrepancy $> 10^{-4}$ before merging \\[4pt]
+
+  Scope creep from PCRA extension &
+  Core \texttt{robstatpy} quality suffers &
+  PCRA is explicitly a stretch goal; only begin after
+  Phase~4 benchmarks are complete and midterm evaluation is passed \\[4pt]
+
+  Mentor availability during summer &
+  Reduced feedback cadence &
+  Three mentors provide redundancy; asynchronous communication
+  via GitHub issues; weekly status updates regardless \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+%--------------------------------------------------------------------
+% SECTION 13 -- REFERENCES
+%--------------------------------------------------------------------
+\section{References}
+
+\begin{enumerate}[leftmargin=2em, itemsep=3pt, label={[\arabic*]}]
+  \item R.~A.~Maronna, R.~D.~Martin, V.~J.~Yohai, and
+    M.~Salibian-Barrera.
+    \textit{Robust Statistics: Theory and Methods (with R)}, 2nd ed.
+    Wiley, 2019.
+  \item M.~Salibian-Barrera, G.~Willems, and R.~Zamar.
+    ``The fast-$\tau$ estimator for regression.''
+    \textit{Journal of Computational and Graphical Statistics}, 2008.
+  \item V.~J.~Yohai.
+    ``High breakdown-point and high efficiency robust estimates for
+    regression.''
+    \textit{The Annals of Statistics}, 15(2):642--656, 1987.
+  \item D.~L.~Rocke.
+    ``Robustness properties of S-estimators of multivariate location and
+    shape in high dimension.''
+    \textit{The Annals of Statistics}, 24(3):1327--1345, 1996.
+  \item L.~Gautier et al.
+    \texttt{rpy2}: R in Python.
+    \url{https://rpy2.github.io/}, 2024.
+  \item R.~D.~Martin.
+    \texttt{PCRA}: Portfolio Construction and Risk Analysis.
+    CRAN, 2023.
+\end{enumerate}
+
+\end{document}

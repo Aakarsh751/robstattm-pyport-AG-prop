@@ -1,0 +1,51 @@
+# ── R ─────────────────────────────────────────────────────────────────────────
+.RData
+.Rhistory
+*.Rout
+*.RData
+
+# ── LaTeX build artifacts ──────────────────────────────────────────────────────
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.venv/
+env/
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+desktop.ini
+
+# ── Claude Code ───────────────────────────────────────────────────────────────
+.claude/
+
+# ── Large / copyrighted PDFs (kept local only) ────────────────────────────────
+robstattm/docs/RobStatTM Book.pdf
+robstattm/docs/WITH R Robust statistics_ theory and methods.pdf
+
+# ── RobStatTM R package source (has its own CRAN repo) ────────────────────────
+robstattm/RobStatTM-master/
+
+# ── Personal / private files ──────────────────────────────────────────────────
+Aakarsh_Resume.pdf
+Accepted_Proposals/
+"docs/gsoc2026_proposal/proposal dougComments - Copy.pdf"
+Robust Statistic via Python GSOC 2026.docx
+docs/misc/
+
+# ── Working / temp files ──────────────────────────────────────────────────────
+docs/gsoc2026_proposal/proposal.tex
+docs/gsoc2026_proposal/proposal.pdf
