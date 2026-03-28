@@ -645,15 +645,68 @@ def lmrobdet_mm(formula, data, family="mopt", efficiency=0.95):
 
 \subsection{Validation Results}
 
-Complete test code, pure-Python implementations, and full numerical
-results for all validated functions are provided in the companion
-test document:
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/docs/gsoc2026_proposal/robstatpy_tests.pdf}{	exttt{robstatpy\_tests.pdf}}.
-All 15/15 subprocess checks and 14/14 rpy2 checks pass;
-the two reproducible notebooks are available in
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/robstattm/python/}{	exttt{robstattm/python/}} in the project repository.
+The wrapper code examples above (\texttt{lmrobdet\_mm} and
+\texttt{cov\_rob\_mm}) are representative of the full wrapper layer.
+Each wrapper calls the corresponding \texttt{RobStatTM} R function
+via \texttt{rpy2} and returns Python-native objects; because R
+executes underneath, outputs are numerically identical to a direct R
+session.
+Full wrapper code and numerical result tables for all five functions
+(\texttt{locScaleM}, \texttt{scaleM}, \texttt{lmrobdetMM},
+\texttt{covRobMM}, \texttt{covRobRocke}, \texttt{pcaRobS}) are
+provided in the companion test document:
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/docs/gsoc2026_proposal/robstatpy_tests.pdf}%
+{\texttt{robstatpy\_tests.pdf}}.
+The rpy2 wrapper notebook (14/14 checks pass) is at
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}%
+{\texttt{robstatpy\_comparison\_rpy2.ipynb}}.
 
-%--------------------------------------------------------------------
+\subsection{Additional Wrapped Functions (via rpy2)}
+
+The rpy2 notebook validates all five core \texttt{RobStatTM} functions
+by calling R and checking outputs against expected values:
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l X c @{}}
+  \toprule
+  \textbf{Function} & \textbf{Dataset} & \textbf{Validation} & \textbf{Status} \\
+  \midrule
+  \texttt{lmrobdetMM}  & mineral & Coefficients, scale, residuals, rweights & PASS \\
+  \texttt{covRobMM}    & wine    & Center vector, covariance matrix, distances & PASS \\
+  \texttt{covRobRocke} & wine    & Center vector, distances & PASS \\
+  \texttt{pcaRobS}     & bus     & Proportion of variance, eigenvectors & PASS \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\vspace{0.5em}
+\noindent\textbf{Selected numerical outputs --- pure R vs.\ \texttt{robstatpy} (rpy2 wrapper):}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{} l l r r @{}}
+  \toprule
+  \textbf{Function} & \textbf{Output Field}
+    & \textbf{Pure R} & \textbf{robstatpy} \\
+  \midrule
+  \multicolumn{4}{@{}l}{\textit{lmrobdetMM (mineral, mopt, eff\,=\,0.95)}} \\
+  & Intercept          & $15.2012$ & $15.2012$ \\
+  & Slope (copper)     & $0.0126$  & $0.0126$  \\
+  & Scale              & $9.9966$  & $9.9966$  \\
+  & Robust $R^2$       & $0.0082$  & $0.0082$  \\[3pt]
+  \multicolumn{4}{@{}l}{\textit{covRobMM (wine, 13 variables, \texttt{set.seed(42)})}} \\
+  & Center{[}1..5{]} & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$
+                     & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$ \\
+  & Max Mahalanobis dist & $164.36$ & $164.36$ \\[3pt]
+  \multicolumn{4}{@{}l}{\textit{covRobRocke (wine, 13 variables, \texttt{set.seed(42)})}} \\
+  & Center{[}1..5{]} & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$
+                     & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$ \\
+  & Max Mahalanobis dist & $154.15$ & $154.15$ \\[3pt]
+  \multicolumn{4}{@{}l}{\textit{pcaRobS (bus, 3 components, \texttt{set.seed(42)})}} \\
+  & propSPC{[}1{]} & $0.8611$ & $0.8611$ \\
+  & propex         & $0.9731$ & $0.9731$ \\
+  \bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
 
 %--------------------------------------------------------------------
 % SECTION 6 -- ALTERNATIVE IMPLEMENTATION STRATEGIES
