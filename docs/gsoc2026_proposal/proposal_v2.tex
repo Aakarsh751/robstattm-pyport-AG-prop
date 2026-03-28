@@ -207,8 +207,8 @@ reproducible Jupyter notebook examples.
                         {\texttt{aakarshgupta919@gmail.com}} \\
   GitHub           & \href{https://github.com/Aakarsh751}
                         {\texttt{github.com/Aakarsh751}} \\
-  Project Repo     & \href{https://github.com/Aakarsh751/robstattm-pyport-AG}
-                        {\texttt{github.com/Aakarsh751/robstattm-pyport-AG}} \\
+  Project Repo     & \href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop}
+                        {\texttt{github.com/Aakarsh751/robstattm-pyport-AG-prop}} \\
   LinkedIn         & \href{https://linkedin.com/in/aakarsh-gupta-128204218/}
                         {\texttt{linkedin.com/in/aakarsh-gupta-128204218}} \\
   Communication    & Zoom, Google Meet \\
@@ -600,7 +600,7 @@ that:
 The complete \texttt{locScaleM} and \texttt{scaleM} wrapper implementations,
 pure-Python re-implementations, and detailed numerical test results are
 provided in the companion notebook in the project repository:
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}%
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}%
 {\texttt{robstatpy\_comparison\_rpy2.ipynb}}.
 
 \subsubsection*{Code Example: \texttt{rpy2} Wrapper for \texttt{lmrobdetMM}}
@@ -642,97 +642,16 @@ def lmrobdet_mm(formula, data, family="mopt", efficiency=0.95):
     }
 \end{lstlisting}
 
+
 \subsection{Validation Results}
 
-The following results demonstrate that the Python implementations match
-the R originals.
-All comparisons use the \texttt{flour} and \texttt{alcohol} datasets
-from \texttt{RobStatTM}.
-
-\subsection{Test 1: \texttt{locScaleM}, Bisquare and Huber Families}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l r r r c @{}}
-  \toprule
-  \textbf{Quantity} & \textbf{R value} & \textbf{Python value}
-    & \textbf{$|\Delta|$} & \textbf{Status} \\
-  \midrule
-  \multicolumn{5}{@{}l}{\textit{Bisquare, eff\,=\,0.95, alcohol data}} \\
-  \quad $\hat{\mu}$    & 3.6970 & 3.6970 & $< 10^{-4}$ & PASS \\
-  \quad std($\hat{\mu}$) & 0.2521 & 0.2521 & $< 10^{-3}$ & PASS \\
-  \quad disper         & 0.8633 & 0.8633 & $< 10^{-4}$ & PASS \\[4pt]
-  \multicolumn{5}{@{}l}{\textit{Huber, eff\,=\,0.95, alcohol data}} \\
-  \quad $\hat{\mu}$    & 3.5828 & 3.5828 & $< 10^{-4}$ & PASS \\
-  \quad std($\hat{\mu}$) & 0.2482 & 0.2482 & $< 10^{-3}$ & PASS \\
-  \quad disper         & 0.8633 & 0.8633 & $< 10^{-4}$ & PASS \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\subsection{Test 2: \texttt{scaleM}, Bisquare and Huber Families}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l r r r c @{}}
-  \toprule
-  \textbf{Family} & \textbf{R value} & \textbf{Python value}
-    & \textbf{$|\Delta|$} & \textbf{Status} \\
-  \midrule
-  Bisquare (flour data) & matches & matches & $< 10^{-4}$ & PASS \\
-  Huber (flour data)    & matches & matches & $< 10^{-4}$ & PASS \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\subsection{Additional Wrapped Functions (via rpy2)}
-
-The comparison notebook also validates all five core functions by calling
-R via \texttt{rpy2} and checking outputs:
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l l l c @{}}
-  \toprule
-  \textbf{Function} & \textbf{Dataset} & \textbf{Validation} & \textbf{Status} \\
-  \midrule
-  \texttt{lmrobdetMM}  & mineral & Coefficients, scale, residuals, rweights & PASS \\
-  \texttt{covRobMM}    & wine    & Center vector, covariance matrix, distances & PASS \\
-  \texttt{covRobRocke} & wine    & Center vector, distances & PASS \\
-  \texttt{pcaRobS}     & bus     & Proportion of variance, eigenvectors & PASS \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\vspace{0.5em}
-\noindent\textbf{Selected numerical outputs from the rpy2 wrapper:}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l l r @{}}
-  \toprule
-  \textbf{Function} & \textbf{Output Field} & \textbf{Value (via robstatpy)} \\
-  \midrule
-  \multicolumn{3}{@{}l}{\textit{lmrobdetMM (mineral, mopt, eff\,=\,0.95)}} \\
-  & Intercept          & $15.2012$ \\
-  & Slope (copper)     & $0.0126$ \\
-  & Scale              & $9.9966$ \\
-  & Robust $R^2$       & $0.0082$ \\[3pt]
-  \multicolumn{3}{@{}l}{\textit{covRobMM (wine, 13 variables)}} \\
-  & Center[1..5]       & $13.74,\; 2.01,\; 2.45,\; 17.04,\; 106.34$ \\
-  & Max robust distance & $6.09$ \\[3pt]
-  \multicolumn{3}{@{}l}{\textit{covRobRocke (wine, 13 variables)}} \\
-  & Center[1..5]       & $13.77,\; 2.03,\; 2.44,\; 17.16,\; 107.52$ \\
-  & Max robust distance & $5.79$ \\[3pt]
-  \multicolumn{3}{@{}l}{\textit{pcaRobS (bus, 3 components, desprop\,=\,0.99)}} \\
-  & propSPC[1]         & $> 0.80$ \\
-  & propex             & $> 0.85$ \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\vspace{0.3em}
-\noindent
-All tests pass: 15/15 checks in the subprocess notebook and 14/14 in the
-rpy2 notebook. Both notebooks are available in the project repository:
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison.ipynb}{\texttt{robstatpy\_comparison.ipynb}} (subprocess) and
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/robstattm/python/robstatpy\_comparison\_rpy2.ipynb}{\texttt{robstatpy\_comparison\_rpy2.ipynb}} (rpy2).
+Complete test code, pure-Python implementations, and full numerical
+results for all validated functions are provided in the companion
+test document:
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/docs/gsoc2026_proposal/robstatpy_tests.pdf}{	exttt{robstatpy\_tests.pdf}}.
+All 15/15 subprocess checks and 14/14 rpy2 checks pass;
+the two reproducible notebooks are available in
+\href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/robstattm/python/}{	exttt{robstattm/python/}} in the project repository.
 
 %--------------------------------------------------------------------
 
@@ -769,131 +688,7 @@ For \texttt{locScaleM} and \texttt{scaleM}, the project provides
 pure-Python re-implementations to serve as the GSoC test tasks and to
 establish a methodology for future direct porting.
 
-% SECTION 7 -- FUTURE WORK: PCRA
-%--------------------------------------------------------------------
-\section{Future Work: PCRA Package Conversion}
-
-The \textbf{PCRA} (Portfolio Construction and Risk Analysis) R package,
-also authored by Prof.\ Martin, depends on \texttt{RobStatTM} for
-robust covariance inputs to portfolio optimisation and for robust
-single-factor model fitting.
-A Python equivalent of PCRA is a natural downstream application of
-\texttt{robstatpy}.
-
-\subsection{Dependency Relationships}
-
-PCRA orchestrates 12+ R packages.  The critical dependency chain is:
-
-\begin{center}
-\begin{tabular}{ccccc}
-  \fbox{PCRA} &
-  $\xrightarrow{\text{covRobMM}}$ &
-  \fbox{RobStatTM} &
-  $\xrightarrow{\text{pyinit}}$ &
-  \fbox{Fortran core} \\[6pt]
-  $\downarrow$ & & & & \\
-  \fbox{PortfolioAnalytics} &
-  $\rightarrow$ &
-  \fbox{PerformanceAnalytics} &
-  $\rightarrow$ &
-  \fbox{xts/zoo} \\
-\end{tabular}
-\end{center}
-
-\noindent
-For the Python side, the mapping is:
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l l X @{}}
-  \toprule
-  \textbf{R Package} & \textbf{Python Equivalent} & \textbf{Notes} \\
-  \midrule
-  RobStatTM            & \texttt{robstatpy}        & This project \\
-  PortfolioAnalytics   & \texttt{cvxpy}            & Convex optimisation \\
-  PerformanceAnalytics & \texttt{empyrical}        & Risk/performance measures \\
-  xts / zoo            & \texttt{pandas}           & Time series indexing \\
-  ggplot2              & \texttt{matplotlib}        & Plotting \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\subsection{Preliminary Results}
-
-A prototype Python reproduction of PCRA Chapter~2 has already been
-completed (\texttt{pcra/python/ch2\_foundations\_demo.py}), demonstrating:
-
-\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-  \item Two-asset efficient frontier (Merton closed-form).
-  \item Global minimum variance portfolio computation.
-  \item Drawdown analysis and risk measures (VaR, ES).
-  \item Robust location estimation via bisquare $\psi$-function.
-\end{itemize}
-
-\noindent
-\textbf{Code example: efficient frontier computation (from the prototype):}
-
-\begin{lstlisting}[style=python, caption={PCRA Chapter 2: Merton efficient frontier in Python}]
-def math_efront_risky_mu_cov(mu_ret, vol_ret, corr_ret,
-                              npoints=100):
-    """Efficient frontier via closed-form Merton formula.
-    Reproduces R's mathEfrontRiskyMuCov() from PCRA."""
-    V = np.diag(vol_ret) @ corr_ret @ np.diag(vol_ret)
-    Vinv = np.linalg.inv(V)
-    one = np.ones(len(mu_ret))
-    a = mu_ret @ Vinv @ one
-    b = mu_ret @ Vinv @ mu_ret
-    c = one @ Vinv @ one
-    d = b * c - a ** 2
-    mu_gmv = a / c
-    sigma_gmv = 1 / np.sqrt(c)
-    mu_range = np.linspace(mu_gmv, max(mu_ret)*1.2, npoints)
-    sigma_range = np.sqrt(
-        (c*mu_range**2 - 2*a*mu_range + b) / d)
-    return mu_range, sigma_range, mu_gmv, sigma_gmv
-\end{lstlisting}
-
-% [Drawdown/VaR/ES code in pcra/python/ch2\_foundations\_demo.py]
-
-
-\noindent
-\textbf{Selected PCRA Chapter~2 results (Python vs.\ R):}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l r r c @{}}
-  \toprule
-  \textbf{Quantity} & \textbf{R} & \textbf{Python} & \textbf{Match} \\
-  \midrule
-  GMV $\sigma_P$ (2-asset, $\rho=0$)    & 0.1200 & 0.1200 & \checkmark \\
-  GMV $\mu_P$ (2-asset, $\rho=0$)       & 0.0610 & 0.0610 & \checkmark \\
-  3-asset GMV return                     & 0.0540 & 0.0540 & \checkmark \\
-  3-asset GMV volatility                 & 0.0707 & 0.0707 & \checkmark \\
-  VaR (5\%, SPY monthly)                 & matches & matches & \checkmark \\
-  ES (5\%, SPY monthly)                  & matches & matches & \checkmark \\
-  Max drawdown depth                     & matches & matches & \checkmark \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\vspace{0.3em}
-\noindent
-The complete comparison output (11~figures, 8~tables) is available in the
-project repository:
-\href{https://github.com/Aakarsh751/robstattm-pyport-AG/blob/main/pcra/output/Ch2\_Comparison.pdf}{\texttt{pcra/output/Ch2\_Comparison.pdf}} (R vs.\ Python side-by-side).
-These results match the R originals and validate the feasibility of
-converting PCRA's core mathematical layer to Python.
-Full PCRA conversion is scoped as a stretch goal; the foundation
-laid by \texttt{robstatpy} makes it achievable in a follow-up
-contribution.
-
-
-\noindent
-The 	\texttt{rpy2} wrapper methodology scales directly to PCRA and other
-R packages in the robust statistics ecosystem: once conversion patterns
-are established for 	\texttt{RobStatTM}, extending them to PCRA is
-incremental. Full PCRA conversion is scoped as a stretch goal, contingent
-on completing the core 	\texttt{robstatpy} deliverables.
-
-% SECTION 8 -- EVALUATION PLAN
+% SECTION 7 -- EVALUATION PLAN
 %--------------------------------------------------------------------
 \section{Evaluation Plan: Comparative Benchmarks}
 
@@ -936,7 +731,7 @@ strategies across three dimensions:
 \end{itemize}
 
 %--------------------------------------------------------------------
-% SECTION 9 -- IMPLEMENTATION PLAN
+% SECTION 8 -- IMPLEMENTATION PLAN
 %--------------------------------------------------------------------
 \section{Implementation Plan and Timeline}
 
@@ -1073,7 +868,7 @@ notebook, $\geq 90\%$ test coverage on delivered modules.
 \end{tabularx}
 
 %--------------------------------------------------------------------
-% SECTION 10 -- DELIVERABLES
+% SECTION 9 -- DELIVERABLES
 %--------------------------------------------------------------------
 \section{Deliverables}
 
@@ -1129,7 +924,7 @@ notebook, $\geq 90\%$ test coverage on delivered modules.
 \end{enumerate}
 
 %--------------------------------------------------------------------
-% SECTION 11 -- DISTRIBUTION
+% SECTION 10 -- DISTRIBUTION
 %--------------------------------------------------------------------
 \section{Distribution and Packaging}
 
@@ -1198,7 +993,7 @@ The installation guide will cover R setup on all three major platforms
 the CRAN installer).
 
 %--------------------------------------------------------------------
-% SECTION 12 -- RISKS
+% SECTION 11 -- RISKS
 %--------------------------------------------------------------------
 \section{Risks and Mitigation Strategies}
 
@@ -1237,7 +1032,7 @@ the CRAN installer).
 \renewcommand{\arraystretch}{1}
 
 %--------------------------------------------------------------------
-% SECTION 13 -- REFERENCES
+% SECTION 12 -- REFERENCES
 %--------------------------------------------------------------------
 \section{References}
 
