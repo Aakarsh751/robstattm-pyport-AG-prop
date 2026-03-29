@@ -47,5 +47,7 @@ Robust Statistic via Python GSOC 2026.docx
 docs/misc/
 
 # ── Working / temp files ──────────────────────────────────────────────────────
-docs/gsoc2026_proposal/proposal.tex
 docs/gsoc2026_proposal/proposal.pdf
+
+# LaTeX sources (compile locally; GitHub shows PDFs only)
+docs/gsoc2026_proposal/*.tex

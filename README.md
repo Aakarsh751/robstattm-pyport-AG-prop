@@ -18,19 +18,18 @@ available to Python users with no R knowledge required.
 Everything in this repo is working, runnable code produced **before the GSoC period starts**,
 to demonstrate readiness for the project.
 
-### How the rpy2 “bridge” is built here (important)
+### rpy2 bridge (what lives in this repo)
 
 | What | Where |
 |------|--------|
-| **Notebook driver** | [`robstattm/python/robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb) — loads `rpy2`, `importr("RobStatTM")`, sets `set_conversion(default_converter)` for Jupyter, defines helpers `R()`, `rx()`, `r2py()`. |
-| **Generator (source of truth for cells)** | [`robstattm/python/build_notebook_rpy2.py`](robstattm/python/build_notebook_rpy2.py) — rebuilds the notebook with `python build_notebook_rpy2.py`. |
-| **Thin `robstattm.*` API calls** | **Not used in the notebook.** After `robstattm = importr("RobStatTM")`, the notebook still calls R via **`R('...')` strings** (e.g. `R('lmrobdetMM(...)')`). So the bridge is **embedded R**, not Python functions wrapping `robstattm.lmrobdetMM(...)`. |
-| **Wrapper-style `robstattm.locScaleM(...)` examples** | [`docs/gsoc2026_proposal/robstatpy_tests.tex`](docs/gsoc2026_proposal/robstatpy_tests.tex) (and PDF) — test-task write-up for `locScaleM` / `scaleM` only. |
-| **Future installable package** | **Not in this repo yet** — no `pyproject.toml` / `pytest` tree; that is the GSoC `robstatpy` deliverable. |
+| **Main notebook** | [`robstattm/python/robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb) — loads `rpy2`, `importr("RobStatTM")`, `set_conversion(default_converter)`, helpers `R()`, `rx()`, `r2py()`. |
+| **Calling style** | Fits are run with **`R('...')`** (R code strings), not `robstattm.lmrobdetMM(...)`-style calls. The **installable `robstatpy` package** will expose proper Python wrappers. |
+| **GSoC test tasks (write-up)** | [`docs/gsoc2026_proposal/robstatpy_tests.pdf`](docs/gsoc2026_proposal/robstatpy_tests.pdf) — `locScaleM` / `scaleM` examples and validation. |
+| **Installable package** | **Not here yet** — no `pyproject.toml` / `pytest`; that is the GSoC deliverable. |
 
-**Notebook layout:** **Part I** walks through `locScaleM`, `scaleM`, `lmrobdetMM`, `covRobMM`/`covRobRocke`, `pcaRobS` via **rpy2** (main line). **Appendix A** holds optional **pure-Python** univariate cross-checks for `locScaleM`/`scaleM` only. **Not implemented here as library wrappers:** `lmrobdetDCML`, `lmrobdet.control` as a standalone Python API, `step.lmrobdet`, `pyinit`, `rob.linear.test`, `KurtSDNew`, external packages (`pense`, `GSE`, `TSGS`), GLM functions.
+**Notebook layout:** **Part I** = `locScaleM`, `scaleM`, `lmrobdetMM`, `covRobMM`/`covRobRocke`, `pcaRobS` via **rpy2**. **Appendix A** = optional NumPy univariate cross-checks only. **Not in this notebook as wrappers:** `lmrobdetDCML`, standalone `lmrobdet.control`, `step.lmrobdet`, `pyinit`, `rob.linear.test`, `KurtSDNew`, `pense` / `GSE` / `TSGS`, GLM.
 
-More detail: [`robstattm/python/NOTEBOOKS.md`](robstattm/python/NOTEBOOKS.md).
+More: [`robstattm/python/NOTEBOOKS.md`](robstattm/python/NOTEBOOKS.md).
 
 ---
 
@@ -55,16 +54,14 @@ The proposal required completing two test tasks before contacting mentors.
 Both are implemented and validated here:
 
 ### Test 1 — `locScaleM`: Robust location and scale (M-estimator)
-- **Where:** [`robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb), Section 1
-- **What it does:** Wraps `RobStatTM::locScaleM()` via rpy2, and provides a pure-Python
-  re-implementation using bisquare and Huber ψ-functions
-- **Result:** Python outputs match R to `< 1e-4` across all 6 checks ✅
+- **Where:** [`robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb), **Part I §1**; optional NumPy cross-check in **Appendix A**
+- **What it does:** `RobStatTM::locScaleM()` via rpy2; appendix compares to a NumPy reference
+- **Result:** R vs NumPy agreement within stated tolerances on the appendix checks ✅
 
 ### Test 2 — `scaleM`: Robust M-scale
-- **Where:** [`robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb), Section 2
-- **What it does:** Wraps `RobStatTM::scaleM()` and explains how its output relates
-  to `locScaleM` (scaleM returns only the dispersion; locScaleM also estimates location)
-- **Result:** Python outputs match R to `< 1e-4` ✅
+- **Where:** Same notebook, **Part I §2** (bridge) and **Appendix A** (R vs NumPy)
+- **What it does:** `RobStatTM::scaleM()` via rpy2; relationship to `locScaleM` as in the book
+- **Result:** Appendix checks pass ✅
 
 ---
 
@@ -90,17 +87,14 @@ All five core RobStatTM functions wrapped and validated:
 robstattm-pyport-AG/
 │
 ├── docs/gsoc2026_proposal/
-│   ├── proposal_v4.pdf          ← GSoC 2026 proposal (read this first)
-│   └── proposal_v4.tex          ← LaTeX source
+│   └── proposal_v4.pdf          ← GSoC 2026 proposal (PDF only on this repo)
 │
 ├── robstattm/
 │   ├── python/
-│   │   ├── robstatpy_comparison_rpy2.ipynb   ← rpy2 bridge notebook (test tasks here)
-│   │   ├── robstatpy_comparison.ipynb         ← subprocess bridge notebook
-│   │   ├── build_notebook_rpy2.py             ← script that generates the rpy2 notebook
-│   │   ├── build_notebook.py                  ← script that generates the subprocess notebook
-│   │   ├── figures/                           ← PNG outputs (covRobMM, lmrobdetMM, pcaRobS, scaleM)
-│   │   └── NOTEBOOKS.md                       ← detailed notebook documentation
+│   │   ├── robstatpy_comparison_rpy2.ipynb   ← rpy2 bridge notebook (main)
+│   │   ├── robstatpy_comparison.ipynb         ← subprocess comparison (alternate)
+│   │   ├── figures/                           ← PNG outputs
+│   │   └── NOTEBOOKS.md                       ← short notebook overview
 │   ├── examples-scripts/        ← 26 R example scripts from Maronna et al. (2019)
 │   ├── r/                       ← helper R scripts (setup, data export)
 │   └── docs/                    ← setup guide, R-to-Python conversion guide
@@ -132,11 +126,9 @@ jupyter notebook robstattm/python/robstatpy_comparison_rpy2.ipynb
 Rscript -e 'install.packages("RobStatTM")'
 
 # Install Python dependencies
-pip install rpy2 numpy pandas scipy matplotlib nbformat
+pip install rpy2 numpy pandas scipy matplotlib
 
-# Regenerate and open
 cd robstattm/python
-python build_notebook_rpy2.py
 jupyter notebook robstatpy_comparison_rpy2.ipynb
 ```
 
