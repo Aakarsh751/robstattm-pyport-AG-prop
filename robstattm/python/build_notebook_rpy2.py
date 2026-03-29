@@ -1,9 +1,9 @@
 """
 build_notebook_rpy2.py
 ======================
-Generates robstatpy_comparison_rpy2.ipynb — a Jupyter notebook that compares
-RobStatTM R functions with Python re-implementations, using rpy2 as the bridge
-instead of subprocess/jsonlite.
+Generates robstatpy_comparison_rpy2.ipynb — Jupyter notebook with **Part I:**
+RobStatTM via **rpy2** (main focus), and **Appendix:** optional pure-Python
+univariate cross-checks. Regenerate with: python build_notebook_rpy2.py
 
 Requirements:
   pip install rpy2 nbformat numpy scipy matplotlib
@@ -32,20 +32,18 @@ def code(src: str):
 
 # ── Cell 1: Title ──────────────────────────────────────────────────────────────
 md('''
-# RobStatTM Python vs R Comparison (rpy2 bridge)
+# RobStatTM from Python (rpy2 bridge)
 
-This notebook uses **rpy2** to call RobStatTM R functions directly from Python,
-comparing them with pure-Python re-implementations.  It covers:
+**Part I — Main line (robstatpy / GSoC focus):** call **RobStatTM** through **rpy2**,
+load data in R, run `locScaleM`, `scaleM`, `lmrobdetMM`, `covRobMM`, `covRobRocke`,
+`pcaRobS`, and pull results into NumPy with `.rx2()` / `r2py()`. This is the wrapper
+path the project ships.
 
-1. `locScaleM` — robust location and scale (M-estimator)
-2. `scaleM` — robust M-scale only
-3. `lmrobdetMM` — robust MM-regression
-4. `covRobMM` / `covRobRocke` — robust covariance
-5. `pcaRobS` — robust PCA (spherical)
+**Appendix — Secondary:** optional **pure-Python** re-implementations for **univariate**
+`locScaleM` / `scaleM` only, to cross-check numerics. Not the primary deliverable.
 
-**Bridge**: rpy2 ≥ 3.6.6 with the Windows `IndexError` patch applied.
-The key setup trick: wrap every `ro.r()` call in `with localconverter(default_converter):`
-to ensure rpy2's conversion context propagates across Jupyter's async task boundaries.
+**Setup:** rpy2 ≥ 3.6; `set_conversion(default_converter)` so conversion rules persist
+under Jupyter’s async cells.
 ''')
 
 # ── Cell 2: Setup ──────────────────────────────────────────────────────────────
@@ -101,15 +99,17 @@ robstattm = importr("RobStatTM")
 print("R version:", R('R.version.string')[0])
 print("RobStatTM loaded OK")
 
-checks = []   # (label, abs_diff, passed_bool)
+checks = []            # bridge / sanity (Part I)
+checks_appendix = []   # R vs NumPy diffs (Appendix only)
 ''')
 
-# ── Cell 3: locScaleM — R results ──────────────────────────────────────────────
+# ── Cell 3–5: locScaleM — R first, then Appendix (Python) ─────────────────────
 md('''
-## 1 — `locScaleM`: Robust Location and Scale (M-estimator)
+## Part I — rpy2 bridge to RobStatTM
 
-Compare `locScaleM(x, psi="bisquare")` in R vs a pure-Python iterative
-re-implementation using the same bisquare ψ-function.
+### 1 — `locScaleM`: robust location and scale
+
+Run `RobStatTM::locScaleM()` in R via `rpy2`, extract `mu`, `std.mu`, `disper`.
 ''')
 
 code(r'''
@@ -131,173 +131,38 @@ print(f"R bisquare: mu={R_mu_b:.6f}, std.mu={R_std_b:.6f}, disper={R_disp_b:.6f}
 print(f"R huber:    mu={R_mu_h:.6f}, std.mu={R_std_h:.6f}, disper={R_disp_h:.6f}")
 ''')
 
-# ── Cell 4: Python locScaleM ───────────────────────────────────────────────────
-code(r'''
-# ── Python re-implementation (matching build_notebook.py which passes 15/15) ──
-
-# tuning.chi: breakdown-based constants for M-scale (lmrobdet.control(bb=0.5))
-TUNING_CHI = {"bisquare": 1.547645, "huber": 7.629389}
-# tuning.psi: efficiency-based constants for location IRLS (eff=0.95)
-TUNING = {"bisquare": {0.95: 4.685}, "huber": {0.95: 1.34}}
-
-def mad(x, scale=1.4826):
-    return np.median(np.abs(x - np.median(x))) * scale
-
-# rho for M-scale (max=1 for bisquare; unbounded for huber)
-def rho_bisquare(u, c):
-    v = u / c
-    return np.where(np.abs(v) <= 1, 1 - (1 - v**2)**3, 1.0)
-
-def rho_huber(u, c):
-    """Huber rho for M-scale: u²/2 inside, c|u|-c²/2 outside."""
-    v = np.abs(u)
-    return np.where(v <= c, 0.5 * v**2, c * v - 0.5 * c**2)
-
-# Weight and psi functions for location IRLS
-def bisquare_w(r, c):
-    u = r / c
-    return np.where(np.abs(u) <= 1, (1 - u**2)**2, 0.0)
-
-def huber_w(r, k):
-    return np.where(np.abs(r) <= k, 1.0, k / (np.abs(r) + 1e-20))
-
-def bisquare_psi(r, c):
-    return r * bisquare_w(r, c)
-
-def huber_psi(r, k):
-    return r * huber_w(r, k)
-
-def bisquare_pp(r, c):
-    u = r / c
-    return np.where(np.abs(u) < 1, (1 - u**2)**2 - 4*u**2*(1 - u**2), 0.0)
-
-def huber_pp(r, k):
-    return np.where(np.abs(r) <= k, 1.0, 0.0)
-
-def scale_m(u, delta=0.5, psi="bisquare", maxit=200, tol=1e-8):
-    """M-scale: solves mean(rho(u/s, c)) = delta via fixed-point iteration."""
-    u = np.asarray(u, dtype=float)
-    c = TUNING_CHI[psi]
-    rho_fn = rho_bisquare if psi == "bisquare" else rho_huber
-    s = np.median(np.abs(u)) / 0.6745
-    if s < 1e-10:
-        return 0.0
-    for _ in range(maxit):
-        s_new = np.sqrt(s**2 * np.mean(rho_fn(u / s, c)) / delta)
-        if abs(s_new - s) / s < tol:
-            return float(s_new)
-        s = s_new
-    return float(s)
-
-def loc_scale_m(x, psi="bisquare", eff=0.95, maxit=50, tol=1e-4):
-    """M-estimator of location with fixed MAD scale (matches locScaleM)."""
-    x = np.asarray(x, dtype=float)
-    n = len(x)
-    c = TUNING[psi][eff]
-    wf  = bisquare_w   if psi == "bisquare" else huber_w
-    psf = bisquare_psi if psi == "bisquare" else huber_psi
-    ppf = bisquare_pp  if psi == "bisquare" else huber_pp
-
-    mu0  = np.median(x)
-    sig0 = mad(x)
-    if sig0 < 1e-10:
-        return mu0, 0.0, 0.0
-
-    for _ in range(maxit):
-        w  = wf((x - mu0) / sig0, c)
-        mu = np.sum(w * x) / np.sum(w)
-        if abs(mu - mu0) / sig0 < tol:
-            break
-        mu0 = mu
-
-    resi   = (x - mu) / sig0
-    a      = np.mean(psf(resi, c)**2)
-    b      = np.mean(ppf(resi, c))
-    std_mu = sig0 * np.sqrt(a / (n * b**2))
-    disper = scale_m(x - mu, delta=0.5, psi=psi)
-    return float(mu), float(std_mu), float(disper)
-
-x_alc = r2py(R('x_alc'))
-
-Py_mu_b, Py_std_b, Py_disp_b = loc_scale_m(x_alc, psi="bisquare")
-Py_mu_h, Py_std_h, Py_disp_h = loc_scale_m(x_alc, psi="huber")
-
-print(f"Py bisquare: mu={Py_mu_b:.6f}, std.mu={Py_std_b:.6f}, disper={Py_disp_b:.6f}")
-print(f"Py huber:    mu={Py_mu_h:.6f}, std.mu={Py_std_h:.6f}, disper={Py_disp_h:.6f}")
-''')
-
-# ── Cell 5: locScaleM checks ──────────────────────────────────────────────────
-code(r'''
-for label, R_v, Py_v, tol in [
-    ("locScaleM bisquare mu",   R_mu_b,   Py_mu_b,   1e-4),
-    ("locScaleM bisquare std",  R_std_b,  Py_std_b,  1e-3),
-    ("locScaleM bisquare disp", R_disp_b, Py_disp_b, 1e-4),
-    ("locScaleM huber mu",      R_mu_h,   Py_mu_h,   1e-4),
-    ("locScaleM huber std",     R_std_h,  Py_std_h,  1e-3),
-    ("locScaleM huber disp",    R_disp_h, Py_disp_h, 1e-4),
-]:
-    diff = abs(R_v - Py_v)
-    ok   = diff < tol
-    checks.append((label, diff, ok))
-    print(f"{'PASS' if ok else 'FAIL'}  {label}: |R-Py|={diff:.2e}  (tol={tol:.0e})")
-''')
-
-# ── Cell 6: scaleM ────────────────────────────────────────────────────────────
 md('''
-## 2 — `scaleM`: Robust M-Scale Only
+### 2 — `scaleM`: robust M-scale (Part I)
 
-`scaleM(x)` computes only the M-scale (no location update).
+`RobStatTM::scaleM()` in R; pull M-scale estimates into Python and plot (flour data).
 ''')
 
 code(r'''
 R('data(flour, package="RobStatTM")')
 R('x_fl <- as.vector(flour[,1])')
-
 R_sm_b = R('scaleM(x_fl, family="bisquare")')[0]
 R_sm_h = R('scaleM(x_fl, family="huber")')[0]
-
 x_fl = r2py(R('x_fl'))
-Py_sm_b = scale_m(x_fl, psi="bisquare")
-Py_sm_h = scale_m(x_fl, psi="huber")
+print(f"scaleM via rpy2: bisquare={R_sm_b:.6f}  huber={R_sm_h:.6f}")
 
-print(f"scaleM bisquare: R={R_sm_b:.6f}  Py={Py_sm_b:.6f}  |diff|={abs(R_sm_b-Py_sm_b):.2e}")
-print(f"scaleM huber:    R={R_sm_h:.6f}  Py={Py_sm_h:.6f}  |diff|={abs(R_sm_h-Py_sm_h):.2e}")
-
-for label, R_v, Py_v in [
-    ("scaleM bisquare", R_sm_b, Py_sm_b),
-    ("scaleM huber",    R_sm_h, Py_sm_h),
-]:
-    diff = abs(R_v - Py_v)
-    ok   = diff < 1e-4
-    checks.append((label, diff, ok))
-    print(f"{'PASS' if ok else 'FAIL'}  {label}: |R-Py|={diff:.2e}")
-''')
-
-# ── Cell 7: scaleM figure ─────────────────────────────────────────────────────
-code(r'''
 fig, axes = plt.subplots(1, 2, figsize=(10, 4))
-for ax, psi, R_v, Py_v in [
-    (axes[0], "bisquare", R_sm_b, Py_sm_b),
-    (axes[1], "huber",    R_sm_h, Py_sm_h),
-]:
+for ax, psi, R_v in [(axes[0], "bisquare", R_sm_b), (axes[1], "huber", R_sm_h)]:
     ax.hist(x_fl, bins=20, color="#aec7e8", edgecolor="white", density=True)
-    ax.axvline(R_v,  color="red",  lw=2, ls="--", label=f"R  {R_v:.4f}")
-    ax.axvline(Py_v, color="blue", lw=2, ls=":",  label=f"Py {Py_v:.4f}")
+    ax.axvline(R_v, color="crimson", lw=2, ls="--", label=f"RobStatTM {R_v:.4f}")
     ax.set_title(f"scaleM ({psi})")
     ax.legend(fontsize=9)
-plt.suptitle("scaleM — flour dataset", fontsize=12)
+plt.suptitle("scaleM — flour (RobStatTM via rpy2)", fontsize=12)
 plt.tight_layout()
-plt.savefig("figures/scaleM_comparison_rpy2.png", dpi=150, bbox_inches="tight")
+plt.savefig("figures/scaleM_bridge_rpy2.png", dpi=150, bbox_inches="tight")
 plt.show()
-print("Saved: scaleM_comparison_rpy2.png")
+print("Saved: figures/scaleM_bridge_rpy2.png")
 ''')
 
 # ── Cell 8: lmrobdetMM ────────────────────────────────────────────────────────
 md('''
-## 3 — `lmrobdetMM`: Robust MM-Regression
+### 3 — `lmrobdetMM`: robust MM-regression
 
-Compare coefficient estimates from `lmrobdetMM` (mineral dataset).
-Python extracts coefficients via rpy2; the fit itself runs in R.
+`lmrobdetMM` on the mineral dataset; coefficients and diagnostics extracted in Python via `rpy2`.
 ''')
 
 code(r'''
@@ -359,9 +224,9 @@ checks.append(("lmrobdetMM slope (from R)",     0.0, True))
 
 # ── Cell 10: covRobMM ─────────────────────────────────────────────────────────
 md('''
-## 4 — `covRobMM` / `covRobRocke`: Robust Covariance
+### 4 — `covRobMM` / `covRobRocke`: robust covariance
 
-Compare robust vs classical center and covariance (wine dataset).
+Robust vs classical center and distances (wine dataset).
 ''')
 
 code(r'''
@@ -431,9 +296,9 @@ checks.append(("covRobRocke center (from R)", 0.0, True))
 
 # ── Cell 12: pcaRobS ──────────────────────────────────────────────────────────
 md('''
-## 5 — `pcaRobS`: Robust PCA (Spherical)
+### 5 — `pcaRobS`: robust PCA (spherical)
 
-Compare robust PCA proportion of explained variance with classical PCA (bus dataset).
+Robust vs classical proportion of variance (bus dataset).
 ''')
 
 code(r'''
@@ -485,30 +350,167 @@ checks.append(("pcaRobS propSPC[1] > 0.8", R_propSPC[0], R_propSPC[0] > 0.8))
 checks.append(("pcaRobS propex > 0.85",    R_propex[0],  R_propex[0] > 0.85))
 ''')
 
+# ── Appendix: pure-Python univariate cross-checks (after Part I) ──────────────
+md('''
+---
+
+## Appendix A — Pure-Python univariate reference (optional)
+
+NumPy re-implementations of `locScaleM` / `scaleM` for **R vs NumPy** agreement
+only. **Not** the primary `robstatpy` deliverable (that is the rpy2 bridge in Part I).
+''')
+
+code(r'''
+# ── Python re-implementation (appendix only) ──
+TUNING_CHI = {"bisquare": 1.547645, "huber": 7.629389}
+TUNING = {"bisquare": {0.95: 4.685}, "huber": {0.95: 1.34}}
+
+def mad(x, scale=1.4826):
+    return np.median(np.abs(x - np.median(x))) * scale
+
+def rho_bisquare(u, c):
+    v = u / c
+    return np.where(np.abs(v) <= 1, 1 - (1 - v**2)**3, 1.0)
+
+def rho_huber(u, c):
+    v = np.abs(u)
+    return np.where(v <= c, 0.5 * v**2, c * v - 0.5 * c**2)
+
+def bisquare_w(r, c):
+    u = r / c
+    return np.where(np.abs(u) <= 1, (1 - u**2)**2, 0.0)
+
+def huber_w(r, k):
+    return np.where(np.abs(r) <= k, 1.0, k / (np.abs(r) + 1e-20))
+
+def bisquare_psi(r, c):
+    return r * bisquare_w(r, c)
+
+def huber_psi(r, k):
+    return r * huber_w(r, k)
+
+def bisquare_pp(r, c):
+    u = r / c
+    return np.where(np.abs(u) < 1, (1 - u**2)**2 - 4*u**2*(1 - u**2), 0.0)
+
+def huber_pp(r, k):
+    return np.where(np.abs(r) <= k, 1.0, 0.0)
+
+def scale_m(u, delta=0.5, psi="bisquare", maxit=200, tol=1e-8):
+    u = np.asarray(u, dtype=float)
+    c = TUNING_CHI[psi]
+    rho_fn = rho_bisquare if psi == "bisquare" else rho_huber
+    s = np.median(np.abs(u)) / 0.6745
+    if s < 1e-10:
+        return 0.0
+    for _ in range(maxit):
+        s_new = np.sqrt(s**2 * np.mean(rho_fn(u / s, c)) / delta)
+        if abs(s_new - s) / s < tol:
+            return float(s_new)
+        s = s_new
+    return float(s)
+
+def loc_scale_m(x, psi="bisquare", eff=0.95, maxit=50, tol=1e-4):
+    x = np.asarray(x, dtype=float)
+    n = len(x)
+    c = TUNING[psi][eff]
+    wf  = bisquare_w   if psi == "bisquare" else huber_w
+    psf = bisquare_psi if psi == "bisquare" else huber_psi
+    ppf = bisquare_pp  if psi == "bisquare" else huber_pp
+    mu0  = np.median(x)
+    sig0 = mad(x)
+    if sig0 < 1e-10:
+        return mu0, 0.0, 0.0
+    for _ in range(maxit):
+        w  = wf((x - mu0) / sig0, c)
+        mu = np.sum(w * x) / np.sum(w)
+        if abs(mu - mu0) / sig0 < tol:
+            break
+        mu0 = mu
+    resi   = (x - mu) / sig0
+    a      = np.mean(psf(resi, c)**2)
+    b      = np.mean(ppf(resi, c))
+    std_mu = sig0 * np.sqrt(a / (n * b**2))
+    disper = scale_m(x - mu, delta=0.5, psi=psi)
+    return float(mu), float(std_mu), float(disper)
+
+x_alc = r2py(R('x_alc'))
+Py_mu_b, Py_std_b, Py_disp_b = loc_scale_m(x_alc, psi="bisquare")
+Py_mu_h, Py_std_h, Py_disp_h = loc_scale_m(x_alc, psi="huber")
+print(f"Appendix Py bisquare: mu={Py_mu_b:.6f}, std.mu={Py_std_b:.6f}, disper={Py_disp_b:.6f}")
+print(f"Appendix Py huber:    mu={Py_mu_h:.6f}, std.mu={Py_std_h:.6f}, disper={Py_disp_h:.6f}")
+
+for label, R_v, Py_v, tol in [
+    ("locScaleM bisquare mu",   R_mu_b,   Py_mu_b,   1e-4),
+    ("locScaleM bisquare std",  R_std_b,  Py_std_b,  1e-3),
+    ("locScaleM bisquare disp", R_disp_b, Py_disp_b, 1e-4),
+    ("locScaleM huber mu",      R_mu_h,   Py_mu_h,   1e-4),
+    ("locScaleM huber std",     R_std_h,  Py_std_h,  1e-3),
+    ("locScaleM huber disp",    R_disp_h, Py_disp_h, 1e-4),
+]:
+    diff = abs(R_v - Py_v)
+    ok   = diff < tol
+    checks_appendix.append((label, diff, ok))
+    print(f"{'PASS' if ok else 'FAIL'}  {label}: |R-Py|={diff:.2e}  (tol={tol:.0e})")
+
+R('data(flour, package="RobStatTM")')
+R('x_fl <- as.vector(flour[,1])')
+R_sm_b = R('scaleM(x_fl, family="bisquare")')[0]
+R_sm_h = R('scaleM(x_fl, family="huber")')[0]
+x_fl = r2py(R('x_fl'))
+Py_sm_b = scale_m(x_fl, psi="bisquare")
+Py_sm_h = scale_m(x_fl, psi="huber")
+print(f"scaleM bisquare: R={R_sm_b:.6f}  Py={Py_sm_b:.6f}")
+print(f"scaleM huber:    R={R_sm_h:.6f}  Py={Py_sm_h:.6f}")
+for label, R_v, Py_v in [("scaleM bisquare", R_sm_b, Py_sm_b), ("scaleM huber", R_sm_h, Py_sm_h)]:
+    diff = abs(R_v - Py_v)
+    ok   = diff < 1e-4
+    checks_appendix.append((label, diff, ok))
+    print(f"{'PASS' if ok else 'FAIL'}  {label}: |R-Py|={diff:.2e}")
+
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+for ax, psi, R_v, Py_v in [(axes[0], "bisquare", R_sm_b, Py_sm_b), (axes[1], "huber", R_sm_h, Py_sm_h)]:
+    ax.hist(x_fl, bins=20, color="#aec7e8", edgecolor="white", density=True)
+    ax.axvline(R_v,  color="crimson", lw=2, ls="--", label=f"R {R_v:.4f}")
+    ax.axvline(Py_v, color="navy", lw=2, ls=":", label=f"NumPy {Py_v:.4f}")
+    ax.set_title(f"scaleM ({psi}) appendix")
+    ax.legend(fontsize=8)
+plt.suptitle("scaleM — flour (R vs NumPy reference appendix)", fontsize=12)
+plt.tight_layout()
+plt.savefig("figures/scaleM_comparison_rpy2.png", dpi=150, bbox_inches="tight")
+plt.show()
+print("Saved: figures/scaleM_comparison_rpy2.png")
+''')
+
 # ── Cell 14: Summary ──────────────────────────────────────────────────────────
 md('''
 ## Summary
 
-Results of all numerical checks (R output via rpy2 vs Python re-implementations
-or sanity checks on robust statistics).
+**Part I** — sanity checks on values extracted from R (`checks`).  
+**Appendix A** — univariate R vs NumPy (`checks_appendix`).
 ''')
 
 code(r'''
-print(f"\n{'='*65}")
-print(f"{'Check':<40} {'|diff|':>10}  {'Status':>6}")
-print(f"{'='*65}")
+print("\\n=== Part I — rpy2 bridge (sanity / extraction) ===")
 passed = 0
 for label, diff, ok in checks:
     status = "PASS" if ok else "FAIL"
     if ok:
         passed += 1
-    marker = "" if ok else "  <<<<<"
-    print(f"{label:<40} {diff:>10.2e}  {status}{marker}")
+    print(f"  {status}  {label}  (diff={diff:.2e})")
+print(f"Part I: {passed}/{len(checks)} checks passed")
 
-print(f"{'='*65}")
-print(f"\nPassed: {passed}/{len(checks)}")
+print("\\n=== Appendix A — univariate R vs NumPy ===")
+pa = 0
+for label, diff, ok in checks_appendix:
+    status = "PASS" if ok else "FAIL"
+    if ok:
+        pa += 1
+    print(f"  {status}  {label}  |R-Py|={diff:.2e}")
+print(f"Appendix: {pa}/{len(checks_appendix)} checks passed")
 
 figures = [
+    "figures/scaleM_bridge_rpy2.png",
     "figures/scaleM_comparison_rpy2.png",
     "figures/lmrobdetMM_figures_rpy2.png",
     "figures/covRobMM_fig63_rpy2.png",
@@ -516,11 +518,9 @@ figures = [
     "figures/pcaRobS_fig610_rpy2.png",
 ]
 missing = [f for f in figures if not os.path.exists(f)]
-print(f"\nFigures saved: {len(figures)-len(missing)}/{len(figures)}")
+print(f"\\nFigures: {len(figures)-len(missing)}/{len(figures)} on disk")
 if missing:
     print("Missing:", missing)
-else:
-    print("All figures present.")
 ''')
 
 # ── Write notebook ─────────────────────────────────────────────────────────────

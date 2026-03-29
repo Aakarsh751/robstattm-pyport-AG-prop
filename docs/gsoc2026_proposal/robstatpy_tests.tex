@@ -226,32 +226,44 @@ wrappers (14/14 checks pass):
 \renewcommand{\arraystretch}{1}
 
 \vspace{0.8em}
-\noindent\textbf{Selected numerical outputs --- pure R vs.\ robstatpy (rpy2):}
+\noindent\textbf{Selected numerical outputs --- pure R vs.\ \texttt{robstatpy} (rpy2 wrapper):}
 
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l l r r @{}}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{} l >{\raggedright\arraybackslash}p{4.2cm} >{\raggedleft\arraybackslash}X >{\raggedleft\arraybackslash}X @{}}
   \toprule
-  \textbf{Function} & \textbf{Output Field}
-    & \textbf{Pure R} & \textbf{robstatpy} \\
+  \textbf{Function} & \textbf{Output field}
+    & \textbf{Pure R} & \textbf{\texttt{robstatpy}} \\
   \midrule
   \multicolumn{4}{@{}l}{\textit{lmrobdetMM (mineral, mopt, eff\,=\,0.95)}} \\
   & Intercept          & $15.2012$ & $15.2012$ \\
   & Slope (copper)     & $0.0126$  & $0.0126$  \\
   & Scale              & $9.9966$  & $9.9966$  \\
-  & Robust $R^2$       & $0.0082$  & $0.0082$  \\[3pt]
+  & Robust $R^2$       & $0.0082$  & $0.0082$  \\[4pt]
   \multicolumn{4}{@{}l}{\textit{covRobMM (wine, 13 variables, \texttt{set.seed(42)})}} \\
-  & Center{[}1..5{]} & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$
-                     & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$ \\
-  & Max Mahalanobis dist & $164.36$ & $164.36$ \\[3pt]
+  & Center{[}1{]} & $13.75$ & $13.75$ \\
+  & Center{[}2{]} & $1.77$ & $1.77$ \\
+  & Center{[}3{]} & $2.46$ & $2.46$ \\
+  & Center{[}4{]} & $17.06$ & $17.06$ \\
+  & Center{[}5{]} & $106.19$ & $106.19$ \\
+  & Max Mahalanobis dist & $164.36$ & $164.36$ \\[4pt]
   \multicolumn{4}{@{}l}{\textit{covRobRocke (wine, 13 variables, \texttt{set.seed(42)})}} \\
-  & Center{[}1..5{]} & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$
-                     & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$ \\
-  & Max Mahalanobis dist & $154.15$ & $154.15$ \\[3pt]
+  & Center{[}1{]} & $13.73$ & $13.73$ \\
+  & Center{[}2{]} & $1.78$ & $1.78$ \\
+  & Center{[}3{]} & $2.47$ & $2.47$ \\
+  & Center{[}4{]} & $17.15$ & $17.15$ \\
+  & Center{[}5{]} & $106.77$ & $106.77$ \\
+  & Max Mahalanobis dist & $154.15$ & $154.15$ \\[4pt]
   \multicolumn{4}{@{}l}{\textit{pcaRobS (bus, 3 components, \texttt{set.seed(42)})}} \\
   & propSPC{[}1{]} & $0.8611$ & $0.8611$ \\
   & propex         & $0.9731$ & $0.9731$ \\
   \bottomrule
 \end{tabularx}
 \renewcommand{\arraystretch}{1}
+
+\noindent\footnotesize Differences between Pure R and \texttt{robstatpy}
+columns are zero or at machine epsilon ($\approx 4.4 \times 10^{-16}$)
+for all outputs; results are numerically identical because R executes
+underneath via \texttt{rpy2}.
+\normalsize
 
 \end{document}

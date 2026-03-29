@@ -8,7 +8,7 @@ Aakarsh Gupta · University of Washington · April 2026
 ## What this repo is
 
 This repository was built to **support and demonstrate** the GSoC 2026 project proposal
-[`docs/gsoc2026_proposal/proposal_v2.pdf`](docs/gsoc2026_proposal/proposal_v2.pdf).
+[`docs/gsoc2026_proposal/proposal_v4.pdf`](docs/gsoc2026_proposal/proposal_v4.pdf).
 
 The proposal describes building **`robstatpy`** — a Python library that wraps the
 [RobStatTM](https://cran.r-project.org/package=RobStatTM) R package, making its
@@ -17,6 +17,20 @@ available to Python users with no R knowledge required.
 
 Everything in this repo is working, runnable code produced **before the GSoC period starts**,
 to demonstrate readiness for the project.
+
+### How the rpy2 “bridge” is built here (important)
+
+| What | Where |
+|------|--------|
+| **Notebook driver** | [`robstattm/python/robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb) — loads `rpy2`, `importr("RobStatTM")`, sets `set_conversion(default_converter)` for Jupyter, defines helpers `R()`, `rx()`, `r2py()`. |
+| **Generator (source of truth for cells)** | [`robstattm/python/build_notebook_rpy2.py`](robstattm/python/build_notebook_rpy2.py) — rebuilds the notebook with `python build_notebook_rpy2.py`. |
+| **Thin `robstattm.*` API calls** | **Not used in the notebook.** After `robstattm = importr("RobStatTM")`, the notebook still calls R via **`R('...')` strings** (e.g. `R('lmrobdetMM(...)')`). So the bridge is **embedded R**, not Python functions wrapping `robstattm.lmrobdetMM(...)`. |
+| **Wrapper-style `robstattm.locScaleM(...)` examples** | [`docs/gsoc2026_proposal/robstatpy_tests.tex`](docs/gsoc2026_proposal/robstatpy_tests.tex) (and PDF) — test-task write-up for `locScaleM` / `scaleM` only. |
+| **Future installable package** | **Not in this repo yet** — no `pyproject.toml` / `pytest` tree; that is the GSoC `robstatpy` deliverable. |
+
+**Notebook layout:** **Part I** walks through `locScaleM`, `scaleM`, `lmrobdetMM`, `covRobMM`/`covRobRocke`, `pcaRobS` via **rpy2** (main line). **Appendix A** holds optional **pure-Python** univariate cross-checks for `locScaleM`/`scaleM` only. **Not implemented here as library wrappers:** `lmrobdetDCML`, `lmrobdet.control` as a standalone Python API, `step.lmrobdet`, `pyinit`, `rob.linear.test`, `KurtSDNew`, external packages (`pense`, `GSE`, `TSGS`), GLM functions.
+
+More detail: [`robstattm/python/NOTEBOOKS.md`](robstattm/python/NOTEBOOKS.md).
 
 ---
 
@@ -76,8 +90,8 @@ All five core RobStatTM functions wrapped and validated:
 robstattm-pyport-AG/
 │
 ├── docs/gsoc2026_proposal/
-│   ├── proposal_v2.pdf          ← GSoC 2026 proposal (read this first)
-│   └── proposal_v2.tex          ← LaTeX source
+│   ├── proposal_v4.pdf          ← GSoC 2026 proposal (read this first)
+│   └── proposal_v4.tex          ← LaTeX source
 │
 ├── robstattm/
 │   ├── python/

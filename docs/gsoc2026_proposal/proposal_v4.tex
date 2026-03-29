@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  GSoC 2026 Proposal — robstatpy: Python Wrappers for RobStatTM   %
-%  Author : Aakarsh Gupta                                   
+%  Version: v4 (working copy; source: proposal_v2.tex)             %
+%  Author : Aakarsh Gupta                                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt, a4paper]{article}
@@ -173,16 +174,18 @@ Robust Statistics R~Package}
 
 \subsection*{Short Description}
 
-The \texttt{RobStatTM} R package (Maronna, Martin, Yohai \& Salibian-Barrera, 2019)
-implements state-of-the-art robust estimators, including MM-regression,
-Rocke's S-estimator for high-dimensional covariance, robust PCA via M-scale
-minimization, and Bianco--Yohai logistic regression.
-While recent Python packages cover some robust methods, the
-\texttt{RobStatTM}-specific implementations, notably the DCML regression
-estimator, robust model selection via RFPE, and robust hypothesis testing,
-remain unavailable in Python.
+The \texttt{RobStatTM} R package supports the Maronna, Martin, Yohai and
+Salibian-Barrera (2019) 2nd edition of \emph{Robust Statistics: Theory and
+Methods (with R)}. As such, \texttt{RobStatTM} implements state-of-the-art
+robust estimators, including bias-robust MM-regression, Rocke's S-estimator
+for robust covariance matrices in high-dimensional data, robust PCA via M-scale minimization, robust model
+selection via RFPE, and Bianco--Yohai robust logistic regression.
+While recent Python packages cover some robust methods, the full range of
+\texttt{RobStatTM}'s modern robust methods, fully explained in
+\emph{Robust Statistics: Theory and Methods}, remains unavailable in Python.
 This project will produce \textbf{\texttt{robstatpy}}, a Python library
-exposing the full \texttt{RobStatTM} function set through lightweight
+exposing the target \texttt{RobStatTM} function set for this project
+(Section~4) through lightweight
 \texttt{rpy2} wrappers whose numerical outputs reproduce the R originals exactly.
 Every wrapper will ship with Python-style documentation modelled on the
 \texttt{RobStatTM} R man pages, a \texttt{pytest} validation suite, and
@@ -296,11 +299,12 @@ The following UW courses form the academic backbone of this project:
 
 \subsection{Relevant Experience and Projects}
 
-\begin{description}[leftmargin=0pt, itemsep=8pt]
+\begin{description}[style=nextline, leftmargin=0pt, itemsep=8pt]
 
   \item[\normalfont\textbf{IT Risk Management and Analyst Intern,
         Virginia Department of Motor Vehicles}
         ]
+  \begin{sloppypar}
   Spearheaded a proof-of-concept initiative to evaluate AI and NLP for
   analysing call-centre interactions, assessing customer sentiment,
   call-resolution efficiency, agent performance, and fraud-related risk
@@ -314,12 +318,14 @@ The following UW courses form the academic backbone of this project:
   decisions.
   This role directly exercised the API-design, packaging, and data-pipeline
   skills that are central to \texttt{robstatpy}.
+  \end{sloppypar}
 
   \item[\normalfont\textbf{Undergraduate Research Volunteer,
         University of Michigan -- Imitation Learning}
         ]
+  \begin{sloppypar}
   Conducted research on Imitation Learning under faculty guidance, training
-  reinforcement-learning and human-guided agents with OpenAI Gym.
+  reinforcement learning and human-guided agents with OpenAI Gym.
   Implemented the DAGGER and HG-DAGGER algorithms from the primary literature
   to improve agent performance, adaptability, and learning efficiency, and
   evaluated all models rigorously using PyTorch.
@@ -328,15 +334,18 @@ The following UW courses form the academic backbone of this project:
   and verify results against published benchmarks, a skill directly
   applicable to wrapping the MM- and S-estimation routines in
   \texttt{RobStatTM}.
+  \end{sloppypar}
 
   \item[\normalfont\textbf{Deep Learning Algorithm for Asthenopia Detection}
         ]
+  \begin{sloppypar}
   Independently conceived and developed a deep-learning image-classification
   pipeline for the early detection of asthenopia (visual fatigue).
   The project was recognised with a \textbf{Gold Award at the Indian Science
   and Engineering Fair} and achieved a top-100 national selection, providing
   evidence of the capacity to drive an independent research project from
   initial conception through to a peer-recognised outcome.
+  \end{sloppypar}
 
 \end{description}
 
@@ -428,7 +437,7 @@ package and all its dependencies automatically.}-installable
 Python package that:
 
 \begin{enumerate}[leftmargin=2em]
-  \item \textbf{Exposes the full \texttt{RobStatTM} API} through
+  \item \textbf{Exposes the target \texttt{RobStatTM} API} (Section~4) through
     \texttt{rpy2} wrappers, accepting NumPy arrays and pandas DataFrames
     and returning native Python objects.
   \item \textbf{Guarantees numerical fidelity:} every output agrees
@@ -470,7 +479,7 @@ Python package that:
 \section{Current \texttt{RobStatTM} Functionality}
 
 The table below lists all \texttt{RobStatTM} R functions recommended
-in \textit{Robust Statistics: Theory and Practice} (Maronna, Martin,
+in \textit{Robust Statistics: Theory and Methods} (Maronna, Martin,
 Yohai, Salibi\'{a}n-Barrera, 2nd ed.), grouped by chapter. These form
 the complete target function set for \texttt{robstatpy}.
 
@@ -506,8 +515,8 @@ the complete target function set for \texttt{robstatpy}.
   \quad\texttt{lmrobdetDCML}
     & Distance-constrained MLE; boosts efficiency over MM
     & 5.9 \\
-  \quad\texttt{pense}$^{\dagger}$
-    & Robust MM elastic net (MM-ridge and MM-lasso as special cases)
+  \quad\texttt{pense}$^{\ast}$
+    & Robust elastic net S estimator (MM-lasso as a special case)
     & 5.1 \\[5pt]
   \multicolumn{3}{@{}l}{\textit{Multivariate Analysis (Chapter 6)}} \\[1pt]
   \quad\texttt{covRobMM}
@@ -517,25 +526,25 @@ the complete target function set for \texttt{robstatpy}.
     & Rocke S-type robust covariance estimator; recommended for $p \geq 10$
     & 6.4.2, 6.4.4 \\
   \quad\texttt{KurtSDNew}
-    & Pe\~{n}a-Prieto highly robust initial covariance estimator
+    & Pe\~{n}a-Prieto highly robust initial location and covariance matrix estimator
     & 6.9.2 \\
   \quad\texttt{pcaRobS}
     & Robust PCA based on a robust scale estimator
     & 6.11.2 \\
-  \quad\texttt{GSE}$^{\dagger}$
+  \quad\texttt{GSE}$^{\ddagger}$
     & Generalized S-estimator for covariance with missing data
     & 6.12.2 \\
-  \quad\texttt{TSGS}$^{\dagger}$
+  \quad\texttt{TSGS}$^{\ddagger}$
     & Two-step GSE covariance estimator for cell-wise outliers
     & 6.13 \\[5pt]
   \multicolumn{3}{@{}l}{\textit{Generalized Linear Models (Chapter 7)}} \\[1pt]
-  \quad\texttt{BYlogreg}$^{\dagger\dagger}$
+  \quad\texttt{BYlogreg}$^{\dagger}$
     & M-estimator for logistic regression
     & 7.2 \\
-  \quad\texttt{WBYlogreg}$^{\dagger\dagger}$
+  \quad\texttt{WBYlogreg}$^{\dagger}$
     & Redescending M-estimator for logistic regression (primary GLM recommendation)
     & 7.2 \\
-  \quad\texttt{WMLlogreg}$^{\dagger\dagger}$
+  \quad\texttt{WMLlogreg}$^{\dagger}$
     & Weighted maximum-likelihood robust logistic regression
     & 7.2 \\
   \bottomrule
@@ -544,14 +553,11 @@ the complete target function set for \texttt{robstatpy}.
 
 \vspace{0.3em}
 \noindent\footnotesize
-$^{\dagger}$~Stretch deliverable (first priority): \texttt{pense},
-\texttt{GSE}, and \texttt{TSGS} are not part of the \texttt{RobStatTM}
-package itself but are available in the \texttt{pense}, \texttt{GSE},
-and \texttt{GSE} R packages respectively, and are recommended alongside
-\texttt{RobStatTM} functions in the book.\\[2pt]
-$^{\dagger\dagger}$~Stretch deliverable (second priority): robust GLM
-wrappers targeted for inclusion after core regression and multivariate
-coverage is complete.
+$^{\ast}$~\texttt{pense} is an R function provided by the \texttt{pense} package.\\[2pt]
+$^{\ddagger}$~\texttt{GSE} and \texttt{TSGS} are R functions provided by the
+\texttt{GSE} package.\\[2pt]
+$^{\dagger}$~Chapter~7 GLM functions appear here as the book-recommended set;
+they are \textbf{not} on the implementation timeline (Section~9).
 \normalsize
 
 %--------------------------------------------------------------------
@@ -576,50 +582,14 @@ native R.
 \href{https://github.com/Aakarsh751/robstattm-pyport-AG-prop/blob/main/docs/gsoc2026_proposal/robstatpy_tests.pdf}%
 {\texttt{robstatpy\_tests.pdf}}
 
-\vspace{0.6em}
-\noindent\textbf{Selected numerical outputs --- pure R vs.\
-\texttt{robstatpy} (rpy2 wrapper):}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{} l l r r @{}}
-  \toprule
-  \textbf{Function} & \textbf{Output Field}
-    & \textbf{Pure R} & \textbf{robstatpy} \\
-  \midrule
-  \multicolumn{4}{@{}l}{\textit{lmrobdetMM (mineral, mopt, eff\,=\,0.95)}} \\
-  & Intercept          & $15.2012$ & $15.2012$ \\
-  & Slope (copper)     & $0.0126$  & $0.0126$  \\
-  & Scale              & $9.9966$  & $9.9966$  \\
-  & Robust $R^2$       & $0.0082$  & $0.0082$  \\[3pt]
-  \multicolumn{4}{@{}l}{\textit{covRobMM (wine, 13 variables, \texttt{set.seed(42)})}} \\
-  & Center{[}1..5{]} & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$
-                     & $13.75,\;1.77,\;2.46,\;17.06,\;106.19$ \\
-  & Max Mahalanobis dist & $164.36$ & $164.36$ \\[3pt]
-  \multicolumn{4}{@{}l}{\textit{covRobRocke (wine, 13 variables, \texttt{set.seed(42)})}} \\
-  & Center{[}1..5{]} & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$
-                     & $13.73,\;1.78,\;2.47,\;17.15,\;106.77$ \\
-  & Max Mahalanobis dist & $154.15$ & $154.15$ \\[3pt]
-  \multicolumn{4}{@{}l}{\textit{pcaRobS (bus, 3 components, \texttt{set.seed(42)})}} \\
-  & propSPC{[}1{]} & $0.8611$ & $0.8611$ \\
-  & propex         & $0.9731$ & $0.9731$ \\
-  \bottomrule
-\end{tabularx}
-\renewcommand{\arraystretch}{1}
-
-\noindent\footnotesize Differences between Pure R and \texttt{robstatpy}
-columns are zero or at machine epsilon ($\approx 4.4 \times 10^{-16}$)
-for all outputs; results are numerically identical because R executes
-underneath via \texttt{rpy2}.
-\normalsize
-
 %--------------------------------------------------------------------
 % SECTION 6 -- PROPOSED WORK
 %--------------------------------------------------------------------
 \section{Proposed Work}
 
-\texttt{robstatpy} exposes the complete \texttt{RobStatTM} function set
-to Python users via lightweight \texttt{rpy2} wrappers, providing
-numerically exact access to every estimator in the library.
+\texttt{robstatpy} exposes the target \texttt{RobStatTM} function set
+(Section~4) to Python users via lightweight \texttt{rpy2} wrappers, providing
+numerically exact access to each in-scope estimator.
 This section describes the wrapper approach and presents code examples
 for key functions already implemented.
 
@@ -644,18 +614,18 @@ re-implementation:
   \item \textbf{Speed of delivery.}  Wrapping a function requires
     writing conversion glue, tests, and documentation, not
     re-deriving the algorithm.
-    This makes it feasible to expose the \emph{entire} API within a
+    This makes it feasible to expose the \emph{full target} API within a
     single GSoC period, rather than a subset.
 \end{enumerate}
 
 \noindent
 Together, these properties make the wrapper approach the most reliable
-path to bringing the full \texttt{RobStatTM} API to Python within a
+path to bringing the in-scope \texttt{RobStatTM} API to Python within a
 single GSoC period, without sacrificing any numerical accuracy.
 
 \subsection{\texttt{rpy2} Wrapper Layer}
 
-Every public \texttt{RobStatTM} function will be wrapped in a Python function
+Every public in-scope \texttt{RobStatTM} function will be wrapped in a Python function
 that:
 \begin{enumerate}[leftmargin=2em]
   \item Accepts NumPy arrays and/or pandas DataFrames.
@@ -663,7 +633,13 @@ that:
     \texttt{numpy2ri}/\texttt{pandas2ri} converters.
   \item Calls the R function inside \texttt{RobStatTM}.
   \item Extracts named elements from the returned R list using
-    \texttt{.rx2()}.
+    \texttt{.rx2()}\footnote{In \texttt{rpy2}, \texttt{rx} and \texttt{rx2}
+    are \emph{delegators} for R's \texttt{[} and \texttt{[[} operators:
+    \texttt{.rx2(\textit{name})} corresponds to \texttt{obj[[\textit{name}]]}
+    in R and is the standard way to pull a single named component (e.g.\ a
+    coefficient vector or residuals) from an R \texttt{list} or fitted-model
+    object. The \texttt{rpy2} vector documentation:
+    \url{https://rpy2.github.io/doc/latest/html/vector.html}.}.
   \item Returns a Python dataclass (or named dict) whose fields match
     the R return values.
 \end{enumerate}
@@ -672,42 +648,48 @@ that:
 \textbf{Architecture diagram:}
 
 \begin{center}
+\small
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{ccccc}
-  \fbox{\texttt{Python user code}} &
-  $\xrightarrow{\text{NumPy/pandas}}$ &
-  \fbox{\texttt{robstatpy API}} &
-  $\xrightarrow{\text{rpy2 bridge}}$ &
-  \fbox{\texttt{RobStatTM (R)}} \\[6pt]
+  \fbox{\texttt{Python user}} &
+  $\xrightarrow{\text{\scriptsize np/pd}}$ &
+  \fbox{\texttt{robstatpy}} &
+  $\xrightarrow{\text{\scriptsize rpy2}}$ &
+  \fbox{\texttt{RobStatTM}} \\[6pt]
   & & $\downarrow$ & & $\downarrow$ \\[4pt]
-  & & \fbox{\texttt{Python dataclass}} &
-  $\xleftarrow{\text{.rx2() extract}}$ &
+  & & \fbox{\texttt{dataclass}} &
+  $\xleftarrow{\text{\scriptsize \texttt{.rx2()}}}$ &
   \fbox{\texttt{R list}} \\
 \end{tabular}
 \end{center}
+\normalsize
 
 \noindent\textbf{Key design decisions:}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=3pt]
   \item \textbf{Global conversion context.}
-    \texttt{rpy2}~3.6+ stores conversion rules in a
+    \texttt{rpy2}~3.6+ stores conversion rules in a\\
     \texttt{contextvars.ContextVar}, which is lost across Jupyter's
     async task boundaries.
-    We patch this by calling \texttt{set\_conversion(default\_converter)}
-    at import time, ensuring conversions persist across cells.
+    We patch this at import time by calling \texttt{set\_conversion}
+    with \texttt{default\_converter}, ensuring conversions persist
+    across cells.
   \item \textbf{R dot-to-Python underscore mapping.}
-    \texttt{importr()} automatically maps \texttt{lmrobdet.control} to
-    \texttt{lmrobdet\_control}.
+    \texttt{importr()} automatically maps\\
+    \texttt{lmrobdet.control} to \texttt{lmrobdet\_control}.
     We document both names in every docstring.
-  \item \textbf{Lazy R package loading.}
-    \texttt{RobStatTM} is loaded via \texttt{importr} only on first
-    use, so importing \texttt{robstatpy} in a pure-Python context
-    (e.g.\ for type hints or documentation builds) does not require R.
+  \item \textbf{Deferred R package loading.}
+    Calling \texttt{importr("RobStatTM")} at module import time starts R
+    immediately; the package design can instead defer \texttt{importr}
+    until the first wrapper call so that a bare \texttt{import robstatpy}
+    (e.g.\ for type hints or doc builds) avoids initializing R until a
+    function is actually used.
 \end{itemize}
 
 
 \subsubsection*{Code Example: \texttt{rpy2} Wrapper for \texttt{lmrobdetMM}}
 
-\begin{lstlisting}[style=python, caption={rpy2 wrapper for lmrobdetMM (regression; demonstrated with mopt family, efficiency=0.95)}]
+\begin{lstlisting}[style=python, title={\footnotesize rpy2 wrapper for \texttt{lmrobdetMM} (mopt family, efficiency\,=\,0.95)}]
 def lmrobdet_mm(formula, data, family="mopt", efficiency=0.95):
     """Robust MM-regression via RobStatTM::lmrobdetMM().
 
@@ -747,52 +729,36 @@ def lmrobdet_mm(formula, data, family="mopt", efficiency=0.95):
 
 
 %--------------------------------------------------------------------
-% SECTION 6 -- ALTERNATIVE IMPLEMENTATION STRATEGIES
+% SECTION 7 -- DIRECT PYTHON IMPLEMENTATION (SECONDARY TRACK)
 %--------------------------------------------------------------------
-\section{Alternative Implementation Strategies}
+\section{What about a Direct Python Implementation?}
 
-Two additional approaches were implemented as cross-checks and to
-demonstrate different trade-offs in R--Python interoperability.
-Both are described briefly here; full code is available in the
-project notebooks.
+A direct Python re-implementation of \texttt{RobStatTM} is \textbf{not the main
+priority} of this project. The core deliverable is a complete \texttt{rpy2}
+wrapper layer whose outputs match \texttt{RobStatTM} numerically.
 
-\subsection{Strategy~B: Subprocess + JSON Wrappers}
+Some native Python implementations may be added where appropriate. They provide
+an independent code path to the same estimators, so benchmarks can compare
+accuracy (e.g.\ agreement with R and with the wrappers), wall-clock cost, and
+scaling with problem size side by side with the \texttt{rpy2}-based wrappers,
+isolating bridge and conversion effects from the underlying algorithm cost.
 
-As a comparison baseline, the project also implements wrappers using
-\texttt{subprocess} calls to \texttt{Rscript} with
-\texttt{jsonlite}-serialised results.
-This approach:
-\begin{itemize}[leftmargin=1.5em]
-  \item Requires no compiled \texttt{rpy2} dependency (useful on systems
-    where building \texttt{rpy2} is difficult).
-  \item Incurs higher per-call overhead due to R process startup.
-  \item Serves as a cross-check: if both wrappers produce identical
-    outputs, we have high confidence in the conversion layer.
-\end{itemize}
-
-% [code available in robstatpy\_comparison.ipynb]
-
-
-\subsection{Strategy~C: Direct Python Re-implementation}
-
-For \texttt{locScaleM} and \texttt{scaleM}, the project provides
-pure-Python re-implementations to serve as the GSoC test tasks and to
-establish a methodology for future direct porting.
-
-% SECTION 7 -- EVALUATION PLAN
+% SECTION 8 -- COMPARATIVE BENCHMARKS EVALUATION
 %--------------------------------------------------------------------
-\section{Evaluation Plan: Comparative Benchmarks}
+\section{Comparative Benchmarks Evaluation}
+\label{sec:evaluation}
 
-A central deliverable is a rigorous comparison of the three implementation
-strategies across three dimensions:
+A central deliverable is a rigorous evaluation of the primary
+\texttt{rpy2} wrapper path: comparison to direct R calls and, where
+relevant, to classical Python estimators, along three dimensions:
 
 \subsection{Metrics}
 
 \begin{enumerate}[leftmargin=2em]
   \item \textbf{Accuracy.}
     For each function, compute $\max_i |y_i^{\text{Py}} - y_i^{\text{R}}|$
-    across all return fields, for both the rpy2 wrapper (expected: $0$)
-    and the pure-Python port (expected: $< 10^{-6}$).
+    across all return fields for the \texttt{rpy2} wrapper against a direct
+    R session call (expected: $0$).
   \item \textbf{Speed.}
     Wall-clock time per call, measured with \texttt{timeit} over 100
     repetitions on synthetic data of sizes $n \in \{100,\,1000,\,10000\}$
@@ -800,8 +766,10 @@ strategies across three dimensions:
     Breakdown: R computation time vs.\ conversion overhead.
   \item \textbf{Coverage.}
     Number of target functions wrapped and passing all validation checks,
-    tracked against the 18-function target set in Section~4
-    (e.g., 6/18 at proposal time; 18/18 as the final deliverable).
+    tracked against the core wrapper set in Section~9
+    (e.g., 6/15 at proposal time; 15/15 as the final deliverable for that set).
+    Section~4 lists the full 18-function textbook companion set, including
+    Chapter~7 (reference only; not on the timeline).
 \end{enumerate}
 
 \subsection{Benchmark Protocol}
@@ -818,8 +786,8 @@ strategies across three dimensions:
     reproduce published results.
 
   \item \textbf{Functions benchmarked:}
-    \texttt{locScaleM}, \texttt{scaleM}, \texttt{lmrobdetMM},
-    \texttt{covRobMM}, \texttt{covRobRocke}, \texttt{pcaRobS}.
+    \texttt{lmrobdetMM}, \texttt{covRobMM}, \texttt{covRobRocke},
+    \texttt{pcaRobS}.
 
   \item \textbf{Accuracy comparison:}
     Each \texttt{robstatpy} wrapper output is compared field-by-field
@@ -833,7 +801,8 @@ strategies across three dimensions:
     Wall-clock time per call measured with \texttt{timeit} over 100
     repetitions. Comparison grid: native R session
     vs.\ \texttt{rpy2} wrapper (showing bridge overhead)
-    vs.\ subprocess wrapper vs.\ nearest Python equivalent.
+    vs.\ nearest classical baseline (\texttt{scikit-learn} or
+    \texttt{statsmodels}, when applicable).
 
   \item \textbf{Reporting:}
     Results presented in a Jupyter notebook with timing tables,
@@ -841,7 +810,7 @@ strategies across three dimensions:
 \end{itemize}
 
 %--------------------------------------------------------------------
-% SECTION 8 -- IMPLEMENTATION PLAN
+% SECTION 9 -- IMPLEMENTATION PLAN
 %--------------------------------------------------------------------
 \section{Implementation Plan and Timeline}
 
@@ -849,6 +818,15 @@ The project follows a \textbf{22-week large-project timeline}
 (350~hours), structured around the GSoC 2026 calendar. Testing and
 documentation are treated as first-class deliverables and are built
 incrementally within each phase rather than deferred.
+Section~\ref{sec:resulting-robstatpy} summarises the resulting
+\textbf{RobstatPY} features (validation, benchmarks, documentation, tutorials).
+
+\medskip
+\noindent\textit{Unless otherwise noted, each weekly milestone includes
+field-by-field \texttt{pytest} checks against direct R calls, a NumPy-style
+docstring on every new wrapper, and a Sphinx API entry produced with
+\texttt{autodoc} (initial stubs are acceptable until the documentation
+phase in Weeks~13--16).}
 
 \subsection{Community Bonding Period (May 1 -- May 24)}
 
@@ -865,119 +843,115 @@ incrementally within each phase rather than deferred.
     cadence and milestone criteria with mentors.
 \end{itemize}
 
-\subsection{Phase 1: Univariate Wrappers (Weeks 1--3, May 25 -- Jun 14)}
+\subsection{Phase 1: Univariate Wrappers (Weeks 1--2, May 25 -- Jun 7)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  1 & \texttt{locScaleM} rpy2 wrapper (bisquare, huber, mopt families;
-    eff $\in \{0.85,\,0.90,\,0.95\}$). Full \texttt{pytest} suite
-    verifying field-by-field agreement with R. Docstring and API
-    docs entry. \\
-  2 & \texttt{mScale} rpy2 wrapper. Document relationship between
-    \texttt{mScale} and \texttt{locScaleM}. Subprocess wrapper as
-    numerical cross-check. Pytest suite. \\
-  3 & \texttt{lmrobdet.control} wrapper exposing all tuning parameters.
+  1 & \texttt{locScaleM} and \texttt{mScale} \texttt{rpy2} wrappers
+    (bisquare, huber, mopt families; eff $\in \{0.85,\,0.90,\,0.95\}$).
+    Full \texttt{pytest} suite vs.\ R; document the relationship between
+    \texttt{mScale} and \texttt{locScaleM}; numerical cross-checks (same
+    inputs and seeds). \\
+  2 & \texttt{lmrobdet.control} wrapper exposing all tuning parameters.
     Reproduce Chapter~2 textbook examples in a Jupyter notebook.
     Integration tests for the complete univariate module. \\
   \bottomrule
 \end{tabularx}
 
-\subsection{Phase 2: Robust Regression (Weeks 4--7, Jun 15 -- Jul 5)}
+\subsection{Phase 2: Robust Regression (Weeks 3--6, Jun 8 -- Jul 5)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  4 & \texttt{lmrobdetMM} wrapper: formula interface, coefficient
+  3 & \texttt{lmrobdetMM} wrapper: formula interface, coefficient
     extraction, residuals, robustness weights, scale.
-    Pytest suite; docstring. \\
-  5 & \texttt{lmrobdetMM} diagnostics: robust $R^2$, fitted values,
+    Pytest suite. \\
+  4 & \texttt{lmrobdetMM} diagnostics: robust $R^2$, fitted values,
     summary table mirroring \texttt{summary()} output.
     \texttt{lmrobdetDCML} wrapper + pytest. \\
-  6 & \texttt{step.lmrobdet} wrapper for stepwise model selection.
+  5 & \texttt{step.lmrobdet} wrapper for stepwise model selection.
     \texttt{pyinit} and \texttt{rob.linear.test} wrappers.
     Reproduce mineral dataset examples (Figs~5.1--5.7). \\
-  7 & \textbf{Midterm milestone:} regression module complete with
-    $\geq 90\%$ pytest coverage. Docstrings for all regression
-    wrappers. Midterm evaluation report. \\
+  6 & \textbf{Midterm milestone:} regression module complete with
+    $\geq 90\%$ pytest coverage. Midterm evaluation report. \\
   \bottomrule
 \end{tabularx}
 
 \vspace{0.3em}
 \noindent\textbf{Midterm Evaluation (Jul 6--10):}
-Deliverables: univariate and regression wrappers (7 functions), pytest
-suite, Chapter~2 and~5 reproduction notebooks,
+Deliverables: all univariate and regression wrappers scheduled for
+Phases~1--2, pytest suite, Chapter~2 and~5 reproduction notebooks,
 $\geq 90\%$ test coverage on delivered modules.
 
-\subsection{Phase 3: Robust Covariance and PCA (Weeks 8--11, Jul 13 -- Aug 9)}
+\subsection{Phase 3: Robust Covariance and PCA (Weeks 7--10, Jul 13 -- Aug 9)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  8  & \texttt{covRobMM} wrapper: center, covariance, correlation,
-     Mahalanobis distances, weights. Pytest suite; docstring. \\
-  9  & \texttt{covRobRocke} and \texttt{KurtSDNew} wrappers.
+  7  & \texttt{covRobMM} wrapper: center, covariance, correlation,
+     Mahalanobis distances, weights. Pytest suite. \\
+  8  & \texttt{covRobRocke} and \texttt{KurtSDNew} wrappers.
      Reproduce wine dataset examples (Fig~6.3). Pytest suite. \\
-  10 & \texttt{pcaRobS} wrapper: eigenvectors, proportion of variance,
+  9 & \texttt{pcaRobS} wrapper: eigenvectors, proportion of variance,
      scores. Reproduce bus dataset examples (Fig~6.10). Pytest suite. \\
-  11 & Distance--distance plot and scree plot utility functions.
+  10 & Distance--distance plot and scree plot utility functions.
      Documentation pass for all multivariate wrappers.
      End-to-end integration tests for covariance and PCA module. \\
   \bottomrule
 \end{tabularx}
 
-\subsection{Phase 4: Benchmarks and Comparative Study (Weeks 12--13, Aug 10 -- Aug 23)}
+\subsection{Phase 4: Benchmarks and Comparative Study (Weeks 11--12, Aug 10 -- Aug 23)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  12 & Speed benchmarks: native R session vs.\ rpy2 wrapper vs.\
-     subprocess wrapper vs.\ \texttt{scikit-learn}/\texttt{statsmodels}
-     baselines. Synthetic contaminated Gaussian data generator. \\
-  13 & Accuracy benchmarks: max absolute error across all functions
+  11 & Speed benchmarks: native R session vs.\ \texttt{rpy2} wrappers vs.\
+     \texttt{scikit-learn}/\texttt{statsmodels} baselines.
+     Synthetic contaminated Gaussian data generator. \\
+  12 & Accuracy benchmarks: max absolute error across all functions
      and parameter combinations. Tabulate rpy2 bridge overhead.
      Comparative Jupyter notebook with timing tables, accuracy
      results, and commentary. \\
   \bottomrule
 \end{tabularx}
 
-\subsection{Phase 5: Documentation, Packaging, and Tutorials (Weeks 14--17, Aug 24 -- Sep 20)}
+\subsection{Phase 5: Documentation, Packaging, and Tutorials (Weeks 13--16, Aug 24 -- Sep 20)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  14 & Complete Sphinx API documentation for all delivered wrappers.
+  13 & Complete Sphinx API documentation for all delivered wrappers.
      Every function has a docstring modelled on the R man page,
      with usage examples. Publish on ReadTheDocs. \\
-  15 & Publish \texttt{robstatpy} on PyPI (sdist + wheel).
+  14 & Publish \texttt{robstatpy} on PyPI (sdist + wheel).
      Installation guide covering R and \texttt{rpy2} setup on
      Linux/macOS/Windows with troubleshooting notes. \\
-  16 & Tutorial Jupyter notebooks reproducing key textbook examples
+  15 & Tutorial Jupyter notebooks reproducing key textbook examples
      from Chapters~2, 5, and~6 of Maronna et al.\ (2019). \\
-  17 & Final integration tests across all modules end-to-end.
+  16 & Final integration tests across all modules end-to-end.
      Contributor guide and README polish. \\
   \bottomrule
 \end{tabularx}
 
-\subsection{Phase 6: Stretch Wrappers and Final Submission (Weeks 18--22, Sep 21 -- Nov 2)}
+\subsection{Phase 6: Stretch Wrappers, Native Python Track, and Final Submission (Weeks 17--22, Sep 21 -- Nov 2)}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \toprule
   \textbf{Week} & \textbf{Deliverables} \\
   \midrule
-  18--19 & \textbf{GLM wrappers (stretch):}
-     \texttt{BYlogreg}, \texttt{WBYlogreg}, \texttt{WMLlogreg}
-     wrappers for robust logistic regression.
-     Pytest suite and docstrings. Reproduce Chapter~7 examples. \\
-  20 & \textbf{Additional stretch wrappers:}
-     \texttt{lmrobM} (regression for designed experiments).
-     \texttt{pense}, \texttt{GSE}, \texttt{TSGS} wrappers
-     where time permits. \\
+  17--18 & \textbf{Stretch wrappers (external packages):}
+     \texttt{pense}, \texttt{GSE}, \texttt{TSGS} where time permits.
+     Pytest suite. \\
+  19--20 & \textbf{Native Python port and comparison (secondary track):}
+     consolidate native reference code for selected functions where
+     available; run side-by-side benchmarks vs.\ \texttt{rpy2} wrappers
+     and R; document methodology, scope, and limits. \\
   21 & Final documentation review: ensure all wrappers are covered,
      all examples run, all tests pass. Address outstanding
      mentor feedback. \\
@@ -988,36 +962,31 @@ $\geq 90\%$ test coverage on delivered modules.
 \end{tabularx}
 
 %--------------------------------------------------------------------
-% SECTION 9 -- DELIVERABLES
+% SECTION 10 -- RESULTING ROBSTATPY FEATURES
 %--------------------------------------------------------------------
-\section{Deliverables}
+\section{Resulting RobstatPY Features}
+\label{sec:resulting-robstatpy}
 
-\subsection{Required Deliverables}
+\noindent
+\textbf{RobstatPY} is the outcome of the project: a pip-installable
+\texttt{robstatpy} package that brings the in-scope \texttt{RobStatTM}
+function set (Section~4) into Python with the same inputs, outputs, and
+numerical behaviour as R through lightweight \texttt{rpy2} wrappers, so
+users gain the full estimation capability of those methods without
+reimplementing them.
+
+\subsection{Validation, benchmarks, and documentation}
 
 \begin{enumerate}[leftmargin=2em, itemsep=4pt]
-  \item \textbf{\texttt{robstatpy} Python package} (pip-installable)
-    exposing the following \texttt{RobStatTM} functions via
-    lightweight \texttt{rpy2} wrappers:
-    \begin{itemize}[leftmargin=1.5em]
-      \item \texttt{locScaleM}, \texttt{mScale} (univariate
-        location and scale)
-      \item \texttt{lmrobdetMM}, \texttt{lmrobdetDCML},
-        \texttt{lmrobdet.control}, \texttt{step.lmrobdet},
-        \texttt{pyinit}, \texttt{rob.linear.test} (regression)
-      \item \texttt{covRobMM}, \texttt{covRobRocke},
-        \texttt{KurtSDNew} (robust covariance)
-      \item \texttt{pcaRobS} (robust PCA)
-    \end{itemize}
-
   \item \textbf{Pytest test suite} achieving $\geq 90\%$ coverage
     across all wrapper functions, with field-by-field comparison
     against direct R calls confirming zero numerical difference for
     every output.
 
   \item \textbf{Comparative benchmark notebook} evaluating speed
-    (native R vs.\ rpy2 vs.\ subprocess) and accuracy across
-    all wrapped functions, on both synthetic contaminated data
-    and real book datasets (mineral, wine, bus).
+    (native R vs.\ \texttt{rpy2} wrappers) and accuracy of the wrappers
+    against R across all delivered functions, on both synthetic contaminated
+    data and real book datasets (mineral, wine, bus).
 
   \item \textbf{Sphinx API documentation} published on ReadTheDocs,
     with docstrings modelled on the \texttt{RobStatTM} R man pages
@@ -1028,32 +997,17 @@ $\geq 90\%$ test coverage on delivered modules.
     demonstrating end-to-end workflows in Python.
 \end{enumerate}
 
-\subsection{Stretch Deliverables}
+\subsection{External package wrappers (stretch)}
 
-\begin{enumerate}[leftmargin=2em, itemsep=4pt]
-  \item \textbf{GLM wrappers} (first priority): \texttt{BYlogreg},
-    \texttt{WBYlogreg}, \texttt{WMLlogreg} for robust logistic
-    regression (Chapter~7); \texttt{lmrobM} for regression with
-    designed experiments (Chapter~4). Pytest suite and docstrings
-    for each.
-
-  \item \textbf{External package wrappers} (first priority):
-    \texttt{pense} (robust MM elastic net), \texttt{GSE}
-    (generalised S-estimator for missing data), and \texttt{TSGS}
-    (two-step cell-wise outlier estimator) --- recommended alongside
-    \texttt{RobStatTM} functions in the book but residing in
-    separate R packages.
-
-  \item \textbf{Complete native Python port} of the remaining
-    \texttt{RobStatTM} functions (\texttt{lmrobdetMM},
-    \texttt{covRobMM}, \texttt{covRobRocke}, \texttt{pcaRobS}),
-    validated against the rpy2 wrappers, with optional
-    \texttt{numba} JIT acceleration for performance-critical
-    inner loops.
-\end{enumerate}
+\noindent
+\textbf{External package wrappers (first priority):}
+\texttt{pense} (robust MM elastic net), \texttt{GSE} (generalised
+S-estimator for missing data), and \texttt{TSGS} (two-step cell-wise
+outlier estimator) --- recommended alongside \texttt{RobStatTM} functions
+in the book but residing in separate R packages.
 
 %--------------------------------------------------------------------
-% SECTION 10 -- DISTRIBUTION
+% SECTION 11 -- DISTRIBUTION
 %--------------------------------------------------------------------
 \section{Distribution and Packaging}
 
@@ -1066,7 +1020,7 @@ The package will be hosted on GitHub under an open-source license
 (MIT or Apache~2.0, to be confirmed with mentors).
 Users can install directly from the repository:
 
-\begin{lstlisting}[style=python, caption={GitHub installation}, numbers=none]
+\begin{lstlisting}[style=python, title={\footnotesize GitHub installation}, numbers=none]
 pip install git+https://github.com/Aakarsh751/robstatpy.git
 \end{lstlisting}
 
@@ -1092,7 +1046,7 @@ The repository will include:
 Stable, versioned releases will be published on the Python Package Index
 (PyPI), enabling standard installation:
 
-\begin{lstlisting}[style=python, caption={PyPI installation}, numbers=none]
+\begin{lstlisting}[style=python, title={\footnotesize PyPI installation}, numbers=none]
 pip install robstatpy
 \end{lstlisting}
 
@@ -1109,20 +1063,23 @@ The packaging workflow uses:
 \end{itemize}
 
 \noindent
-\textbf{R dependency handling:}
+\textbf{R dependency handling:}\/
 Since \texttt{robstatpy} requires a working R installation with
 \texttt{RobStatTM}, the package will:
-(1) detect \texttt{R\_HOME} automatically at import time,
-(2) provide a clear \texttt{ImportError} message with installation
-instructions if R is not found, and
-(3) include a \texttt{robstatpy.check\_setup()} utility that validates
-the R environment and prints version information.
-The installation guide will cover R setup on all three major platforms
-(Linux via \texttt{apt}/\texttt{conda}, macOS via Homebrew, Windows via
-the CRAN installer).
+\begin{enumerate}[label=(\arabic*), leftmargin=2.2em, itemsep=2pt, topsep=2pt]
+  \item detect \texttt{R\_HOME} automatically at import time;
+  \item provide a clear \texttt{ImportError} message with installation
+    instructions if R is not found;
+  \item include a \texttt{robstatpy.check\_setup()} utility that validates
+    the R environment and prints version information.
+\end{enumerate}
+\noindent
+The installation guide will cover R setup on all three major platforms:
+Linux (\texttt{apt} or \texttt{conda}), macOS (Homebrew), and Windows
+(the CRAN installer).
 
 %--------------------------------------------------------------------
-% SECTION 11 -- RISKS
+% SECTION 12 -- RISKS
 %--------------------------------------------------------------------
 \section{Risks and Mitigation Strategies}
 
@@ -1135,8 +1092,9 @@ the CRAN installer).
   \midrule
   \texttt{rpy2} build failures on Windows/macOS &
   Delays CI and user installation &
-  Provide pre-built wheels where possible; subprocess wrapper as
-  independent fallback; Docker image for reproducible builds \\[4pt]
+  Provide pre-built wheels where possible; document Conda/conda-forge
+  installs and Docker-based workflows as fallbacks; pin supported R
+  versions in CI \\[4pt]
 
   R or \texttt{RobStatTM} version incompatibility &
   Wrapper outputs may differ across R versions; breaking API changes
@@ -1167,7 +1125,7 @@ the CRAN installer).
 \renewcommand{\arraystretch}{1}
 
 %--------------------------------------------------------------------
-% SECTION 12 -- REFERENCES
+% SECTION 13 -- REFERENCES
 %--------------------------------------------------------------------
 \section{References}
 

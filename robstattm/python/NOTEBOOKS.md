@@ -9,7 +9,7 @@ bridges to call R:
 | Notebook | Builder | R Bridge | Status |
 |---|---|---|---|
 | `robstatpy_comparison.ipynb` | `build_notebook.py` | subprocess + jsonlite | 15/15 checks pass |
-| `robstatpy_comparison_rpy2.ipynb` | `build_notebook_rpy2.py` | rpy2 3.6.6 | 14/14 checks pass |
+| `robstatpy_comparison_rpy2.ipynb` | `build_notebook_rpy2.py` | rpy2 3.6.6 | Part I = rpy2 bridge; Appendix A = univariate R vs NumPy |
 
 ---
 
