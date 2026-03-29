@@ -1,5 +1,7 @@
 # RobStatTM comparison notebooks
 
+These notebooks support the **RobStatTMPY** GSoC proposal (install name on PyPI: `robstattmpy`).
+
 ## `robstatpy_comparison_rpy2.ipynb` (primary)
 
 Calls **RobStatTM** from Python using **rpy2**. This is the main demonstration for the GSoC proposal.

@@ -1,6 +1,6 @@
 # robstattm-pyport-AG
 
-**Companion repository for the GSoC 2026 proposal: Python Wrappers for RobStatTM**
+**Companion repository for the GSoC 2026 proposal: RobStatTMPY (Python wrappers for RobStatTM)**
 Aakarsh Gupta · University of Washington · April 2026
 
 ---
@@ -10,7 +10,7 @@ Aakarsh Gupta · University of Washington · April 2026
 This repository was built to **support and demonstrate** the GSoC 2026 project proposal
 [`docs/gsoc2026_proposal/proposal_v4.pdf`](docs/gsoc2026_proposal/proposal_v4.pdf).
 
-The proposal describes building **`robstatpy`** — a Python library that wraps the
+The proposal describes building **RobStatTMPY** — a Python library that wraps the
 [RobStatTM](https://cran.r-project.org/package=RobStatTM) R package, making its
 robust statistical estimators (MM-regression, robust covariance, robust PCA, and more)
 available to Python users with no R knowledge required.
@@ -23,9 +23,9 @@ to demonstrate readiness for the project.
 | What | Where |
 |------|--------|
 | **Main notebook** | [`robstattm/python/robstatpy_comparison_rpy2.ipynb`](robstattm/python/robstatpy_comparison_rpy2.ipynb) — loads `rpy2`, `importr("RobStatTM")`, `set_conversion(default_converter)`, helpers `R()`, `rx()`, `r2py()`. |
-| **Calling style** | Fits are run with **`R('...')`** (R code strings), not `robstattm.lmrobdetMM(...)`-style calls. The **installable `robstatpy` package** will expose proper Python wrappers. |
+| **Calling style** | Fits are run with **`R('...')`** (R code strings), not `robstattm.lmrobdetMM(...)`-style calls. The **installable RobStatTMPY** package (`pip install robstattmpy`) will expose proper Python wrappers. |
 | **GSoC test tasks (write-up)** | [`docs/gsoc2026_proposal/robstatpy_tests.pdf`](docs/gsoc2026_proposal/robstatpy_tests.pdf) — `locScaleM` / `scaleM` examples and validation. |
-| **Installable package** | **Not here yet** — no `pyproject.toml` / `pytest`; that is the GSoC deliverable. |
+| **Installable package** | **Not here yet** — no `pyproject.toml` / `pytest`; **RobStatTMPY** is the GSoC deliverable. |
 
 **Notebook layout:** **Part I** = `locScaleM`, `scaleM`, `lmrobdetMM`, `covRobMM`/`covRobRocke`, `pcaRobS` via **rpy2**. **Appendix A** = optional NumPy univariate cross-checks only. **Not in this notebook as wrappers:** `lmrobdetDCML`, standalone `lmrobdet.control`, `step.lmrobdet`, `pyinit`, `rob.linear.test`, `KurtSDNew`, `pense` / `GSE` / `TSGS`, GLM.
 
