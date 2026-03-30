@@ -8,7 +8,7 @@ Aakarsh Gupta · University of Washington · April 2026
 ## What this repo is
 
 This repository was built to **support and demonstrate** the GSoC 2026 project proposal
-[`docs/gsoc2026_proposal/proposal_v4.pdf`](docs/gsoc2026_proposal/proposal_v4.pdf).
+[`docs/gsoc2026_proposal/RobStatTM-Py GSOC2026 Proposal.pdf`](docs/gsoc2026_proposal/RobStatTM-Py%20GSOC2026%20Proposal.pdf).
 
 The proposal describes building **RobStatTM-Py**, a Python library that wraps the
 [RobStatTM](https://cran.r-project.org/package=RobStatTM) R package, making its
@@ -87,7 +87,7 @@ All five core RobStatTM functions wrapped and validated:
 robstattm-pyport-AG/
 │
 ├── docs/gsoc2026_proposal/
-│   └── proposal_v4.pdf          ← GSoC 2026 proposal (PDF only on this repo)
+│   └── RobStatTM-Py GSOC2026 Proposal.pdf          ← GSoC 2026 proposal (PDF only on this repo)
 │
 ├── robstattm/
 │   ├── python/
@@ -150,3 +150,6 @@ python ch2_foundations_demo.py
 - **PCRA package:** [PCRA on CRAN](https://cran.r-project.org/package=PCRA)
 - **GSoC organization:** R Project for Statistical Computing
 - **Mentors:** Doug Martin (UW), Matias Salibian-Barrera (UBC), Brian Peterson
+
+
+
