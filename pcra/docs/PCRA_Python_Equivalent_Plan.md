@@ -206,14 +206,14 @@ PCRA depends directly on RobStatTM for three of its most important capabilities:
 | Robust scale (M-estimator, mOpt) | `scaleM(family="mopt")` | Table 2.8 |
 | Robust regression | `lmrobdetMM` | Used in SFM robust plots |
 
-A working Python **RobStatTMPY** package (the GSoC deliverable; `pip install robstattmpy`) is a hard prerequisite
+A working Python **RobStatTM-Py** package (the GSoC deliverable; `pip install robstatm-py`) is a hard prerequisite
 for the PCRA Python equivalent. Once the robust statistics layer exists natively in
 Python, the PCRA functions listed in Section 2–3 above can be built on top of it.
 
 ### Phased dependency diagram
 
 ```
-GSoC 2026 Core (RobStatTMPY)
+GSoC 2026 Core (RobStatTM-Py)
   ├── locScaleM, scaleM, lmrobdetMM, covRobMM, covRobRocke, pcaRobS
   └── Validated against R ground truth via rpy2 test oracle
           │
@@ -241,7 +241,7 @@ The side-by-side comparison is available as a single organized PDF:
 
 1. **Feasibility**: Full PCRA chapter reproduction is achievable in pure Python with
    NumPy, SciPy, pandas, matplotlib, and cvxpy — no R required at runtime.
-2. **Scope clarity**: The robust statistics core (RobStatTMPY) is a well-defined,
+2. **Scope clarity**: The robust statistics core (RobStatTM-Py) is a well-defined,
    self-contained first deliverable. PCRA adds a portfolio analytics layer on top.
 3. **Presentation material**: The Ch2_Comparison.pdf can be shown directly as evidence
    of progress in GSoC midterm/final evaluations and in the proposal itself.

@@ -1,6 +1,6 @@
 # RobStatTM comparison notebooks
 
-These notebooks support the **RobStatTMPY** GSoC proposal (install name on PyPI: `robstattmpy`).
+These notebooks support the **RobStatTM-Py** GSoC proposal (install name on PyPI: `robstatm-py`).
 
 ## `robstatpy_comparison_rpy2.ipynb` (primary)
 
