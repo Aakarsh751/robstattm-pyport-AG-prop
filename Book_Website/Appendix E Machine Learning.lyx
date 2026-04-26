@@ -1,0 +1,8035 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass svmono
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{makeidx}% allows index generation
+% standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}% used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%\usepackage[ style=authoryear,natbib=true,giveninits=true,backend=biber,maxcitenames=2]{biblatex}
+\usepackage[style=authoryear,natbib=true,firstinits=false,backend=biber,maxcitenames=2]{biblatex}
+
+
+\setlength{\bibitemsep}{0.5\baselineskip}
+\DeclareNameAlias{sortname}{family-given}
+
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}
+{\addbibresource[location=local]{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}
+    {\addbibresource[location=local]{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}
+        {\addbibresource[location=local]{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}}
+        {   \IfFileExists{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}
+            {\addbibresource[location=local]{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}}
+            {}
+        }
+    }
+}
+\renewcommand\cite{\citet}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[p,osf]{stickstootext}
+\usepackage[stix2,vvarbb]{newtxmath}
+\usepackage[varqu,varl]{inconsolata}
+% \usepackage{txfonts}
+\usepackage{upgreek}
+
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+{\input{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+    {\input{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+        {\input{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+        {   \IfFileExists{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+            {\input{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+            {}
+        }
+    }
+}
+
+\belowsink=90pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options graybox,envcountchap,sectrefs
+\use_default_options false
+\master svmono_book-master.lyx
+\begin_modules
+knitr
+subequations
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfstartview=XYZ null null 1.25,pdfpagemode=UseNone"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 0
+\use_minted 0
+\branch use_only_in_child
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<include=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(
+\end_layout
+
+\begin_layout Plain Layout
+
+	keep.source=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	message=FALSE, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.path='Plots/', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.align='center', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.width=4, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.height=3, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.keep='last',
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.show='hide',
+\end_layout
+
+\begin_layout Plain Layout
+
+	dev.args=list(pointsize=10),
+\end_layout
+
+\begin_layout Plain Layout
+
+	cache=FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy.opts=list(width.cutoff=40))
+\end_layout
+
+\begin_layout Plain Layout
+
+options(width=70)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(PCRA)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{chapter}{4} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+MACHINE LEARNING
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:AppendixE"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Planned for publication in 2026 by R.
+ Douglas Martin, Thomas K.
+ Philips, Bernd Scherer and Kirk Li.
+ All rights reserved.
+ © Copyright 2025
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+10/22/25
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocchpnum=30pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsecnum=33pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsecnum=40pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsubsecnum=48pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocparanum=55pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubparanum=63pt
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+calctocindent
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Overview of Machine Learning 
+\end_layout
+
+\begin_layout Standard
+Machine Learning (ML), Large Language Models (LLMs), and Generative Artificial
+ Intelligence (GAI) have had a significant impact on a variety of fields,
+ and we fully expect portfolio management to prove no less vulnerable to
+ their disruptive effects.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Breiman2001"
+literal "false"
+
+\end_inset
+
+ identifies two disjoint statistical cultures:
+\end_layout
+
+\begin_layout Enumerate
+A data–driven culture that is focused on modeling data as if it were drawn
+ from a known data model, which is universally assumed to be a parametric
+ distribution whose parameters can be estimated, ideally by maximum-likelihood,
+ and fitting system responses (or dependent variables) to data items (or
+ independent variables) using methods appropriate to the distribution (e.g.
+ linear regression /least squares for jointly normal random variables),
+ with goodness-of-fit being the primary figure of merit, and
+\end_layout
+
+\begin_layout Enumerate
+A distribution–agnostic culture that is focused on identifying an (often
+ high-dimensional) algorithmic relationship between the data and the system's
+ responses, with forecast accuracy being the primary figure of merit.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Breiman2001"
+literal "false"
+
+\end_inset
+
+ argues that while most statisticians fall into the first group, it is the
+ second group that is focused on what truly matters in the real world, and
+ we might call members of the second group ML practitioners.
+ Loosely speaking, ML refers to 
+\end_layout
+
+\begin_layout Enumerate
+Novel application of statistical and algorithmic methods and non-linear
+ transformations
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and non-linear transformations 
+\series bold
+I think we can delete this bit.
+ NO -MOST MACHINE LEARNING TECHNIQUES NEED THE DATA TO BE PREPROCESSED INTO
+ SOME 
+\begin_inset Quotes eld
+\end_inset
+
+NATURAL FORM
+\begin_inset Quotes erd
+\end_inset
+
+ IN WHICH THEY WORK MUCH BETTER THAN THEY DO WITH RAW DATA.
+ AS A SIMPLE EXAMPLE, WE ARE MUCH BETTER OFF INPUTTING EARNINGS YIELDS AND
+ RETURNS TO AN ML ALGORITHM THAN JUST SUPPLYING IT WITH PAST AND PRESENT
+ EARNINGS, PRICES, SPLITS DIVIDENDS.
+ I SAW THIS MULIPLE TIMES IN THE MACHINE LEARNING CLASSES I SAT IN ON.
+ 
+\color green
+OK, but maybe add an explantory footnote, especially to differentiate those
+ kinds of preprocessing with model based nonlinear transformation, such
+ as in additive models and neural networks.
+ DONE
+\end_layout
+
+\end_inset
+
+ to high-dimensional data,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See for example, the material on identifying recesssions and recoveries
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExpectedReturnChapter
+\end_layout
+
+\end_inset
+
+, where the raw unemployment rate must be transformed before it can be input
+ to a threshold detector.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+I think we should expand our working definition, keeping in mind the Gu
+ et al (2020) definition, and assert that machine learning is not restricted
+ to high-dimensional data (as is always assumed).
+ The leading example here is model selection, where it is quite fair to
+ refer to an automatics model selection method, such as are regularized
+ regression (other than ridge), and AIC, BIC, etc..
+ Here we can refer to the RFPE section of Chapter 6.
+ This breaks with the mold, but I think it is quite important to enlarge
+ the meaning of machine learning in this way.
+ DONE
+\end_layout
+
+\end_inset
+
+ as well as the use of non-linear models (e.g.
+ multiplicative models, or models with interaction terms) in order to solve
+ numerical problems such as forecasting future stock returns from current
+ prices and financial statement information, and
+\end_layout
+
+\begin_layout Enumerate
+Automatic model selection using regularized regression, as well as by applying
+ measures of model complexity such as AIC (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Akaike1974"
+literal "false"
+
+\end_inset
+
+) and BIC (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Schwarz1978"
+literal "false"
+
+\end_inset
+
+, as well as 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "deLeeuw1992"
+literal "false"
+
+\end_inset
+
+), and of predictive power, such as the Robust Final Predictor Error method
+ covered in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+TimeSeriesFactorModelsChapter
+\end_layout
+
+\end_inset
+
+.
+ This type of machine learning has been in use for over fifty years, and
+ continues to be developed with new techniques for model selection even
+ when the data sets are not huge, and when the number of variables used
+ is modest.
+ 
+\end_layout
+
+\begin_layout Standard
+LLMs and GAI, on the other hand, first transform, and then process, textual
+ or visual data to solve unstructured problems such as summarizing news
+ items, regulatory testimony, or management disclosures in corporate financial
+ statements.
+ ML, LLMs, and GAI should not be seen as mutually exclusive fields.
+ They are better thought of as existing along a continuum, as the techniques
+ and algorithms that underpin them have much in common.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KellyXiu2023"
+literal "false"
+
+\end_inset
+
+ comprehensively survey the application of Machine Learning methods to problems
+ in finance, and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HastieTibshiraniFriedman2009"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "JWHTStatLearning2013"
+literal "false"
+
+\end_inset
+
+ provide rigorous, insightful, and thoughtful coverage of the statistical
+ aspects of machine learning.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GuKellyXiu2020"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CaoJiangWangYang2024"
+literal "false"
+
+\end_inset
+
+ exemplify the application of these methods to asset pricing and the estimation
+ of expected returns, while 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KimMuhnNikolaev2023"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KimMuhnNikolaev2024a"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KimMuhnNikolaev2024b"
+literal "false"
+
+\end_inset
+
+ exemplify the application of Large Language Models and Generative Artificial
+ Intelligence to the comprehension of financial statements.
+\end_layout
+
+\begin_layout Standard
+The distinguishing features of machine learning methods are their ability
+ to efficiently handle exceptionally large data sets with many explanatory
+ factors, their focus on model selection and mitigating overfits to noisy
+ data, and their ability to model the non-linearities that characterize
+ most real-world problems.
+\end_layout
+
+\begin_layout Standard
+A thoughtful investor must embrace both financial and technological perspectives
+ when employing ML, LLMs, and GAI – the risk of lazy inquiry is the identificati
+on of models devoid of economic underpinnings that are modern day equivalents
+ of constellations in a night sky studded with stars.
+ The all-too-common consequence of such practices is models that generate
+ good results when tested with available data, but which fail miserably
+ when faced with new data.
+ It is fair to say that the field of machine learning has grown so explosively
+ in recent years that a portion of an appendix cannot do it justice, and
+ we therefore focus on a small, but important, subset of such methods that
+ are of particular relevance to portfolio management.
+\end_layout
+
+\begin_layout Standard
+Machine Learning algorithms can usefully be classified into three categories:
+\end_layout
+
+\begin_layout Enumerate
+Supervised learning: An algorithm is presented with a set of inputs or 
+\emph on
+features
+\emph default
+ (e.g.
+ financial statements and market data) and outputs or 
+\emph on
+responses
+\emph default
+ (e.g.
+ stock market returns) and is tasked with identifying the relationship between
+ the two.
+ Formally, given a collection of feature–response pairs 
+\begin_inset Formula $\left[\mathbf{X},\ \mathbf{y}\right]=\left\{ \mathbf{x}_{i},\ \mathbf{y}_{i}\right\} ,\ 1\leqslant i\leqslant N$
+\end_inset
+
+, as well as a corresponding set of (usually non–negative) weights 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ and a loss function 
+\begin_inset Formula $\mathscr{L}$
+\end_inset
+
+, find a high–dimensional function 
+\begin_inset Formula $f$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i}w_{i}\,\mathscr{L}\left(f\left(\mathbf{x}_{i}\right)-\mathbf{y}_{i}\right)$
+\end_inset
+
+ is minimized.
+ It is often assumed, frequently without justification, that the features
+ and the responses are linearly related to each other, and it good practice
+ to explore the creation of new features by applying non-linear transformations
+ to existing features.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Unsupervised learning: An algorithm is presented with a collection of objects
+ (e.g., bonds), each with a set of characteristics (e.g., covenants, spreads,
+ issuer's financial statements and history of defaults) and is tasked with
+ estimating the high–dimensional joint density of the data, or of classifying
+ it into a set of disjoint clusters such that the items in each cluster
+ are close to each other under some metric, and are distant from items in
+ other clusters.
+ In the given example, the clusters might be ratings classes.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Reinforcement learning: An algorithm is presented with an initial set of
+ inputs and an objective function which it is tasked with maximizing.
+ New inputs are continually incorporated and consumed, and an optimal response
+ is recomputed following each new observation.
+ In this case, the reinforcement learning algorithm may be thought of as
+ an optimal control policy, and can be applied to the multi-period optimization
+ of a portfolio whose holdings have time-varying expected returns and transactio
+n costs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I kind of think something needs to be said here about the wide array of
+ machine learning methods in recent academic finance publications, as in
+ Gu et al.
+ (2019) and Kelly and Xiu(2023), and that we will focus on a small, but
+ important subset of such methods, as an introduction to machine learning
+ in finance.
+ DONE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This material is too short to be a Section.
+ Maybe it can be merged into the introductory text.
+ By the way, it is quite appropriate to have introductory material at the
+ beginning of a Chapter which does not have a Section number, e.g., as I did
+ in Chapter 2, and which may be a good idea for all chapters.
+ I HAVE MERGED THE FIRST SECTION AND THE TOO-SHORT SECOND SECTION.
+ I LIKE THE AESTEHICS OF AN UNNUMBERED INTRODUCTORY SECTION, BUT IT MAKES
+ IT HARD TO REFER BACK TO IT, AND WE ALSO HAVE TO CHANGE ALL THE NUMBERING
+ IN THE SPRINGER MACRO.
+ 
+\series bold
+One should not need to refer back to un-numbered introductory sections.
+ How about we revisit this issue jointly before too long.
+ OK
+\end_layout
+
+\end_inset
+
+We restrict our exploration of machine learning to the field of 
+\emph on
+supervised learning
+\emph default
+ – a form of learning that is particularly relevant to portfolio management,
+ and Least Squares and its variants prove to be a good starting point for
+ many supervised learning algorithms, as does exploratory data analysis
+ (EDA).
+ The R packages 
+\family typewriter
+tourr
+\family default
+ and 
+\family typewriter
+Pursuit
+\family default
+ are particularly useful for EDA as they allow users to explore and visualize
+ large multivariate datasets, project the data along different axes, and
+ to tour the projections to identify clusters visually.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The curious reader will wonder what Unsupervised Learning is, and we need
+ to include a brief paragraph on un-supervised, and unsupervised versus
+ supervised learning.
+ GOOD IDEA - DONE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Supervised Learning Using Regularized Classical Algorithms
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ClassicalSupervisedLearning"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I see no value in pitching LS as a supervised learning algorithm here.
+ No one will regard this as meaningful.
+ I think this Section should be focused on quadratic loss penalized/regularized
+ regression, for which you provide very nice material, and just touch on
+ the linear model and LS to get going on regularized regression.
+ If you convert Section 1.1 into introductory text which is not a Section,
+ and absorb 1.2 into it, then this becomes Section 1.1 (16.1), with a title
+ such as 
+\begin_inset Quotes eld
+\end_inset
+
+Classical Regularized Regression Machine Learning
+\begin_inset Quotes erd
+\end_inset
+
+, or some such.
+\end_layout
+
+\begin_layout Plain Layout
+Then Cross-Validation (and other methods of choosing lambda) will serve
+ naturally as Section 1.2, and Section 1.3 can 
+\begin_inset Quotes eld
+\end_inset
+
+Robust Regularized Regression
+\begin_inset Quotes erd
+\end_inset
+
+, which is our unique contribution, which not yet noticed in the ML literatue
+ in finance (or elsewhere.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The classical linear model
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We include the sizes of the various vectors and matrices as subscripts for
+ clarity.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is quite unnecessary for readers of this book, we use it nowhere else,
+ and it leads to quite unattractive notation.
+\end_layout
+
+\begin_layout Plain Layout
+It is much more common to use 
+\begin_inset Formula $p$
+\end_inset
+
+, or an upper case 
+\begin_inset Formula $K$
+\end_inset
+
+, as the number of parameters.
+ OK.
+ I HAVE SWITCHED TO p BUT KEPT THE DIMENSION AS IT BECOMES VERY USEFUL WHEN
+ DISCUSSING REGULARIZED METHODS.
+ 
+\series bold
+I still think it is quite unecessary, awkard notation, and you don't seem
+ to rely on it (indeed, no need to rely on it) for regularized methods.
+ I DISAGREE - IT IS USED SUPRISINGLY OFTEN TO MAKE CLEAR THE SCALE OF THE
+ PROBLEM, ESPECIALLY WHEN p>N.
+ HAPPYU TO DISCUSS.
+ 
+\color green
+OK, but in any event only introduce when it is really needed, not in the
+ context of the standard model which are discussed quite a bit in other
+ chapters, which we should be consistent with unless clearly justified.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{y}}_{N\times1}=\mathrm{\mathbf{X}}_{N\times p}\ \bubeta_{N\times1}\,+\,\bueps_{N\times1}\label{eq:OLS1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is used for time series and cross-section factor models in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FactorModelsChapters
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Later we will add 
+\begin_inset Quotes eld
+\end_inset
+
+and for cross-section factor models in Chapter 6.2
+\end_layout
+
+\end_inset
+
+and is described in detail in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ProbabilityAppendix
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+minimizes 
+\begin_inset Formula $\bueps_{1\times N}^{\prime}\ \bueps_{N\times1}$
+\end_inset
+
+ and is given by
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For the first line below, and subsequent use of 
+\begin_inset Formula $\bueps\bueps^{\prime}$
+\end_inset
+
+ ,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $\bueps_{N\times1}$
+\end_inset
+
+ needs to be expressed as 
+\begin_inset Formula $\bueps_{N\times1}(\bubeta_{m\times1})$
+\end_inset
+
+, e.g., as in Section 6.2.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ ADD IN COMMENTS ON MODEL SELECTION 
+\series bold
+Very awkard notation, which should be used only when absolutely necessary.
+ 
+\series default
+I disagree - in many of the results, the size of the various matrices is
+ not obvious at all, and can be very confusing to the reader.
+ I use it only when necessary for clarity.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{LS} & =\underset{\bubeta}{\mathrm{argmin}}\ \bueps_{1\times N}^{\prime}\ \bueps_{N\times1}\nonumber \\
+ & =\left(\mathrm{\mathbf{X}}_{p\times N}^{\prime}\ \mathrm{\mathbf{X}}_{N\times p}\right)^{-1}\ \mathrm{\mathbf{X}}_{p\times N}^{\prime}\ \mathrm{\mathbf{y}}_{N\times1}.\label{eq:OLS2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+No need for the third line above
+\series default
+.
+ I THINK YOU MEAN THE SECOND LINE - I HAVE REMOVED IT 
+\series bold
+\color green
+No, I meant the third line, as it is of little value in the context of this
+ chpater where the emphasis is on the the optimization with regularization
+ terms addeed (and one never solves LS by computng the ivnerse).
+ And the second line leads naturally to what follows.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Not every optimization problem admits a closed form solution, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:OLS1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can also be solved iteratively by guessing an initial value for 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+, computing the gradient of 
+\begin_inset Formula $\bueps\bueps^{\prime}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+, and then moving in the direction of the gradient to obtain a better estimate
+ of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+ When the iterative process ends, the final estimate of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ will be very close (ideally exactly equal) to 
+\begin_inset Formula $\hat{\bubeta}_{LS}$
+\end_inset
+
+.
+ Seen in this light, the machine has 
+\begin_inset Quotes eld
+\end_inset
+
+learned
+\begin_inset Quotes erd
+\end_inset
+
+ the optimal values of the regression coefficients by a process not very
+ different from a schoolchild's 
+\begin_inset Quotes eld
+\end_inset
+
+guess, check and revise
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I don't see the above paragraph, and the 
+\begin_inset Quotes eld
+\end_inset
+
+iterative algorithm
+\begin_inset Quotes erd
+\end_inset
+
+ below as adding value here, and it kind of gets in the way of the main
+ points below.
+ Iterative weighted algorithms have already been covered for robust estimators
+ in Chapter 2.7 and 6.2, and can be introduced later, when really needed,
+ in this chapter.
+ 
+\series bold
+I still say we should delete the above text as not relevant here.
+ I DISAGREE, BUT AM HAPPY TO DISCUSS.
+ 
+\color green
+OK, there is no harm.
+ I just see little value unless it is a lead-in to later algorithms that
+ are of necessity iterative.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:OLS2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives us insights into the limitations of Least Squares and its region
+ of applicability.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $p>N$
+\end_inset
+
+, no unique solution exists because 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}$
+\end_inset
+
+ is singular.
+ None the less, this is an important use case in genomics (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "JohnstoneTitterington2009"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FanMaZhong2021"
+literal "false"
+
+\end_inset
+
+) and is increasingly important in finance, as researchers often throw every
+ explanatory variable they have available into 
+\begin_inset Quotes eld
+\end_inset
+
+kitchen sink
+\begin_inset Quotes erd
+\end_inset
+
+ regressions in the hope of identifying a factor relevant to the problem
+ at hand.
+ This issue is addressed in depth in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExpectedReturnChapter
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are nearly co-linear because some of the explanatory variables are closely
+ related to, or constructed in almost the same way as others (e.g.
+ Comprehensive Income, Net Income and Operating Income, all from the Income
+ Statement of a firm's financial statements), 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}$
+\end_inset
+
+ becomes nearly singular, and the coefficient estimates become unstable.
+\end_layout
+
+\begin_layout Enumerate
+Least squares does not perform variable selection: even if the true relationship
+ between 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ is encapsulated in a small subset of the entries in 
+\begin_inset Formula $\mathrm{\bubeta}$
+\end_inset
+
+, Least Squares will likely assign non-zero values to all its entries.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If the true relationship between 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ is non-linear, any transformation of the columns of 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ needs to be done ahead of time by the analyst.
+ This, too, is addressed in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExpectedReturnChapter
+\end_layout
+
+\end_inset
+
+, where it is shown that the addition of a quadratic term noticeably improves
+ return forecasts for the S&P 500.
+\end_layout
+
+\begin_layout Enumerate
+Least Squares is not robust to even a single outlier, and we refer the reader
+ to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+RobustEstimationSections
+\end_layout
+
+\end_inset
+
+, where robust methods are introduced as data dependent weighted versions
+ of least squares estimators, as well as to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+RobustEstimatorsChapter
+\end_layout
+
+\end_inset
+
+, which
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Here it will be much better to point to the sections of Chapters 2 and 6,
+ where robust methods are introduced as data dependent weighted versions
+ of least squares estimators, with application examples, and point to Chapter
+ 18 for more foundational and theoretical details.
+ 
+\series bold
+This is still the case
+\series default
+.
+ DONE
+\end_layout
+
+\end_inset
+
+describes robust regression algorithms that are largely unaffected by outliers,
+ and which should be used routinely by financial analysts.
+\end_layout
+
+\begin_layout Standard
+Some, though not all, of these problems can be addressed using 
+\emph on
+regularization
+\emph default
+ techniques which are designed to reduce the likelihood of overfitting models
+ to data, and which we next discuss.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The rest of Section 1.3 is very nice.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Regularization
+\end_layout
+
+\begin_layout Standard
+The central idea that underlies regularization is simple: constrain the
+ weights 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ in some way so that they become more stable and/or more sparse, and computable
+ even if 
+\begin_inset Formula $p>N$
+\end_inset
+
+.
+ For notational simplicity, we assume that all the columns of 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ as well as 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ are demeaned, so that the first element of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ corresponds to an explanatory variable, and not the intercept.
+ This is standard practice when regularizing – it is variations from a baseline,
+ not the baseline itself, that we are trying to fit, and shrinking the intercept
+ will immediately introduce bias.
+ Define
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left\Vert \bueps\right\Vert ^{2} & =\bueps^{\prime}\bueps.\nonumber \\
+ & =\left(\mathrm{\mathbf{y}}\,-\,\mathrm{\mathbf{X}}\,\bubeta\right)^{\prime}\left(\mathrm{\mathbf{y}}\,-\,\mathrm{\mathbf{X}}\,\bubeta\right)\label{eq:SumEpsilonSquared}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \bubeta\right\Vert _{q}=\sum_{i\,=\,1}^{p}\left|\bubeta_{i}\right|^{q},\ \ q\geqslant0.\label{eq:qNormBeta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While it is common practice to write
+\begin_inset Formula $\left\Vert \mathbf{x}\right\Vert _{q}=\left(\sum_{i\,=\,1}^{p}\left|\mathbf{x}_{i}\right|^{q}\right)^{1/q}$
+\end_inset
+
+, we have deliberately chosen not to raise the sum in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:qNormBeta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to the 
+\begin_inset Formula $1/q^{th}$
+\end_inset
+
+ power as 
+\begin_inset Formula $q=0$
+\end_inset
+
+ is an important special case – 
+\begin_inset Formula $\left\Vert \bubeta\right\Vert _{0}$
+\end_inset
+
+ is just the number of non-zero components of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+It is standard practice in this context to assume that 
+\begin_inset Formula $0^{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ When 
+\begin_inset Formula $q=1$
+\end_inset
+
+, it is the sum of their absolute values, and when 
+\begin_inset Formula $q=2$
+\end_inset
+
+, it is the square of the Euclidean length of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+ Regularization reformulates the least squares objective function to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{q}=\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2}\,+\,\lambda_{q}\left\Vert \bubeta\right\Vert _{q},\ \ q,\ \lambda_{q}\geqslant0\label{eq:RegularizationGeneral}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\lambda_{q}=0$
+\end_inset
+
+, we are back to classical Least Squares for all 
+\begin_inset Formula $q\geqslant0$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $q=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{0}>0$
+\end_inset
+
+, we are trading off Mean Squared Error against the number of predictor
+ variables.
+ When 
+\begin_inset Formula $q=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{1}>0$
+\end_inset
+
+ , we are trading off Mean Squared Error against the sum of the magnitude
+ of all the coefficients.
+ This case is known as 
+\emph on
+lasso
+\emph default
+ (
+\bar under
+L
+\bar default
+east 
+\bar under
+A
+\bar default
+bsolute 
+\bar under
+S
+\bar default
+hrinkage and 
+\bar under
+S
+\bar default
+election 
+\bar under
+O
+\bar default
+perator, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Tibshirani1996"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Tibshirani2011"
+literal "false"
+
+\end_inset
+
+).
+ When 
+\begin_inset Formula $q=2$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}>0$
+\end_inset
+
+, we are trading off Mean Squared Error against the square of the Euclidean
+ length of the coefficient vector.
+ This case is known as 
+\emph on
+ridge regression
+\emph default
+ (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HoerlKennard1970"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hastie2020"
+literal "false"
+
+\end_inset
+
+).
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Technometrics devoted an entire issue (Vol 62, Issue 4, 2020) to celebrate
+ the 
+\begin_inset Formula $50^{th}$
+\end_inset
+
+ anniversary of ridge regression.
+\end_layout
+
+\end_inset
+
+ The optimal value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is determined using 
+\emph on
+cross-validation
+\emph default
+, which we discuss below.
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ContraintSurfaces"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the shape of the constraint boundaries for lasso, ridge regression,
+ and the elastic net, which is a weighted linear combination of the lasso
+ and ridge penalties, with two explanatory variables.
+ All three boundaries are convex, but only the latter two are strictly convex.
+ The 
+\family typewriter
+R
+\family default
+ package 
+\family typewriter
+glmnet
+\family default
+ (
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://glmnet.stanford.edu/index.html
+\end_layout
+
+\end_inset
+
+) provides efficient implementations of all these methods as well as many
+ others.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/Lasso Ridge and Elastic Net Constraints.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ContraintSurfaces"
+
+\end_inset
+
+Shape of the Contraint Surfaces for Lasso, Ridge and Elastic Net For Two
+ Variables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ridge Regression
+\end_layout
+
+\begin_layout Standard
+The objective function for ridge regression can be written in two equivalent
+ ways:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{ridge} & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2}\,+\,\lambda\left\Vert \bubeta\right\Vert _{2},\ \ \lambda>0\label{eq:RidgeRegressionA}\\
+ & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2},\ \ \mathrm{s.t.}\left\Vert \bubeta\right\Vert _{2}\leqslant c,\ c>0\label{eq:RidgeRegressionB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These formulations echo the two ways in which efficient frontiers can be
+ computed (the Lagrangian formulation and the bound formulation), but the
+ Lagrangian formulation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is easier to deal with analytically.
+ The bound formulation makes clear that 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ lies on or inside the surface of a hypersphere of radius 
+\begin_inset Formula $\sqrt{c}.$
+\end_inset
+
+ In fact, it mirrors the formulation of mean-variance efficient portfolio
+ construction covered in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FoundationsChapter
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Ridge regression was originally proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HoerlKennard1970"
+literal "false"
+
+\end_inset
+
+ as an ad-hoc solution to the problem of collinearity in least squares.
+ It is sometimes said to get its name from the fact that it adds a stabilizing
+ 
+\begin_inset Quotes eld
+\end_inset
+
+raised ridge
+\begin_inset Quotes erd
+\end_inset
+
+ to the diagonal of 
+\begin_inset Formula $\mathrm{\mathbf{X}}^{\prime}\ \mathrm{\mathbf{X}}$
+\end_inset
+
+.
+ The quadratic penalty term ensures that closed form solutions to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionB"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ always exists, and it is left as an exercise to show that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{ridge}=\left(\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}\,+\,\lambda\,\mathbf{I}_{p\times p}\right)^{-1}\,\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{y}}_{N\times1},\label{eq:RidgeRegressionSolution}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+that the 
+\begin_inset Formula $p$
+\end_inset
+
+ eigenvalues of 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}\,+\,\lambda\,\mathbf{I}_{p\times p}$
+\end_inset
+
+ can be obtained by adding 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to the eigenvalues of 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}$
+\end_inset
+
+, and that the eigenvectors of 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}\,+\,\lambda\,\mathbf{I}_{p\times p}$
+\end_inset
+
+ are identical to the eigenvectors of 
+\begin_inset Formula $\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}$
+\end_inset
+
+.
+ Simple rearrangement of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:OLS2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionSolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{ridge}=\left(\mathbf{I}_{p\times p}\,+\,\lambda\,\left(\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathrm{\mathbf{X}}_{N\times p}\right)^{-1}\right)^{-1}\hat{\bubeta}_{LS}.\label{eq:RidgevsLSbeta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the special case when the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are orthonormal (i.e.
+ are orthogonal and and have unit variance), 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgevsLSbeta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reduces to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{ridge}=\frac{\hat{\bubeta}_{LS}}{1+\lambda}.\label{eq:RidgevsLSbetaOrthogonal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ridge regression is not linearly equivariant – the bracketed term in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionSolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ makes clear that the regularization penalty, being additive, is proportionately
+ larger for columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ with low variance.
+ It is the norm, therefore, to pre-process 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ ahead of solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionSolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by standardizing all its columns so that they have a sample mean of 0 and
+ a sample variance of 1.
+ Also, ridge regression does not reduce the number of coefficients in a
+ model – it simply shrinks them all towards zero and each other as 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ increases.
+ The optimal value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be determined using cross-validation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hastie2020"
+literal "false"
+
+\end_inset
+
+ uses the Singular Value Decomposition (SVD) to show that if two or more
+ of columns in 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ are identical, ridge regression will assign each one of them identical
+ coefficients that sum to the same value that would be assigned to the single
+ column that remains after all the duplicates are excised.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Theobald1974"
+literal "false"
+
+\end_inset
+
+ proves that the covariance matrix of 
+\begin_inset Formula $\hat{\bubeta}_{ridge}$
+\end_inset
+
+ is smaller than that of 
+\begin_inset Formula $\hat{\bubeta}_{LS}$
+\end_inset
+
+ for some value of 
+\begin_inset Formula $\lambda>0.$
+\end_inset
+
+ It follows that the ridge estimator is necessarily biased, as the Gauss-Markov
+ Theorem (see 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ProbabilityAppendix
+\end_layout
+
+\end_inset
+
+) assures us that least squares is the best linear unbiased estimator of
+ 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ and minimizes the covariance matrix of 
+\begin_inset Formula $\hat{\bubeta}_{LS}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is small, ridge regression is almost identical to least squares, and its
+ estimates are essentially unbiased.
+ As 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ increases, the coefficients are shrunk to 0: their variance declines, but
+ their bias increases.
+ At the optimal value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the MSE, which is the sum of the variance and the square of the bias,
+ is minimized.
+ 
+\end_layout
+
+\begin_layout Standard
+There is a deep link between ridge regression and the Singular Value Decompositi
+on.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MathToolsAppendix
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+for a discussion of the SVD.
+\end_layout
+
+\end_inset
+
+ If we write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{X}}_{N\times p}=\mathrm{\mathbf{U}}_{N\times N}\mathrm{\mathbf{D}}_{N\times p}\mathrm{\mathbf{V}}_{p\times p}^{\prime},\label{eq:SVDofX}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{U}}^{\prime}\,\mathrm{\mathbf{U}}\,=\,\mathrm{\mathbf{V}}^{\prime}\,\mathrm{\mathbf{V}}\,=\,\mathrm{\mathbf{I}},\label{eq:UandVareOrthogonal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $\mathrm{\mathbf{D}}_{N\times p}$
+\end_inset
+
+ diagonal in the sense that 
+\begin_inset Formula $\mathrm{\mathbf{D}}_{11}\,\geqslant\,\mathrm{\mathbf{D}}_{22}\,\geqslant\mathrm{\mathbf{D}}_{22}\geqslant\mathrm{\mathbf{D}}_{\min(N,\ p),\ \min(N,\ p)}\geqslant0$
+\end_inset
+
+, and substitute 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SVDofX"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RidgeRegressionSolution"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and simplify, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{ridge}=\sum_{i\ s.t.\ \mathbf{D}_{i\,i}>0}\mathbf{v}_{i}\frac{\mathbf{D}_{i\,i}}{\mathbf{D}_{i\,i}^{2}+\lambda}\,\mathbf{u}_{i}\cdot\mathbf{y}\label{eq:RidgeBetaViaSVD}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{u}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{v}_{i}$
+\end_inset
+
+ are the left and right singular vectors of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+.
+ The fitted values are easily seen to be
+\begin_inset Formula 
+\begin{align}
+\hat{\mathrm{\mathbf{y}}} & =\mathbf{X}\,\hat{\bubeta}_{ridge}\nonumber \\
+ & =\mathrm{\mathbf{U}}\,\mathrm{\mathbf{D}}\,\mathrm{\mathbf{V}}^{\prime}\left(\mathrm{\mathbf{D}}^{\prime}\,\mathrm{\mathbf{D}}\ +\ \lambda\,\mathbf{I}\right)^{-1}\mathrm{\mathbf{V}}\,\mathrm{\mathbf{D}}\,\mathrm{\mathbf{U}^{\prime}}\,\mathbf{y}\nonumber \\
+ & =\sum_{i\ s.t.\ \mathbf{D}_{i\,i}\,>\,0}\mathbf{u}_{i}\,\frac{\mathbf{D}_{i\,i}^{2}}{\mathbf{D}_{i\,i}^{2}+\lambda}\,\mathbf{u}_{i}\cdot\mathbf{y}.\label{eq:RidgeYhatViaSVD}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once the SVD of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ has been identified and the inner products 
+\begin_inset Formula $\mathbf{u}_{i}\cdot\mathbf{y}$
+\end_inset
+
+ computed, the entire ridge solution is known.
+ The SVD representation of ridge regression makes clear that:
+\end_layout
+
+\begin_layout Enumerate
+Small singular values are shrunk more than large singular values, and
+\end_layout
+
+\begin_layout Enumerate
+The large singular values do not necessarily contribute to the prediction
+ – the dot product of 
+\begin_inset Formula $\mathbf{u}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+is just as important as the magnitude of 
+\begin_inset Formula $\mathbf{D}_{i\,i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The second observation has an important practical implication: care must
+ be taken when discarding terms in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeBetaViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeYhatViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The common practice of discarding small eigenvalues (in Principal Components
+ Regression) or singular values (in SVD) can result in the inadvertent deletion
+ of precisely those components of the data in which its explanatory power
+ is most highly concentrated.
+\end_layout
+
+\begin_layout Standard
+Projection Pursuit Analysis (PPA) and Independent Components Analyis (ICA)
+ provide useful alternatives to PCA and SVD in such situations, as they
+ identify directions along which the separation between classes is maximized.
+ 
+\end_layout
+
+\begin_layout Standard
+As 
+\begin_inset Formula $\lambda\longrightarrow0$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeBetaViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeYhatViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ converge to the OLS solution 
+\emph on
+even when the system of equations is under determined
+\emph default
+ (i.e.
+ when 
+\begin_inset Formula $p>N)$
+\end_inset
+
+.
+ In this case 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeBetaViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeYhatViaSVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ represent the OLS solution that minimizes 
+\begin_inset Formula $\left\Vert \bubeta\right\Vert _{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In spite of its simplicity and its inability to select a subset of the explanato
+ry variables, ridge regression has proved to be a powerful way in which
+ to balance bias and variance while minimizing MSE, and it plays a fundamental
+ role in data science and machine learning.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hastie2020"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "vanWieringen2023"
+literal "false"
+
+\end_inset
+
+ usefully collect five decades of insights into its many benefits, as well
+ as its relationship to other concepts in Bayesian statistics and data science.
+\end_layout
+
+\begin_layout Subsection
+Lasso 
+\end_layout
+
+\begin_layout Standard
+Lasso 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Lasso is an acronym for 
+\bar under
+L
+\bar default
+east 
+\bar under
+A
+\bar default
+bsolute 
+\bar under
+S
+\bar default
+hrinkage and 
+\bar under
+S
+\bar default
+election 
+\bar under
+O
+\bar default
+perator.
+\end_layout
+
+\end_inset
+
+ replaces ridge regression's quadratic penalty with a linear (in absolute
+ value) penalty.
+ As in the case of ridge regression, the objective function for lasso can
+ be written using either a Lagrangian or a bound formulation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{lasso} & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2}\,+\,\lambda\left\Vert \bubeta\right\Vert _{1},\ \ \lambda>0\label{eq:LassoA}\\
+ & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2},\ \ \mathrm{s.t.}\left\Vert \bubeta\right\Vert _{1}<c,\ c>0\label{eq:LassoB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the special case when the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are orthonormal, it can be shown that the solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LassoA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{lasso}=\left(\left|\hat{\bubeta}_{LS}\right|\,-\,\frac{\lambda}{2}\boldsymbol{1}\right)^{+}\odot\mathrm{sgn}\left(\hat{\bubeta}_{LS}\right),\label{eq:LassovsLSbeta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\boldsymbol{1}$
+\end_inset
+
+ is a column vector of 
+\begin_inset Formula $p$
+\end_inset
+
+ 1's, 
+\begin_inset Formula $x^{+}=\max\left(x,\,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\odot$
+\end_inset
+
+ denotes the element-wise (or Hadamard) product of the two vectors, and
+ 
+\begin_inset Formula $\mathrm{sgn}\left(x\right)=1\ \forall\ x\geqslant0$
+\end_inset
+
+ and -1 otherwise.
+\end_layout
+
+\begin_layout Standard
+Turning to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ConstraintsAndPenaltiesChapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+for insight, we see that the computation of 
+\begin_inset Formula $\hat{\bubeta}_{lasso}$
+\end_inset
+
+ is a constrained quadratic program that can be solved using the computationally
+ efficient LARS (Least Angle Regression) algorithm first described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "EfronHastieJohnstoneTibshirani2004"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "TibshiraniRyan2013"
+literal "false"
+
+\end_inset
+
+ proves that the solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LassoA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LassoB"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is unique with probability 1 if the entries of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are drawn from a continuous distribution, and also describes an enhanced
+ LARS algorithm that is implemented in the 
+\family typewriter
+R
+\family default
+ package 
+\family typewriter
+glmnet
+\family default
+, which implements a wide range of linear models.
+ Even when the entries of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are not drawn from a continuous distribution, and if two or more solutions
+ exist, they are equivalent in that they have the same optimal value and
+ level of sparsity.
+\end_layout
+
+\begin_layout Standard
+The optimal value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be chosen using cross-validation.
+ The bound formulation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LassoB"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ makes clear that 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ lies on a surface defined by intersecting planes.
+ The sharp corners at the intersections of these planes make the objective
+ function not differentiable at these points and induce a sparsity property
+ – unlike ridge regression, lasso naturally selects a subset of the explanatory
+ variables and assigns zero weight to the others.
+ Its great disadvantage (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Breiman1996a"
+literal "false"
+
+\end_inset
+
+) is that it can be unstable – both 
+\begin_inset Formula $\left\Vert \bueps\right\Vert ^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\bubeta}_{lasso}$
+\end_inset
+
+ can change dramatically when small changes are made to the selected subset
+ of explanatory variables, or when new cases are added to the data.
+ 
+\end_layout
+
+\begin_layout Standard
+Put differently, lasso lacks the 
+\emph on
+oracle property
+\emph default
+: if the true model is based on a subset 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ of the available regressors with cardinality 
+\begin_inset Formula $p^{\prime}<p$
+\end_inset
+
+, then as 
+\begin_inset Formula $N\longrightarrow\infty$
+\end_inset
+
+, an oracular algorithm will exhibit the following features: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{i},\ i\notin\mathcal{P} & =0\label{eq:OracleLassoA}\\
+\sqrt{N}\left(\hat{\bubeta}_{\mathcal{P}}-\bubeta_{\mathcal{P}}\right) & \longrightarrow N\left(\mathbf{0},\ \buSigma^{*}\right),\label{eq:OracleLassoB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\buSigma^{*}$
+\end_inset
+
+ is the covariance matrix of the true subset model.
+ 
+\end_layout
+
+\begin_layout Standard
+The details are technical; we refer the reader to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FanLi2001"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Zou2006"
+literal "false"
+
+\end_inset
+
+ for a careful exploration of the oracle property as well as the relevant
+ proofs.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Zou2006"
+literal "false"
+
+\end_inset
+
+ shows that the 
+\emph on
+adaptive lasso
+\emph default
+ achieves the oracle property if the terms in the lasso's penalty function
+ are suitably weighted, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{adaptive\ lasso}=\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2}\,+\,\lambda\sum_{i=1}^{p}w_{i}\left|\bubeta\right|_{i},\ \ \lambda>0\label{eq:AdaptiveLasso}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the weights 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ are derived from the coefficients of some other 
+\begin_inset Formula $\sqrt{N}-$
+\end_inset
+
+consistent estimator of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ such as ridge regression.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Zou2006"
+literal "false"
+
+\end_inset
+
+ uses both LS and ridge weights, and defines
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\left(\frac{1}{\left|\bubeta_{\sqrt{N}-consistent,\ i}\right|}\right)^{\gamma},\ \gamma>0.\label{eq:AdaptiveLassoWeights}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In essence, when the coefficients of the ancillary estimator are small,
+ the penalty in the lasso is amplified, so that the entries of 
+\begin_inset Formula $\hat{\bubeta}_{adaptive\ lasso}$
+\end_inset
+
+ corresponding to noise are more likely to be set to 0.
+ Both 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be determined empirically using cross-validation.
+ 
+\end_layout
+
+\begin_layout Standard
+Lasso is far more efficient computationally than the natural way in which
+ to maximize sparsity, which is to identify the best subset of the explanatory
+ variables.
+ The best subset approach creates all 
+\begin_inset Formula $2^{m}-1$
+\end_inset
+
+ possible subsets of the 
+\begin_inset Formula $m$
+\end_inset
+
+ explanatory variables, regresses 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ against each one of these subsets, and finally selects the subset with
+ smallest forecast error.
+ The complexity of best subset selection grows rapidly with both 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+, though 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BertsimasKingMazumder2016"
+literal "false"
+
+\end_inset
+
+ describe an efficient mixed integer programming algorithm that solves the
+ best subset problem for 
+\begin_inset Formula $m\approx100$
+\end_inset
+
+ and 
+\begin_inset Formula $N\approx1000$
+\end_inset
+
+ in a few minutes.
+ The primary advantage of the best subset selection approach is that it
+ cleanly eliminates noise variables that might display some spurious correlation
+ with 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HastieTibshiraniTibshirani2020"
+literal "false"
+
+\end_inset
+
+ compare lasso to best subset as well as a variant of lasso known as 
+\emph on
+relaxed lasso
+\emph default
+ in which lasso is first used to identify the relevant variables, and least
+ squares is then used to determine their coefficients.
+\end_layout
+
+\begin_layout Standard
+Formally, let 
+\begin_inset Formula $S_{\lambda}$
+\end_inset
+
+ be the set of variables chosen by lasso for a given value of lambda, and
+ let 
+\begin_inset Formula $\hat{\bubeta}_{LS}\left(S_{\lambda}\right)$
+\end_inset
+
+ be the least squares coefficient vector when 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ is regressed against the subset of columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ corresponding to 
+\begin_inset Formula $S_{\lambda}$
+\end_inset
+
+.
+ To ensure that 
+\begin_inset Formula $\hat{\bubeta}_{LS}\left(S_{\lambda}\right)$
+\end_inset
+
+ has length 
+\begin_inset Formula $p$
+\end_inset
+
+, we pad it with zeroes in positions corresponding to variables that are
+ not selected.
+ The relaxed lasso estimator is a weighted average of the pure lasso estimate
+ and the restricted least squares estimate, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{relaxed\ lasso}\left(\lambda,\ \gamma\right)=\gamma\,\hat{\bubeta}_{lasso}\,+\,(1-\gamma)\hat{\bubeta}_{LS}\left(S_{\lambda}\right),\ 0<\lambda,\ 0\leqslant\gamma\leqslant1.\label{eq:RelaxedLasso}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optimal values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ must be determined from cross-validation, and an upper bound on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ can be obtained by testing a few cases till one is found that forces all
+ (or almost all) the coefficients to 0.
+\end_layout
+
+\begin_layout Standard
+Lasso, unlike ridge regression, tends to perform poorly when two or more
+ of the variables are highly correlated.
+ The total weight assigned to the highly correlated group can be distributed
+ in very different proportions among the correlated variates with little
+ impact on the objective function.
+ Ridge regression, on the other hand, will tend to weight them equally as
+ its quadratic penalty diminishes when there is an even allocation between
+ highly correlated variables.
+\end_layout
+
+\begin_layout Standard
+This observation is of practical importance: it sometimes proves necessary
+ to include or exclude a complete (predefined) set of columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+, as, for example, when a categorical variable is encoded by a set of 
+\begin_inset Formula $l$
+\end_inset
+
+ dummy variables, the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ one of which is 1 (all the other 
+\begin_inset Formula $l-1$
+\end_inset
+
+ are 0) according to whether or the particular observation is associated
+ with category 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The grouping problem arises naturally in machine learning, and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "YuanLin2006"
+literal "false"
+
+\end_inset
+
+ solve it using a variant of lasso they call group lasso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HastieTibshiraniTibshirani2020"
+literal "false"
+
+\end_inset
+
+ conduct a series of experiments comparing lasso and relaxed lasso to best
+ subset selection and forward stepwise selection.When the signal-to-noise
+ ratio (SNR) is low, lasso tends to perform better than best subset selection
+ and forward stepwise selection.
+ When it is high, the reverse is true.
+ Relaxed lasso turns out to be the overall winner – it performs about as
+ well as lasso when SNR is low, and about as well as best subset selection
+ when it is high.
+ While no single method uniformly dominates the others, it is important
+ to keep in mind that it is the low SNR case that is of greatest relevance
+ to finance, making lasso and relaxed lasso useful starting points for machine
+ learning in finance.
+\end_layout
+
+\begin_layout Subsection
+The Elastic Net 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouHastie2005"
+literal "false"
+
+\end_inset
+
+ approach the correlated variable problem by combining the ridge and lasso
+ penalties to get a new penalty that they call the 
+\emph on
+elastic net
+\emph default
+.
+ While it is not a complete cure for the problems that afflict both ridge
+ regression and  lasso, the elastic net inherits both the sparsity of lasso
+ and the ability of ridge regression to preserve and equally weight groups
+ of correlated variables.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouHastie2005"
+literal "false"
+
+\end_inset
+
+ colorfully describe the elastic net as a stretchable fishing net that 
+\begin_inset Quotes eld
+\end_inset
+
+catches all the big fish
+\begin_inset Quotes erd
+\end_inset
+
+ while letting the little ones slip away, and start by formulating the 
+\emph on
+na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net
+\emph default
+, which solves
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net} & =\underset{\bubeta}{\mathrm{argmin}}\left\Vert \bueps\right\Vert ^{2}\,+\,\lambda_{1}\left\Vert \bubeta\right\Vert _{1}\,+\,\lambda_{2}\left\Vert \bubeta\right\Vert _{2},\ \ \lambda_{1},\ \lambda_{2}>0\nonumber \\
+ & =\underset{\bubeta}{\mathrm{argmin}}\left\Vert \bueps\right\Vert ^{2}\,+\,\lambda\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\left(1-\alpha\right)\left\Vert \bubeta\right\Vert _{2}\right),\ \ \lambda>0,\ 0<\alpha<1\label{eq:ElasticNet}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The objective function for the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve
+\emph on
+ 
+\emph default
+elastic net can be rewritten using both the Lagrangian and bound formulations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net} & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2}\,+\,\lambda\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\left(1-\alpha\right)\left\Vert \bubeta\right\Vert _{2}\right),\ \ \lambda>0,\ 0<\alpha<1\label{eq:ElasticNetA}\\
+ & =\underset{\bubeta}{\mathrm{argmin}}\ \left\Vert \bueps\right\Vert ^{2},\ \ \mathrm{s.t.}\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\left(1-\alpha\right)\left\Vert \bubeta\right\Vert _{2}\right)<c,\ c>0,\ 0<\alpha<1.\label{eq:ElasticNetB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouHastie2005"
+literal "false"
+
+\end_inset
+
+ show that the solution to the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve
+\emph on
+ 
+\emph default
+elastic net is identical to the solution of lasso on augmented data sets
+ 
+\begin_inset Formula $\mathrm{\mathbf{X}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}^{*}$
+\end_inset
+
+, where
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{X}}_{(N+p)\times p}^{*}=\frac{1}{\sqrt{1\,+\,\lambda_{2}}}\left[\begin{array}{c}
+\mathrm{\mathbf{X}}_{N\times p}\\
+\sqrt{\lambda_{2}}\,\mathrm{\mathbf{I}}_{p\times p}
+\end{array}\right]\label{eq:Xstar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{y}}_{(N+p)\times1}^{*}=\left[\begin{array}{c}
+\mathrm{\mathbf{y}}_{N\times1}\\
+\mathrm{\mathbf{0}}_{p\times1}
+\end{array}\right].\label{eq:ystar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore, if we let 
+\begin_inset Formula $\gamma=\nicefrac{\lambda_{1}}{\sqrt{1\,+\,\lambda_{2}}}$
+\end_inset
+
+, 
+\begin_inset Formula $\bubeta^{*}=\sqrt{1\,+\,\lambda_{2}}\,\bubeta$
+\end_inset
+
+ and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bueps_{(N+m)\times1}^{*}=\mathrm{\mathbf{y}}_{(N+p)\times1}^{*}\,-\,\mathrm{\mathbf{X}}_{(N+p)\times p}^{*}\,\bubeta_{(N+p)\times1}^{*}.\label{eq:EpsilonStar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net}=\frac{1}{\sqrt{1\,+\,\lambda_{2}}}\times\left[\underset{\bubeta^{*}}{\mathrm{argmin}}\left\Vert \bueps^{*}\right\Vert ^{2}\,+\,\gamma\left\Vert \bubeta^{*}\right\Vert ^{1}\right],\ \ \gamma>0,\label{eq:BetaNaiveElasticNet}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ elastic net is just lasso applied to an augmented data set! 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Like lasso, the elastic net has sharp boundaries, and does both variable
+ selection and shrinkage, and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+in the special case when the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are orthonormal it can be shown that the solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BetaNaiveElasticNet"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net}=\frac{\left(\left|\hat{\bubeta}_{LS}\right|-\frac{\lambda_{1}}{2}\boldsymbol{1}\right)^{+}\odot\mathrm{sgn}\left(\hat{\bubeta}_{LS}\right)}{1+\lambda_{2}}.\label{eq:ElasticNetvsLSbeta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On comparing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgevsLSbetaOrthogonal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LassovsLSbeta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ElasticNetvsLSbeta"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is clear that ridge regression shrinks but does not select, lasso selects
+ and thresholds but does not shrink, and the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net does both.
+ Less obviously, the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net does both, and in addition, has a grouping property – like
+ ridge regression, it gives highly correlated variables similar weights.
+ If the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are standardized to have mean 0 and variance 1, and if the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ and 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ components of 
+\begin_inset Formula $\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net}$
+\end_inset
+
+ are positively correlated, the magnitude of the difference between them
+ is bounded by 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net,\ i}-\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net,\ j}\right|\leqslant\frac{\left\Vert \mathbf{y}\right\Vert _{1}}{\lambda_{2}}\sqrt{2\,(1-\rho)},\label{eq:DeltaBetaBound}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is the sample correlation between the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ and 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ (see Theorem 1 and Appendix A of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouHastie2005"
+literal "false"
+
+\end_inset
+
+ for a proof).
+ 
+\end_layout
+
+\begin_layout Standard
+In practice, though, the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net tends to shrink too much – its solution is first impacted
+ by 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ (which induces shrinkage as does ridge regression when the columns of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are orthogonal – see 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgevsLSbetaOrthogonal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and then by 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+, which induces further lasso-like selection.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouHastie2005"
+literal "false"
+
+\end_inset
+
+ suggest a pragmatic solution to this problem – they undo the ridge-like
+ shrinkage by scaling the coefficients of the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net by 
+\begin_inset Formula $1\,+\,\lambda_{2}$
+\end_inset
+
+ and transform the na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\begin_inset Quotes erd
+\end_inset
+
+{i}
+\end_layout
+
+\end_inset
+
+ve elastic net into the 
+\emph on
+elastic net
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{\bubeta}_{elastic\ net} & =\left(1\,+\,\lambda_{2}\right)\times\hat{\bubeta}_{na\ddot{i}ve\ elastic\ net}\nonumber \\
+ & =\sqrt{1\,+\,\lambda_{2}}\times\left[\underset{\bubeta^{*}}{\mathrm{argmin}}\left\Vert \bueps^{*}\right\Vert ^{2}\,+\,\gamma\,\left\Vert \bubeta^{*}\right\Vert _{1}\right],\ \ \gamma>0.\label{eq:BetaElasticNet}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By doing so, they preserve the variable selection property of lasso and
+ induce the desirable variable grouping property we earlier described.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ZouZhang2009"
+literal "false"
+
+\end_inset
+
+ show that a variant of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BetaElasticNet"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that they call the 
+\emph on
+adaptive elastic net
+\emph default
+ exhibits the oracle property.
+ As in the case of the adaptive lasso, they first identify 
+\begin_inset Formula $\hat{\bubeta}_{elastic\ net}$
+\end_inset
+
+, and then use these coefficients to weight the individual components of
+ 
+\begin_inset Formula $\left\Vert \bubeta^{*}\right\Vert _{1}$
+\end_inset
+
+ in a second model
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\bubeta}_{adaptive\ elastic\ net}=\left(1\,+\,\lambda_{2}\right)\times\underset{\bubeta}{\mathrm{argmin}}\left\Vert \bueps\right\Vert ^{2}\,+\,\lambda_{1}\sum_{i=1}^{p}w_{i}\left|\bubeta\right|_{i}\,+\,\lambda_{2}\left\Vert \bubeta\right\Vert _{2},\ \ \lambda_{1},\ \lambda_{2}>0\label{eq:AdaptiveElasticNet}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\left(\frac{1}{\left|\bubeta_{elastic\ net,\ i}\right|}\right)^{\gamma},\ \gamma>0.\label{eq:AdaptiveElasticNetWeights}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As in the case of the adaptive lasso, small elastic net coefficients amplify
+ the corresponding terms penalty in the adaptive elastic net, making the
+ removal of noise coefficients more likely.
+ Both 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be determined empirically using cross-validation.
+ 
+\end_layout
+
+\begin_layout Subsection
+Cross-Validation
+\end_layout
+
+\begin_layout Standard
+Cross-validation involves splitting the training data set into two or more
+ parts, some of which are used for model building, and others that are used
+ for model testing ahead of implementation.
+ 
+\end_layout
+
+\begin_layout Standard
+Leave-out-one cross-validation is the simplest form of cross-validation,
+ and is applicable to data without a temporal component (i.e.
+ without a well defined notion of past, present and future).
+ From a data set with 
+\begin_inset Formula $N$
+\end_inset
+
+ items, we create 
+\begin_inset Formula $N-1$
+\end_inset
+
+ data sets with 
+\begin_inset Formula $N-1$
+\end_inset
+
+ items each by removing the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row of 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ for 
+\begin_inset Formula $1\leqslant i\leqslant N$
+\end_inset
+
+.
+ Next, we build 
+\begin_inset Formula $N-1$
+\end_inset
+
+ models using our preferred modeling technique, and use these to forecast
+ the excluded observations 
+\begin_inset Formula $\mathrm{\mathbf{y}}_{i}$
+\end_inset
+
+ one at a time.
+ The mean squared error is a function of both the modeling technique and
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+MSE\left(\lambda\right)=\frac{1}{N}\sum_{i=1}^{N}\left(\hat{\mathrm{\mathbf{y}}_{i}}-\mathrm{\mathbf{y}}_{i}\ |\ \lambda\right)^{2}\label{eq:MSECrossValidation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\hat{\mathrm{\mathbf{y}}_{i}}$
+\end_inset
+
+ is the forecast of 
+\begin_inset Formula $\mathrm{\mathbf{y}}_{i}$
+\end_inset
+
+ made using the model built on the remaining 
+\begin_inset Formula $N-1$
+\end_inset
+
+ rows of 
+\begin_inset Formula $\mathrm{\mathbf{X}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+.
+ The value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ must be determined by minimizing 
+\begin_inset Formula $MSE$
+\end_inset
+
+ over all possible values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lambda^{*}=\underset{\lambda}{\mathrm{argmin}\ }MSE\left(\lambda\right).\label{eq:OptimalLambda}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An upper bound on 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ can be obtained by testing a few cases till one is found that forces all
+ (or almost all) the coefficients to 0, and the cross-validation procedure
+ can then examine a grid of values between 0 and 
+\begin_inset Formula $\lambda_{max}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $N$
+\end_inset
+
+ is so large that leave-out-one cross-validation is computationally prohibitive,
+ cross-validation can also be done with a 
+\begin_inset Formula $k-$
+\end_inset
+
+fold split: the data is broken up into 
+\begin_inset Formula $k<<N$
+\end_inset
+
+ subgroups of approximately equal size; 
+\begin_inset Formula $k-1$
+\end_inset
+
+ of which are used as a training set, with the last one being used as a
+ validation set.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BreimanSpector1992"
+literal "false"
+
+\end_inset
+
+ suggest that 
+\begin_inset Formula $k$
+\end_inset
+
+ be set to 5, though 10 is also commonly used.
+ 
+\end_layout
+
+\begin_layout Standard
+When the data has a temporal component, a 
+\emph on
+training-validation-testing
+\emph default
+ data split is common: the data is split into three parts.
+ The oldest part (the training set) is used to build models with a wide
+ range of values for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ The middle part (the validation set), is used to test each model built
+ using the training set.
+ Finally, the model (or the parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+) that gives rise to the best forecasts in the validation set is identified,
+ and is then applied to the most recent part (the testing set).
+ It is important that the testing data set be held out and completely unavailabl
+e to the algorithm during training and validation, as viewing it ahead of
+ time is equivalent to looking into the future.
+\end_layout
+
+\begin_layout Standard
+Parameter identification for temporal data can be done in other ways as
+ well.
+ For example, we use expanding window robust regressions in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExpectedReturnChapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+to forecast the forward returns of the S&P 500 Index.
+ Assume we have data for time periods 
+\begin_inset Formula $1,\ 2,\ \cdots,\ T$
+\end_inset
+
+.
+ We start by fitting a model using robust regression over some initial time
+ period 
+\begin_inset Formula $1,\ 2,\ \cdots,\ T_{0}$
+\end_inset
+
+, and then test its prediction for time period 
+\begin_inset Formula $T_{0}+1$
+\end_inset
+
+.
+ We then build a new model using data over an expanded window 
+\begin_inset Formula $1,\ 2,\ \cdots,\ T_{0}+1$
+\end_inset
+
+ and test its prediction for time period 
+\begin_inset Formula $T_{0}+2$
+\end_inset
+
+.
+ Each period the training window expands by one to allow the incorporation
+ of new data, and this process is continued till the data is exhausted.
+ The entire loop can be repeated using different values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ before choosing a final value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ for use with the next incoming observation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I have never been convinced of expanding window regression, primarily because
+ it is not time adaptive enough.
+ INTERESTINGLY, IT IS CENTRAL TO PORTFOLIO MANAGEMENT, BECAUSE REGIMES CHANGE,
+ AND YOU DON'T WANT TO JUST FIT YOUR MODEL ON THE MOST RECENT REGIME - YOU
+ ARE BETTER OFF FITTING OVER A WIDE RANGE OF REGIMES.
+ I USE IT FOR THE S&P 500 RETURN PREDICTION PROBLEM IN THE EXPECTED RETURN
+ CHAPTER.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Robust Regularized Regression
+\end_layout
+
+\begin_layout Standard
+Even though robust statistical methods have made inroads into statistical
+ modeling and have seen some application in portfolio management as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MartinStoyanovLiShammaa2023"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MartinGuerardXia2024"
+literal "false"
+
+\end_inset
+
+,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+and portfolio management, 
+\series bold
+This is most definitely not the case, and we can cite our 2023 JPM paper
+ as kind of a 
+\begin_inset Quotes eld
+\end_inset
+
+first
+\begin_inset Quotes erd
+\end_inset
+
+ on the topic.
+ DONE
+\end_layout
+
+\end_inset
+
+ they are far from being a standard method in the field of machine learning.
+ A notable exception is the use of a well-known Huber method of controlling
+ for outliers in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "GuKellyXiu2020"
+literal "false"
+
+\end_inset
+
+.
+ Even so, some robust analogues of the methods described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:ClassicalSupervisedLearning"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exist, and we expect many more to be developed in the near future.
+ The R package 
+\family typewriter
+pense
+\family default
+ has robust extensions of ridge, lasso and elastic net estimators, and a
+ good discussion of these methods can be found in Chapter 5 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2019"
+literal "false"
+
+\end_inset
+
+ as well as in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FreueKepplingerSalibianSmucler2019"
+literal "false"
+
+\end_inset
+
+.
+ We use it for all our work.
+\end_layout
+
+\begin_layout Standard
+The central idea in robust regularization is to replace 
+\begin_inset Formula $\left\Vert \bueps\right\Vert ^{2}$
+\end_inset
+
+ in the various objective functions with 
+\begin_inset Formula $\sum_{i}\rho\left(\nicefrac{\bueps_{i}\,}{\,\hat{s}}\right)$
+\end_inset
+
+ for some symmetric loss function 
+\begin_inset Formula $\rho(.)$
+\end_inset
+
+ and some robust estimator of scale 
+\begin_inset Formula $\hat{s}$
+\end_inset
+
+ .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+It is a current limitation of most work in this area, as well as of 
+\family typewriter
+pense
+\family default
+, that they use Tukey's Bisquare for their 
+\begin_inset Formula $\rho$
+\end_inset
+
+ function.
+ While Tukey's bisquare does have some desirable properties (it is bounded,
+ and its corresponding 
+\begin_inset Formula $\psi$
+\end_inset
+
+ function is redescending), the mOpt 
+\begin_inset Formula $\rho$
+\end_inset
+
+ function is better, and we expect that the authors of 
+\family typewriter
+pense
+\family default
+ will eventually replace Tukey's Bisquare with mOpt.
+ 
+\series bold
+This is not really the case.
+ The most important thing is that the rho function must be 
+\begin_inset Quotes eld
+\end_inset
+
+reasonably
+\begin_inset Quotes erd
+\end_inset
+
+ bounded, and the main argument in favor of mOpt over the Bisquare is that
+ mOpt is supported by a theoretical result, whereas the Bisquare is not,
+ and the mOpt shape is more intuitive as a robust 3-sigma edit rule.
+ For the latter, see Figure 6.2 of Chapter 6, and the text immediately following,
+ and for the former see Section 18.4.4 of Chapter 18.
+ AGREED
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Robust Ridge Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2011"
+literal "false"
+
+\end_inset
+
+ describes a robust algorithm for ridge regression that is best thought
+ of as a weighted version of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with data dependent weights 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{w}_{i},\ 1\leqslant i\leqslant N$
+\end_inset
+
+ is the weight applied to the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+.
+ If we let 
+\begin_inset Formula $\mathbf{W}_{N\times N}=diag(\mathbf{w})$
+\end_inset
+
+, the robust equivalent of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RidgeRegressionA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\mu},\ \hat{\bubeta}_{robust\ ridge}=\left(\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathbf{W}_{N\times N}\,\mathrm{\mathbf{X}}_{N\times p}\,+\,\lambda\,\mathbf{I}_{p\times p}\right)^{-1}\,\mathrm{\mathbf{X}}_{p\times N}^{\prime}\,\mathbf{W}_{N\times N}\,\left(\mathrm{\mathbf{y}}_{N\times1}-\hat{\mu}\boldsymbol{1}_{N\times1}\right),\label{eq:RobustRidgeRegressionSolution}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\hat{\mu},\ \hat{\bubeta}_{robust\ ridge}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{W}_{N\times N}$
+\end_inset
+
+ must be identified iteratively.
+\end_layout
+
+\begin_layout Standard
+Earlier, we could safely assume that 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ was demeaned so that 
+\begin_inset Formula $\hat{\mu}$
+\end_inset
+
+ could be set to 0, but in the presence of outliers, this is no longer true,
+ and the algorithm must provide a robust estimate of its location.
+ The weights 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{w}_{i}=\frac{\psi(\bueps_{i})}{\bueps_{i}}\label{eq:RobustRidgeWeights}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+are determined by applying 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+RobustWeightsDefinition
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ to the residuals 
+\begin_inset Formula $\bueps$
+\end_inset
+
+ obtained from
+\begin_inset Formula 
+\begin{equation}
+\bueps=\mathbf{y}\,-\hat{\mu}\,\boldsymbol{1}_{N}\,\mathbf{-\,X}\ \hat{\bubeta}_{robust\ ridge}.\label{eq:RobustRidgeResiduals}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2011"
+literal "false"
+
+\end_inset
+
+ starts by using a highly robust (but potentially inefficient) regression
+ estimator to obtain an initial estimate of the regression coefficients
+ 
+\begin_inset Formula $\hat{\mu}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\bubeta}_{0}$
+\end_inset
+
+, following which the residuals 
+\begin_inset Formula $\bueps_{0}$
+\end_inset
+
+ are computed.
+ He then obtains an initial estimate of their scale, 
+\begin_inset Formula $\hat{\sigma}_{0}$
+\end_inset
+
+, by solving
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{N}\sum_{i\thinspace=\,1}^{N}\rho_{0}\left(\frac{\bueps_{0,\ i}}{\hat{\sigma}_{0}}\right)=\delta,\label{eq:IntializeSigmaEstimate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho_{0}(x)=\rho_{Bisquare}\left(\frac{x}{c_{0}}\right)=\min\left(1,\ 1\,-\,\left(1-\left(\frac{x}{c_{0}}\right)^{2}\right)^{3}\right),\label{eq:ScaledBisquareRhoc}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the values of 
+\begin_inset Formula $\delta$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+ determine the algorithm's robustness.
+ 
+\end_layout
+
+\begin_layout Standard
+Next, using the initial estimate of scale, as well as an estimate of the
+ equivalent degrees of freedom in the data, the algorithm adjusts 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+ upwards to a new value 
+\begin_inset Formula $c$
+\end_inset
+
+ that assures a desired level of normal efficiency when minimizing the loss
+ function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathscr{L}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right)=\hat{\sigma}_{0}^{2}\cdot\sum_{i\,=\,1}^{N}\rho\left(\frac{\mu,\ \bueps_{i}\left(\bubeta\right)}{\hat{\sigma}_{0}}\right)+\lambda\left\Vert \bubeta\right\Vert _{2},\label{eq:RobustRidgeLoss}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho(x)=\rho_{Bisquare}\left(\frac{x}{c}\right)=\min\left(1,\ 1\,-\,\left(1-\left(\frac{x}{c}\right)^{2}\right)^{3}\right).\label{eq:ScaledBisquareRho}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, using weights derived from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RobustRidgeWeights"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RobustRidgeLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ScaledBisquareRho"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the iterative procedure repeatedly updates 
+\begin_inset Formula $\mathbf{W},\ \hat{\bubeta}_{robust\ ridge},$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\mu}$
+\end_inset
+
+ till the changes in 
+\begin_inset Formula $\bueps$
+\end_inset
+
+ are sufficiently small.
+ The algorithm has a number of subtleties, starting with the fact that its
+ robustness depends on both the initial estimate of scale and the effective
+ number of parameters, and these are covered in Section 5.10 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2019"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We recommend implementing robust ridge regression using the function 
+\family typewriter
+regmest
+\family default
+ in the R package 
+\family typewriter
+pense
+\family default
+ with the parameter 
+\family typewriter
+alpha
+\family default
+ set to 0.
+ If a cross validated robust ridge regression is required, the corresponding
+ function is 
+\family typewriter
+regmest_cv()
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Robust Lasso and Elastic Net
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FreueKepplingerSalibianSmucler2019"
+literal "false"
+
+\end_inset
+
+ describe a flexible family of robust estimators that can implement models
+ ranging from ridge regression through elastic net to lasso by changing
+ a single parameter 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in the loss functions.
+ They consider two loss functions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathscr{L}_{PS}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right) & =\sigma^{2}\left(\mu,\ \bubeta\right)\,+\,\lambda_{S}\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\frac{\left(1-\alpha\right)}{2}\left\Vert \bubeta\right\Vert _{2}\right),\ \ \lambda_{S}>0,\ 0\leqslant\alpha\leqslant1\label{eq:SestimatorLoss}\\
+\mathscr{L}_{PM}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right) & =\frac{1}{N}\sum_{i\,=\,1}^{N}\rho\left(\frac{\bueps_{i}\left(\mu,\ \bubeta\right)}{\hat{\sigma}_{0}}\right)\,+\,\lambda_{M}\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\frac{\left(1-\alpha\right)}{2}\left\Vert \bubeta\right\Vert _{2}\right),\ \ \lambda_{M}>0,\ 0\leqslant\alpha\leqslant1.\label{eq:MestimatorLoss}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The presence of the variance in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ identifies it as the loss function of an S-estimator (S stands for scale)
+ and the presence of the 
+\begin_inset Formula $\rho$
+\end_inset
+
+ function in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ identifies it as an M-estimator.
+ The corresponding estimators are known as PENSE (
+\bar under
+P
+\bar default
+enalized 
+\bar under
+E
+\bar default
+lastic 
+\bar under
+N
+\bar default
+et 
+\bar under
+S
+\bar default
+ 
+\bar under
+E
+\bar default
+stimator) and PENSEM (
+\bar under
+P
+\bar default
+enalized 
+\bar under
+E
+\bar default
+lastic 
+\bar under
+N
+\bar default
+et 
+\bar under
+S
+\bar default
+ 
+\bar under
+E
+\bar default
+stimator – 
+\bar under
+M
+\bar default
+ step).
+ The factor of 2 in the regularization penalty and 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are not essential - we follow the convention adopted by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FreueKepplingerSalibianSmucler2019"
+literal "false"
+
+\end_inset
+
+ to allow easy cross-referencing.
+ These scaling factors do not affect the solutions to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but make them easier to manipulate algebraically and interpret.
+ The factor of 2 cancels when 
+\begin_inset Formula $\left\Vert \bubeta\right\Vert _{2}$
+\end_inset
+
+ is differentiated, and the factor of 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+ permits us to interpret the first term of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MestimatorLoss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as an expectation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kepplinger2023"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KepplingerCohen2023"
+literal "false"
+
+\end_inset
+
+ describe adaptive versions of PENSE and PENSEM that reduce the bias of
+ large coefficients and improves their ability to select variables.
+ An initial estimate of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ is obtained using robust ridge regression, and these coefficients are then
+ used to weight both the magnitude and the square of the individual components
+ of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+ The revised loss functions are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathscr{L}_{APS}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right) & =\sigma^{2}\left(\mu,\ \bubeta\right)\,+\,\lambda_{S}\,\sum_{i=1}^{p}w_{i}\left(\alpha\,\left|\bubeta_{i}\right|\,+\,\frac{1-\alpha}{2}\bubeta_{i}^{2}\right),\ \ \lambda_{S}>0,\ 0\leqslant\alpha\leqslant1\label{eq:AdaptiveSestimatorLoss}\\
+\mathscr{L}_{APM}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right) & =\frac{1}{N}\sum_{i\,=\,1}^{N}\rho\left(\frac{\bueps_{i}\left(\mu,\ \bubeta\right)}{\hat{\sigma}_{0}}\right)\,+\,\lambda_{M}\sum_{i\,=\,1}^{p}w_{i}\left(\alpha\,\left|\bubeta_{i}\right|\,+\,\frac{1-\alpha}{2}\bubeta_{i}^{2}\right),\ \ \lambda_{M}>0,\ 0\leqslant\alpha\leqslant1.\label{eq:AdaptiveMestimatorLoss}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+w_{i}=\left(\frac{1}{\left|\bubeta_{robust\ ridge,\ i}\right|}\right)^{\gamma},\ \gamma>0.\label{eq:AdaptiveElasticNetWeights-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The function 
+\family typewriter
+adamest_cv(
+\family default
+) in 
+\family typewriter
+pense
+\family default
+ implements adaptive scaling for both lasso and elastic net.
+ As with all regularized models, the loss function must be minimized using
+ cross-validation, though, as the data might contain outliers, 
+\begin_inset Formula $MSE$
+\end_inset
+
+ is no longer a good measure of the prediction error, which must be measured
+ using a robust estimator of scale.
+ The cross-validation functions in 
+\family typewriter
+pense
+\family default
+ allow the user to specify a range of classical and robust measures of predictio
+n error.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We have something unique to offer here.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We need rich, convincing applications examples, which compare Classic (LS
+ based) and Robust Regularized Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Classification and Robust Logistic regression 
+\end_layout
+
+\begin_layout Standard
+Sometimes, we are tasked with mapping a set of features to a set of 
+\begin_inset Formula $K$
+\end_inset
+
+ distinct classes, or categories, of responses 
+\begin_inset Formula $C_{1},\,C_{2},\cdots,\,C_{K}$
+\end_inset
+
+, such as the digits 0–9 (
+\begin_inset Formula $K=10$
+\end_inset
+
+), or the recessionary and expansionary states of the economy that we studied
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ExpectedReturnChapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ (
+\begin_inset Formula $K=2$
+\end_inset
+
+).
+ The linear models we have discussed so far are ill suited to this task
+ – we need to map their output (which we assume to be a scalar 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+) to exactly one these 
+\begin_inset Formula $K$
+\end_inset
+
+ categories, to which we assign the numeric values 
+\begin_inset Formula $1,\,2,\,\cdots,\,K$
+\end_inset
+
+.
+ This process, which is known as 
+\emph on
+classification
+\emph default
+, can be done in a number of ways, including:
+\end_layout
+
+\begin_layout Enumerate
+If the categories are naturally ordered, we can use a regularized regression
+ algorithm to regress their numerical values against the features, and map
+ 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ to a category by comparing it to a set of 
+\begin_inset Formula $K-1$
+\end_inset
+
+ thresholds 
+\begin_inset Formula $-\infty<\,T_{1}<\,T_{2}<\cdots<\,T_{K-1}<\infty$
+\end_inset
+
+, and output 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $C_{1}\ \mathrm{if}\ \hat{y}\ \leqslant\ T_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C_{2}\ \mathrm{if}\ T_{1}\ <\ \hat{y}\ \leqslant\ T_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C_{K}\ \mathrm{if}\ T_{K-1}\ <\ \hat{y}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If the categories are not naturally ordered, we can create a set of 
+\begin_inset Formula $K$
+\end_inset
+
+ linear models, one for each class 
+\begin_inset Formula $C_{j},\ 1\,\leqslant\,j\,\leqslant\,K$
+\end_inset
+
+, by associating the feature matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ with a matching set of 
+\begin_inset Formula $K$
+\end_inset
+
+ binary response vectors 
+\begin_inset Formula $\mathbf{c}^{j},\ 1\,\leqslant\,j\,\leqslant\,K$
+\end_inset
+
+, whose 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row is 1 (i.e.
+ 
+\begin_inset Formula $\mathbf{c}_{i}^{j}=1$
+\end_inset
+
+) if the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ item belongs to 
+\begin_inset Formula $C_{j}$
+\end_inset
+
+ and 0 otherwise.
+ Given a new feature vector 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+, we input its values into all 
+\begin_inset Formula $K$
+\end_inset
+
+ models and assign the observation to 
+\begin_inset Formula $C_{j}$
+\end_inset
+
+ if 
+\begin_inset Formula $\hat{y}_{j}$
+\end_inset
+
+, the fitted output of the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ model is the largest of the 
+\begin_inset Formula $K$
+\end_inset
+
+ fitted outputs.
+ In essence, each one of the models makes a prediction about the class of
+ the observation, which is then assigned to the class it most closely resembles.
+ While attractive in theory, this method often fails in practice when 
+\begin_inset Formula $K>2$
+\end_inset
+
+, as some classes get masked by other classes.
+ The masking problem can be solved using 
+\emph on
+linear discriminant analysis
+\emph default
+, but the distributional assumptions required by it are restrictive, and
+ we do not pursue it further.
+\end_layout
+
+\begin_layout Enumerate
+If the identification problem maps naturally to one of choosing the class
+ with the highest posterior probability, and if the sum of all the class
+ probabilities is 1, we can apply a non-linear transformation 
+\begin_inset Formula $g(\cdot)$
+\end_inset
+
+ to map 
+\begin_inset Formula $\hat{y}_{j}$
+\end_inset
+
+ to the probability that the given features correspond to an item from 
+\begin_inset Formula $C_{j}$
+\end_inset
+
+, for 
+\begin_inset Formula $1\,\leqslant\,j\,\leqslant\,K$
+\end_inset
+
+.
+ This is most easily done using 
+\emph on
+logistic regression
+\emph default
+ when there are only two classes, which, for convenience, we label 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, and to which we assign values of 0 and 1 respectively.
+ This requires only a single linear model that relates 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{c}$
+\end_inset
+
+, the class response vector,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{c}_{i}=0$
+\end_inset
+
+ if the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ is associated with 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ and is 1 if it is associated with 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ and we simplify notation by using 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $g\left(\hat{y}\right)$
+\end_inset
+
+ to denote its output and its transformed output respectively.
+\end_layout
+
+\begin_layout Standard
+In the first case, both the model and the thresholds must be determined
+ using cross-validation.
+ Candidate models include the classical and robust regularized models described
+ earlier in this chapter.
+ In the second, multiple distributional assumptions, along with assumptions
+ about the independence of measurements and the covariance of observations
+ within classes must be made in order to operationalize it.
+ As these assumptions are not true of most finance data sets, we do not
+ pursue it further.
+\end_layout
+
+\begin_layout Standard
+The third approach is widely used, and we focus on the 
+\begin_inset Formula $K=2$
+\end_inset
+
+ case to build our intuition before outlining the mathematics of the general
+ case.
+ 
+\end_layout
+
+\begin_layout Subsection
+Logistic Regression
+\end_layout
+
+\begin_layout Standard
+Logistic regression usefully bridges two observations:
+\end_layout
+
+\begin_layout Enumerate
+The response of a linear model, 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+, is unbounded on either side of the real line, and
+\end_layout
+
+\begin_layout Enumerate
+Probability distributions are increasing and non-negative, and are bounded
+ between 0 and 1.
+\end_layout
+
+\begin_layout Standard
+These observations can be reconciled by mapping 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ to the conditional probability that an observation 
+\begin_inset Formula $\mathbf{x}=\left(x_{1},\ x_{2},\ \cdots,\ x_{p}\right)^{\prime}$
+\end_inset
+
+ is associated with 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ via an appropriate 
+\emph on
+link function
+\emph default
+ 
+\begin_inset Formula $g\left(\cdot\right)$
+\end_inset
+
+.
+ Cumulative distribution functions are well suited to use as link functions
+ as they naturally map the real line to 
+\begin_inset Formula $[0,\ 1]$
+\end_inset
+
+, and we therefore write
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+While 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Probit"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ maps 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ to 
+\begin_inset Formula $p\left(\mathbf{x}\right)$
+\end_inset
+
+ via 
+\begin_inset Formula $g\left(\cdot\right)$
+\end_inset
+
+, it is equally common to see 
+\begin_inset Formula $p\left(\mathbf{x}\right)$
+\end_inset
+
+ being mapped to 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ via 
+\begin_inset Formula $g^{-1}\left(\cdot\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+g\left(\hat{y}\right) & =F\left(\hat{y},\ \butheta\right),\ -\infty\,<\,\hat{y}\,<\,\infty,\nonumber \\
+ & =Pr\left[\mathbf{x}\in C_{2}\right]\nonumber \\
+ & \triangleq p\left(\mathbf{x}\right).\label{eq:Probit}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ takes as its inputs a vector of parameters 
+\begin_inset Formula $\butheta$
+\end_inset
+
+, as well as 
+\begin_inset Formula $\hat{y}=\mathbf{x}^{\prime}\,\bubeta$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is a column vector of features associated with the observation and 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ is the coefficient vector generated by the linear model.
+ Finally, 
+\begin_inset Formula $p\left(\mathbf{x}\right)$
+\end_inset
+
+ is the probability that this observation is associated with 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Correspondingly, 
+\begin_inset Formula $1\,-\,p\left(\mathbf{x}\right)$
+\end_inset
+
+ is the probability that it is associated with 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ The model must be estimated by optimizing over 
+\begin_inset Formula $F(\cdot),\ \butheta$
+\end_inset
+
+ and 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ using maximum likelihood estimation and/or cross-validation.
+\end_layout
+
+\begin_layout Standard
+Allowing complete freedom in the choice of 
+\begin_inset Formula $F(\cdot)$
+\end_inset
+
+ so underconstrains the problem that no unique solution can be found.
+ In practice, therefore, we restrict the allowable family of distributions.
+ The two most widely used families are the Normal (in which case the model
+ is known as a 
+\emph on
+probit
+\emph default
+ model) or the 
+\emph on
+logit
+\emph default
+ (in which case it is known as logistic regression), and it is the second
+ that has come to dominate usage, largely on account of its lower computational
+ complexity.
+ With appropriate scaling, the normal and logit densities almost overlap
+ each other, so the results derived from their use are almost identical.
+\end_layout
+
+\begin_layout Standard
+Logistic regression starts by mapping 
+\begin_inset Formula $p\left(\mathbf{x}\right)$
+\end_inset
+
+ to the entire real line using the logit, or the quantile function of the
+ standard logistic distribution:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{y} & =\mathbf{x}^{\prime}\,\bubeta\nonumber \\
+ & =\ln\left(\frac{p\left(\mathbf{x}\right)}{1\,-\,p\left(\mathbf{x}\right)}\right).\label{eq:LogisticTransform}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bracketed term on the right hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogisticTransform"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is known as the 
+\emph on
+odds
+\emph default
+ (the entire right hand side is known as the 
+\emph on
+log odds
+\emph default
+) and can take any positive value.
+ It is easily seen that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p\left(\mathbf{x}\right)=\frac{\mathrm{odds}}{1\,+\,\mathrm{odds}},\label{eq:OddsVsP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogisticTransform"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is easily inverted to give 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+p\left(\mathbf{x}\right) & =g\left(\hat{y}\right)\nonumber \\
+ & =\frac{\exp\left(\hat{y}\right)}{1\,+\,\exp\left(\hat{y}\right)}\nonumber \\
+ & =\frac{\exp\left(\mathbf{x}^{\prime}\,\bubeta\right)}{1\,+\,\exp\left(\mathbf{x}^{\prime}\,\bubeta\right)}\nonumber \\
+ & =\frac{1}{1\,+\,\exp\left(-\mathbf{x}^{\prime}\,\bubeta\right)}.\label{eq:LogisticTransform2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we are given a feature matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ whose 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row is 
+\begin_inset Formula $\mathbf{X}_{i}$
+\end_inset
+
+, we correspondingly write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+p\left(\mathbf{X}_{i}\right) & =g\left(\hat{y}_{i}\right)\nonumber \\
+ & =\frac{\exp\left(\hat{y}_{i}\right)}{1\,+\,\exp\left(\hat{y}_{i}\right)}\nonumber \\
+ & =\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{1\,+\,\exp\left(\mathbf{X}_{i}\,\bubeta\right)}\nonumber \\
+ & =\frac{1}{1\,+\,\exp\left(-\mathbf{X}_{i}\,\bubeta\right)}.\label{eq:LogisticTransform3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the rows of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ are independent, we can use the fact that 
+\begin_inset Formula $\mathbf{c}_{i}$
+\end_inset
+
+ is binary to write the log-likelihood function of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+l(\bubeta) & =\ln\ L(\bubeta)\nonumber \\
+ & =\ln\left(\prod_{i\,=\,1}^{N}\left(p\left(\mathbf{X}_{i}\right)\right)^{\mathbf{c}_{i}}\left(1\,-\,p\left(\mathbf{X}_{i}\right)\right)^{1-\mathbf{c}_{i}}\right)\nonumber \\
+ & =\sum_{i\,=\,1}^{N}\mathbf{c}_{i}\cdot\ln\,p\left(\mathbf{X}_{i}\right)\ +\ \left(1\,-\,\mathbf{c}_{i}\right)\cdot\ln\,\left(1\,-\,p\left(\mathbf{X}_{i}\right)\right)\nonumber \\
+ & =\sum_{i\,=\,1}^{N}\mathbf{c}_{i}\cdot\ln\,\left(\frac{p\left(\mathbf{X}_{i}\right)}{1\,-\,p\left(\mathbf{X}_{i}\right)}\right)\ +\ \sum_{i\,=\,1}^{N}\cdot\ln\,\left(1\,-\,p\left(\mathbf{X}_{i}\right)\right)\nonumber \\
+ & =\sum_{i\,=\,1}^{N}\mathbf{c}_{i}\cdot\mathbf{X}_{i}\,\bubeta\ -\ \sum_{i\,=\,1}^{N}\ln\left(1\,+\,\exp\left(\mathbf{X}_{i}\,\bubeta\right)\right).\label{eq:LogLikelihoodLogisticRegression}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is easily shown that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\nabla l(\bubeta) & =\frac{\partial l(\bubeta)}{\partial\bubeta}\nonumber \\
+ & =\sum_{i\,=\,1}^{N}\left(\mathbf{c}_{i}\,-\,\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{1+\exp\left(\mathbf{X}_{i}\,\bubeta\right)}\right)\mathbf{X}_{i}^{\prime}\label{eq:LogisticRegressionGradient}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{H}(\bubeta) & =\frac{\partial^{2}l(\bubeta)}{\partial\bubeta\partial\bubeta^{\prime}}\nonumber \\
+ & =-\sum_{i\,=\,1}^{N}\mathbf{X}_{i}^{\prime}\,\mathbf{X}_{i}\,\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{\left(1+\exp\left(\mathbf{X}_{i}\,\bubeta\right)\right)^{2}}.\label{eq:LogisticRegressionHessian}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We identify 
+\begin_inset Formula $\bubeta_{Logistic\ Regression}$
+\end_inset
+
+ by setting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla l(\bubeta)=\mathbf{0},\label{eq:LogisticRegressionEstimatingEquation}
+\end{equation}
+
+\end_inset
+
+and then using gradient descent to iteratively identify the value of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ that solves 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogisticRegressionEstimatingEquation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The relevant details can be found in Section 4.4.1 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HastieTibshiraniFriedman2009"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Logistic regression, like the other linear models we earlier described,
+ can be regularized, and 
+\family typewriter
+glmnet
+\family default
+ allows the addition of an elastic net penalty to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogLikelihoodLogisticRegression"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The corresponding loss function is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathscr{L}_{LR}\left(\mathbf{X},\ \mathbf{y},\ \mu,\ \bubeta\right)=-\frac{1}{N}\,l(\bubeta)\,+\,\lambda_{LR}\left(\alpha\left\Vert \bubeta\right\Vert _{1}\,+\,\frac{\left(1-\alpha\right)}{2}\left\Vert \bubeta\right\Vert _{2}\right),\ \ \lambda_{LR}\geqslant0,\ 0\leqslant\alpha\leqslant1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Negating 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogLikelihoodLogisticRegression"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and dividing it by 
+\begin_inset Formula $N$
+\end_inset
+
+ turns the log-likelihood into an expected loss, and the addition of the
+ elastic net penalty allows for variable selection and shrinkage.
+ When 
+\begin_inset Formula $\lambda_{LR}=0$
+\end_inset
+
+, the loss function corresponds to classical logistic regression.
+ As 
+\begin_inset Formula $\lambda_{LR}$
+\end_inset
+
+ increases, the choice of alpha determines whether the regularization is
+ ridge-like, lasso-like or elastic net-like.
+ 
+\end_layout
+
+\begin_layout Standard
+It proves useful to routinely include a small ridge penalty when running
+ logistic regression to protect against divergence in the special case when
+ the classes are completely separated and have no overlap.
+ In this case, the MLE of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ is not unique, and some of its entries will become infinite.
+ A small ridge penalty protects against this.
+\end_layout
+
+\begin_layout Standard
+Robust logistic regression is subtly different from robust linear regression,
+ as the respones fall into a finite number of buckets, so that while errors
+ may exist in some responses, no outliers can exist.
+ The features, on the other hand, are unbounded, and can act as 
+\emph on
+leverage points
+\emph default
+ if they lie far away from the majority of the features.
+\end_layout
+
+\begin_layout Standard
+The influence function of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogisticRegressionEstimatingEquation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the MLE for Logistic Regression, can be shown to be (see Section 7.1 of
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2019"
+literal "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jann2020"
+literal "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+IF\left(\mathbf{c},\ \mathbf{X},\ \bubeta\right)=\left(\frac{1}{N}\sum_{i\,=\,1}^{N}\mathbf{X}_{i}^{\prime}\,\mathbf{X}_{i}\,\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{\left(1\,+\,\exp\left(\mathbf{X}_{i}\,\bubeta\right)\right)^{2}}\right)^{-1}\cdot\sum_{i\,=\,1}^{N}\left(\mathbf{c}_{i}\,-\,\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{1\,+\,\exp\left(\mathbf{X}_{i}\,\bubeta\right)}\right)\mathbf{X}_{i}^{\prime}.\label{eq:LogisticRegressionIF}
+\end{equation}
+
+\end_inset
+
+As the first term 
+\begin_inset Formula $\longrightarrow\left(E\left(\mathbf{x^{\prime}}\,\mathbf{x}\,\frac{\exp\left(\mathbf{x}\,\bubeta\right)}{\left(1\,+\,\exp\left(\mathbf{x}\,\bubeta\right)\right)^{2}}\right)\right)^{-1}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ represents a random row of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+, and as the magnitude of bracketed term in the sum is bounded by 1, the
+ primary determinant of the impact of an added observation on 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathbf{X}_{i}$
+\end_inset
+
+.
+ Robust logistic regression applies a data-dependent weight 
+\begin_inset Formula $\mathbf{W}_{i}$
+\end_inset
+
+ that depends on how far 
+\begin_inset Formula $\mathbf{X}_{i}$
+\end_inset
+
+ is from its distribution to the estimating equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:LogisticRegressionEstimatingEquation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which now becomes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sum_{i\,=\,1}^{N}\mathbf{W}_{i}\left(\mathbf{c}_{i}\,-\,\frac{\exp\left(\mathbf{X}_{i}\,\bubeta\right)}{1\,+\,\exp\left(\mathbf{X}_{i}\,\bubeta\right)}\right)\mathbf{X}_{i}^{\prime}=\mathbf{0},\label{eq:RobustLogisticRegressionMLE}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the vector of weights 
+\begin_inset Formula $\mathbf{W}$
+\end_inset
+
+ is derived from a robust estimate of the Mahalonobis distances of the rows
+ of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ from their common distribution.
+ Points that lie further away from the distribution are downweighted so
+ as not to distort the estimate of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+ The details are complex and can be found in Section 7.2 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Maronna2019"
+literal "false"
+
+\end_inset
+
+.
+ The R package 
+\family typewriter
+RobstatTM
+\family default
+ implements the weighted robust logistic regression algorithm 
+\family typewriter
+logregWBY
+\family default
+ that was first described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BiancoYohai1996"
+literal "false"
+
+\end_inset
+
+ and further enhanced in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CrouxHaesbroeck2003"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Projection Pursuit Regression and Neural Networks
+\end_layout
+
+\begin_layout Subsection
+Projection Pursuit 
+\end_layout
+
+\begin_layout Standard
+Least squares and its derivatives provide powerful ways by which to identify
+ structure in a high-dimensional space by optimally projecting features
+ onto a low-dimensional subspace, most often a hyperplane.
+ But what if the features can be made more visually informative by first
+ scaling and rotating, and perhaps even discarding, some of their components
+ before projecting them? Or if they exhibit clustering when projected onto
+ some special hyperplane? 
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Projections"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates the nature of the problem.
+ The data plotted is a mixture of two independent random variables 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ is normally distributed with mean 1.5 and variance 1, while 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+ is exponential with mean 1.
+ The plotted variables 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are derived from 
+\begin_inset Formula $Z_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Z_{2}$
+\end_inset
+
+ as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+X & =Z_{1}\ \mathrm{w.p.}\ \frac{2}{3},\ 1-Z_{2}\ \mathrm{w.p}.\ \frac{1}{3}\\
+Y & =Z_{1}\ \mathrm{w.p.}\ \frac{2}{3},\ \phantom{1-Z_{2}}-Z_{2}\ \mathrm{w.p}.\ \frac{1}{3}
+\end{align*}
+
+\end_inset
+
+The scatter plot at the top left displays the actual data, while the density
+ plot at the top right clearly shows the concentration of the points.
+ The separation between the two distributions is clear, and a 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+ line nicely separates the two distributions.
+ The density of 
+\begin_inset Formula $X$
+\end_inset
+
+ (bottom left), however, shows only a single peak, and that of 
+\begin_inset Formula $Y$
+\end_inset
+
+ (bottom right), identifies both peaks, but suggests that the two distributions
+ are almost equally likely.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/Scatter plot of x and y.png
+	scale 35
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename Plots/Two-d density plot of x and y using stat_density_2d.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/One-d density plot of x.png
+	scale 35
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename Plots/One-d density plot of y.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Projections"
+
+\end_inset
+
+Four views of two variables and their densities
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Projection pursuit
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The catchy name appears to have been first mentioned in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FriedmanTukey1974"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ is the process of exposing structure in a feature matrix beyond its covariance
+ matrix by maximizing an appropriately chosen 
+\emph on
+projection index 
+\begin_inset Formula $I$
+\end_inset
+
+.
+
+\emph default
+ The value of the projection index ought to reflect how interesting a particular
+ projection of the features might be to an analyst.
+ The notion of interestingness is application dependent, but is often interprete
+d as how non-normal the distribution of the projected data is.
+\end_layout
+
+\begin_layout Standard
+One-dimensional projection pursuit searches for a vector 
+\begin_inset Formula $\bubeta_{1}$
+\end_inset
+
+ that best exposes the underlying structure of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ by maximizing 
+\begin_inset Formula $I\left(\mathbf{X}^{\prime}\,\bubeta\right)$
+\end_inset
+
+.
+ Two-dimensional projection pursuit adds a second projection vector 
+\begin_inset Formula $\bubeta_{2}$
+\end_inset
+
+ as well as a bivariate projection index 
+\begin_inset Formula $I\left(\mathbf{X}^{\prime}\,\bubeta_{1},\ \mathbf{X}^{\prime}\,\bubeta_{2}\right)$
+\end_inset
+
+ that is maximized when interesting structure in the joint density of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ in two orthogonal directions is best exposed.
+\end_layout
+
+\begin_layout Standard
+Projection pursuit is often used to maximally separate clusters in a feature
+ matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+, and so lends itself to both supervised and unsupervised learning.
+ Projection pursuit regression goes a step further – it applies nonlinear
+ transformations to projections of data on a collection of identified proejction
+ vectors to obtain a better regression surface.
+\end_layout
+
+\begin_layout Standard
+The R packages 
+\family typewriter
+Pursuit, tourr
+\family default
+ and 
+\family typewriter
+REPPlab
+\family default
+ allow one to explore and visualize various projections of a data set, and
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iris1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays two projections of the famous 
+\family typewriter
+iris
+\family default
+ dataset along two axes using 
+\family typewriter
+Pursuit::GrandTour
+\family default
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Iris_flower_data_set
+\end_layout
+
+\end_inset
+
+ for the history of this dataset, which is widely used in machine learning.
+ It contains 4 measurements (the length and the width of petals and sepals)
+ on 150 flowers representing three species of irises.
+ The measurements were made by Edgar Anderson and the data set was made
+ famous by Sir Ronald Fisher in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Fisher1936"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ The plot on the left displays the raw data projected without any attempt
+ to maximize separation between classes, and evidences significant overlap
+ between the three species.
+ The plot on the right, in contrast, shows how an optimal projection allows
+ error-free identification of all irises of species setosa, and excellent,
+ though not perfect, separation of the two other species (versicolor and
+ virginica.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/Projection Pursuit Unrotated.png
+	width 7cm
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Plots/Projection Pursuit Example.png
+	width 7cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Iris1"
+
+\end_inset
+
+Initial and final projections of the Iris dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The projection vectors employed for the right-hand plot are displayed in
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:ProjectionVectorsIris"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and it is easily confirmed that they are orthogonal and have unit length.
+ Projection pursuit can be performed recursively – all irises of class setosa
+ can be removed from the dataset, and the algorithm can then be applied
+ to separate irises of the two the remaining classes (versicolor and virginica)
+ as well as possible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:ProjectionVectorsIris"
+
+\end_inset
+
+Unit projection vectors for Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iris1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+Projection Vector 1 (X-axis)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+Projection Vector 2 (Y-axis)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sepal.Length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.4567710
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1068818
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sepal.Width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.7476539
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.1170979
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Petal.Length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3671295
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5765450
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Petal.Width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.3123937
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.8015362
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kruskal1969"
+literal "false"
+
+\end_inset
+
+ initiated work on projection pursuit by searching for clusters that maximize
+ an 
+\begin_inset Quotes eld
+\end_inset
+
+index of condensation
+\begin_inset Quotes erd
+\end_inset
+
+ which he defined to be the coefficient of variation of the inter-point
+ distances generated by 
+\begin_inset Formula $\mathbf{X}\bubeta$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+I_{Kruskal}=\frac{\sigma_{y_{i}-y_{j}}}{\overline{y_{i}-y_{j}}}.\label{eq:KruskalCondensation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The intuition that motivates 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:KruskalCondensation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is simple: if projecting 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ onto 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+ results in a few well-separated clusters of points, the average inter-point
+ distance within clusters will be small, while the average inter-point distance
+ across clusters will be large, simultaneously increasing its numerator
+ and decreasing its denominator.
+ Unfortunately 
+\begin_inset Formula $I_{Kruskal}$
+\end_inset
+
+ is not robust to outliers, though it can be improved using robust estimates
+ of both the numerator and denominator.
+\end_layout
+
+\begin_layout Standard
+Over the years, many such indices have been identified, and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HouWentzell2011"
+literal "false"
+
+\end_inset
+
+ use kurtosis as an index to identify the directions 
+\begin_inset Formula $\mathbf{u}_{i}$
+\end_inset
+
+ that maximize cluster separation by 
+\emph on
+minimizing
+\emph default
+ the kurtosis of 
+\begin_inset Formula $\mathbf{u}_{i}\cdot\mathbf{y}$
+\end_inset
+
+.
+ Their technique rests on 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Moors1986"
+literal "false"
+
+\end_inset
+
+ observation that kurtosis measures the dispersion of 
+\begin_inset Formula $x$
+\end_inset
+
+ around both 
+\begin_inset Formula $\mu-\sigma$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu+\sigma$
+\end_inset
+
+, making its minimization a simple way by which to optimally separate observatio
+ns into two classes, one centered at 
+\begin_inset Formula $\mu-\sigma$
+\end_inset
+
+ and the other at 
+\begin_inset Formula $\mu+\sigma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\kappa & =E\left[\left(\frac{x\ -\ \mu}{\sigma}\right)^{4}\right]\nonumber \\
+ & =E\left[\left(\left(\frac{x\ -\ \mu}{\sigma}\right)^{2}\right)^{2}\right]\nonumber \\
+ & =E\left[\left(\left(\frac{x\ -\ \mu}{\sigma}\right)^{2}\right)\right]^{2}\ +\ \mathrm{var}\left(\left(\frac{x\ -\ \mu}{\sigma}\right)^{2}\right)\nonumber \\
+ & =1\ +\ \mathrm{var}\left(\left(\frac{x\ -\ \mu}{\sigma}\right)^{2}\right)\label{eq:KurtosisForICA}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:KurtosisMinProjections"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:KurtosisMinProjectionVector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates how the Iris dataset can be projected onto a single vector
+ and separated by minimizing kurtosis using the function 
+\family typewriter
+Pursuit::PP_Optimizer
+\family default
+.
+ The results are virtually identical to those in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Iris1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/Kurtosis Minimization.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:KurtosisMinProjections"
+
+\end_inset
+
+Projections onto the kurtosis minimizing projection vector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:KurtosisMinProjectionVector"
+
+\end_inset
+
+The kurtosis minimizing projection vector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22222}
+\end_layout
+
+\end_inset
+
+ Projection Vector
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sepal.Length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.988068380 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sepal.Width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.114840009 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Petal.Length
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.102380058 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Petal.Width
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.007139457 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hphantom{22}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% https://tex.stackexchange.com/questions/730693/place-a-figure-and-table-side-by
+-side-and-%% aligned-at-the-top-in-a-figure-float/730738#730738.
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcolumnwidth{8cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{paracol}{2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+includegraphics[width=
+\backslash
+linewidth]{Plots/Kurtosis Minimization.png}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+caption{Projections onto the kurtosis minimizing projection vector}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+label{fig:KurtosisMinProjections}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+switchcolumn
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+caption{The kurtosis minimizing projection vector}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+label{tab:KurtosisMinProjectionVector}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{tabular}{lr}
+\end_layout
+
+\begin_layout Plain Layout
+
+	  
+\backslash
+toprule
+\end_layout
+
+\begin_layout Plain Layout
+
+      Feature & 
+\backslash
+hphantom{22222} Projection Vector 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	  
+\backslash
+midrule 
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+      Sepal.Length & 0.988068380  
+\backslash
+hphantom{22} 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+      Sepal.Width  & 0.114840009  
+\backslash
+hphantom{22} 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+      Petal.Length & -0.102380058 
+\backslash
+hphantom{22} 
+\backslash
+
+\backslash
+ 
+\backslash
+midrule
+\end_layout
+
+\begin_layout Plain Layout
+
+      Petal.Width  & 0.007139457  
+\backslash
+hphantom{22} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	  
+\backslash
+bottomrule
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{paracol}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Projection pursuit analysis (PPA) has much in common with Independent Components
+ Analysis (ICA), which in turn is related to Principal Components Analysis
+ (PCA).
+ The links between the techniques are addressed briefly in Chapter 14 of
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HastieTibshiraniFriedman2009"
+literal "false"
+
+\end_inset
+
+ and are developed comprehensively in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HyvarinenOja2000"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HyvarinenKaarhunenOja2001"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Projection Pursuit Regression
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FriedmanStuetzle1981"
+literal "false"
+
+\end_inset
+
+ use the projections identified by PPA to usefully generalize Least Squares
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ProbabilityAppendix
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+for a development of Least Squares.
+\end_layout
+
+\end_inset
+
+ by writing 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{y}=\overline{y}\ +\ \sum_{i=1}^{m}f_{i}\left(\mathbf{x}^{\prime}\,\bubeta_{i}\right),\label{eq:PPR1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\bubeta_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ projection,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+These may not be identical to the projections identified by projection pursuit.
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Formula $f_{i},\ 1\leqslant i\leqslant m$
+\end_inset
+
+ are smooth 
+\emph on
+ridge functions
+\emph default
+, or functions that vary only in the direction of 
+\begin_inset Formula $\bubeta$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KonyaginKuleshovMaiorov2018"
+literal "false"
+
+\end_inset
+
+ for the theory of ridge functions.
+\end_layout
+
+\end_inset
+
+ The ridge functions in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PPR1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+are not restricted to be linear, allowing it to capture nonlinearities in
+ the relationship between 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Most importantly, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "DiaconisShahshahani1984"
+literal "false"
+
+\end_inset
+
+ show that ridge functions possess a universal approximation property –
+ any function of 
+\begin_inset Formula $p$
+\end_inset
+
+ variables can be appproximated arbitrarily well by ridge functions for
+ sufficiently large 
+\begin_inset Formula $m$
+\end_inset
+
+, echoing the Stone-Weierstrass Theorem for continuous functions on Hausdorff
+ spaces.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "FriedmanStuetzle1981"
+literal "false"
+
+\end_inset
+
+ call their method Projection Pursuit Regression (PPR) and present an iterative
+ algorithm for identifying 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bubeta_{i}$
+\end_inset
+
+.
+ Even though the algorithm is refined in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Friedman1985"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Friedman1987"
+literal "false"
+
+\end_inset
+
+, we present only the original version, both for ease of exposition and
+ for relevance.
+ In spite of its distinguished parentage, PPR is no longer widely used,
+ and lives on primarily as the intellectual predecessor of neural networks,
+ largely on account of the universal approximation property they share.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Enumerate
+
+\family typewriter
+Initialize:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $i\longleftarrow1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m\longleftarrow m_{max}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+Demean the response vector
+\family default
+ 
+\begin_inset Formula $\mathbf{y}_{1}\longleftarrow\mathbf{y}-\bar{\mathbf{y}}\mathbf{1}$
+\end_inset
+
+
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\family typewriter
+While 
+\begin_inset Formula $i=1,\ 2,\cdots,\ m$
+\end_inset
+
+ and (
+\begin_inset Formula $res^{2}$
+\end_inset
+
+> Threshold):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family typewriter
+Compute the residuals 
+\begin_inset Formula $\mathrm{\bueps}_{i}\longleftarrow\mathbf{y}_{i}\ -\ \sum_{j=1}^{i-1}f_{j}\left(\mathbf{X}\,\bubeta_{j}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+Search for and dentify the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ projection vector 
+\family default
+
+\begin_inset Formula $\bubeta_{i}$
+\end_inset
+
+ 
+\family typewriter
+and ridge function
+\family default
+ 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ 
+\family typewriter
+that minimizes the sum of squared residuals
+\family default
+ 
+\begin_inset Formula $res^{2}=\left(\mathrm{\bueps}_{i}\ -\ f_{i}\left(\mathbf{X}\,\bubeta_{i}\right)\right)^{\prime}\left(\mathrm{\bueps}_{i}\ -\ f_{i}\left(\mathbf{X}\,\bubeta_{i}\right)\right)$
+\end_inset
+
+ , where 
+\begin_inset Formula $f_{i}\left(\cdot\right)$
+\end_inset
+
+is applied to each component of 
+\begin_inset Formula $\mathbf{X}\,\bubeta_{i}$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:FriedmanSteutzlePPR"
+
+\end_inset
+
+The Friedman-Steutzle algorithm for Projection Pursuit Regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:FriedmanSteutzlePPR"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is a forward stagewise procedure – once a projection vector is identified,
+ it is not modified in later stages.
+ In contrast, the SMART algorithm decribed in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Friedman1985"
+literal "false"
+
+\end_inset
+
+ directly minimizes the sum of squared residuals by iteratively minimizing
+ the magnitude of the residual 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PPR1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ using a Gauss-Newton iteration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+m^{*},\ \mathbf{f}^{*},\ \bubeta^{*}=\underset{m,\ f_{i},\ \bubeta_{i}}{argmin}\left(\mathbf{y}\ -\ \bar{\mathbf{y}}\mathbf{1}\ -\ \sum_{i=1}^{m}f_{i}\left(\mathbf{X}\,\bubeta_{i}\right)\right)^{\prime}\left(\mathbf{y}\ -\ \bar{\mathbf{y}}\mathbf{1}\ -\ \sum_{i=1}^{m}f_{i}\left(\mathbf{X}\,\bubeta_{i}\right)\right),\label{eq:SMARTppr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $m^{*},\ \mathbf{f}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bubeta^{*}$
+\end_inset
+
+ are the optimal values of 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $f_{i},\ 1\leqslant i\leqslant m$
+\end_inset
+
+ and 
+\begin_inset Formula $\bubeta_{i},\ 1\leqslant i\leqslant m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The two solutions can be strikingly different, particularly when the features
+ are almost collinear.
+ The SMART algorithm is available as the Base R functions 
+\family typewriter
+ppr
+\family default
+ and 
+\family typewriter
+plot.ppr
+\family default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:pprFitofFNBtoF3andFFC4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays the projection vectors identified by PPR as well as the LS fits
+ of Fama-French 3– and 4–factor models to the weekly returns of the stock
+ with ticker FNB in 2008.
+ It echoes the comparison between LS and robust regression in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FNBLSandRobustRegressionTable
+\end_layout
+
+\end_inset
+
+.
+ We have deliberately suppressed the intercept as it is small, and as the
+ projection vectors do not have an intercept.
+ The first four columns display the first two projection vectors for PPR
+ for the 3– and 4–factor Fama-French models while the last two columns display
+ LS fits using the same data.
+ It is not possible to display or compactly characterize the entire PPR
+ surface as it involves non-linear smoothing of the residuals generated
+ by each of the ridge functions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:pprFitofFNBtoF3andFFC4"
+
+\end_inset
+
+Projection Pursuit Vectors and LS fits of FF3 and FFC4 models to FNB 2008
+ weekly returns.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<results = 
+\begin_inset Quotes eld
+\end_inset
+
+asis
+\begin_inset Quotes erd
+\end_inset
+
+,echo = F, warning = FALSE, tidy=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(PCRA)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(facmodTS)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+load("../Ch 6 Time Series Factor Models/Data/datFF3W.rda")
+\end_layout
+
+\begin_layout Plain Layout
+
+load("../Ch 6 Time Series Factor Models/Data/datFF4W.rda")
+\end_layout
+
+\begin_layout Plain Layout
+
+load("../Ch 6 Time Series Factor Models/Data/stkLs_.rda")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+datFF3 <- datFF3W["2008-01-01/2008-12-31",]
+\end_layout
+
+\begin_layout Plain Layout
+
+names(datFF3)[1] <- "MKT"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+datFF4 <- datFF4W["2008-01-01/2008-12-31",]
+\end_layout
+
+\begin_layout Plain Layout
+
+names(datFF4)[c(1, 4)] <- c("MKT","MOM")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+stkLs_$'2007-2008' <- stkLs_$'2007-2008'[-105,]
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB <- stkLs_$'2007-2008'$retFNB
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB <- FNB["2008-01-01/2008-12-31"]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF3 <- cbind(FNB, datFF3)
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF4 <- cbind(FNB, datFF4)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF3.ppr <- ppr(FNB ~ MKT + SMB + HML, data = FNB_FF3, nterms = 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF3.lm  <-  lm(FNB ~ MKT + SMB + HML, data = FNB_FF3)
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF4.ppr <- ppr(FNB ~ MKT + SMB + HML + MOM, data = FNB_FF4, nterms =
+ 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF4.lm  <-  lm(FNB ~ MKT + SMB + HML + MOM, data = FNB_FF4)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF3.alpha <- round(rbind(FNB_FF3.ppr[["alpha"]], rep(0, 2)), 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+rownames(FNB_FF3.alpha) <- c("MKT", "SMB", "HML", "MOM")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+FNB_FF4.alpha <- round(FNB_FF4.ppr[["alpha"]], 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+rownames(FNB_FF4.alpha) <- c("MKT", "SMB", "HML", "MOM")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lsFBB_FF3.coef <- round(c(FNB_FF3.lm$coefficients[2:4], 0), 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+names(lsFBB_FF3.coef) <- c("MKT", "SMB", "HML", "MOM")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lsFBB_FF4.coef <- round(FNB_FF4.lm$coefficients[2:5], 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+names(lsFBB_FF4.coef) <- c("MKT", "SMB", "HML", "MOM")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+projVectorsAndCoeffs <- cbind(FNB_FF3.alpha,  FNB_FF4.alpha, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                              lsFBB_FF3.coef, lsFBB_FF4.coef)
+\end_layout
+
+\begin_layout Plain Layout
+
+colnames(projVectorsAndCoeffs) <- c("PPR: V1/FF3",  "PPR: V2/FF3",
+\end_layout
+
+\begin_layout Plain Layout
+
+                                    "PPR: V1/FF4",  "PPR: V2/FF4",
+\end_layout
+
+\begin_layout Plain Layout
+
+                                    "LS: Coeff(FF3)", "LS: Coeff(FF4)")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+kable(projVectorsAndCoeffs, format = "latex", booktabs = TRUE, row.names
+ = TRUE) |>
+\end_layout
+
+\begin_layout Plain Layout
+
+  kable_styling(table.env = "center") |>
+\end_layout
+
+\begin_layout Plain Layout
+
+  column_spec(1,   "0.5in")|>
+\end_layout
+
+\begin_layout Plain Layout
+
+  column_spec(2:5, "0.7in")|>
+\end_layout
+
+\begin_layout Plain Layout
+
+  column_spec(6:7, "0.8in")
+\end_layout
+
+\begin_layout Plain Layout
+
+# summary(FNB_FF4.ppr)
+\end_layout
+
+\begin_layout Plain Layout
+
+# summary(FNB_FF3.ppr)
+\end_layout
+
+\begin_layout Plain Layout
+
+# summary(FNB_FF3.lm)
+\end_layout
+
+\begin_layout Plain Layout
+
+# summary(FNB_FF4.lm)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:rssFNBtoF3andFFC4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays the residual sums of squares for PPR and LS fits to the weekly
+ returns of FNB in 2008.
+ PPR roughly halves the error variance, in part due to the fact that it
+ fits the data with non-linear ridge functions.
+ It is striking that both fits see little improvement when moving from three
+ factors to four, supporting the widely-held view that equity returns are
+ explained in large part by a few systematic factors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:rssFNBtoF3andFFC4"
+
+\end_inset
+
+Residual Sum of Squares for PPR and LS fits of FF3 and FFC4 models to FNB
+ 2008 weekly returns.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<results = 
+\begin_inset Quotes eld
+\end_inset
+
+asis
+\begin_inset Quotes erd
+\end_inset
+
+,echo = F, warning = FALSE, tidy=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+rss.FNB_FF3.ppr <- FNB_FF3.ppr$gof
+\end_layout
+
+\begin_layout Plain Layout
+
+rss.FNB_FF4.ppr <- FNB_FF4.ppr$gof
+\end_layout
+
+\begin_layout Plain Layout
+
+rss.FNB_FF3.lm  <- sum(FNB_FF3.lm$residuals^2)
+\end_layout
+
+\begin_layout Plain Layout
+
+rss.FNB_FF4.lm  <- sum(FNB_FF4.lm$residuals^2)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+df <- data.frame(
+\begin_inset Quotes eld
+\end_inset
+
+PPR_FF3
+\begin_inset Quotes erd
+\end_inset
+
+ = round(rss.FNB_FF3.ppr, 3),
+\end_layout
+
+\begin_layout Plain Layout
+
+				 
+\begin_inset Quotes eld
+\end_inset
+
+PPR_FF4
+\begin_inset Quotes erd
+\end_inset
+
+ = round(rss.FNB_FF4.ppr, 3),
+\end_layout
+
+\begin_layout Plain Layout
+
+				 
+\begin_inset Quotes eld
+\end_inset
+
+LS_FF3
+\begin_inset Quotes erd
+\end_inset
+
+  = round(rss.FNB_FF3.lm, 3),
+\end_layout
+
+\begin_layout Plain Layout
+
+				 
+\begin_inset Quotes eld
+\end_inset
+
+LS_FF4
+\begin_inset Quotes erd
+\end_inset
+
+  = round(rss.FNB_FF4.lm, 3)
+\end_layout
+
+\begin_layout Plain Layout
+
+				)
+\end_layout
+
+\begin_layout Plain Layout
+
+colnames(df) <- c(
+\begin_inset Quotes eld
+\end_inset
+
+PPR: FF3
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+PPR: FF4
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+LS: FF3
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+LS: FF4
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+kable(df, format = "latex", booktabs = TRUE, row.names = FALSE) |>
+\end_layout
+
+\begin_layout Plain Layout
+
+  kable_styling(table.env = "center") |>
+\end_layout
+
+\begin_layout Plain Layout
+
+  column_spec(1:6, "0.8in")
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined,C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined,C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined"
+options "biblatex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

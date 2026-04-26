@@ -1,0 +1,150 @@
+---
+title: "Appendix D: Portfolio Theory"
+subtitle: "Mean-Variance Frontier, CAPM, APT, and Robust Estimation"
+---
+
+::: {.copyright-notice}
+**Copyright Notice.** Planned for publication in 2026 by R. Douglas Martin, Thomas K. Philips, Bernd Scherer, and Kirk Li. All rights reserved. © Copyright 2025.
+:::
+
+::: {.pdf-callout}
+::: {.pdf-icon}
+&#128196;
+:::
+::: {.pdf-text}
+**Full appendix available as PDF.**
+[Download Appendix D — Portfolio Theory](Appendix%20D%20Portfolio%20Theory.pdf){target="_blank"}
+:::
+:::
+
+## Overview
+
+This appendix derives the mathematical results underlying classical portfolio theory: the minimum-variance frontier, the Capital Asset Pricing Model (CAPM), the zero-beta CAPM, and the Arbitrage Pricing Theory (APT). It also provides technical details on the robust estimation methods used in the main text.
+
+---
+
+## D.1 — Minimum-Variance Frontier Mathematics
+
+::: {.section-list}
+**Topics covered:**
+
+- Derivation of the minimum-variance weight vector $\mathbf{w}_{\mathrm{mv}}$
+- Closed-form solution using Lagrange multipliers (two-fund separation)
+- The constants $a, b, c, d$ and their geometric meaning
+- Positivity of $d$ via the Cauchy-Schwarz inequality
+- Global minimum variance (GMV) portfolio: mean $\mu_{\mathrm{gmv}} = a/c$ and variance $\sigma^2_{\mathrm{gmv}} = 1/c$
+:::
+
+The minimum-variance portfolio with target return $\mu_P$, subject to full investment $\mathbf{w}^\prime \mathbf{1} = 1$ and return constraint $\mathbf{w}^\prime \boldsymbol{\mu} = \mu_P$, has weight vector
+
+$$
+\mathbf{w}_{\mathrm{mv}} = \mathbf{w}_1 + \mu_P\,\mathbf{w}_2,
+$$
+
+where $\mathbf{w}_1$ and $\mathbf{w}_2$ are two fixed portfolios (the **two-fund separation** result). The efficient frontier is the upper branch of the resulting parabola in $(\sigma_P, \mu_P)$ space.
+
+The scalar $d = bc - a^2 > 0$ (with equality only when all expected returns are identical, which never arises in practice) follows from the Cauchy-Schwarz inequality applied to $\mathbf{C}^{-1/2}\boldsymbol{\mu}$ and $\mathbf{C}^{-1/2}\mathbf{1}$.
+
+---
+
+## D.2 — The Tangent Portfolio is the Market Portfolio Under the CAPM
+
+::: {.section-list}
+**Topics covered:**
+
+- Definition of the tangent portfolio: maximum Sharpe ratio portfolio
+- Derivation that the tangent portfolio equals the market portfolio under CAPM assumptions
+- Implications: all investors hold a combination of the risk-free asset and the market portfolio
+:::
+
+---
+
+## D.3 — Proof of the CAPM
+
+::: {.section-list}
+**Topics covered:**
+
+- CAPM assumptions: investors maximize mean-variance utility, homogeneous expectations, risk-free asset
+- Derivation of the Security Market Line (SML): $\mu_i - r_f = \beta_i (\mu_M - r_f)$
+- Beta as the scaled covariance: $\beta_i = \mathrm{cov}(R_i, R_M)/\sigma_M^2$
+:::
+
+The **Capital Asset Pricing Model** states that in equilibrium, every asset's expected excess return is proportional to its market beta:
+
+$$
+\mu_i - r_f = \beta_i \left(\mu_M - r_f\right), \quad \beta_i = \frac{\mathrm{cov}(R_i, R_M)}{\sigma_M^2}.
+$$
+
+The CAPM is derived by exploiting the fact that the market portfolio must lie on the efficient frontier, and using the first-order conditions of the investor's mean-variance optimization problem.
+
+---
+
+## D.4 — Zero-Beta CAPM Derivation
+
+::: {.section-list}
+**Topics covered:**
+
+- The zero-beta portfolio $Z(P)$ of a frontier portfolio $P$: the unique frontier portfolio uncorrelated with $P$
+- Black's (1972) zero-beta CAPM (no risk-free asset): $\mu_i = \mu_{Z(M)} + \beta_i (\mu_M - \mu_{Z(M)})$
+- Geometric interpretation on the minimum-variance frontier
+:::
+
+::: {#fig-zero-beta layout-ncol=1}
+![Zero-beta portfolio on the minimum-variance frontier. For any frontier portfolio $P$ (here the market portfolio $M$), its zero-beta counterpart $Z(M)$ is the frontier portfolio with zero covariance with $M$. The zero-beta CAPM replaces the risk-free rate with the expected return of $Z(M)$, making it applicable when no risk-free asset exists.](4C__Users_tkpme_Dropbox_BookPCRA_Springer_Produ___D_Portfolio_Theory_Plots_zeroBetaPort_graph.PNG){fig-alt="Zero beta portfolio on the mean-variance frontier"}
+
+Zero-beta CAPM: $Z(M)$ is the frontier portfolio uncorrelated with the market portfolio $M$.
+:::
+
+---
+
+## D.5 — Zero-Covariance Frontier Portfolios
+
+::: {.section-list}
+**Topics covered:**
+
+- Characterization of all pairs of zero-covariance frontier portfolios
+- The zero-covariance map on the parabolic frontier
+:::
+
+---
+
+## D.6 — Proof of the APT
+
+::: {.section-list}
+**Topics covered:**
+
+- Ross (1976) Arbitrage Pricing Theory: factor model structure and no-arbitrage pricing
+- Factor risk premia and factor betas
+- Relationship between APT and CAPM
+:::
+
+The **Arbitrage Pricing Theory** assumes returns follow a $K$-factor linear model:
+
+$$
+R_i = \alpha_i + \sum_{k=1}^{K} \beta_{ik} F_k + \varepsilon_i.
+$$
+
+Under a no-arbitrage condition, the expected return satisfies
+
+$$
+\mu_i \approx r_f + \sum_{k=1}^{K} \beta_{ik}\, \lambda_k,
+$$
+
+where $\lambda_k$ is the risk premium of factor $k$. The APT requires no distributional assumptions on returns beyond the factor structure.
+
+---
+
+## D.7 — Robust Estimation Details
+
+::: {.section-list}
+**Topics covered:**
+
+- mOpt $\psi$ function formula: the bounded score function used in MM-regression
+- Technical details supporting the robust estimators discussed in the main text
+:::
+
+::: {.callout-note}
+## Reading Guide
+
+Section D.1 is the mathematical foundation for all portfolio construction results in PCRA. Readers with a strong linear algebra background (covered in Appendix A) will find the derivations in D.1–D.4 straightforward. Section D.6 (APT) is self-contained and can be read independently.
+:::

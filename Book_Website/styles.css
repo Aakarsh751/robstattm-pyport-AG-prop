@@ -1,0 +1,289 @@
+/* ============================================================
+   PCRA Book Website — Custom Academic Stylesheet
+   ============================================================ */
+
+/* --- Typography ------------------------------------------- */
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  color: #1b3a5c;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2rem; border-bottom: 2px solid #1b3a5c; padding-bottom: 0.3em; }
+h2 { font-size: 1.5rem; border-bottom: 1px solid #dde3ea; padding-bottom: 0.2em; }
+h3 { font-size: 1.2rem; }
+
+/* --- Navbar ----------------------------------------------- */
+
+.navbar {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* --- Hero block on homepage ------------------------------- */
+
+.hero-block {
+  background: linear-gradient(135deg, #1b3a5c 0%, #2d6496 100%);
+  color: #ffffff;
+  padding: 3.5rem 2.5rem;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-block h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  margin-top: 0;
+}
+
+.hero-block .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.88;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.hero-block .authors {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.98rem;
+  margin-top: 1.2rem;
+  opacity: 0.92;
+}
+
+.hero-block .publisher-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-top: 1rem;
+  letter-spacing: 0.03em;
+}
+
+/* --- Appendix cards on homepage --------------------------- */
+
+.appendix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.appendix-card {
+  background: #f7f9fc;
+  border: 1px solid #dde3ea;
+  border-left: 4px solid #1b3a5c;
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem;
+  transition: box-shadow 0.18s ease, border-left-color 0.18s ease;
+}
+
+.appendix-card:hover {
+  box-shadow: 0 4px 14px rgba(27,58,92,0.12);
+  border-left-color: #2d6496;
+}
+
+.appendix-card .label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2d6496;
+  margin-bottom: 0.35rem;
+}
+
+.appendix-card h3 {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1b3a5c;
+  border: none;
+}
+
+.appendix-card p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0 0 0.8rem;
+  line-height: 1.55;
+}
+
+.appendix-card a.btn-appendix {
+  display: inline-block;
+  background: #1b3a5c;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.appendix-card a.btn-appendix:hover {
+  background: #2d6496;
+}
+
+/* --- Section overview boxes ------------------------------- */
+
+.section-list {
+  background: #f7f9fc;
+  border: 1px solid #dde3ea;
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.section-list ul {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.section-list li {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: #2a2a2a;
+}
+
+/* --- PDF download callout --------------------------------- */
+
+.pdf-callout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #eef4fb;
+  border: 1px solid #b8d0ea;
+  border-radius: 6px;
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.pdf-callout .pdf-icon {
+  font-size: 2rem;
+  line-height: 1;
+  color: #1b3a5c;
+  flex-shrink: 0;
+}
+
+.pdf-callout .pdf-text {
+  font-size: 0.92rem;
+  color: #1b3a5c;
+}
+
+.pdf-callout a {
+  font-weight: 600;
+  color: #1b3a5c;
+  text-decoration: underline;
+}
+
+/* --- Figure captions -------------------------------------- */
+
+.quarto-float figcaption,
+figcaption,
+.figure-caption {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* --- Table of contents ------------------------------------ */
+
+#TOC {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.87rem;
+}
+
+#TOC a {
+  color: #2a5080;
+}
+
+#TOC a:hover {
+  color: #1b3a5c;
+}
+
+/* --- Page footer ------------------------------------------ */
+
+.nav-footer {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #666;
+  border-top: 1px solid #dde3ea;
+  margin-top: 3rem;
+}
+
+/* --- Callout overrides ------------------------------------ */
+
+.callout {
+  border-radius: 6px;
+}
+
+/* --- Copyright notice ------------------------------------- */
+
+.copyright-notice {
+  background: #fffbea;
+  border: 1px solid #e8d87a;
+  border-radius: 5px;
+  padding: 0.75rem 1.1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #5a4a00;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Author block ----------------------------------------- */
+
+.author-card {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #dde3ea;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.author-card .author-info h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.author-card .author-info p {
+  font-size: 0.92rem;
+  color: #444;
+  margin: 0;
+}
+
+/* --- Responsive adjustments ------------------------------ */
+
+@media (max-width: 768px) {
+  .hero-block { padding: 2rem 1.4rem; }
+  .hero-block h1 { font-size: 1.7rem; }
+  .appendix-grid { grid-template-columns: 1fr; }
+  .author-card { flex-direction: column; }
+}

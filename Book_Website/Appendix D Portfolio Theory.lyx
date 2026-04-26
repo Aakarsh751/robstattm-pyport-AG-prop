@@ -1,0 +1,3209 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass svmono
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{makeidx}% allows index generation
+% standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}% used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%\usepackage[ style=authoryear,natbib=true,giveninits=true,backend=biber,maxcitenames=2]{biblatex}
+\usepackage[style=authoryear,natbib=true,firstinits=false,backend=biber,maxcitenames=2]{biblatex}
+
+
+\setlength{\bibitemsep}{0.5\baselineskip}
+\DeclareNameAlias{sortname}{family-given}
+
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}
+{\addbibresource[location=local]{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}
+    {\addbibresource[location=local]{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}
+        {\addbibresource[location=local]{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}}
+        {   \IfFileExists{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}
+            {\addbibresource[location=local]{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}}
+            {}
+        }
+    }
+}
+\renewcommand\cite{\citet}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[p,osf]{stickstootext}
+\usepackage[stix2,vvarbb]{newtxmath}
+\usepackage[varqu,varl]{inconsolata}
+% \usepackage{txfonts}
+\usepackage{upgreek}
+
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+{\input{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+    {\input{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+        {\input{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+        {   \IfFileExists{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+            {\input{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+            {}
+        }
+    }
+}
+
+\belowsink=90pt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options graybox,envcountchap,sectrefs
+\use_default_options false
+\master svmono_book-master.lyx
+\begin_modules
+knitr
+subequations
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfstartview=XYZ null null 1.25,pdfpagemode=UseNone"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 0
+\use_minted 0
+\branch use_only_in_child
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<include=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(
+\end_layout
+
+\begin_layout Plain Layout
+
+	keep.source=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	message=FALSE, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.path='Plots/', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.align='center', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.width=4, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.height=3, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.keep='last',
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.show='hide',
+\end_layout
+
+\begin_layout Plain Layout
+
+	dev.args=list(pointsize=10),
+\end_layout
+
+\begin_layout Plain Layout
+
+	cache=FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy.opts=list(width.cutoff=40))
+\end_layout
+
+\begin_layout Plain Layout
+
+options(width=70)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(PCRA)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(tidyverse)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(kableExtra)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{chapter}{3} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+PORTFOLIO THEORY
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:AppendixD"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Planned for publication in 2026 by R.
+ Douglas Martin, Thomas K.
+ Philips, Bernd Scherer and Kirk Li.
+ All rights reserved.
+ © Copyright 2025
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+10/12/25
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocchpnum=30pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsecnum=33pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsecnum=40pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsubsecnum=48pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocparanum=55pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubparanum=63pt
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+calctocindent
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+MinVar Frontier Mathematics
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: minVarMath"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+GlobalMinVarPortfolios
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+we showed that the weight vector 
+\begin_inset Formula $\mathbf{w}_{mv}$
+\end_inset
+
+ that minimize portfolio variance, subject to the mean return and full investmen
+t constraints 
+\begin_inset Formula $\mathbf{w}^{\prime}\bumu=\mu_{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}^{\prime}\mathbf{1}=1$
+\end_inset
+
+, has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{w}_{\mathrm{mv}}=\lambda_{1}\mathbf{C}^{-1}\bumu\,+\,\lambda_{2}\mathbf{C}^{-1}\boldsymbol{1}.\label{eq: minVarWtVectorGeneralForm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying the mean return and full-investment constrains results in two equations
+ in the two unknowns 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+, and the reader can easily show that the solution to these equations is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{alignedat}{1}\lambda_{1} & =\dfrac{c\mu_{P}\,-\,a}{d}\\
+\lambda_{2} & =\dfrac{b\,-\,a\mu_{P}}{d}
+\end{alignedat}
+\label{eq: theTwoLamdas}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $a=\mathbf{1}^{\prime}\mathbf{C}^{-1}\bumu$
+\end_inset
+
+, 
+\begin_inset Formula $b=\bumu^{\prime}\mathbf{C}^{-1}\bumu$
+\end_inset
+
+, 
+\begin_inset Formula $c=\mathbf{1}^{\prime}\mathbf{C}^{-1}\mathbf{1}>0$
+\end_inset
+
+, and 
+\begin_inset Formula $d=bc\,-\,a^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Substituting 
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: minVarWtVectorGeneralForm"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and easy algebraic manipulation results in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{w}_{\mathrm{mv}}=\mathbf{w}_{1}\,+\,\mu_{P}\mathbf{w}_{2}\label{eq: minVarWtVector}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{alignedat}{1}\mathbf{w}_{1} & =\dfrac{1}{d}\left(b\mathbf{C}^{-1}\mathbf{1}\,-\,a\mathbf{C}^{-1}\bumu\right)\\
+\mathbf{w}_{2} & =\dfrac{1}{d}\left(c\mathbf{C}^{-1}\bumu\,-\,a\mathbf{C}^{-1}\mathbf{1}\right).
+\end{alignedat}
+\label{eq: minVarPairOfWts}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+d & =(\bumu^{\mathrm{\prime}}\mathbf{C}^{-1}\bumu)({\bf 1^{\mathrm{\prime}}}\mathbf{C}^{-1}{\bf 1})\,-\,{\bf ({\bf 1^{\mathrm{\prime}}}}\mathbf{C}^{-1}\bumu)^{2}\label{eq: dExpression}\\
+ & \geqslant0
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where we show below how the above inequality follows from the Cauchy-Schwarz
+ inequality, and that 
+\begin_inset Formula $d$
+\end_inset
+
+ is positive except in the special case where 
+\begin_inset Formula $\bum=c\mathbf{1}$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $c$
+\end_inset
+
+, which does not arise in practice.
+ 
+\end_layout
+
+\begin_layout Standard
+Also, we note that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{alignedat}{1}c^{-1} & =\sigma_{\mathrm{gmv}}^{2}\\
+\dfrac{a}{c} & =\mu_{\mathrm{gmv}}
+\end{alignedat}
+\label{eq: constantsMore}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mu_{\mathrm{gmv}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{\mathrm{gmv}}^{2}$
+\end_inset
+
+ are the mean and variance of the global minimum variance (GMV) portfolio.
+\end_layout
+
+\begin_layout Subsubsection*
+Positivity of 
+\begin_inset Formula $\boldsymbol{d}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: positivity of d"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ is positive definite so is 
+\begin_inset Formula $\mathbf{C}^{-1}$
+\end_inset
+
+, and basic matrix theory shows that therefore 
+\begin_inset Formula $\mathbf{C}^{-1}$
+\end_inset
+
+ can be factored into the product of two inverse square root matrices, 
+\begin_inset Formula $\mathbf{C}^{-1}=\mathbf{C}^{-1/2}\mathbf{C}^{-1/2}$
+\end_inset
+
+ where 
+\begin_inset Formula $\mathbf{C}^{-1/2}$
+\end_inset
+
+ is positive definite.
+ Thus one has
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+d & =(\bumu^{\mathrm{\prime}}\mathbf{C}^{-1/2}\mathbf{C}^{-1/2}\bumu)\,\cdot\,({\bf 1^{\mathrm{\prime}}}\mathbf{C}^{-1/2}\mathbf{C}^{-1/2}{\bf 1})\,-\,{\bf ({\bf 1^{\mathrm{\prime}}}}\mathbf{C}^{-1/2}\mathbf{C}^{-1/2}{\bf \boldsymbol{\mu}})^{2}\\
+ & =(\check{\bumu^{\prime}}\check{\bumu})\,\cdot\,(\check{\mathbf{1}}^{\mathrm{\prime}}\check{\mathbf{1}})\,-\,(\check{\mathbf{1}}^{\mathrm{\prime}}\check{{\bf \bumu}})^{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\check{\bumu}=\mathbf{C}^{-1/2}\bumu$
+\end_inset
+
+ and 
+\begin_inset Formula $\check{\mathbf{1}}=\mathbf{C}^{-1/2}{\bf 1}$
+\end_inset
+
+.
+ The Cauchy-Schwarz inequality for two vectors 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ states that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf ({\bf x^{\mathrm{\prime}}}}\mathbf{y})^{2}\leqslant{\bf ({\bf x^{\mathrm{\prime}}}}\mathbf{x})\,\cdot\,{\bf ({\bf y^{\mathrm{\prime}}}}\mathbf{y})\quad\mathrm{with\:equality\:if,\:and\:only\:if,}\quad\mathbf{y=\mathrm{\mathit{c\cdot\mathbf{x}}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for some non-zero constant 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $d$
+\end_inset
+
+ is equal to zero if and, only if, 
+\begin_inset Formula $\mathbf{C}^{-1/2}\bumu=c\cdot\mathbf{C}^{-1/2}{\bf 1}$
+\end_inset
+
+, equivalently if and only if 
+\begin_inset Formula $\mathbf{C}^{-1/2}\left(\bumu\,-\,c\cdot\mathbf{1}\right)={\bf 0}$
+\end_inset
+
+, where 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is a vector of zeros.
+ But since 
+\begin_inset Formula $\mathbf{C}^{-1/2}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ is positive definite, the condition 
+\begin_inset Formula $\mathbf{C}^{-1/2}\left(\bumu\,-\,c\cdot\mathbf{1}\right)={\bf 0}$
+\end_inset
+
+ can only occur if 
+\begin_inset Formula $\bumu=c\,\cdot\,\mathbf{1}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $d=0$
+\end_inset
+
+ if, and only if, the portfolio mean vector has all equal values, which
+ essentially never happens in practice.
+\end_layout
+
+\begin_layout Section
+The Tangent Portfolio is the Market Portfolio Under the CAPM
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: tangentPortIsMktPortUnderCAPM"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Under the first CAPM assumption in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+CAPM
+\end_layout
+
+\end_inset
+
+, all market participants hold the tangent portfolio 
+\begin_inset Formula $T$
+\end_inset
+
+, and the last assumption implies that the supply of securities equals the
+ demand.
+ Let 
+\begin_inset Formula $N$
+\end_inset
+
+ be the number of securities in the market, with 
+\begin_inset Formula $V_{j}$
+\end_inset
+
+ be the market capitalization of the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ security.
+ Then 
+\begin_inset Formula $V=\sum_{j\,=\,1}^{N}V_{j}$
+\end_inset
+
+ is the total market capitalization, and 
+\begin_inset Formula $w_{M,\,j}=V_{j}/V$
+\end_inset
+
+ is the weight of the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ security in the market portfolio.
+ Let 
+\begin_inset Formula $K$
+\end_inset
+
+ be the number of market investors, where the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ investor invests an amount 
+\begin_inset Formula $\gamma_{k}W_{k},\ 0<\gamma_{k}<1$
+\end_inset
+
+ in risky assets and an amount 
+\begin_inset Formula $W_{k}(1-\gamma_{k})$
+\end_inset
+
+ in the risk-free asset.
+ In general the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ investor would invest an amount 
+\begin_inset Formula $\gamma_{k}W_{k}w_{k,\,j}$
+\end_inset
+
+ in the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ market asset, and therefore the total amount invested in the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ asset by all investors is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{V}_{j}=\sum_{k\,=\,1}^{K}\gamma_{k}\,W_{k}\,w_{k,\,j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, under the CAPM assumptions all investors all hold the same tangent
+ portfolio, so 
+\begin_inset Formula $w_{k,\,j}=w_{j},\,k=1,\,2\,,\cdots,\,K$
+\end_inset
+
+ where 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ is the weight of the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ asset in the tangent portfolio 
+\begin_inset Formula $T$
+\end_inset
+
+, and 
+\begin_inset Formula $\sum_{j\,=\,1}^{N}w_{j}=1$
+\end_inset
+
+.
+ Thus
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{V}_{j}=w_{j}\sum_{k\,=\,1}^{K}\gamma_{k}\,W_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is the amount invested by all investors in the 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+ asset, and 
+\begin_inset Formula $\dot{V}=\sum_{j\,=\,1}^{N}\dot{V}_{j}=\sum_{k\,=\,1}^{K}\gamma_{k}\,W_{k}$
+\end_inset
+
+ is the total amount invested by all investors.
+ However, under the CAPM equilibrium assumption 
+\begin_inset Formula $\dot{V}_{j}=V_{j}$
+\end_inset
+
+ and 
+\begin_inset Formula $\dot{V}=V$
+\end_inset
+
+, which results in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w_{M,\,j}=\dfrac{V_{j}}{V}=\dfrac{\dot{V}_{j}}{\dot{V}}=w_{j},\ j=1,\,2,\,\cdots\,,\,N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and so the tangent portfolio 
+\begin_inset Formula $T$
+\end_inset
+
+ is the market portfolio 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+\noindent
+
+\series bold
+Proof of the CAPM
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: CAPMproof"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following is a simple proof of the CAPM formula 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+CAPMformula
+\end_layout
+
+\end_inset
+
+ with beta defined by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+CAPMbeta
+\end_layout
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be the market portfolio whose mean return and variance are 
+\begin_inset Formula $\mu_{M}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{M}^{2}$
+\end_inset
+
+ respectively.
+ As the market portfolio is the tangent portfolio, the Capital Allocation
+ Line associated with the entire market is known as the 
+\emph on
+Capital Market Line
+\emph default
+ (CML), and can be written as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu=r_{f}\,+\,\dfrac{(\mu_{M}\,-\,r_{f})}{\sigma_{M}}\sigma.\label{eq: CML}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now consider any security in the market place with return 
+\begin_inset Formula $r_{i}$
+\end_inset
+
+, mean 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{i}^{2}$
+\end_inset
+
+, such that 
+\begin_inset Formula $(\mu_{i},\sigma_{i})$
+\end_inset
+
+ does not lie on the efficient frontier.
+ We form a portfolio 
+\begin_inset Formula $P$
+\end_inset
+
+ by investing a fraction 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ in the security and a fraction 
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+, in the market portfolio 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The mean return and variance of the portfolio 
+\begin_inset Formula $P$
+\end_inset
+
+ are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mu_{P} & =\alpha\mu_{i}\,+\,(1\,-\,\alpha)\mu_{M}\\
+\sigma_{P} & =\left(\alpha^{2}\sigma_{i}^{2}\,+\,2\,\alpha\,(1\,-\,\alpha)\,\sigma_{i,\,M}\,+\,(1\,-\,\alpha)^{2}\sigma_{M}^{2}\right)^{1/2}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The pair 
+\begin_inset Formula $(\mu_{P},\,\sigma_{P})=(\mu_{P}(\alpha),\,\sigma_{P}(\alpha))$
+\end_inset
+
+ traces out a 
+\begin_inset Formula $\mu_{P}(\alpha)$
+\end_inset
+
+ versus 
+\begin_inset Formula $\sigma_{P}(\alpha)$
+\end_inset
+
+ curve in portfolio mean return versus standard deviation space as 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ varies from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $1$
+\end_inset
+
+, with value 
+\begin_inset Formula $(\mu_{i},\,\sigma_{i})$
+\end_inset
+
+ when 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+ and value 
+\begin_inset Formula $(\mu_{M},\,\sigma_{M})$
+\end_inset
+
+ when 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+.
+ This curve can never lie above or to the left of the CML (if it did, the
+ CML would not be optimal), and the slope of the curve at 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\dfrac{d\mu}{d\sigma}(\alpha)\Biggr|_{\alpha=0} & =\dfrac{d\mu/d\alpha\bigr|_{\alpha=0}}{d\sigma/d\alpha\bigr|_{\alpha=0}},\label{eq: DmuDsigmaFunction}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the derivative of the numerator is equal to 
+\begin_inset Formula $\mu_{i}\,-\,\mu_{M}$
+\end_inset
+
+ for all 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ including 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+.
+ Straightforward calculus yields an expression for 
+\begin_inset Formula $d\sigma/d\alpha$
+\end_inset
+
+ that reduces to 
+\begin_inset Formula $\left(\sigma_{i,\,M}\,-\,\sigma_{M}^{2}\right)/\sigma_{M}$
+\end_inset
+
+ when 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+.
+ Thus
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\dfrac{d\mu}{d\sigma}(\alpha)\Biggr|_{\alpha=0}=\sigma_{M}\dfrac{\mu_{i}\,-\,\mu_{M}}{\sigma_{i,\,M}\,-\,\sigma_{M}^{2}}\label{eq: DmuDsigmaAtMarketPort}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A small but important step in the proof is a straightforward verification
+ that the derivative function 
+\begin_inset Formula $\dfrac{d\mu}{d\sigma}(\alpha)$
+\end_inset
+
+ is continuous at 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+.
+ Thus at 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ the derivative 
+\begin_inset Formula $\dfrac{d\mu}{d\sigma}(\alpha)$
+\end_inset
+
+ is tangent to the CML, and so its slope must equal that of the CML, or
+ 
+\begin_inset Formula $(\mu_{M}-r_{f})/\sigma_{M})$
+\end_inset
+
+.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The reason is that if the curve of portfolio 
+\begin_inset Formula $P$
+\end_inset
+
+ is not tangent to the CML, its variance would be lower than the CML variance
+ for 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ in some neighborhood of 
+\begin_inset Formula $\mu_{M}$
+\end_inset
+
+, contradicting the optimality of the CML.
+\end_layout
+
+\end_inset
+
+ It follows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu_{M}\,-\,r_{f}=\sigma_{M}^{2}\,\dfrac{\mu_{i}\,-\,\mu_{M}}{\sigma_{i,\,M}\,-\,\sigma_{M}^{2}},\label{eq: CAPMderivation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which, upon rearrangement, yields the CAPM.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+An alternative proof of the CAPM using the mathematics of Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec: mvoCashAndRiskyAssets"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is left as an 
+\series bold
+Exercise
+\series default
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Alternate Proof of the CAPM
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: alternateCAPMProof"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Under the assumptions stated in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec: CAPM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the tangent portfolio T is the market portfolio M and the tangent portfolio
+ weight vector 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TanPortWts"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is market portfolio weights vector is
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+{\bf w}_{M}=\frac{\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}{\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}
+\]
+
+\end_inset
+
+which can be re–arranged to give
+\begin_inset Formula 
+\[
+\mathrm{{\bf \boldsymbol{\mu}}_{e}}\boldsymbol{=}\left(\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}\right)\cdot\mathbf{C}{\bf w}_{M}.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\left(\mathbf{C}{\bf w}_{M}\right)_{i}=cov(r_{i},r_{M}),\,i=1,\cdots,N$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{align*}
+\mu_{e,i} & =\mu_{i}-r_{f}\\
+ & =\left(\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}\right)\cdot cov(r_{i},r_{M}).
+\end{align*}
+
+\end_inset
+
+The market excess return is
+\begin_inset Formula 
+\[
+\mu_{M,e}=\mu_{M}-r_{f}=\bum_{e}^{\prime}\mathbf{w}_{M}=\frac{\bum_{e}^{\prime}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}{\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}
+\]
+
+\end_inset
+
+and the market variance is
+\begin_inset Formula 
+\begin{align*}
+\sigma_{M}^{2} & =\frac{\bum_{e}^{\prime}\mathbf{C}^{-1}\mathbf{C}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}{\left(\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}\right)^{2}}\\
+ & =\frac{\bum_{e}^{\prime}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}}{\left(\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}\right)^{2}}.
+\end{align*}
+
+\end_inset
+
+Thus
+\begin_inset Formula 
+\[
+\mathbf{1^{\prime}}\mathbf{C}^{-1}{\bf \boldsymbol{\mu}}_{e}=\frac{\mu_{M,e}}{\sigma_{M}^{2}}
+\]
+
+\end_inset
+
+ and so we have
+\begin_inset Formula 
+\[
+\mu_{i}-r_{f}=\left(\mu_{M}-r_{f}\right)\cdot\frac{cov(r_{i},r_{M})}{\sigma_{M}^{2}},\,i=1,\cdots,N.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+CAPM Time Series Model Inconsistency
+\series default
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: timeSeriesCAPMinconsistency"
+
+\end_inset
+
+ 
+\series bold
+Move this to Chapter 4.
+\end_layout
+
+\begin_layout Plain Layout
+It is sometimes assumed by practitioners that equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: tseriesCAPM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+ is equivalent to the CAPM given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: CAPM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ But this is not exactly true, as there is an inconsistency between the
+ two equations that can be seen as follows.
+ If we substitute 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: tseriesCAPM"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+ into the representation of market return as a value weighted sum of asset
+ returns, and recall that the market beta 
+\begin_inset Formula $\beta_{M}=\sum_{i=1}^{N}w_{M,i}\beta_{i}$
+\end_inset
+
+ is equal to one, we get
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+r_{M,t} & =\sum_{i=1}^{N}w_{M,i}r_{i,t}\\
+ & =\sum_{i=1}^{N}w_{M,i}\cdot(\beta_{i}\cdot r_{M,t}+\varepsilon_{i,t})\\
+ & =r_{M,t}+\sum_{i=1}^{N}w_{M,i}\varepsilon_{i,t}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which implies that the summation term on the right-hand side of the last
+ line above is zero.
+ Although this summation is typically quite small for large 
+\begin_inset Formula $N$
+\end_inset
+
+, it is rarely if ever exactly equal to zero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zero Beta CAPM Derivation
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: zeroBetaCAPMderivation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we provide a simple derivation of the Zero Beta CAPM using MinVar portfolio
+ results in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: minVarMath"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The assumptions we use are the same as those for the standard CAPM, except
+ for the assumption that there is no risk–free asset available.
+ A further difference from the standard CAPM setup is that different investors
+ will take different positions on the efficient frontier.
+ However, in equilibrium, the market portfolio 
+\begin_inset Formula $M$
+\end_inset
+
+ is a convex combination of efficient portfolios of all investors, and is
+ therefore efficient.
+\end_layout
+
+\begin_layout Standard
+Recall from equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: minVarWtVectorGeneralForm"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ that the weight vector of a MinVar efficient portfolio 
+\begin_inset Formula $p$
+\end_inset
+
+, with return 
+\begin_inset Formula $r_{p}$
+\end_inset
+
+ and mean return 
+\begin_inset Formula $\mu_{p}$
+\end_inset
+
+, has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{w}_{p}=\lambda\mathbf{C}^{-1}\bumu\,+\,\gamma\mathbf{C}^{-1}\mathbf{1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It follows that for any other portfolio 
+\begin_inset Formula $q$
+\end_inset
+
+ with weight vector 
+\begin_inset Formula $\mathbf{w}_{q}$
+\end_inset
+
+, return 
+\begin_inset Formula $r_{q}$
+\end_inset
+
+ and mean return 
+\begin_inset Formula $\mu_{q}$
+\end_inset
+
+, the covariance of 
+\begin_inset Formula $r_{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{q}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{cov}(r_{p},\,r_{q}) & =\mathbf{w}_{q}^{\prime}\mathbf{C}\mathbf{w}_{p}\nonumber \\
+ & =\lambda\mathbf{w}_{q}^{\prime}\bumu\,+\,\gamma\mathbf{w}_{q}^{\prime}\mathbf{1}\nonumber \\
+ & =\lambda\mu_{q}\,+\,\gamma.\label{eq: cov(r_p,r_q)-initial}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A portfolio that is constrained to have zero covariance with respect to
+ an efficient frontier portfolio 
+\begin_inset Formula $p$
+\end_inset
+
+ is called a 
+\emph on
+zero covariance portfolio
+\emph default
+.
+ A fully-invested zero-covariance portfolio 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+, that has weight vector 
+\begin_inset Formula $\mathbf{w}_{zc(p)}$
+\end_inset
+
+, return 
+\begin_inset Formula $r_{zc(p)}$
+\end_inset
+
+, and mean return 
+\begin_inset Formula $\mu_{zc(p)}$
+\end_inset
+
+, satisfies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{cov}(r_{p},\,r_{zc(p)}) & =\lambda\mathbf{w}_{zc(p)}^{\prime}\bumu\,+\,\gamma\mathbf{w}_{zc(p)}^{\prime}\mathbf{1}\nonumber \\
+ & =\lambda\mu_{zc(p)}\,+\,\gamma\nonumber \\
+ & =0.\label{eq: cov(r_p,r_zc(p))}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A formula for a zero beta portfolio weight vector is derived in TS 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec: zeroCovariancePortfolios"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, where the frontier geometray of zero Beta portfolios is discussed.
+ Solving for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: cov(r_p,r_zc(p))"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and substituting in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: cov(r_p,r_q)-initial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{cov}(r_{p},\,r_{q}) & =\lambda(\mu_{q}\,-\,\mu_{zc(p)})\label{eq: cov(r_p,r_q)}\\
+\mathrm{var}(r_{p}) & =\lambda(\mu_{p}\,-\,\mu_{zc(p)}).\label{eq: var(r_p)}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dividing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: cov(r_p,r_q)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: var(r_p)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, rearranging and let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the market portfolio 
+\begin_inset Formula $M$
+\end_inset
+
+, we have: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu_{q}=\mu_{zc(M)}\,+\,\beta_{q,\,M}(\mu_{M}\,-\,\mu_{zc(M)}).\label{eq: zeroBetaCAPMportLevel}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the portfolio 
+\begin_inset Formula $q$
+\end_inset
+
+ is an arbitrary fully-invested portfolio, it can be an individual asset
+ with index 
+\begin_inset Formula $j$
+\end_inset
+
+ , which results in the asset level zero-beta CAPM:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu_{j}=\mu_{zc(M)}\,+\,\beta_{j,\,M}\,(\mu_{M}\,-\,\mu_{zc(M)}).\label{eq: zeroBetaCAPM}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zero Covariance Frontier Portfolios
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: zeroCovariancePortfolios"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any portfolio 
+\begin_inset Formula $p$
+\end_inset
+
+ that has zero covariance with respect to another portfolio 
+\begin_inset Formula $q$
+\end_inset
+
+ is a portfolio whose beta with respect to 
+\begin_inset Formula $q$
+\end_inset
+
+ is zero, i.e., 
+\begin_inset Formula $\beta_{pq}=0$
+\end_inset
+
+, and the portfolio 
+\begin_inset Formula $p$
+\end_inset
+
+ is called a 
+\emph on
+zero beta
+\emph default
+ portfolio.
+ It turns out that a portfolio or asset that has a zero beta with respect
+ to the market portfolio is the basis of a 
+\emph on
+zero beta CAPM
+\emph default
+, which we discussed in the previous Section.
+ Here we discuss the special case of zero covariance frontier portfolios.
+ It turns out the zero covariance frontier portfolios are inefficient, and
+ since the MaxQU approach only gives efficient frontier portfolios, we use
+ instead the MinVar optimization results.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p$
+\end_inset
+
+ denote any efficient frontier portfolio not equal to the global minimum
+ variance portfolio, and define 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+ to be a frontier portfolio that has a zero covariance with respect to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ The expected value of the 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+ portfolio is easily found from general expression 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+covTwoFrontierPortfolios
+\end_layout
+
+\end_inset
+
+ for the covariance between any two frontier portfolios, which in this case
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{alignedat}{1}\mathrm{cov}(r_{zc(p)},\,r_{p}) & =\sigma_{\mathrm{gmv}}^{2}\,+\,\dfrac{c}{d}\left(\mu_{zc(p)}\,-\,\mu_{\mathrm{gmv}}\right)\left(\mu_{p}\,-\,\mu_{\mathrm{gmv}}\right)\\
+ & =0
+\end{alignedat}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $c=\mathbf{1}^{\prime}\mathbf{C}^{-1}\mathbf{1}>0$
+\end_inset
+
+ and the formula for the positive constant 
+\begin_inset Formula $d$
+\end_inset
+
+ is given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: dExpression"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ It follows that the expected return of the zero covariance frontier portfolio
+ is given by the formula: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu_{zc(p)}=\mu_{\mathrm{gmv}}\,-\,\dfrac{d}{c}\,\cdot\,\dfrac{\sigma_{\mathrm{gmv}}^{2}}{\mu_{p}\,-\,\mu_{\mathrm{gmv}}}.\label{eq: zeroBetaPortMean}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $p$
+\end_inset
+
+ is any efficient frontier portfolio other than the GMV portfolio it follows
+ that 
+\begin_inset Formula $\mu_{p}>\mu_{\mathrm{gmv}}$
+\end_inset
+
+.
+ Thus the second term above is positive and 
+\begin_inset Formula $\mu_{zc(p)}<\mu_{\mathrm{gmv}}$
+\end_inset
+
+, i.e., the mean return of the zero covariance frontier portfolio is always
+ less than that of the GMV portfolio.
+ This means that the zero covariance portfolio is an inefficient frontier
+ portfolio, i.e., it lies on the lower half of the portfolio frontier that
+ corresponds to the minus sign in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+minVarFrontierRisky
+\end_layout
+
+\end_inset
+
+.
+ The zero covariance portfolio weight vector 
+\begin_inset Formula $\mathbf{w}_{zc(p)}$
+\end_inset
+
+ corresponding to 
+\begin_inset Formula $\mu_{zc(p)}$
+\end_inset
+
+ is uniquely defined by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: minVarWtVector"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{w}_{zc(p)}=\mathbf{w}_{1}\,+\,\mu_{zc(p)}\mathbf{w}_{2}.\label{eq: zeroBetaPortWeight}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It turns out that the relationship between the efficient frontier portfolio
+ 
+\begin_inset Formula $p$
+\end_inset
+
+, the GMV portfolio 
+\begin_inset Formula $p_{gmv}$
+\end_inset
+
+ and the zero covariance portfolio 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+ is described by the straight line in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: zero-covariancePortfolioGeometry"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Note in particular that the straight line connecting portfolios 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+ goes through the portfolio 
+\begin_inset Formula $p_{gmv}$
+\end_inset
+
+.
+ NOTE: In the figure the 
+\emph on
+gmv
+\emph default
+ is referred to as the MVP.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I borrowed the Figure below from Huang and Litzenberger, and will eventually
+ replace it with an original.
+ Doug
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/zeroBetaPort graph.PNG
+	lyxscale 30
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Relationship between portfolios 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $p_{gmv}$
+\end_inset
+
+ and 
+\begin_inset Formula $zc(p)$
+\end_inset
+
+ in mean return versus variance coordinates.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: zero-covariancePortfolioGeometry"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It can be shown that the straight line in the above figure is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mu_{r}=\mu_{zc(p)}\,+\,\dfrac{\mu_{p}\,-\,\mu_{gmv}}{\sigma_{p}^{2}\,-\,\sigma_{gmv}^{2}}\,\sigma_{r}^{2}\label{eq: zc(p) geometry}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and that 
+\begin_inset Formula $\mu_{r}=\mu_{gmv}$
+\end_inset
+
+ when 
+\begin_inset Formula $\sigma_{r}^{2}=\sigma_{gmv}^{2}$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Old Approach in HL, not used here
+\series default
+.
+ The above result is obtained rather easily because of the restriction that
+ the zero-beta portfolio 
+\begin_inset Formula $Pz$
+\end_inset
+
+ must be a frontier portfolio.
+ It turns out that for the zero-beta CAPM, a more general result is required
+ where 
+\begin_inset Formula $Pz$
+\end_inset
+
+ can be any achievable fully invested portfolio.
+ This result is a bit more involved, so we sketch the development here,
+ leaving it as Exercise to fill in some of the details.
+\end_layout
+
+\begin_layout Plain Layout
+Old and Not Used.
+ Let 
+\begin_inset Formula $Pe$
+\end_inset
+
+ be an efficient frontier portfolio, other than the GMV portfolio, with
+ returns 
+\begin_inset Formula $r_{Pe}$
+\end_inset
+
+ and let 
+\begin_inset Formula $P$
+\end_inset
+
+ be any other fully-invested portfolio with returns 
+\begin_inset Formula $r_{P}$
+\end_inset
+
+.
+ The covariance between 
+\begin_inset Formula $r_{Pe}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{P}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\mathrm{cov}(r_{Pe},r_{P}) & =\mathbf{w}_{Pe}^{\prime}\mathbf{C}\mathbf{w}_{P}\\
+ & =\lambda_{1}\bumu^{\prime}\mathbf{C}^{-1}\mathbf{C}\mathbf{w}_{P}+\lambda_{2}\mathbf{1}^{\prime}\mathbf{C}^{-1}\mathbf{C}\mathbf{w}_{P}\\
+ & =\lambda_{1}\mu_{P}+\lambda_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+where the second equality follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: minvarWtvecGeneral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Now substituting the values of the two Lagrange multipliers from
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: theTwoLamdas"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and solving for 
+\begin_inset Formula $\mu_{Pe}$
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mu_{P}=\dfrac{a\mu_{Pe}-b}{c\mu_{Pe}-a}+\mathrm{cov}(r_{Pe},r_{P})\dfrac{d}{c(\mu_{Pe}-\mu_{gmv})}.\label{eq: zeroBetaPortFirstStep}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Somewhat remarkably, the first term above can be shown (as an 
+\series bold
+Exercise
+\series default
+) to have the form
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mu_{\mathrm{gmv}}-\dfrac{d}{c}\cdot\dfrac{\sigma_{\mathrm{gmv}}^{2}}{\mu_{Pe}-\mu_{\mathrm{gmv}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+given by the right-hand side of the zero-beta portfolio mean return expression
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: zeroBetaPortMean"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with 
+\begin_inset Formula $P$
+\end_inset
+
+ replaced by 
+\begin_inset Formula $Pe$
+\end_inset
+
+.
+ Thus the above expression is equal to the mean 
+\begin_inset Formula $\mu_{Pez}$
+\end_inset
+
+ of the 
+\begin_inset Formula $Pe$
+\end_inset
+
+ zero-beta portfolio 
+\begin_inset Formula $Pez$
+\end_inset
+
+.
+ With some additional effort, using the expression 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: minvarPortVariance"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, one can show (another 
+\series bold
+Exercise
+\series default
+) that the second term above is equal to 
+\begin_inset Formula $\beta_{P,Pe}(\mu_{Pe}-\mu_{Pez})$
+\end_inset
+
+, where 
+\begin_inset Formula $\beta_{P,Pe}=\mathrm{cov}(r_{P},r_{Pe})/\mathrm{var}(r_{Pe})$
+\end_inset
+
+.
+ Thus we have the following portfolio 
+\begin_inset Formula $Pe$
+\end_inset
+
+ zero-beta portfolio 
+\begin_inset Formula $Pez$
+\end_inset
+
+ representation of the expected value of portfolio 
+\begin_inset Formula $P$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mu_{Pez} & =\mu_{Pez}+\beta_{P,Pe}(\mu_{Pe}-\mu_{Pez})\\
+ & =(1-\beta_{P,Pe})\mu_{Pez}+\beta_{P,Pe}\mu_{Pe}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+We don't need the following material here, maybe use it later if we find
+ a valuable application of it, e.g., robust regression, penalized regression
+ such as Lasso, Elastic Net.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Portfolio Optimization via Linear Regression
+\end_layout
+
+\begin_layout Plain Layout
+Consider the returns data based MinVar problem
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\min\limits _{{\bf w}}\sigma_{P}^{2}({\bf w)}=\min\limits _{{\bf w}}{\bf w'}\boldsymbol{\hat{\Sigma}}{\bf w},\qquad\mathbf{w\,\epsilon\,C}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+where 
+\begin_inset Formula $\boldsymbol{\hat{\Sigma}}$
+\end_inset
+
+ is an estimate of the unkown returns covariance matrix 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{\boldsymbol{W}}$
+\end_inset
+
+ is the set of all 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ that satisfy a set of linear inequality constraints.
+ The classical estimator of 
+\begin_inset Formula $\boldsymbol{\Sigma}$
+\end_inset
+
+ is the sample covariance matrix
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\hat{\Sigma}}=\dfrac{1}{T}\sum_{t=1}^{T}(\mathbf{r}_{t}-\boldsymbol{\hat{\mu}})(\mathbf{r}_{t}-\boldsymbol{\hat{\mu}})',\qquad\qquad\hat{\Sigma}_{ij}=\dfrac{1}{T}\sum_{t=1}^{T}(r_{it}-\hat{\mu}_{i})(r_{jt}-\hat{\mu}_{j}),\quad i,j=1,\cdots,n\label{eq:sampleCov-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+where
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\boldsymbol{\hat{\mu}}=\dfrac{1}{T}\sum_{t=1}^{T}\mathbf{r}_{t},\qquad\qquad\hat{\mu}=\dfrac{1}{T}\sum_{t=1}^{T}r_{it},\quad i=1,\cdots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+This allows us to write
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+T\cdot{\bf w'}\boldsymbol{\hat{\Sigma}}{\bf w} & =\sum_{t=1}^{T}{\bf w'}(\mathbf{r}_{t}-\boldsymbol{\hat{\mu}})(\mathbf{r}_{t}-\boldsymbol{\hat{\mu}})'{\bf w}\\
+ & =\sum_{t=1}^{T}\left({\bf w'}(\mathbf{r}_{t}-\boldsymbol{\hat{\mu}})\right)^{2}\\
+ & =\sum_{t=1}^{T}({\bf w'}\mathbf{r}_{t}-\hat{r}_{P}(\mathbf{w}))^{2},\qquad\hat{r}_{P}(\mathbf{w})={\bf w'\boldsymbol{\hat{\mu}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+and minimization of sum of squares on the right-hand side subject to constraints
+ is equivalent to solveing the MinVar problem.
+\end_layout
+
+\begin_layout Plain Layout
+Consider the minimization problem
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\underset{\gamma,\mathbf{w}}{min}\sum_{t=1}^{T}({\bf w'}\mathbf{r}_{t}+\gamma)^{2}\label{eq:minVarasReg-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+and minimize first with respect to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Setting the derivative with respect to 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ equal to zero gives
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+-2\cdot\sum_{t=1}^{T}({\bf w'}\mathbf{r}_{t}+\gamma)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+whose solution for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\gamma & =-\frac{1}{T}\sum_{t=1}^{T}{\bf w'}\mathbf{r}_{t}\\
+ & =-{\bf w'}\frac{1}{T}\sum_{t=1}^{T}\mathbf{r}_{t}\\
+ & =-\mathbf{w}'\boldsymbol{\hat{\mu}}\\
+ & =-\hat{r}_{P}(\mathbf{w}).
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Now consider the linear regression model
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+y_{t}=\gamma+\mathbf{r}_{t}'\mathbf{w}+\varepsilon_{t},\quad,t=1,\cdots,T.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The least-squares estimates of the unknown coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{w}$
+\end_inset
+
+ are the solution of the minimization problem
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\underset{\gamma,\mathbf{w}}{min}\sum_{t=1}^{T}({\bf \mathit{y_{t}}-\gamma-w'}\mathbf{r}_{t})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+which reveals that the MinVar minimization (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:minVarasReg-1"
+
+\end_inset
+
+) is equivalent to solving the above least squares regression problem in
+ which one sets 
+\begin_inset Formula $y_{t}=0,$
+\end_inset
+
+
+\begin_inset Formula $\:t=1,\cdots,T$
+\end_inset
+
+.
+ However, keep in mind that the minimization is to be done under the constraint
+ that 
+\begin_inset Formula $\mathbf{w}\,\epsilon\,\mathcal{\boldsymbol{W}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+Once one realizes how the constrained MinVar problem can be treated as a
+ special least-squares regression problem, it suggests that in addition
+ to using least-squares to solve the problem, one can use orther regression
+ fitting methods than least square.
+ For example one can use robust regression in which the quadratic loss function
+ is replaced by some robustifying loss function (see for example Maronna,
+ Martin and Yohai, 2006).
+ Or one can use modern penalized regression methods that result in parsimonious
+ models that have a relatively small number of coefficients among a possible
+ large number of coefficients, e.g., least-angle regression (LAR) and the
+ Lasso method.
+ See for example Hastie, Tibshirani and Friedman (2009).
+ In the present context such regression methods would result in a relatively
+ small number of non-zero portfolio weights among a possible 
+\begin_inset Formula $n$
+\end_inset
+
+ non-zero weights.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Proof of the APT
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: APTproof"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The vector 
+\begin_inset Formula $\mathbf{a}=(a_{1},\,a_{2},\,\cdots\,,\,a_{n})^{\prime}$
+\end_inset
+
+ of intercepts in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+APTintercepts
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ may be written in the least-squares regression fit-plus-residuals form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{alignedat}{1}\mathbf{a} & =\hat{\lambda}_{0}\mathbf{1}\,+\,\text{\mathbf{B}\ensuremath{\hat{\boldsymbol{\lambda}}}}\,+\,\ensuremath{\mathbf{u}}\end{alignedat}
+\label{eq: LSregression-avec-on-Bmat}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\hat{\lambda}_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\boldsymbol{\lambda}}=(\hat{\lambda}_{1},\,\hat{\lambda}_{2},\,\cdots\,,\,\hat{\lambda}_{K})^{\prime}$
+\end_inset
+
+ are the least-squares regression coefficients, and 
+\begin_inset Formula $\ensuremath{\mathbf{u}}=(u_{1},\,u_{2},\,\cdots\,,\,u_{n})^{\prime}$
+\end_inset
+
+ is the vector of regression residuals.
+ For details on the above LS regression decomposition see 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+LeastSquaresSection
+\end_layout
+
+\end_inset
+
+, where it is shown that the regression residuals vector 
+\begin_inset Formula $\ensuremath{\mathbf{u}}$
+\end_inset
+
+ is orthogonal to the vector 
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ as well as to the columns of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\mathbf{u}^{\prime}\mathbf{1}=\sum_{i\,=\,1}^{n}u_{i}=0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{u}^{\prime}\mathbf{B}=\mathbf{0}^{\prime}$
+\end_inset
+
+ where the right hand side is a vector of 
+\begin_inset Formula $K$
+\end_inset
+
+ zeros.
+ It follows of course that 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ is orthogonal to the fit 
+\begin_inset Formula $\mathbf{a}=\hat{\lambda}_{0}\mathbf{1}+\text{\mathbf{B}\ensuremath{\hat{\boldsymbol{\lambda}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider the zero investment portfolio weights vector
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{w=}\frac{\ensuremath{\mathbf{u}}}{\sqrt{n}\mathrm{\left\Vert \ensuremath{\mathbf{u}}\right\Vert }}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\left\Vert \ensuremath{\mathbf{u}}\right\Vert =\sqrt{\sum_{i\,=\,1}^{n}u_{i}^{2}}$
+\end_inset
+
+.
+ Then using 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+APTreturnsModel
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ along with the fact that 
+\begin_inset Formula $\mathbf{u}^{\prime}\mathbf{B}=\mathbf{0}^{\prime}$
+\end_inset
+
+, the arbitrage portfolio 
+\begin_inset Formula $p$
+\end_inset
+
+ has return
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+r_{p} & =\mathbf{w}^{\prime}\mathbf{r}\nonumber \\
+ & =\dfrac{1}{\sqrt{n}\left\Vert \ensuremath{\mathbf{u}}\right\Vert }(\mathbf{u}^{\prime}\mathbf{a}\,+\,\mathbf{u}^{\prime}\bueps)\label{eq: arbPortfolioReturn}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and since 
+\begin_inset Formula $\mathrm{E}(\bueps)=0$
+\end_inset
+
+, the arbitrage portfolio has mean
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mu_{p} & =\dfrac{\mathbf{u}^{\prime}\mathbf{a}}{\sqrt{n}\left\Vert \ensuremath{\mathbf{u}}\right\Vert }\nonumber \\
+ & =\dfrac{\mathbf{u}^{\prime}\ensuremath{\mathbf{u}}}{\sqrt{n}\left\Vert \ensuremath{\mathbf{u}}\right\Vert }\nonumber \\
+ & =\dfrac{1}{\sqrt{n}}\left\Vert \ensuremath{\mathbf{u}}\right\Vert \label{eq: arbPorMean}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the second line is due to substituting 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: LSregression-avec-on-Bmat"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and using the orthogonality of 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, and the last line is because 
+\begin_inset Formula $\mathbf{u}^{\prime}\ensuremath{\mathbf{u}}=\left\Vert \ensuremath{\mathbf{u}}\right\Vert ^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The variance of the arbitrage portfolio 
+\begin_inset Formula $r_{p}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{E}(r_{p}-\mu_{p})^{2} & =\mathrm{E}\left(\dfrac{\mathbf{u}^{\prime}\bueps}{\sqrt{n}\left\Vert \ensuremath{\mathbf{u}}\right\Vert }\right)^{2}\nonumber \\
+ & =\dfrac{\mathbf{u}^{\prime}\mathbf{C}\mathbf{u}}{n\left\Vert \ensuremath{\mathbf{u}}\right\Vert ^{2}}\label{eq: arbPortRisk}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ is the covariance matrix of the errors 
+\begin_inset Formula $\bueps=(\epsilon_{1},\,\epsilon_{2},\,\cdots,\,\epsilon_{n})^{\prime}$
+\end_inset
+
+.
+ We say that the arbitrage portfolio is 
+\emph on
+asymptotically risk diversifiable 
+\emph default
+(ARD) if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\underset{n\rightarrow\infty}{\lim}\dfrac{\mathbf{u}^{\prime}\mathbf{C}\mathbf{u}}{n\left\Vert \ensuremath{\mathbf{u}}\right\Vert ^{2}}=0.\label{eq: asympRiskDiversifiable}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The simplest condition that results in ARD is where the 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ are uncorrelated and have bounded variances 
+\begin_inset Formula $\sigma_{i}^{2}<B$
+\end_inset
+
+, for in that case 
+\begin_inset Formula $\mathbf{u}^{\prime}\mathbf{C}\mathbf{u}=\sum_{i\,=\,1}^{n}u_{i}^{2}\sigma_{i}^{2}<B\sum_{i\,=\,1}^{n}u_{i}^{2}$
+\end_inset
+
+ and the above ratio is bounded by 
+\begin_inset Formula $B/n$
+\end_inset
+
+, which goes to 0 as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I will add a little discussion down below on the practical implications
+ of the ARD, and also, that the APT suggests why it is ok to use a single
+ intercept parameter in 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ fundamental factor models.
+ Doug
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose the portfolio is ARD and that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mu_{p,\,\infty} & =\underset{n\rightarrow\infty}{\lim}\dfrac{1}{\sqrt{n}}\left\Vert \ensuremath{\mathbf{u}}\right\Vert \\
+ & =\underset{n\rightarrow\infty}{\lim}\left(\dfrac{1}{n}\sum_{i\,=\,1}^{n}u_{i}^{2}\right)\\
+ & >0.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In that case, the arbitrage portfolio has an asymptotic sure profit with
+ no risk.
+ But in a market that is arbitrage free this is not possible, and it must
+ be that the APT condition
+\begin_inset Formula 
+\[
+lim_{n\rightarrow\infty}\left(\dfrac{1}{n}\sum_{i\,=\,1}^{n}u_{i}^{2}\right)=0
+\]
+
+\end_inset
+
+is satisfied.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Robust Estimation Details
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: robEstDetails"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Can likely delete this section.
+ Doug
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+mOpt Psi Function Formula 
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: boundedRhoPsiFormula"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The mOpt psi function formula is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\psi_{mOpt}(x)=\begin{cases}
+x & |x|\leqslant1\\
+\dfrac{\phi(1)}{\phi(1)\,-\,a}\left(x\,-\,\mathrm{SGN}(x)\dfrac{a}{\phi(x)}\right)\mathrm{\mathit{U}}(c\,-\,|x|) & |x|>1
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ is the standard normal density function, 
+\begin_inset Formula $\mathrm{\mathit{U}}(x)$
+\end_inset
+
+ is the unit step function whose value is 1 for 
+\begin_inset Formula $x\geqslant0$
+\end_inset
+
+ and is 0 for 
+\begin_inset Formula $x<0$
+\end_inset
+
+, and the constants 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ depend on the desired normal distribution efficiency.
+ Note that 
+\begin_inset Formula $\psi_{mOpt}(x)=0$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+ outside the interval 
+\begin_inset Formula $(-c,\,c)$
+\end_inset
+
+.
+ A 95% normal distribution efficiency is obtained with 
+\begin_inset Formula $a=0.0132$
+\end_inset
+
+ and 
+\begin_inset Formula $c=3.004$
+\end_inset
+
+.
+ The rho function 
+\begin_inset Formula $\rho_{mOpt}(x)$
+\end_inset
+
+ is obtained by an integration of 
+\begin_inset Formula $\psi_{mOpt}(x)$
+\end_inset
+
+, and because the latter is zero outside the interval 
+\begin_inset Formula $(-c,\,c)$
+\end_inset
+
+, the rho function is bounded with a constant value outside that interval.
+ Details of the integral of the mOpt psi function, and computing values
+ of 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ from specified normal distribution efficiencies are provided in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KonisMartin2021"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined,C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined,C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined"
+options "biblatex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,8799 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass svmono
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{makeidx}% allows index generation
+% standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}% used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%\usepackage[ style=authoryear,natbib=true,giveninits=true,backend=biber,maxcitenames=2]{biblatex}
+\usepackage[style=authoryear,natbib=true,firstinits=false,backend=biber,maxcitenames=2]{biblatex}
+
+
+\setlength{\bibitemsep}{0.5\baselineskip}
+\DeclareNameAlias{sortname}{family-given}
+
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}
+{\addbibresource[location=local]{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}
+    {\addbibresource[location=local]{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}
+        {\addbibresource[location=local]{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}}
+        {   \IfFileExists{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}
+            {\addbibresource[location=local]{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}}
+            {}
+        }
+    }
+}
+\renewcommand\cite{\citet}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[p,osf]{stickstootext}
+\usepackage[stix2,vvarbb]{newtxmath}
+\usepackage[varqu,varl]{inconsolata}
+% \usepackage{txfonts}
+\usepackage{upgreek}
+
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+{\input{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+    {\input{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+        {\input{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+        {   \IfFileExists{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+            {\input{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+            {}
+        }
+    }
+}
+
+\belowsink=90pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options graybox,envcountchap,sectrefs
+\use_default_options false
+\master svmono_book-master.lyx
+\begin_modules
+knitr
+subequations
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfstartview=XYZ null null 1.25,pdfpagemode=UseNone"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 0
+\use_minted 0
+\branch use_only_in_child
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<include=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(
+\end_layout
+
+\begin_layout Plain Layout
+
+	keep.source=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	message=FALSE, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.path='Plots/', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.align='center', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.width=4, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.height=3, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.keep='last',
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.show='hide',
+\end_layout
+
+\begin_layout Plain Layout
+
+	dev.args=list(pointsize=10),
+\end_layout
+
+\begin_layout Plain Layout
+
+	cache=FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy.opts=list(width.cutoff=40))
+\end_layout
+
+\begin_layout Plain Layout
+
+options(width=70)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(PCRA)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{chapter}{0} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+MATHEMATICAL TOOLS FOR PCRA
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:AppendixA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Planned for publication in 2026 by R.
+ Douglas Martin, Thomas K.
+ Philips, Bernd Scherer and Kirk Li.
+ All rights reserved.
+ © Copyright 2025
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+10/12/25
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocchpnum=30pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsecnum=33pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsecnum=40pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsubsecnum=48pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocparanum=55pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubparanum=63pt
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+calctocindent
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This Appendix contains a variety of basic mathematical results that prove
+ useful in the context of portfolio construction and risk management.
+ We expect that much of the material provided here will be used primarily
+ to refresh the reader's memory, thereby facilitating its use throughout
+ this book.
+ Our treatment of matrices and Linear Algebra owes a great deal to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gentle2017"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Strang2016"
+literal "false"
+
+\end_inset
+
+, and we strongly recommend both books to anyone with an interest in this
+ under rated field.
+ In addition, we refer readers who have an interest in optimization to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LuenbergerYe2008"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Vectors and Vector Spaces
+\end_layout
+
+\begin_layout Subsection
+Vectors
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+vector
+\emph default
+ is a collection of objects that supports two arithmetic operations: vector
+ addition (denoted +) and scalar multiplication (denoted 
+\begin_inset Formula $\cdot$
+\end_inset
+
+).
+ It is useful to think of a vector as a list of 
+\begin_inset Formula $n$
+\end_inset
+
+ real numbers that correspond to a point in 
+\begin_inset Formula $n$
+\end_inset
+
+–dimensional Euclidean space with 
+\begin_inset Formula $n$
+\end_inset
+
+ orthogonal axes, as this interpretation clearly supports elementwise addition
+ provided both vectors have the same number of elements, i.e., if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{u}}=\left[\begin{array}{c}
+u_{1}\\
+\vdots\\
+u_{n}
+\end{array}\right],\ \mathrm{\mathbf{v}}=\left[\begin{array}{c}
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]\label{eq:Vector1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}} & =\left[\begin{array}{c}
+u_{1}\\
+\vdots\\
+u_{n}
+\end{array}\right]\,+\,\left[\begin{array}{c}
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]\label{eq:Vector2}\\[0.5em]
+ & =\left[\begin{array}{c}
+u_{1}\,+\,v_{1}\\
+\vdots\\
+u_{n}\,+\,v_{n}
+\end{array}\right].\label{eq:Vector3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In addition, it supports scalar multiplication according to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c\,\cdot\,\mathrm{\mathbf{u}}=\left[\begin{array}{c}
+c\,u_{1}\\
+\vdots\\
+c\,u_{n}
+\end{array}\right].\label{eq:Vector4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, not all vectors are defined in this way.
+ In particular, polynomials and square–integrable functions of one real
+ variable are also vectors, as both support vector addition
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The sum of two polynomials is also a polynomial, and the same is true for
+ square–integrable functions of one real variable.
+\end_layout
+
+\end_inset
+
+ and scalar multiplication.
+ 
+\end_layout
+
+\begin_layout Standard
+One type of vector that we repeatedly encounter in this book is a vector
+ of 
+\emph on
+security returns
+\emph default
+, each element of which is lower bounded by 
+\begin_inset Formula $-100\%$
+\end_inset
+
+.
+ Another is a vector of 
+\emph on
+security weights
+\emph default
+ associated with a portfolio.
+ These weights may be 
+\emph on
+constrained
+\emph default
+ (e.g.
+ the long–only constraint requires all weights to be positive and to sum
+ to 1) or 
+\emph on
+unconstrained
+\emph default
+ (i.e.
+ the weights may be positive or negative, and may not sum to 1, as is often
+ the case when a portfolio is levered).
+\end_layout
+
+\begin_layout Standard
+Vectors also support vector multiplication via the 
+\emph on
+dot product, 
+\emph default
+or 
+\emph on
+inner product
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The term dot product is typically used when the vector space under consideration
+ is 
+\begin_inset Formula $n$
+\end_inset
+
+–dimensional Euclidean space.
+ In more general vector spaces, the term inner product is more commonly
+ used.
+ There is another type of vector product, the 
+\emph on
+cross product
+\emph default
+, which sees application mainly in physics.
+ We ignore it here.
+\end_layout
+
+\end_inset
+
+.
+ The dot product of two vectors of equal length, 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+, is defined to be
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This definition of an inner product can be extended to cover complex numbers
+ as well, but we restrict our attention to real numbers as complex numbers
+ are exceedingly rare in portfolio construction.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{u}}\,\cdotp\,\mathrm{\mathbf{v}}=\sum_{i\,=\,1}^{n}u_{i}\,v_{i}.\label{eq:DotProduct}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More generally, the inner product of 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+ is written as 
+\begin_inset Formula $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle $
+\end_inset
+
+, and is a real number that satisfies the following criteria:
+\end_layout
+
+\begin_layout Enumerate
+Non–negativity: 
+\begin_inset Formula $\mathrm{\mathbf{\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{0}}\right\rangle =}\,0\ \forall\,\mathrm{\mathbf{u}}},$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{u}}\right\rangle >0$
+\end_inset
+
+ if 
+\begin_inset Formula $\mathrm{\mathbf{u}}\ne\mathbf{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Commutativity: 
+\begin_inset Formula $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =\left\langle \mathrm{\mathbf{v}},\,\mathrm{\mathbf{u}}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Scalar multiplication: 
+\begin_inset Formula $\left\langle c\,\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =c\,\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle $
+\end_inset
+
+ for all scalars 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Distributivity: 
+\begin_inset Formula $\left\langle \mathrm{\mathbf{u}\,+\,}\mathbf{w},\,\mathrm{\mathbf{v}}\right\rangle =\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle \,+\,\left\langle \mathrm{\mathbf{w}},\,\mathrm{\mathbf{v}}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Two vectors, 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+, are said to be 
+\emph on
+orthogonal
+\emph default
+ if 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =0.\label{eq:OrthogonalVectors}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+norm
+\emph default
+ of a vector is the square root of its inner product with itself.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert =\sqrt{\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{u}}\right\rangle }.\label{eq:NormU}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Euclidean space, the norm of a vector is equal to its length.
+\end_layout
+
+\begin_layout Subsection
+The Distance Between Two Vectors
+\end_layout
+
+\begin_layout Standard
+The vector
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{u}}=\left[\begin{array}{r}
+1\\
+-2
+\end{array}\right]\label{eq:VectorWith2Elements}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+corresponds to the point 
+\begin_inset Formula $x=1,\,y=-2$
+\end_inset
+
+ in the 
+\begin_inset Formula $X-Y$
+\end_inset
+
+ plane.
+ We can apply Pythagoras' Theorem to compute its norm, or the distance from
+ the origin to the point 
+\begin_inset Formula $\left(1,\,-2\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert  & =\sqrt{1^{2}\,+\,\left(-2\right)^{2}}\nonumber \\
+ & =\sqrt{5}.\label{eq:LengthOfVectorWith2Elements}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, the norm of a vector with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements in Euclidean space is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert =\sqrt{u_{1}^{2}\,+\,\cdots\,+\,u_{n}^{2}},\label{eq:LengthOfVector}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and this concept is easily generalized to obtain the 
+\emph on
+distance
+\emph default
+ between two vectors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}} & \triangleq\left\Vert \mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right\Vert \nonumber \\
+ & =\sqrt{\left(u_{1}-v_{1}\right)^{2}\,+\,\cdots\,+\,\left(u_{n}-v_{n}\right)^{2}}.\label{eq:DistanceBetweenVectors}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is important to note that this definition of distance is not unique:
+ the distance between two square–integrable functions of one real variable,
+ 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $g(x)$
+\end_inset
+
+, for example, can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+d_{f,\,g}=\sqrt{\int\left(f(x)\,-\,g(x)\right)^{2}dx}.\label{eq:DistanceBetweenTwoFunctions}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regardless of how it is defined, a valid measure of distance must satisfy
+ three properties:
+\end_layout
+
+\begin_layout Enumerate
+Non-negativity: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\ d_{\mathrm{\mathbf{u}},\mathrm{\,\mathbf{v}}}\geqslant0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Symmetry: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\ d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}}=d_{\mathrm{\mathbf{v}},\,\mathrm{\mathbf{u}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Triangle Inequality: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\,\mathrm{\mathbf{w}},\ d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{w}}}\leqslant d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}}\,+\,d_{\mathrm{\mathbf{v}},\,\mathrm{\mathbf{w}}}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The triangle inequality get its name from its geometric interpretation:
+ the sum of the lengths of any two sides of a triangle must be at least
+ as large as its third side.
+ When the vectors in question are lists of real numbers, and the measure
+ of distance between vectors is the Euclidean distance, the triangle inequality
+ is equivalent to the Cauchy–Schwarz inequality for real numbers:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Left-hand side needs a magnitude notation, and I think it is nicer to express
+ both sides in squared form, or at least state that as equivalent.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\sum_{i\,=\,1}^{n}u_{i}\,v_{i}\right)^{2}\leqslant\sum_{i\,=\,1}^{n}u_{i}^{2}\,\cdotp\,\sum_{i\,=\,1}^{n}v_{i}^{2},\label{eq:CauchySchwarz}
+\end{equation}
+
+\end_inset
+
+with equality if and only if 
+\begin_inset Formula $v_{i}=c\,u_{i}$
+\end_inset
+
+ for some constant 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Should also give the condition for equality: 
+\begin_inset Formula $\mathrm{\mathbf{v}}=\dfrac{\mathrm{\mathbf{u}}\,\cdotp\,\mathrm{\mathbf{v}}}{\left\Vert \mathrm{\mathbf{u}}\right\Vert ^{2}}\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While proofs of these inequalities abound, we recommend reviewing their
+ treatment in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Steele2004"
+literal "false"
+
+\end_inset
+
+, which is both comprehensive and accessible to the non–specialist.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Should give one simple reference along with one comprehensive reference,
+ or just the former.
+\end_layout
+
+\end_inset
+
+ The dot product admits an equivalent, geometric, definition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{u}}\,\cdotp\,\mathrm{\mathbf{v}}=\left\Vert \mathrm{\mathbf{u}}\right\Vert \,\left\Vert \mathrm{\mathbf{v}}\right\Vert \,\cos\theta,\label{eq:DotProduct2}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is the angle between 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+.
+ Orthogonality is equivalent to condition that 
+\begin_inset Formula $\theta=90^{\textdegree}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Vector Spaces
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+vector space
+\emph default
+ adds structure to sets of vectors and the arithmetic operations associated
+ with them.
+ A vector space 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+ has the following properties:
+\end_layout
+
+\begin_layout Enumerate
+Additive Closure: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Multiplicative Closure: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+\end_inset
+
+ and for all scalars 
+\begin_inset Formula $c,\ c\,\cdot\,\mathbf{u}\in\mathcal{{S}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Additive commutativity: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}=\mathrm{\mathbf{v}}\,+\,\mathrm{\mathbf{u}}$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Enumerate
+Distributivity with respect to scalar and vector addition: For all vectors
+ 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$
+\end_inset
+
+, and for all scalars 
+\begin_inset Formula $c,\,d,\ (c\,+\,d)\cdot\left(\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\right)=\mathit{c}\cdot\mathbf{\mathrm{\mathbf{u}}}\,+\,\mathit{c}\,\cdot\,\mathrm{\mathbf{v}}\,+\,\mathit{d}\,\cdot\,\mathrm{\mathbf{u}}\,+\,\mathit{d}\,\cdot\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Additive Associativity: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v},}\,\mathrm{\mathbf{w}}\in\mathcal{{S}},\ \left(\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\right)\,+\,\mathrm{\mathbf{w}}=\mathrm{\mathbf{u}}\,+\,\left(\mathrm{\mathbf{v}}\,+\,\mathrm{\mathbf{w}}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Multiplicative Associativity: For all vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+\end_inset
+
+ and for all scalars 
+\begin_inset Formula $c,\,d$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{\ }\left(c\,d\right)\,\cdot\,\mathrm{\mathbf{w}}=c\,\cdot\,\left(d\,\cdot\,\mathrm{\mathbf{w}}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Existence of additive and multiplicative identities.
+ There exists a vector 
+\begin_inset Formula $\mathbf{\mathrm{\mathbf{0}}}\in\mathcal{{S}}$
+\end_inset
+
+ and a scalar 1, such that for all 
+\begin_inset Formula $\mathrm{\mathbf{u}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}\mathrm{\,+\,\mathbf{0}}}=\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $1\,\cdot\,\mathbf{u}=\mathbf{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Existence of an additive inverse.
+ For all vectors, 
+\begin_inset Formula $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+\end_inset
+
+ there exists a vector 
+\begin_inset Formula $\mathrm{\mathbf{-u}}\in\mathcal{{S}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{-u}}=\mathrm{\mathbf{0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It is important to check that each of these properties is satisfied before
+ declaring a set of vectors to be a vector space.
+ For example, if 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ is a vector of security returns, and if 
+\begin_inset Formula $c$
+\end_inset
+
+ is a real number, and if vector addition and scalar multiplication are
+ defined elementwise and follow the normal rules of arithmetic, 
+\begin_inset Formula $c\,\cdotp\,\mathrm{\mathbf{u}}$
+\end_inset
+
+ does not always satisfy a basic property of returns: they cannot be smaller
+ than 
+\begin_inset Formula $-100\%$
+\end_inset
+
+.
+ If, on the other hand, 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ is a vector of 
+\emph on
+logarithmic
+\emph default
+ 
+\emph on
+returns
+\emph default
+ (see 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AssetReturnsChapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+ for a discussion of various types of returns) it is easy to see that 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+ is a vector space.
+\end_layout
+
+\begin_layout Standard
+An 
+\emph on
+inner product space
+\emph default
+ is a vector space in which the inner product is well defined.
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+subspace
+\emph default
+ of a vector space is a subset of 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+ that satisfies all the requirements of a vector space.
+ In particular, vector addition and scalar multiplication must always result
+ in a vector that lies in the subspace.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, let 
+\begin_inset Formula $\mathcal{{S}}_{XY}$
+\end_inset
+
+ be the set of all vectors with 2 real components, i.e.
+ vectors in the 
+\begin_inset Formula $X–Y$
+\end_inset
+
+ plane, with elementwise vector addition and scalar multiplication.
+ 
+\begin_inset Formula $\mathcal{{S}}_{Y}$
+\end_inset
+
+, the subset of vectors whose first component is 0 (i.e.
+ vectors that lie on the 
+\begin_inset Formula $Y$
+\end_inset
+
+ axis), is a subspace of 
+\begin_inset Formula $\mathcal{{S}}_{XY}$
+\end_inset
+
+, as is 
+\begin_inset Formula $\mathcal{{S}}_{X}$
+\end_inset
+
+, the subset of vectors whose second component is 0 (i.e.
+ vectors that lie on the 
+\begin_inset Formula $X$
+\end_inset
+
+ axis).
+ 
+\end_layout
+
+\begin_layout Standard
+Formally, a set of vectors 
+\begin_inset Formula $\mathrm{\mathbf{v}}_{1,},\mathrm{\mathbf{v}}_{2},\cdots,\mathrm{\mathbf{v}}_{k}$
+\end_inset
+
+ which are not all equal to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ is said to be linearly independent if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{1}\,\mathrm{\mathbf{v}}_{1}\,+\,c_{2}\,\mathrm{\mathbf{v}}_{2}\,+\,\cdots\,+\,c_{k}\,\mathrm{\mathbf{v}}_{k}=\mathbf{0}\Longleftrightarrow c_{1}\,=\,c_{2}\,=\,\cdots\,=\,c_{k}\,=\,0.\label{eq:VectorSpaceDimension}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+dimension
+\emph default
+ of a vector space is the maximum number of linearly independent vectors
+ contained in it, and the dimension of a subspace cannot exceed that of
+ its parent space.
+ 
+\end_layout
+
+\begin_layout Standard
+A set of linearly independent vectors 
+\begin_inset Formula $\mathcal{{B}}$
+\end_inset
+
+ is said to be a 
+\emph on
+basis
+\emph default
+ for 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+, or to 
+\emph on
+span
+\emph default
+ 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+, if any vector 
+\begin_inset Formula $\mathrm{\mathbf{v}}\in\mathcal{{S}}$
+\end_inset
+
+ can be written as a unique linear combination of the vectors in 
+\begin_inset Formula $\mathcal{{B}}$
+\end_inset
+
+.
+ Bases are not unique, though one basis may prove more convenient than another
+ in a particular application.
+ All bases must have the same number of elements, and this must equal the
+ dimension of the vector space.
+ 
+\end_layout
+
+\begin_layout Standard
+If the vectors in a basis are all orthogonal to each other, the basis is
+ called an 
+\emph on
+orthogonal basis
+\emph default
+.
+ If, in addition, the length of each basis vector is 1, it is said to be
+ an 
+\emph on
+orthonormal basis
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+It is easy to see why 
+\begin_inset Formula $\mathcal{{S}}_{XY}$
+\end_inset
+
+ is a two dimensional vector space: there are no non–zero values of 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{1}\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]\,+\,c_{2}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\label{eq:2DVectorSpace}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and every vector in the 
+\begin_inset Formula $X-Y$
+\end_inset
+
+ plane can be represented as a unique combination of 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+.
+ It follows that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{B}=\left\{ \left[\begin{array}{c}
+0\\
+1
+\end{array}\right],\ \left[\begin{array}{c}
+1\\
+0
+\end{array}\right]\right\} \label{eq:BasisForXYplane}
+\end{equation}
+
+\end_inset
+
+ is an orthonormal basis for 
+\begin_inset Formula $\mathcal{{S}}_{XY}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Likewise, the monomials 
+\begin_inset Formula $\left\{ 1,\,x,\,x^{2,},\cdots\right\} $
+\end_inset
+
+form a basis for the vector space of polynomials.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Likewise, it is easy to see why 
+\begin_inset Formula $\mathcal{{S}}_{Y}$
+\end_inset
+
+ is one–dimensional: for any two vectors whose first component is 0, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{1}\left[\begin{array}{c}
+0\\
+a
+\end{array}\right]\,-\,\frac{ac_{1}}{b}\,\left[\begin{array}{c}
+0\\
+b
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\label{eq:1DVectorSpace}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+provided that 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are not 0.
+ Furthermore, any point on the 
+\begin_inset Formula $Y$
+\end_inset
+
+ axis can be represented as a multiple of either vector.
+ Exchanging the first and the second components of both vectors makes clear
+ that the same argument applies to 
+\begin_inset Formula ${S}_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Projections of a Vector Space
+\end_layout
+
+\begin_layout Standard
+Exact, but computationally demanding, calculations using vectors in a high
+ dimensional vector space 
+\begin_inset Formula $\mathcal{{S}}_{1}$
+\end_inset
+
+ are often approximated using representations of the vectors in a lower
+ dimensional subspace 
+\begin_inset Formula $\mathcal{{S}}_{2}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathcal{{B}}_{2}$
+\end_inset
+
+ is an orthogonal basis for 
+\begin_inset Formula $\mathcal{{S}}_{2}$
+\end_inset
+
+, the best approximate representation of a vector 
+\begin_inset Formula $\mathrm{\mathbf{u}_{1}}\in\mathcal{{S}}_{1}$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathcal{{S}}_{2}$
+\end_inset
+
+ is its 
+\emph on
+projection
+\emph default
+, 
+\begin_inset Formula $\mathrm{\mathbf{p}}_{1}$
+\end_inset
+
+, which is given by
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{p}}_{1}=\sum_{\mathrm{\mathbf{b}}_{i}\in\mathcal{{B}}_{2}}\dfrac{\left\langle \mathrm{\mathbf{u}}_{1},\,\mathrm{\mathbf{b}}_{i}\right\rangle }{\left\Vert \mathrm{\mathbf{b}}_{i}\right\Vert ^{2}}\mathrm{\mathbf{b}}_{i}\label{eq:Projection}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In essence, the projection first captures, and then aggregates, all that
+ 
+\begin_inset Formula $\mathrm{\mathbf{u}}_{1}$
+\end_inset
+
+ has in common with each of the orthogonal basis vectors of 
+\begin_inset Formula $\mathcal{{S}}_{2}$
+\end_inset
+
+.
+ The residual 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{r}_{1} & =\mathbf{u}_{1}\,-\,\mathbf{p}_{1}\nonumber \\
+ & =\mathbf{u}_{1}\,-\,\sum_{\mathrm{\mathbf{b}}_{i}\in\mathcal{{B}}_{2}}\dfrac{\left\langle \mathrm{\mathbf{u}}_{1},\,\mathrm{\mathbf{b}}_{i}\right\rangle }{\left\Vert \mathrm{\mathbf{b}}_{i}\right\Vert ^{2}}\mathrm{\mathbf{b}}_{i}\label{eq:ProjectionResidual}
+\end{align}
+
+\end_inset
+
+must therefore be orthogonal to each basis vector, and must lie in 
+\begin_inset Formula $\mathcal{{S}}_{2}^{\bot}$
+\end_inset
+
+, the 
+\emph on
+orthogonal complement
+\emph default
+ to 
+\begin_inset Formula $\mathcal{{S}}_{2}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The orthogonal complement of a subspace is a vector space comprised of all
+ vectors that are orthogonal to the subspace.
+\end_layout
+
+\end_inset
+
+.
+ Seen in this light, projecting a vector from 
+\begin_inset Formula $\mathcal{{S}}_{XY}$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathcal{{S}}_{Y}$
+\end_inset
+
+ is equivalent to zeroing out its first component and preserving its second;
+ the residual of this projection lies entirely in 
+\begin_inset Formula $\mathcal{{S}}_{X}$
+\end_inset
+
+, which is the orthogonal complement to 
+\begin_inset Formula $\mathcal{{S}}_{Y}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Matrices and Matrix Arithmetic
+\end_layout
+
+\begin_layout Subsection
+Some Basic Definitions
+\end_layout
+
+\begin_layout Standard
+We can stack 
+\begin_inset Formula $m$
+\end_inset
+
+ vectors
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We continue to require that all components of these vectors be real numbers,
+ though much of this section can be generalized to complex numbers and finite
+ fields.
+\end_layout
+
+\end_inset
+
+ with 
+\begin_inset Formula $n$
+\end_inset
+
+ elements each side by side to form an 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ 
+\emph on
+matrix
+\emph default
+ as follows
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We follow the notation in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gentle2017"
+literal "false"
+
+\end_inset
+
+, and use 
+\begin_inset Formula $n$
+\end_inset
+
+ to denote the number of rows and 
+\begin_inset Formula $m$
+\end_inset
+
+ to denote the number of columns.
+ Other authors exchange 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+, but still put the number of rows before the number of columns.
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{a}}_{1} & \cdots & \mathrm{\mathbf{a}}_{m}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{ccc}
+a_{11} & \cdots & a_{1m}\\[0.5em]
+\vdots & \vdots & \vdots\\
+a_{n1} & \cdots & a_{nm}
+\end{array}\right].\label{eq:Matrix}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In general, 
+\begin_inset Formula $n\neq m$
+\end_inset
+
+, though in most cases of interest to us, 
+\begin_inset Formula $n=m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+If 
+\begin_inset Formula $n\neq m$
+\end_inset
+
+, the matrix is said to be 
+\emph on
+rectangular
+\emph default
+, and if 
+\begin_inset Formula $n=m$
+\end_inset
+
+, it is said to be 
+\emph on
+square
+\emph default
+.
+ Rectangular matrices often arise when we model the returns of many securities
+ using a few cross–sectional or time–series factors, while square matrices
+ arise when representing the interaction between all possible pairs of securitie
+s or factors.
+ A covariance matrix, for example, is square.
+\end_layout
+
+\begin_layout Standard
+The transpose of a matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\mathrm{\mathbf{A}}^{\prime}$
+\end_inset
+
+, is obtained by exchanging its rows and columns, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}^{\prime}=\left[\begin{array}{ccc}
+a_{11} & \cdots & a_{n1}\\
+\vdots & \vdots & \vdots\\
+a_{1m} & \cdots & a_{nm}
+\end{array}\right].\label{eq:Atranspose}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Transposition transforms an 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix into a 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix.
+\end_layout
+
+\begin_layout Subsection
+The Rank of a Matrix
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+column space
+\emph default
+ of a matrix is the vector space spanned by its columns, while its 
+\emph on
+row space
+\emph default
+ is the vector space spanned by its rows.
+ The row space of a matrix is the column space of its transpose.
+ The 
+\emph on
+null space 
+\emph default
+of a matrix
+\emph on
+, 
+\begin_inset Formula $\mathcal{{N}}(\mathrm{\mathbf{A}})$
+\end_inset
+
+,
+\emph default
+ as well as its 
+\emph on
+left null space,
+\emph default
+ 
+\emph on
+
+\begin_inset Formula $\mathcal{{N}}(\mathrm{\mathbf{A}^{\prime}})$
+\end_inset
+
+,
+\emph default
+ are vector spaces that are orthogonal to its column and row spaces respectively.
+ They are defined by the fact that vectors in the null space and left null
+ space are mapped to 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{A}}^{\prime}$
+\end_inset
+
+ respectively, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathcal{{N}}\left(\mathrm{\mathbf{A}}\right) & =\left\{ \mathrm{\mathbf{x}}\,|\,\mathrm{\mathbf{A}}\mathrm{\mathbf{x}}=\mathrm{\mathbf{0}}\right\} \label{eq:NullSpace}\\
+\mathcal{{N}}\left(\mathrm{\mathbf{A}}^{\prime}\right) & =\left\{ \mathrm{\mathbf{y}}\,|\,\mathrm{\mathbf{A}}^{\prime}\mathrm{\mathbf{y}}=\mathrm{\mathbf{0}}\right\} ,\label{eq:LeftNullSpace}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the product of a matrix and a vector is defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MatrixVectorProduct"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Closely related to the dimension of a vector space (the maximum number of
+ linearly independent vectors contained in it) are the 
+\emph on
+row rank
+\emph default
+ of a matrix, or the maximum number of linearly independent 
+\emph on
+rows
+\emph default
+ contained in it, and its 
+\emph on
+column rank
+\emph default
+, or the maximum number of linearly independent 
+\emph on
+columns
+\emph default
+ contained in it.
+ Although one might think that the row and column ranks of a matrix will
+ in general be different, it is surprisingly true that they are always equal.
+ A proof of this non–intuitive result can be found in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gentle2017"
+literal "false"
+
+\end_inset
+
+.
+ It follows that
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Strictly speaking, one must differentiate between the 
+\emph on
+row rank
+\emph default
+ of a matrix (the maximum number of linearly independent rows contained
+ in it) and its 
+\emph on
+column rank
+\emph default
+ (the maximum number of linearly independent columns contained in it), but
+ the row rank is always equal to the column rank.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\leqslant\min\left(n,\,m\right).\label{eq:MatrixRank}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\,+\,\mathrm{rank}\left(\mathcal{{N}}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\right) & =m\label{eq:SumOfRanksA}\\
+\mathrm{rank}\left(\mathrm{\mathbf{A}^{\prime}}_{m\times n}\right)\,+\,\mathrm{rank}\left(\mathcal{{N}}\left(\mathrm{\mathbf{A}}_{m\times n}^{\prime}\right)\right) & =n,\label{eq:SumOfRanksB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}\,+\,\mathbf{B}\right) & \leqslant\mathrm{rank}\left(\mathrm{\mathbf{A}}\right)\,+\,\mathrm{rank}\left(\mathbf{B}\right)\label{eq:RankOfSums}\\
+\mathrm{rank}\left(\mathrm{\mathbf{A}}\mathbf{B}\right) & \leqslant\min\left(\mathrm{rank}\left(\mathrm{\mathbf{A}}\right),\,\mathrm{rank}\left(\mathbf{B}\right)\right),\label{eq:RankOfProduct}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where matrix addition and multiplication are defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MatrixAddition"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MatrixMultiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Assume that row rank and column rank of an 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ are 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ respectively.
+ First, perform a series of pairwise exchanges on the rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ so that all the 
+\begin_inset Formula $p$
+\end_inset
+
+ linearly independent rows lie at the top of the matrix and the 
+\begin_inset Formula $n-p$
+\end_inset
+
+ dependent rows lie below them.
+ As no change is made to each row, this cannot change the row rank of the
+ matrix.
+ Next, perform a sequence of pairwise exchanges on the columns of this reordered
+ matrix so that all the 
+\begin_inset Formula $q$
+\end_inset
+
+ linearly independent columns lie at the left of the matrix and the 
+\begin_inset Formula $m-q$
+\end_inset
+
+ dependent columns lie to their right.
+ As no change is made to each column, this cannot change the column rank
+ of the matrix.
+ Now partition the reordered matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{O}$
+\end_inset
+
+ as follows:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\mathrm{\mathbf{A}}_{O} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11} & \mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21} & \mathrm{\mathbf{A}}_{22}
+\end{array}\right],
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+where 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ is 
+\begin_inset Formula $p\,\times\,q$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{12}$
+\end_inset
+
+ is 
+\begin_inset Formula $p\,\times\,\left(m\,-\,q\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{21}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(n\,-\,p\right)\,\times\,q$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{22}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(n\,-\,p\right)\,\times\,\left(m\,-\,q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+We now extract the first 
+\begin_inset Formula $p$
+\end_inset
+
+ rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{O}$
+\end_inset
+
+ to form a 
+\begin_inset Formula $p\,\times\,m$
+\end_inset
+
+ submatrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{IR}$
+\end_inset
+
+ that contains only its independent rows, and the first 
+\begin_inset Formula $q$
+\end_inset
+
+ columns of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{O}$
+\end_inset
+
+ to create another 
+\begin_inset Formula $n\times q$
+\end_inset
+
+ submatrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{IC}$
+\end_inset
+
+ that contains only its independent columns, i.e
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}_{IR} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\end{array}\right]\label{eq:IndependentRows}\\[0.5em]
+\mathrm{\mathbf{A}}_{IC} & =\left[\begin{array}{c}
+\mathrm{\mathbf{A}}_{11}\\
+\hline \mathrm{\mathbf{A}}_{21}
+\end{array}\right].\label{eq:IndependentCols}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Observe that 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ is contained in both 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{IR}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{IC}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $p=q$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ is square and we are done.
+ If the row rank and column rank are unequal, 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ is rectangular, and with no loss of generality, we assume that 
+\begin_inset Formula $p<q$
+\end_inset
+
+.
+ But if 
+\begin_inset Formula $p<q$
+\end_inset
+
+, the 
+\begin_inset Formula $q$
+\end_inset
+
+ columns of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ must be linearly dependent, as any vector of length 
+\begin_inset Formula $p$
+\end_inset
+
+ can be written as a linear combination of 
+\begin_inset Formula $p$
+\end_inset
+
+ independent vectors of length 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ It follows that we can find a vector 
+\begin_inset Formula $\mathrm{\mathbf{v}}_{q}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}_{11}\mathrm{\mathbf{v}}_{q}=\mathbf{0}.\label{eq:A11_dependent_cols}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Next, as the rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ are linearly independent, and those of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{21}$
+\end_inset
+
+ are not, we can write
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}_{21}=\mathrm{\mathbf{D}}\mathrm{\mathbf{A}}_{11}\label{eq:A11_dependent_rows}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+for some 
+\begin_inset Formula $\left(n-p\right)\times p$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+.
+ But this implies that
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}_{IC}\mathrm{\mathbf{v}}_{q} & =\left[\begin{array}{c}
+\mathrm{\mathbf{A}}_{11}\\
+\hline \mathrm{\mathbf{A}}_{21}
+\end{array}\right]\mathrm{\mathbf{v}}_{q}.\nonumber \\[0.5em]
+ & =\left[\begin{array}{c}
+\mathrm{\mathbf{A}}_{11}\\
+\hline \mathrm{\mathbf{D}}\mathrm{\mathbf{A}}_{11}
+\end{array}\right]\mathrm{\mathbf{v}}_{q}\nonumber \\[0.5em]
+ & =\left[\begin{array}{c}
+\mathbf{0}\\
+\hline \mathbf{0}
+\end{array}\right].\label{eq:AIC_dependent_cols}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+But this contradicts our assumption that the columns of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{IC}$
+\end_inset
+
+ are independent! 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11}$
+\end_inset
+
+ must therefore be square, and the row rank of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{O}$
+\end_inset
+
+, as well as that of 
+\begin_inset Formula $\mathrm{\mathbf{A}},$
+\end_inset
+
+ must equal its column rank.
+ It follows that the rank of 
+\begin_inset Formula $\mathrm{\mathbf{A}^{\prime}}$
+\end_inset
+
+ is equal to the rank of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Matrix Addition and Multiplication
+\end_layout
+
+\begin_layout Standard
+We can add two matrices elementwise if they have the same numbers of rows
+ and columns
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}\,+\,\mathrm{\mathbf{B}}=\left[\begin{array}{ccc}
+a_{11}\,+\,b_{11} & \ \cdots\  & a_{1m}\,+\,b_{1m}\\
+\vdots & \vdots & \vdots\\
+a_{n1}\,+\,b_{n1} & \ \cdots\  & a_{nm}\,+\,b_{nm}
+\end{array}\right],\label{eq:MatrixAddition}
+\end{equation}
+
+\end_inset
+
+and multiply a matrix by a scalar, just as we did with vectors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c\cdotp\mathrm{\mathbf{A}}=\left[\begin{array}{ccc}
+c\thinspace a_{11} & \ \cdots\  & c\thinspace a_{1m}\\
+\vdots & \vdots & \vdots\\
+c\thinspace a_{n1} & \ \cdots\  & c\thinspace a_{nm}
+\end{array}\right].\label{eq:MatrixScaling}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A matrix may also be multiplied by a vector, to give rise to another vector.
+ The product 
+\begin_inset Formula $\mathrm{\mathbf{Ax}}$
+\end_inset
+
+ is a 
+\emph on
+linear transformation
+\emph default
+ of the vector 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+, and can also be viewed as a linear combination of the columns of the matrix,
+ with the weights being given by the vector 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+.
+ The number of columns in 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ must equal the number of elements in 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ if the product is to be valid:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{Ax}} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{a}}_{1} & \cdots & \mathrm{\mathbf{a}}_{m}\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{m}
+\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{c}
+x_{1}\,\mathrm{\mathbf{a}}_{1}\,+\,\cdots\,+\,x_{m}\,\mathrm{\mathbf{a}}_{m}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{c}
+a_{11}\thinspace x_{1}+\cdots+a_{1m}\thinspace x_{m}\\
+\vdots\\
+a_{n1}\thinspace x_{1}+\cdots+a_{nm}\thinspace x_{m}
+\end{array}\right].\label{eq:MatrixVectorProduct}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As a matrix is just a stacked set of vectors, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MatrixVectorProduct"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ generalizes naturally to allow for the multiplication of two matrices that
+ are conformable – the number of columns in the first matrix must equal
+ the number of rows in the second:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{AB}} & =\mathrm{\mathbf{A}}\left[\begin{array}{c}
+\mathrm{\mathbf{b}}_{1}\cdots\mathrm{\mathbf{b}}_{p}\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c}
+\mathrm{\mathbf{A}}\mathrm{\mathbf{b}}_{1}\cdots\mathrm{\mathrm{\mathbf{A}}\mathbf{b}}_{p}\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{ccc}
+a_{11}\thinspace b_{11}\,+\,\cdots\,+\,a_{1m}\thinspace b_{m1} & \ \cdots\  & a_{11}\thinspace b_{1p}\,+\,\cdots\,+\,a_{1n}\thinspace b_{mp}\\
+\vdots & \vdots & \vdots\\
+a_{n1}\thinspace b_{11}\,+\,\cdots\,+\,a_{nm}\thinspace b_{n1} & \ \cdots\  & a_{n1}\thinspace b_{1p}\,+\,\cdots\,+\,a_{nm}\thinspace b_{mp}
+\end{array}\right].\label{eq:MatrixMultiplication}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is 
+\begin_inset Formula $n\,\times\,m$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathrm{\mathbf{B}}$
+\end_inset
+
+ is 
+\begin_inset Formula $m\,\times\,p$
+\end_inset
+
+, the product 
+\begin_inset Formula $\mathrm{\mathbf{A\,B}}$
+\end_inset
+
+ is 
+\begin_inset Formula $n\,\times\,p$
+\end_inset
+
+.
+ Additionally
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathrm{\mathbf{A\,B}}\right)^{\prime}=\mathrm{\mathbf{B}}^{\prime}\,\mathrm{\mathbf{A}}^{\prime}.\label{eq:ABtranspose}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We note in passing that 
+\begin_inset Formula $\mathrm{\mathbf{AB}}$
+\end_inset
+
+ can also be viewed as a linear combination of the rows of 
+\begin_inset Formula $\mathrm{\mathbf{B}}$
+\end_inset
+
+, with the weights being given by the rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}.$
+\end_inset
+
+ In general
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A\,B}}\ne\mathrm{\mathbf{B\,A}.}\label{eq:ABneBA}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrices prove particularly useful when solving sets of linear equations.
+ If we set 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A\,x}}=\mathrm{\mathbf{b},}\label{eq:AxEQb}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ is a column vector, we have a compact representation of a collection of
+ linear equations that can be interpreted in one of two ways:
+\end_layout
+
+\begin_layout Enumerate
+Row perspective: Each row of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ corresponds to a 
+\emph on
+hyperplane
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In 
+\begin_inset Formula $n$
+\end_inset
+
+–dimensional Euclidean space, a hyperplane is a subspace whose dimension
+ is one less than the dimension of the space.
+ In 2 and 3 dimensions, hyperplanes are lines and planes respectively.
+\end_layout
+
+\end_inset
+
+, and solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ entails finding a vector 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ that lies at the intersection of these 
+\begin_inset Formula $n$
+\end_inset
+
+ hyperplanes
+\end_layout
+
+\begin_layout Enumerate
+Column perspective: Each column of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is a vector, and solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ entails finding a vector 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ that makes the two sides of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ equal.
+\end_layout
+
+\begin_layout Standard
+Sometimes, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ possesses a unique solution, while at other times, it can have an infinite
+ number of solutions or no solution at all.
+ The existence of a unique solution is governed by whether or not 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is invertible, a topic we will return to shortly.
+\end_layout
+
+\begin_layout Subsection
+Some Special Matrices
+\end_layout
+
+\begin_layout Standard
+Some matrices have a special structure that greatly simplifies operations
+ on them
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A comprehensive list of matrices with special structures and their names
+ can be found at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/List_of_named_matrices
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+If a matrix is square, and if 
+\begin_inset Formula $a_{ij}=a_{ji}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,\,j$
+\end_inset
+
+, it is said to be 
+\emph on
+symmetric
+\emph default
+.
+ If, in addition, 
+\begin_inset Formula $a_{ij}=0\ \forall i\neq j$
+\end_inset
+
+, it is said to be 
+\emph on
+diagonal
+\emph default
+.The transpose of a symmetric matrix is equal to itself.
+ Clearly, all diagonal matrices are symmetric, but the converse is not true.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Zero matrix
+\emph default
+ 
+\begin_inset Formula $\mathrm{\mathbf{0}}_{n}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with 0's everywhere, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{0}}_{n}=\left[\begin{array}{ccc}
+0 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & 0
+\end{array}\right].\label{eq:ZeroMatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Identity matrix
+\emph default
+ 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ diagonal matrix with 1's along the diagonal and 0's elsewhere, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{I}}_{n}=\left[\begin{array}{ccc}
+1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & 1
+\end{array}\right].\label{eq:IdentityMatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathrm{\mathbf{J}}_{n}$
+\end_inset
+
+, the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with all 1's can be constructed by mutliplying a vector of 
+\begin_inset Formula $n$
+\end_inset
+
+ 1's by its transpose
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{J}}_{n} & =\mathrm{\mathbf{1}}_{n}\,\mathrm{\mathbf{1}}_{n}^{\prime}\nonumber \\
+ & =\left[\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right]\left[\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right]^{\prime}\nonumber \\
+ & =\left[\begin{array}{ccc}
+1 & \cdots & 1\\
+\vdots & \ddots & \vdots\\
+1 & \cdots & 1
+\end{array}\right].\label{eq:AllOneMatrix}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix is said to be 
+\emph on
+Orthogonal
+\emph default
+ if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}^{\prime}\,\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{m},\label{eq:OrthogonalMatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and it is useful to think of such a matrix as a stacked collection of vectors
+ that lie at right angles to each other in Euclidean space.
+ The product 
+\begin_inset Formula $\mathrm{\mathbf{A}}^{\prime}\mathrm{\mathbf{A}}$
+\end_inset
+
+ is a symmetric matrix that is known as the 
+\emph on
+Gramian
+\emph default
+, and whose rank is the same as the rank of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A martrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ can be raised to an integer power 
+\begin_inset Formula $k$
+\end_inset
+
+ by multiplying together 
+\begin_inset Formula $k$
+\end_inset
+
+ copies of itself.
+ For example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}^{2}=\mathrm{\mathbf{A}}\,\mathrm{\mathbf{A}},\label{eq:ASquared}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and is said to be 
+\emph on
+nilpotent of index k
+\emph default
+ if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}^{k} & =\mathbf{0}_{n}\label{eq:NilpotentMatrixA}\\
+\mathrm{\mathbf{A}}^{j} & \ne\mathbf{0}_{n}\ \mathrm{for}\ 1\leqslant j<k.\label{eq:NilpotentMatrixB}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Toeplitz Matrices
+\end_layout
+
+\begin_layout Standard
+A 
+\emph on
+Toeplitz
+\emph default
+ matrix is a square matrix with constant offset diagonals, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+a_{i,\,j}=a_{i\,+\,1,\,j\,+\,1},\ 1\leqslant i,\,j\leqslant n-1\label{eq:ToeplitzMatrix1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e.g.,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+6 & 1 & 2 & 3 & 4\\
+7 & 6 & 1 & 2 & 3\\
+8 & 7 & 6 & 1 & 2\\
+9 & 8 & 7 & 6 & 1
+\end{array}\right].\label{eq:ToeplitzMatrix2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the special case when each row is a cyclic shift of the prior row, the
+ matrix is referred to as a 
+\emph on
+circulant
+\emph default
+ matrix, e.g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right].\label{eq:CirculantMatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Every circulant matrix is a Toeplitz matrix, but the converse is not true.
+\end_layout
+
+\begin_layout Subsection
+Block Matrices
+\end_layout
+
+\begin_layout Standard
+A matrix can often usefully be partitioned into a set of adjacent 
+\emph on
+blocks, 
+\emph default
+with the boundaries between blocks being identified by vertical and horizontal
+ lines.
+ The circulant matrix displayed in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:CirculantMatrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, for example, can be partitioned into four blocks in a variety of ways
+ as can be seen in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+–
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Observe that the various submatrices are not necessarily square – in particular
+, 
+\emph on
+none
+\emph default
+ of the submatrices in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are square.
+ 
+\end_layout
+
+\begin_layout Standard
+Even though a matrix can have multiple blocks, we illustrate block matrix
+ operations using matrices that are partitioned into four adjacent blocks.
+ The results presented here generalize naturally to larger numbers of blocks,
+ and we refer the interested reader to the comprehensive treatment in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gentle2017"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}} & =\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix1}\\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]\label{eq:PartitionedMatrix2}\\[0.5em]
+ & =\left[\begin{array}{cc|ccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+\hline 4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix3}\\[0.5em]
+ & =\left[\begin{array}{ccc|cc}
+1 & 2 & 3 & 4 & 5\\
+\hline 5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix4}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is useful to think of the blocks along the main diagonal as representing
+ the influence of a tightly coupled set of items on each other (e.g.
+ stocks within a sector, with one block per sector), while blocks off the
+ main diagonal represent interactions between different sets of items (i.e.
+ between sectors in an index).
+ Sometimes, the off–diagonal blocks have entries that are much smaller in
+ magnitude than the blocks on the diagonal, and may be set to 0 to simplify
+ the matrix.
+ A matrix whose off–diagonal blocks are all zero is called a 
+\emph on
+block diagonal
+\emph default
+ matrix.
+\end_layout
+
+\begin_layout Standard
+The transpose of a block matrix is obtained by block transposition of the
+ transposes of each of the blocks:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}^{\prime} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11} & \mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21} & \mathrm{\mathbf{A}}_{22}
+\end{array}\right]^{\prime}\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}^{\prime} & \mathrm{\mathbf{A}}_{21}^{\prime}\\
+\hline \mathrm{\mathbf{A}}_{12}^{\prime} & \mathrm{\mathbf{A}}_{22}^{\prime}
+\end{array}\right].\label{eq:BlockTranspose}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Just as matrices allow addition and multiplication if their dimensions are
+ conformable, so do block matrices allow block addition and block multiplication
+ provided that the dimensions of the various blocks are conformable, e.g.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A+B}} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]+\left[\begin{array}{c|c}
+\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{B}}_{22}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\,+\,\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\,+\,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\,+\,\mathrm{\mathbf{B}}_{21}\, & \,\mathbf{A}_{22}\,+\,\mathrm{\mathbf{B}}_{22}
+\end{array}\right],\label{eq:BlockMatrixAddition}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A\,B}} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]\left[\begin{array}{c|c}
+\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{B}}_{22}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\mathrm{\mathbf{B}}_{11}\,+\,\mathrm{\mathbf{A}}_{12}\mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{A}}_{11}\mathrm{\mathbf{B}}_{12}\,+\,\mathrm{\mathbf{A}}_{12}\mathrm{\mathbf{B}}_{22}\\
+\hline \mathrm{\mathbf{A}}_{21}\mathrm{\mathbf{B}}_{11}\,+\,\mathrm{\mathbf{A}}_{22}\mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{A}}_{21}\mathrm{\mathbf{B}}_{12}\,+\,\mathrm{\mathbf{A}}_{22}\mathrm{\mathbf{B}}_{22}
+\end{array}\right].\label{eq:BlockMatrixMultiplication}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The partitioned matrix in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be multiplied by itself in accordance with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:BlockMatrixMultiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but the partition in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ cannot be block multiplied by itself or by the partition in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PartitionedMatrix3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Rectangular, Square, Symmetric, diagonal
+\end_layout
+
+\begin_layout Itemize
+Orthogonal
+\end_layout
+
+\begin_layout Itemize
+Toeplitz
+\end_layout
+
+\begin_layout Itemize
+Block structure/partitioned, and multiplication of such
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Echelon Form and LU Factorization
+\end_layout
+
+\begin_layout Standard
+Computing the rank of a matrix has much in common with solving the set of
+ linear equations specified in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Using Gaussian elimination
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Gaussian elimination attempts to triangularize a matrix by iteratively subtracti
+ng a multiple of each row, starting from the first row and working downwards,
+ from all the rows below so as to cancel their leading entry.
+ The process transforms a matrix into row echelon form, and ideally into
+ an upper triangular matrix.
+\end_layout
+
+\end_inset
+
+, one can transform 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ into a matrix 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ in 
+\emph on
+row echelon form
+\emph default
+ with the following properties
+\end_layout
+
+\begin_layout Enumerate
+All non-zero rows of 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ lie above all rows with only zeros
+\end_layout
+
+\begin_layout Enumerate
+The first non–zero entry in each row lies strictly to the right of the first
+ non–zero entry in the row above it, and
+\end_layout
+
+\begin_layout Enumerate
+All entries below the first non–zero entry in each row are 0.
+\end_layout
+
+\begin_layout Standard
+The rank of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is the number of non–zero rows in 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+.
+ It is also the dimension of its column and row spaces.
+ The sum of the dimensions of the column space and the null space must equal
+ the number of columns, while the sum of the dimensions of the row space
+ and the left null space must equal the number of rows.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is square and of full rank, it can be represented as the product of lower
+ and upper triangular matrices 
+\begin_inset Formula $\mathrm{\mathbf{L}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{U}}$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{L}}\,\mathrm{\mathbf{U},}\label{eq:AequalsLU}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathrm{\mathbf{L}}$
+\end_inset
+
+ has only 1's on the diagonal, permitting a rapid solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A particular useful form of the LU factorization is the LDU factorization
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{L}}\,\mathrm{\mathbf{D}}\,\mathbf{U},\label{eq:AequalsLDU}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+ is a diagonal matrix, and both 
+\begin_inset Formula $\mathrm{\mathbf{L}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{U}}$
+\end_inset
+
+ have only 1's on the diagonal.
+ 
+\end_layout
+
+\begin_layout Subsection
+The Determinant of a Matrix
+\end_layout
+
+\begin_layout Standard
+The determinant of a square matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $det\left(\mathrm{\mathbf{A}}\right)$
+\end_inset
+
+, is the signed volume of a parallelepiped whose vertices are the 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ possible sums of the rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The origin, which corresponds to the sum of none of the rows, is one of
+ the vertices of the parallelepiped.
+\end_layout
+
+\end_inset
+
+.
+ Unlike the volume of a physical object, which is always positive, the determina
+nt of a matrix has both sign and magnitude.
+ In this regard, it has something in common with vectors.
+ If 
+\begin_inset Formula $det\left(\mathrm{\mathbf{A}}\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is said to be 
+\emph on
+singular
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It is particularly easy to compute the determinant of a diagonal matrix
+ 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+, as its 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ possible row sums represent an 
+\begin_inset Formula $n-$
+\end_inset
+
+dimensional hypercube with orthogonal sides.
+ Its volume (and determinant) are therefore given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\left(\mathrm{\mathbf{D}}\right)=\prod_{i\,=\,1}^{n}d_{ii}.\label{eq:DiagonalDeterminant}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The row sums of the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ identity matrix 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ represent a unit hypercube, and its determinant must therefore be 1.
+ 
+\end_layout
+
+\begin_layout Standard
+More generally, the determinant of a block diagonal matrix is the product
+ of the determinants of each of its diagonal blocks, i.e.
+\begin_inset Formula 
+\begin{equation}
+det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{D}}_{11} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{0}}\\
+\mathrm{\mathbf{0}} & \ddots &  & \mathrm{\mathbf{0}}\\
+\vdots &  &  & \vdots\\
+\mathrm{\mathbf{0}} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{D}}_{nn}
+\end{array}\right]=\prod_{i\,=\,1}^{n}det\left(\mathrm{\mathbf{D}}_{ii}\right).\label{eq:BlockDiagonalDeterminant}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix vividly illustrates many properties of determinants, though it is
+ not always possible to project the insights it affords to understand larger
+ matrices.
+ It is easy to show that the area of a quadrilateral with vertices 
+\begin_inset Formula $(0,\,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(a,\,b)$
+\end_inset
+
+, 
+\begin_inset Formula $(c,\,d)$
+\end_inset
+
+ and 
+\begin_inset Formula $(a+c,\,b+d)$
+\end_inset
+
+ is 
+\begin_inset Formula $ad-bc$
+\end_inset
+
+, and it follows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}=ad\,-\,bc.\label{eq:Det2by2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If any two rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ are interchanged, the magnitude of its determinant remains unchanged, but
+ its sign reverses – indicating that we are visiting the vertices of the
+ hypercube in a different sequence, e.g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+det\mathrm{\,\left[\begin{array}{cc}
+\mathit{c}\, & \,\mathit{d}\\
+\mathit{a}\, & \text{\,}\mathit{b}
+\end{array}\right]} & =bc\,-\,ad\nonumber \\[0.5em]
+ & =-\,det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}.\label{eq:RowExchange2by2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore, if any two rows of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ are identical, its determinant must be 0.
+ This follows from the observation that exchanging two rows must reverse
+ the sign of the determinant.
+ But if the rows are identical, the determinant must remain the same, and
+ this can only happen if it is 0.
+\end_layout
+
+\begin_layout Standard
+Multiplying any single row of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ by a constant 
+\begin_inset Formula $c$
+\end_inset
+
+ scales its determinant by 
+\begin_inset Formula $c$
+\end_inset
+
+ as well – the volume of a hypercube is proportional to the length of each
+ of its sides.
+ It follows that if the entire matrix is multiplied by 
+\begin_inset Formula $c$
+\end_inset
+
+, its determinant is scaled by 
+\begin_inset Formula $c^{n}$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\left(c\mathrm{\mathbf{A}}\right)=c^{n}det\left(\mathrm{\mathbf{A}}\right).\label{eq:ScaledMatixDeterminant}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If any row of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is 0, so is its determinant, as this is equivalent to multiplying that
+ row by 0.
+\end_layout
+
+\begin_layout Standard
+Matrix transposition does not impact the value of the determinant, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\left(\mathrm{\mathbf{A}^{\prime}}\right)=det\left(\mathrm{\mathbf{A}}\right),\label{eq:DeterminantofTranspose}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and by way of example, it is easy to check that the area of a quadrilateral
+ with vertices 
+\begin_inset Formula $(0,\,0)$
+\end_inset
+
+, 
+\begin_inset Formula $(a,\,d)$
+\end_inset
+
+, 
+\begin_inset Formula $(b,\,c)$
+\end_inset
+
+ and 
+\begin_inset Formula $(a+b,\,c+d)$
+\end_inset
+
+ is 
+\begin_inset Formula $ad-bc$
+\end_inset
+
+.
+ This is 
+\emph on
+not
+\emph default
+ the same quadrilateral as that associated with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Det2by2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but their areas are identical.
+\end_layout
+
+\begin_layout Standard
+Additionally, adding a multiple of any row to any other row (or any column
+ to any other column) does not change the value of the determinant, e.g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+det\,\left[\begin{array}{cc}
+\mathit{a} & \mathit{b}\\
+\mathit{c}\,+\,na\, & \,\mathit{d\,+\,nb}
+\end{array}\right] & =a\left(d\,+\,nb\right)\,-\,b\left(c\,+\,na\right)\nonumber \\[0.5em]
+ & =ad\,-\,bc\nonumber \\[0.5em]
+ & =det\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\,+\,ma\\
+\mathit{c}\, & \,\mathit{d\,+\,mc}
+\end{array}\right]\nonumber \\[0.5em]
+ & =det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}.\label{eq:RowAddition2by2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In particular, if 
+\begin_inset Formula $a\ne0$
+\end_inset
+
+ and 
+\begin_inset Formula $n=-\nicefrac{c}{a}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RowAddition2by2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the matrix becomes upper triangular, and its determinant is just the product
+ of its diagonal entries.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\mathrm{\,\left[\begin{array}{cl}
+\mathit{a}\, & \,\mathit{b}\\
+0\, & \,\mathit{\frac{ad\,-\,bc}{a}}
+\end{array}\right]}=ad\,-\,bc.\label{eq:Det2by2Triangular}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More generally, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+det\,\left[\begin{array}{cccc}
+\mathit{t_{11}} & t_{12} & \cdots & t_{1n}\\
+0 & t_{22} &  & t_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & t_{nn}
+\end{array}\right] & =det\,\left[\begin{array}{cccc}
+\mathit{t_{11}} & 0 & \cdots & 0\\
+t_{21} & t_{22} &  & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+t_{n1} & t_{n2} & \cdots & t_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\prod_{i\,=\,1}^{n}t_{ii}.\label{eq:TriangularMatrixDerminant}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This follows from the observation that elementary row operations can be
+ used to to combine rows and diagonalize a triangular matrix without changing
+ its determinant.
+ In a like manner, the determinant of a block triangular matrix is the product
+ of the determinants of its diagonal blocks:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{T}}_{11} & \mathrm{\mathbf{T}}_{12} & \cdots & \mathrm{\mathbf{T}}_{1n}\\
+\mathrm{\mathbf{0}} & \mathrm{\mathbf{T}}_{22} &  & \mathrm{\mathbf{T}}_{2n}\\
+\vdots &  & \ddots & \vdots\\
+\mathbf{0} & \mathbf{0} & \cdots & \mathrm{\mathbf{T}}_{nn}
+\end{array}\right] & =det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{T}}_{11} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{0}}\\
+\mathrm{\mathbf{T}}_{21} & \mathrm{\mathbf{T}}_{22} &  & \mathrm{\mathbf{0}}\\
+\vdots &  & \ddots & \vdots\\
+\mathrm{\mathbf{T}}_{n1} & \mathrm{\mathbf{T}}_{n2} & \cdots & \mathrm{\mathbf{T}}_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\prod_{i\,=\,1}^{n}det\left(\mathrm{\mathbf{T}}_{ii}\right).\label{eq:BlockTriangularDeterminant}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinants are multiplicative:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+det\left(\mathbf{A}\mathbf{B}\right)=det\left(\mathrm{\mathbf{A}}\right)\,det\left(\mathrm{\mathbf{B}}\right),\label{eq:DeterminantOfProducts}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and, as a consequence, the LDU factorization of a matrix, which is of great
+ practical importance, preserves the value of its determinant.
+ The determinants of all three matrices are given by the product of their
+ diagonal entries, and the determinants of both 
+\begin_inset Formula $\mathrm{\mathbf{L}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{U}}$
+\end_inset
+
+ are 1, so that the determinant of 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+ must be identical to that of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The Inverse of a Matrix
+\end_layout
+
+\begin_layout Standard
+If an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ square matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is of full rank, its determinant is non–zero, and it is said to 
+\emph on
+invertible
+\emph default
+; there exists a unique 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ square matrix, denoted 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+, such that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{A}^{-1}\,\mathbf{A} & =\mathbf{A}\,\mathbf{A}^{-1}\nonumber \\
+ & =\mathbf{I}_{n}.\label{eq:AinverseAeqI}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matrix inversion can be thought of as the generalization of the reciprocal
+ to matrices, and this interpretation is clearly visible when inverting
+ a diagonal matrix .
+ If
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{D}} & =\left[\begin{array}{cccc}
+d_{11} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & d_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+\mathrm{\mathbf{D}}^{-1} & =\left[\begin{array}{cccc}
+\frac{1}{d_{11}} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \frac{1}{d_{nn}}
+\end{array}\right]\nonumber \\
+ & =\frac{1}{det\left(\mathrm{\mathbf{D}}\right)}\left[\begin{array}{cccc}
+\prod_{i\,\ne\,1}d_{ii} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \prod_{i\,\ne\,n}d_{ii}
+\end{array}\right].\label{eq:Dinverse}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, the inverse of a matrix is given by the ratio of the transpose
+ of its 
+\emph on
+cofactor matrix
+\emph default
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We use the letter 
+\begin_inset Formula $\mathrm{\mathbf{F}}$
+\end_inset
+
+ to denote the cofactor matrix as 
+\begin_inset Formula $\mathrm{\mathbf{C}}$
+\end_inset
+
+ is used to denote the covariance matrix.
+\end_layout
+
+\end_inset
+
+ and its determinant
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}^{-1}=\frac{\mathrm{\mathbf{F}}^{\prime}}{det\left(\mathrm{\mathbf{A}}\right)},\label{eq:CofactorExpansion}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(-1\right)^{i+j}$
+\end_inset
+
+ times the determinant of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ with its 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ row and 
+\begin_inset Formula $j^{th}$
+\end_inset
+
+column removed.
+ The inverse of a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ matrix, for example, is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cc}
+a\, & \,b\\
+c\, & \,d
+\end{array}\right]^{-1}=\frac{1}{ad\,-\,bc}\left[\begin{array}{rr}
+d\, & \,-b\\
+-c\, & \,a
+\end{array}\right].\label{eq:TwoByTwoInverse}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The inverse of a product of two matrices exhibits the same 
+\begin_inset Quotes eld
+\end_inset
+
+reverse order
+\begin_inset Quotes erd
+\end_inset
+
+ property we saw earlier for its transpose:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathrm{\mathbf{A\,B}}\right)^{-1}=\mathrm{\mathbf{B}}^{-1}\,\mathrm{\mathbf{A}}^{-1},\label{eq:ABinverse}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the availability of an inverse allows a closed form solution to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{x}}=\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{b}}.\label{eq:xEqAinverseB}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Somewhat surprisingly, and in spite of its great conceptual importance,
+ matrix inversion is rarely used when solving linear equations on account
+ of the fact that the the computation of the cofactor matrix is both tedious
+ and numerically unstable.
+ Instead, Gaussian elimination and LU factorization are used to solve 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ directly.
+\end_layout
+
+\begin_layout Subsection
+Inverses of Special Matrices 
+\end_layout
+
+\begin_layout Standard
+There appears to be a virtually inexhaustible supply of results involving
+ the inverses of block matrices of various types – the results we present
+ here are those most likely to prove useful in portfolio construction and
+ risk management and are drawn from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LuShiou2002"
+literal "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ block matrices prove particularly useful, as they are often used to split
+ securities into two subsets (loosely speaking, a set of securities of interest
+ and another set containing all other securities).
+ Formulas involving the inverse of a submatrix are valid only if the inverse
+ exists.
+ Likewise, formulas that involve the product of matrices are valid only
+ if the relevant submatrices are conformable.
+\end_layout
+
+\begin_layout Standard
+We start by stating results for the inverses of diagonal and anti–diagonal
+ block matrices
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We take the liberty of naming the blocks 
+\begin_inset Formula $\mathrm{\mathbf{A}},\ \mathbf{B},\ \mathrm{\mathbf{C}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+ and not 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{11},\ \mathrm{\mathbf{A}}_{12},\ \mathrm{\mathbf{A}}_{21}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{22}$
+\end_inset
+
+ solely for clarity of exposition.
+\end_layout
+
+\end_inset
+
+, and indicate their sizes via subscripts:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{rl}
+\mathbf{A}_{n\,\times\,n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \boldsymbol{\hphantom{-}\mathbf{B}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{rl}
+\mathbf{A}_{n\,\times\,n}^{-1} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathbf{B}_{m\,\times\,m}^{-1}
+\end{array}\right]\label{eq:SpecialInverse1a}\\[0.5em]
+\left[\begin{array}{lr}
+\mathbf{0}_{n\,\times\,m} & \hphantom{-}\mathbf{A}_{n\,\times\,n}\\
+\mathbf{B}_{m\,\times\,m} & \hphantom{-}\mathbf{0}_{m\,\times\,n}
+\end{array}\right]^{-1} & =\left[\begin{array}{rl}
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathbf{B}_{m\,\times\,m}^{-1}\\
+\mathbf{A}_{n\,\times\,n}^{-1} & \hphantom{-}\mathbf{0}_{n\,\times\,m}
+\end{array}\right].\label{eq:SpecialInverese1b}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We next provide expressions for the inverses of upper and lower triangular
+ matrices that are valid if 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{C}}$
+\end_inset
+
+ are invertible:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{ll}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \hphantom{-}\mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{C}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\mathbf{A}^{-1} & \mathrm{\hphantom{-}-\mathbf{A}^{-1}}\,\mathbf{B}\,\mathrm{\mathbf{C}}^{-1}\\
+\mathbf{0}_{m\times n} & \hphantom{-}\mathrm{\hphantom{-}}\mathbf{C}^{-1}
+\end{array}\right]\label{eq:SpecialInverse2a}\\[0.5em]
+\left[\begin{array}{ll}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{C}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\hphantom{-}\mathrm{\mathbf{\mathbf{A}^{-1}}} & \hphantom{-}\mathbf{0}_{n\times m}\\
+-\mathrm{\mathbf{C}}^{-1}\,\mathbf{B}\,\mathbf{A}^{-1} & \mathrm{\hphantom{-}}\mathbf{C}^{-1}
+\end{array}\right].\label{eq:SpecialInverse2b}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the important special case when 
+\begin_inset Formula $\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{C}}=\mathrm{\mathbf{I}}_{m}$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpecialInverse2a"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpecialInverse2b"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ simplify to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \mathrm{\hphantom{-}-\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\hphantom{-}\mathbf{I}}_{m}
+\end{array}\right]\label{eq:SpecialInverse3a}\\[0.5em]
+\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\hphantom{-}\mathrm{\mathbf{I}}_{n} & \hphantom{-}\hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+-\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\hphantom{-}\mathbf{I}}_{m}
+\end{array}\right].\label{eq:SpecialInverse3b}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the general case when all 4 matrices are non-zero, the inverse is obtained
+ by inverting each of the matrices in a block LDU or UDL representations
+ using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpecialInverse1a"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpecialInverse3a"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpecialInverse3b"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and finally combining their inverses using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ABinverse"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{cc}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathrm{\mathbf{C}}_{m\,\times\,n} & \mathrm{\mathbf{D}}_{m\,\times\,m}
+\end{array}\right] & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{C}\,}\mathrm{\mathbf{A}}^{-1} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{A}} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \mathrm{\hphantom{-}\mathbf{D}}\,-\,\mathrm{\mathbf{C}}\,\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{B}}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{B}}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\label{eq:SpecialInverse4a}\\[0.5em]
+ & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{B}}\,\mathrm{\mathbf{D}}^{-1}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{A}\,-\,\mathrm{\mathbf{B}}\,\mathrm{\mathbf{D}}^{-1}\,\mathrm{\mathbf{C}}} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathbf{D}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{D}}^{-1}\,\mathrm{\mathbf{C}} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right].\label{eq:SpecialInverse4b}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The choice of which expansion to use will depend on whether 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathrm{\mathbf{D}}$
+\end_inset
+
+ is invertible.
+ Furthermore, if the matrix is to be inverted, either 
+\begin_inset Formula $\mathrm{\mathbf{D}}-\mathrm{\mathbf{C}}\mathrm{\mathbf{A}}^{-1}\mathrm{\mathbf{B}}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathrm{\mathbf{A}-\mathrm{\mathbf{B}}\mathrm{\mathbf{D}}^{-1}\mathrm{\mathbf{C}}}$
+\end_inset
+
+ must additionally be invertible.
+\end_layout
+
+\begin_layout Standard
+While formulae are known for the inverse of Toeplitz matrices (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LvHuang2007"
+literal "false"
+
+\end_inset
+
+), they are cumbersome.
+ In general, the inverse of a Toeplitz matrix is not necessarily a Toeplitz
+ matrix, but the inverse of a circulant matrix is also a circulant matrix.
+ One Toeplitz matrix that sees extensive use in time series work and its
+ inverse are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[\begin{array}{cccccc}
+1 & \rho & \rho^{2} & \cdots &  & \rho^{n-1}\\
+\rho & 1 & \rho & \cdots &  & \rho^{n-2}\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+\rho^{n-2} & \rho^{n-3} & \rho^{n-4} & \cdots & 1 & \rho\\
+\rho^{n-1} & \rho^{n-2} & \rho^{n-3} & \cdots & \rho & 1
+\end{array}\right]^{-1}=\left[\begin{array}{cccccc}
+1 & -\rho & 0 & 0 & \cdots & 0\\
+-\rho & \,1\,+\,\rho^{2}\, & -\rho & 0 & \cdots & 0\\
+0 & -\rho & \,1\,+\,\rho^{2}\, & -\rho & \vdots & \vdots\\
+\vdots & \vdots & -\rho & \,1\,+\,\rho^{2}\, & -\rho & 0\\
+0 & 0 & \cdots & -\rho & \,1\,+\,\rho^{2}\, & -\rho\\
+0 & 0 & \cdots & 0 & -\rho & 1
+\end{array}\right].\label{eq:ToeplitzInverse}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Inverses of 2x2 Upper and Lower Triangular Matrices with 1's on the diagonal
+\end_layout
+
+\begin_layout Plain Layout
+Inverse of Upper and Lower Block Triangular Matrices with Identity matrices
+ on the diagonal
+\end_layout
+
+\begin_layout Plain Layout
+Exercises: Invert a 2-by-2 and a 3-by-3 by hand.
+ Check with R code.
+ Do the general case when the diagonal elements are not 1.
+ The determinant of the Identity matrix 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ is 1 for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ More generally, the determinant of a diagonal matrix 
+\begin_inset Formula $\mathrm{\mathbf{D}}_{n}$
+\end_inset
+
+ is the product of its diagonal elements.
+\end_layout
+
+\begin_layout Plain Layout
+Toeplitz matrix inversion - will add formula.
+ The general case is hard - do you really need it? Not needed, reference
+ to Lv and Huang included
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I am planning to use this in Chapter 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Sherman Morrison Identity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Sherman–Morrison–Woodbury Matrix Inversion Lemma
+\end_layout
+
+\begin_layout Standard
+The following identities see wide application in factor models, as well
+ as in statistics and signal processing.
+ They are variously known as the Sherman–Morrison–Woodbury matrix inversion
+ lemma, the Sherman–Morrison formula, and the Woodbury matrix identity.
+ The fact that they are attributed to many authors is likely a reflection
+ of the fact that they were discovered independently by a multitude of researche
+rs at about the same time.
+ 
+\end_layout
+
+\begin_layout Standard
+Broadly speaking, they provide an affirmative answer to the following question:
+ If, after computing the inverse of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+, we perturb it with a low rank (as opposed to a low magnitude) perturbation,
+ can we efficiently compute the inverse of the perturbed matrix by perturbing
+ 
+\begin_inset Formula $\mathrm{\mathbf{A}}^{-1}$
+\end_inset
+
+ with a related low rank perturbation
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Proofs of these, and other related, identities can be found at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikipedia.org/wiki/Woodbury_matrix_identity
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+We start with the special case when the perturbation has rank 1.
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ be an invertible 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, let 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ be column vectors of length 
+\begin_inset Formula $n$
+\end_inset
+
+ (and hence of rank 1), and let 
+\begin_inset Formula $c$
+\end_inset
+
+ be any scalar.
+ Then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The 
+\begin_inset Formula $c$
+\end_inset
+
+ below is not needed, as any such can be included in 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+ So I think we should just delete it.
+ Don't delete it – it naturally generalizes to a matrix 
+\series bold
+C
+\series default
+ and makes clear the link to the Woodbury Matrix Identity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{A}\,+\,c\,\mathbf{x}\,\mathbf{y}^{\prime}\right)^{-1}=\mathbf{A}^{-1}\,-\,\frac{c\,\mathbf{A}^{-1}\,\mathbf{x}\,\mathbf{y}^{\prime}\,\mathbf{A}^{-1}}{1\,+\,c\,\mathbf{x}^{\prime}\,\mathbf{A}^{-1}\mathbf{y}}.\label{eq:ShermanMorrison1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ simplifies even further when 
+\begin_inset Formula $\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+, for in this case, 
+\begin_inset Formula $\mathbf{A}^{-1}=\mathbf{A}$
+\end_inset
+
+, and we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{I}_{n}\,+\,c\,\mathbf{x}\,\mathbf{y}^{\prime}\right)^{-1}=\mathbf{I}_{n}\,-\,\frac{c\mathbf{\,x}\,\mathbf{y}^{\prime}}{1\,+\,c\,\mathbf{x}^{\prime}\,\mathbf{y}}.\label{eq:ShermanMorrison2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Both 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be evaluated in 
+\begin_inset Formula $O\left(n^{2}\right)$
+\end_inset
+
+ arithmetic operations (direct matrix inversion using Gaussian elimination
+ requires 
+\begin_inset Formula $O\left(n^{3}\right)$
+\end_inset
+
+ operations), and even more importantly, they are numerically stable – small
+ changes to any of the parameters on the left hand sides of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ result in small changes to their right hand sides.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I am planning to use this in Chapter example.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More generally, let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ be 
+\begin_inset Formula $n\times n$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ be 
+\begin_inset Formula $n\times k$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ be 
+\begin_inset Formula $k\times k$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ be 
+\begin_inset Formula $k\times n$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{A}\,+\,\mathbf{U\,\mathbf{C\mathbf{\,V}}}\right)^{-1}=\mathbf{A}^{-1}\,-\,\mathbf{A}^{-1}\,\mathbf{U}\left(\mathbf{C}^{-1}\,+\,\mathbf{V}\,\mathbf{A}^{-1}\,\mathbf{U}\right)^{-1}\,\mathbf{V}\,\mathbf{A}^{-1}\label{eq:Woodbury}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where it is assumed that the inverses all exist.
+ Typically, 
+\begin_inset Formula $k\ll n$
+\end_inset
+
+, making the inversion of 
+\begin_inset Formula $\mathrm{\mathbf{C}}$
+\end_inset
+
+ far less tedious than direct recomputation of 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HendersonSearle1981"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hager1989"
+literal "false"
+
+\end_inset
+
+ provide a useful compendium of results related to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ShermanMorrison2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Woodbury"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as well as a comprehensive summary of how they are applied in a variety
+ of settings.
+ One such result is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{cccc}
+a & b & \cdots & b\\
+b & a & \cdots & b\\
+\vdots & \vdots & \ddots & \vdots\\
+b & b & \cdots & a
+\end{array}\right]^{-1} & =\left[\left(a\,-\,b\right)\mathrm{\mathbf{I}}_{n}\,+\,b\,\mathbf{1}_{n}\,\mathbf{1}_{n}^{\prime}\right]^{-1}\nonumber \\
+ & =\frac{1}{a\,-\,b}\left[\mathrm{\mathbf{I}}_{n}\,-\,\frac{b}{a\,+\,\left(n\,-\,1\right)\,b}\,\mathbf{J}_{n}\right].\label{eq:SingleFactorShermanMorrison}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{J}_{n}=\mathbf{1}_{n}\mathbf{1}_{n}^{\prime}$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AllOneMatrix"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and provided that 
+\begin_inset Formula $a\,\ne\,b$
+\end_inset
+
+ and 
+\begin_inset Formula $a\,+\,(n-1)\,b\ne0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+This result proves particularly useful when analyzing constant correlation
+ matrices with 
+\begin_inset Formula $a=1$
+\end_inset
+
+ and 
+\begin_inset Formula $b=\rho$
+\end_inset
+
+ for 
+\begin_inset Formula $\nicefrac{-1\,}{\,\left(n-1\right)}<\rho<1$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Outside this range, the matrix may be invertible, but it is not positive
+ definite.
+\end_layout
+
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{cccc}
+1 & \rho & \cdots & \rho\\
+\rho & 1 & \cdots & \rho\\
+\vdots & \vdots & \ddots & \vdots\\
+\rho & \rho & \cdots & 1
+\end{array}\right]^{-1} & =\frac{1}{1\,-\,\rho}\left[\mathrm{\mathbf{I}}_{n}\,-\,\frac{\rho}{1\,+\,\left(n\,-\,1\right)\,\rho}\,\mathbf{J}_{n}\right]\nonumber \\
+ & =\frac{\left(1\,+\,\left(n\,-\,1\right)\,\rho\right)\mathrm{\mathbf{I}}_{n}\,-\,\rho\,\mathbf{J}_{n}}{\left(1\,-\,\rho\right)\left(1\,+\,\left(n\,-\,1\right)\,\rho\right)}.\label{eq:ConstantCorrelationShermanMorrison}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The Inverse of a Covariance Matrix
+\end_layout
+
+\begin_layout Standard
+Sometime, a closed form inverse of a matrix yields useful insights into
+ the nature of its entries, and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Stevens1998"
+literal "false"
+
+\end_inset
+
+ provides a particularly good example of this.
+ Assume that we have a set of 
+\begin_inset Formula $n$
+\end_inset
+
+ securities.
+ The covariance matrix of their returns can be partitioned as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{C}}_{n} & =\left[\begin{array}{c|c}
+\mathrm{\sigma}_{1}^{2}\, & \,\mathbf{\Sigma}_{12}\\
+\hline \mathbf{\Sigma}_{21}\, & \,\mathrm{\mathbf{C}}_{n\,-\,1}
+\end{array}\right],\label{eq:GuyStevensCovMat}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\sigma_{1}^{2}$
+\end_inset
+
+ is the variance of security 1, 
+\begin_inset Formula $\mathbf{\Sigma}_{12}$
+\end_inset
+
+ is a 
+\begin_inset Formula $1\times(n-1)$
+\end_inset
+
+ vector that contains the covariances of security 1 with the remaining 
+\begin_inset Formula $n-1$
+\end_inset
+
+ securities, 
+\begin_inset Formula $\mathbf{\Sigma}_{21}=\mathbf{\Sigma}_{12}^{\prime}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathrm{\mathbf{C}}_{n\,-\,1}$
+\end_inset
+
+ is the covariance matrix of the remaining 
+\begin_inset Formula $n-1$
+\end_inset
+
+ securities.
+ We can partition 
+\begin_inset Formula $\mathrm{\mathbf{C}}_{n}^{-1}$
+\end_inset
+
+ in the same way we partition 
+\begin_inset Formula $\mathrm{\mathbf{C}}_{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{C}}_{n}^{-1}=\left[\begin{array}{c|c}
+a_{11}\, & \,\mathbf{\Lambda}{}_{12}\\
+\hline \mathrm{\mathbf{\Lambda}}_{21}\, & \,\mathrm{\mathbf{\Lambda}}_{22}
+\end{array}\right].\label{eq:GuyStevensInverse1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{C}}_{n}^{-1}\mathrm{\mathbf{C}}_{n} & =\mathrm{\mathbf{I}}_{n},\nonumber \\
+ & =\left[\begin{array}{c|c}
+1\, & \,\mathbf{0}\\
+\hline \mathbf{0}\, & \,\mathrm{\mathbf{I}}_{n\,-\,1}
+\end{array}\right]\label{eq:GuyStevensInverse2}
+\end{align}
+
+\end_inset
+
+we can write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+a_{11}\,\mathrm{\sigma}_{1}^{2}\,+\,\mathbf{\Lambda}_{12}\,\mathbf{\Sigma}_{21} & =1\label{eq:GuyStevensInverse3}\\[0.5em]
+a_{11}\,\mathbf{\Sigma}_{12}\,+\,\mathbf{\Lambda}_{12}\,\mathrm{\mathbf{C}}_{n-1} & =\mathbf{0}.\label{eq:GuyStevensInverse4}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On solving 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GuyStevensInverse4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ for 
+\begin_inset Formula $\mathbf{\Lambda}_{12}$
+\end_inset
+
+, substituting into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GuyStevensInverse3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and simplifying, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+a_{11} & =\frac{1}{\mathrm{\sigma}_{1}^{2}\,-\,\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}\,\mathbf{\Sigma}_{21}}\nonumber \\
+ & =\frac{1}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)}\nonumber \\
+ & =\frac{1}{\mathrm{\sigma}_{\epsilon}^{2}},\label{eq:GuyStevensA11}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $R_{1}^{2}$
+\end_inset
+
+ is the fraction of the variance of security 1 that is explained by securities
+ 
+\begin_inset Formula $2,3,\cdots,n$
+\end_inset
+
+ when its returns are regressed against theirs, and 
+\begin_inset Formula $\mathrm{\sigma}_{\epsilon}^{2}$
+\end_inset
+
+ is the variance of the regression residuals.
+ These are well known results in the theory of least squares, and are discussed
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Stevens1997"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Hayashi2000"
+literal "false"
+
+\end_inset
+
+.
+ Next, we write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{\Lambda}_{12} & =-a_{11}\,\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}\nonumber \\
+ & =\frac{-\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)}\nonumber \\
+ & =\frac{-\mathrm{\boldsymbol{\beta}_{1}}}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)},\label{eq:GuyStevensBeta1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\boldsymbol{\beta}_{1}$
+\end_inset
+
+ is the vector of regression coefficients obtained when security 1's returns
+ are regressed against those of securities 
+\begin_inset Formula $1,\cdots,\,i-1,\,i+1,\cdots,\,n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+But since our choice of security 1 is arbitrary, all the rows must have
+ exactly the same form, and the inverse of the covariance matrix must be
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{C}}_{n}^{-1}=\left[\begin{array}{cccc}
+\frac{1}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\, & \,\frac{-\beta_{12}}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\, & \,\cdots\, & \,\frac{-\beta_{1n}}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\\
+\frac{-\beta_{21}}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\, & \,\frac{1}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\, &  & \,\frac{-\beta_{2n}}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\\
+\vdots & \vdots & \,\ddots\, & \vdots\\
+\frac{-\beta_{n1}}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}\, & \,\frac{-\beta_{n2}}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}\, &  & \,\frac{1}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}
+\end{array}\right].\label{eq:GuyStevensInverse5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Even though we would not ever invert a covariance matrix in this way (both
+ the data requirements and the computational effort are huge, and the procedure
+ is not numerically stable), the insights it affords are valuable, and helps
+ clarify our thinking about the structure of the inverse of a covariance
+ matrix.
+\end_layout
+
+\begin_layout Subsection
+The Mahanalobis Distance
+\end_layout
+
+\begin_layout Standard
+It sometimes proves useful to measure the distance between two random vectors
+ that are drawn from the same 
+\emph on
+joint
+\emph default
+ distribution, but whose 
+\emph on
+marginal
+\emph default
+ distributions are very different.
+ For example, vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+ may contain the returns of all the stocks in the S&P 500 on two adjacent
+ days, but the marginal distribution of their first entries (a volatile
+ small cap biotech firm) may be very different than that of their last entry
+ (a steadily growing consumer goods company).
+ In such cases, it proves useful to first express the distance between each
+ component of the two vectors in standard deviation units, and to then compute
+ a standardized distance between them using a variant of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DistanceBetweenVectors"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ In the special case when all the components of 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+ are independent, this gives us
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+d_{\mathrm{\mathbf{u}},\mathrm{\mathbf{v}}}=\sqrt{\left(\frac{u_{1}\,-\,v_{1}}{\sigma_{1}}\right)^{2}\,+\,\cdots\,+\,\left(\frac{u_{n}\,-\,v_{n}}{\sigma_{n}}\right)^{2}}.\label{eq:DistanceScaledBySigma}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More generally, the 
+\emph on
+Mahalanobis distance
+\emph default
+ takes into account the covariances between the components of the vectors,
+ and is defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+d_{\mathrm{\mathbf{u}},\mathrm{\mathbf{v}}}^{M}=\sqrt{\left(\mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right)^{\prime}\,\mathrm{\mathbf{C}}^{-1}\,\left(\mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right)},\label{eq:MahanalobisDistance}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $C$
+\end_inset
+
+ is the covariance matrix of the components of 
+\begin_inset Formula $\mathrm{\mathbf{u}}$
+\end_inset
+
+ (and 
+\begin_inset Formula $\mathrm{\mathbf{v}}$
+\end_inset
+
+).
+ If the covariance matrix is diagonal (i.e.
+ if all the components of a vector are uncorrelated with each other), 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:MahanalobisDistance"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reduces to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:DistanceScaledBySigma"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Eigenvalues and Eigenvectors
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, a matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ maps a non–zero vector 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ to another vector 
+\begin_inset Formula $\mathrm{\mathbf{b}}$
+\end_inset
+
+ which may lie at a great distance from 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+.
+ But not all matrices push vectors far away: the identity matrix 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+, for example, maps every vector to itself, and a scalar multiple of 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ maps a vector to the same scalar multiple of itself.
+ This property is not unique to 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+ – all square matrices map certain special vectors to scaled versions of
+ themselves, i.e
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}\,\mathrm{\mathbf{e}}=\lambda\,\mathrm{\mathbf{e}}.}\label{eq:Eigenvector1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The vector 
+\begin_inset Formula $\mathrm{\mathbf{e}}$
+\end_inset
+
+ is known as an 
+\emph on
+eigenvector
+\emph default
+ of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+, the scalar 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is its corresponding 
+\emph on
+eigenvalue
+\emph default
+, and they are collectively referred to as an 
+\emph on
+eigenpair
+\emph default
+.
+ Note that 
+\begin_inset Formula $\mathrm{\mathbf{e}}$
+\end_inset
+
+ is not unique – any scalar multiple of 
+\begin_inset Formula $\mathrm{\mathbf{e}}$
+\end_inset
+
+ is also an eigenvector of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ Often, an eigenvector is scaled so that its norm is 1, and the resulting
+ eigenvector is known as a 
+\emph on
+unit eigenvector
+\emph default
+ or a 
+\emph on
+normalized eigenvector
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+If we rewrite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Eigenvector1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)\mathrm{\mathbf{e}}=\mathrm{\mathbf{0},}\label{eq:Eigenvector2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the eigenvalues of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ can be seen to be those values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ for which 
+\begin_inset Formula $\mathbf{A}-\lambda\mathrm{\mathbf{I}}$
+\end_inset
+
+ is singular, or non–invertible, and therefore has a null space, or 
+\emph on
+eigenspace
+\emph default
+; any vector 
+\begin_inset Formula $\mathbf{e}$
+\end_inset
+
+ that lies in the eigenspace associated with a particular eigenvalue is
+ an eigenvector of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ It follows from the definition of invertibility that 
+\begin_inset Formula 
+\begin{equation}
+det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)=0,\label{eq:Eigenenvector3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\lambda_{i},1\leqslant i\leqslant n$
+\end_inset
+
+ be an eigenvalue of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sum_{i\,=\,1}^{n}\lambda_{i} & =\sum_{i\,=\,1}^{n}a_{ii}\nonumber \\
+ & \triangleq trace\left(\mathrm{\mathbf{A}}\right),\label{eq:SumOfEigenvalues}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\prod_{i\,=\,1}^{n}\lambda_{i}=det\left(\mathrm{\mathbf{A}}\right).\label{eq:ProductOfEigenvalues}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The set of eigenvalues of a matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is known as its 
+\emph on
+spectrum
+\emph default
+, and its spectral radius, 
+\begin_inset Formula $\rho\left(\mathbf{A}\right)$
+\end_inset
+
+, is defined to be 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho\left(\mathbf{A}\right)=\max_{i}\left|\lambda_{i}\right|,\label{eq:SpectralRadius1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and it can be shown that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho\left(\mathbf{A}\right)\leqslant\min\left(\max_{i}\sum_{j\,=\,1}^{n}\left|a_{ij}\right|,\ \max_{j}\sum_{i\,=\,1}^{n}\left|a_{ij}\right|\right).\label{eq:SpectralRadius2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A few useful facts about the eigenpairs 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{e}}_{i}$
+\end_inset
+
+ of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ follow:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is invertible, 
+\begin_inset Formula $\nicefrac{1}{\lambda_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{e}}_{i}$
+\end_inset
+
+ are an eigenpair of 
+\begin_inset Formula $\mathbf{A}^{-1}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The eigenvalues (but not necessarily the eigenvectors) of 
+\begin_inset Formula $\mathrm{\mathbf{A}^{\prime}}$
+\end_inset
+
+ are identical to the eigenvalues of 
+\begin_inset Formula $\mathrm{\mathbf{A}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda_{i}^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{e}}_{i}$
+\end_inset
+
+ are an eigenpair of 
+\begin_inset Formula $\mathbf{A}^{k},\ k>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is triangular or diagonal, then 
+\begin_inset Formula $\lambda_{i}=a_{ii},\ 1\leqslant i\leqslant n$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda_{i}\,-\,k$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{e}}_{i}$
+\end_inset
+
+ are an eigenpair of 
+\begin_inset Formula $\mathbf{A\,-\,}k\,\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ is an invertible 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, the eigenvalues (but not necessarily the eigenvectors) of 
+\begin_inset Formula $\mathbf{B}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{B}}$
+\end_inset
+
+ are identical to those of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If the eigenvalues of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are distinct, or if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is symmetric and has only real entries (covariance and correlation matrices
+ are good examples of this second, weaker, condition), the matrix 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ formed by stacking its normalized (i.e.
+ of length 1) eigenvectors side by side diagonalizes 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{P}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{P}}=\mathbf{D}_{\lambda}\label{eq:EigenvaluesDiagonalizeA}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{D}_{\lambda}=\left[\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \lambda_{n}
+\end{array}\right].\label{eq:Dlambda}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EigenvaluesDiagonalizeA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is often written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\mathbf{A}=\mathbf{P}\,\mathbf{D}_{\lambda}\,\mathbf{P}^{-1}},\label{eq:SpectralRepresentation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where it is called the 
+\emph on
+eigendecomposition
+\emph default
+, or the 
+\emph on
+spectral
+\emph default
+ 
+\emph on
+representation
+\emph default
+, of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It can further be shown that when the eigenvalues of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are distinct, or if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is symmetric and has only real entries, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{P}^{-1}=\mathbf{P}^{\prime},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpectralRepresentation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can usefully be rewritten as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{\mathbf{A}} & =\mathbf{P}\,\mathbf{D}_{\lambda}\,\mathbf{P}^{\prime}\nonumber \\
+ & =\sum_{i=1}^{n}\lambda_{i}\,\mathrm{\mathbf{p}}_{i}\,\mathrm{\mathbf{p}}_{i}^{\prime},\label{eq:SpectralRepresentation1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathrm{\mathbf{p}}_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ column of 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Clearly, 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ is invertible only if 
+\begin_inset Formula $\mathbf{D}_{\lambda}$
+\end_inset
+
+ is invertible, and 
+\begin_inset Formula $\mathbf{D}_{\lambda}$
+\end_inset
+
+ in turn is invertible if and only if all its eigenvalues are non–zero.
+ Direct multiplication shows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}^{k} & =\mathbf{P}\,\mathbf{D}_{\lambda}^{k}\,\mathbf{P}^{-1}\nonumber \\
+ & =\mathbf{P}\,\mathbf{D}_{\lambda}^{k}\,\mathbf{P}^{\prime}\nonumber \\
+ & =\sum_{i\,=\,1}^{n}\lambda_{i}^{k}\,\mathrm{\mathbf{p}}_{i}\,\mathrm{\mathbf{p}}_{i}^{\prime},\ k\geqslant2,\label{eq:SpectralRepresentationOfPowers}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+under the above conditions, and it is also true that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\exp\left(\mathrm{\mathbf{A}}\right) & =\mathbf{P}\,\exp\left(\mathbf{D}_{\lambda}\right)\,\mathbf{P}^{-1}\nonumber \\
+ & =\mathbf{P}\,\exp\left(\mathbf{D}_{\lambda}\right)\,\mathbf{P}^{\prime},\label{eq:SpectralRepresentationOfExpA}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\exp\left(\mathrm{\mathbf{A}}\right)\triangleq\mathbf{I}_{n}\,+\,\sum_{i\,>\,0}\frac{1}{i!}\mathrm{\mathbf{A}}^{i}\label{eq:MatrixExponential}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+is known as the 
+\emph on
+matrix exponential
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+It follows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\exp\left(\mathrm{\mathbf{0}}_{n}\right)=\mathbf{I}_{n}.\label{eq:MatrixExponential0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the special case when 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ commute, i.e.
+ when 
+\begin_inset Formula $\mathbf{A}\,\mathbf{B}=\mathbf{B}\,\mathbf{A}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\exp\left(\mathrm{\mathbf{A}}\right)\exp\left(\mathrm{\mathbf{B}}\right) & =\exp\left(\mathrm{\mathbf{B}}\right)\,\exp\left(\mathrm{\mathbf{A}}\right)\nonumber \\
+ & =\exp\left(\mathrm{\mathbf{A}}\,+\,\mathrm{\mathbf{B}}\right).\label{eq:MatrixExponentialProduct}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In particular, as 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ commutes with itself, and as 
+\begin_inset Formula $\mathrm{\mathbf{A}\,+}\,\left(-\mathrm{\mathbf{A}}\right)=\mathbf{0}_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\exp\left(\mathrm{\mathbf{A}}\right)^{-1}=\exp\left(-\mathrm{\mathbf{A}}\right).\label{eq:MatrixExponentialInverse}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EigenvaluesDiagonalizeA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be generalized: two matrices, 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{B}}$
+\end_inset
+
+, are said to be 
+\emph on
+similar
+\emph default
+ if there exists an invertible matrix 
+\begin_inset Formula $\mathrm{\mathbf{E}}$
+\end_inset
+
+ such that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{E}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{E}}=\mathbf{B}.\label{eq:SimilarMatrices1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar matrices have identical eigenvalues, as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+det\left(\mathbf{B}\,-\,\lambda\mathrm{\mathbf{I}}\right) & =det\left(\mathbf{\mathbf{E}^{-1}}\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)\mathbf{\mathbf{E}}\right)\nonumber \\
+ & =det\left(\mathbf{\mathbf{E}^{-1}}\right)det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)det\left(\mathbf{\mathbf{E}}\right)\nonumber \\
+ & =det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right).\label{eq:SimilarMatrices2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Positive Definite Matrices
+\end_layout
+
+\begin_layout Standard
+A matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is said to be 
+\emph on
+positive definite
+\emph default
+ if 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{A\,x}}>\mathrm{\mathbf{0}}\ \forall\mathrm{\mathbf{x}}\ne\mathrm{\mathbf{0}}.\label{eq:PositiveDefinite}
+\end{equation}
+
+\end_inset
+
+An equivalent condition for positive definiteness is that all the eigenvalues
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are strictly positive.
+ If we relax the inequality slightly, i.e.
+ if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{A\,x}}\geqslant\mathrm{\mathbf{0}}\ \forall\mathrm{\mathbf{x}}\ne\mathrm{\mathbf{0}},\label{eq:PositiveSemiDefinite}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is said to be 
+\emph on
+positive semi–definite
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Negating each entry in a positive definitive (or positive semi–definite)
+ matrix results in a 
+\emph on
+negative definite
+\emph default
+ (or 
+\emph on
+negative semi–definite
+\emph default
+) matrix – the inequalities in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PositiveDefinite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PositiveSemiDefinite"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ are reversed.
+\end_layout
+
+\begin_layout Standard
+The Gramian matrix 
+\begin_inset Formula $\mathbf{A}^{\prime}\mathrm{\mathbf{A}}$
+\end_inset
+
+ is non–negative definite, as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{\mathbf{A}^{\prime}\,\mathrm{\mathbf{A}\,}x}} & =\left(\mathbf{\mathbf{A\,}x}\right)^{\prime}\left(\mathbf{\mathbf{A\,}x}\right)\nonumber \\
+ & \geqslant\mathrm{\mathbf{0}\ \forall\mathrm{\mathbf{x}}}.\label{eq:GramianNonNegativeDefinite}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore, the rank of the Gramian is identical to the rank of 
+\begin_inset Formula $\mathbf{\mathbf{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is symmetric and positive semi–definite, its eigenvalues are non–negative.
+ If it is symmetric and positive definite, its eigenvalues are strictly
+ positive.
+\end_layout
+
+\begin_layout Standard
+Positive definite matrices are of great importance in portfolio management
+ because they are used to compute the variance of a portfolio from the variances
+ and covariances of its constituent securities (the variance of a portfolio
+ is, by definition, non–negative), and also find use when identifying extrema
+ of multivariate functions
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Correspondingly, negative definite matrices find use when identifying maxima
+ of multivariate functions.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+As a positive definite covariance matrix is symmetric and has only real
+ entries, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EigenvaluesDiagonalizeA"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+–
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SpectralRepresentation1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ apply, and we can write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{P}^{\prime}\,\mathbf{A}\,\mathbf{P}=\mathbf{D}_{\lambda},\label{eq:PDMatrixDiagonalization}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ is an orthonormal matrix whose columns are the normalized eigenvalues of
+ 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{D}_{\lambda}$
+\end_inset
+
+ is a diagonal matrix of eigenvalues – see 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Dlambda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ If we define
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sqrt{\mathbf{D}_{\lambda}^{-1}}=\left[\begin{array}{cccc}
+\nicefrac{1}{\sqrt{\lambda_{1}}} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \nicefrac{1}{\sqrt{\lambda_{n}}}
+\end{array}\right]\label{eq:SqrtDlambdaInv}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{Q}=\mathbf{P}\,\sqrt{\mathbf{D}_{\lambda}^{-1}},\label{eq:QFromP}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we can write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{Q}^{\prime}\,\mathbf{A}\,\mathbf{Q}=\mathbf{I}_{n}.\label{eq:CovarianceMatrixInverse}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using straightforward properties of Cholesky factorization and products
+ of orthogonal matrices, it can be shown that 
+\begin_inset Formula $\mathbf{Q}$
+\end_inset
+
+ diagonalizes 
+\emph on
+any
+\emph default
+ positive definite covariance matrix, say 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{Q}^{\prime}\,\mathbf{B}\,\mathbf{Q}=\mathbf{D}_{1},\label{eq:PdiagonalizesB}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{D}_{1}$
+\end_inset
+
+ is a diagonal matrix, though its entries are not the eigenvalues of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+ The matrices 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are said to be simultaneously diagonalizable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Define eigenvalues and eigenvectors
+\end_layout
+
+\begin_layout Itemize
+Spectral representation
+\end_layout
+
+\begin_layout Itemize
+Positive definiteness 
+\end_layout
+
+\begin_layout Itemize
+Distribution of Eigenvalues?
+\end_layout
+
+\begin_layout Itemize
+Random Matrices?
+\end_layout
+
+\begin_layout Itemize
+Ignore these - too specialized, too hard
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+QR Decomposition and the Gram–Schmidt Procedure
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:QR_Decomposition"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume that we have a set of vectors 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{1},\,\mathrm{\mathbf{q}}_{2,}\,\cdots\,,\mathrm{\mathbf{q}}_{n}$
+\end_inset
+
+ which form an orthonormal basis
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+An orthogonal basis can be transformed into an orthonormal basis by dividing
+ each vector by its norm.
+\end_layout
+
+\end_inset
+
+ for an 
+\begin_inset Formula $n$
+\end_inset
+
+–dimensional vector space 
+\begin_inset Formula $\mathcal{{S}}$
+\end_inset
+
+ .
+ From the definition of orthonormality,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \mathrm{\mathbf{q}}_{i},\,\mathrm{\mathbf{q}}_{j}\right\rangle =\begin{cases}
+1 & i=j\\
+0 & i\ne j.
+\end{cases}\label{eq:Orthonormality}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{i}$
+\end_inset
+
+ are vectors in 
+\begin_inset Formula $n$
+\end_inset
+
+–dimensional Euclidean space, we can stack them side by side to form an
+ 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{Q}}=\left[\mathrm{\mathbf{q}}_{1}\,\cdots\,\mathrm{\mathbf{q}}_{n}\right],\label{eq:Qmatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and it is easily seen that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{Q}}^{\prime}\,\mathrm{\mathbf{Q}} & =\mathrm{\mathbf{I}}_{n}.\label{eq:QtransposeQequalsIn}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can post–multiply both sides of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QtransposeQequalsIn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by 
+\begin_inset Formula $\mathrm{\mathbf{Q}}^{-1}$
+\end_inset
+
+ to obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{Q}}^{-1}=\mathrm{\mathbf{Q}}^{\prime},\label{eq:QinverseEqualsQtranspose}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+but it is important to note that 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QtransposeQequalsIn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (but not 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:QinverseEqualsQtranspose"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) holds even if 
+\begin_inset Formula $\mathrm{\mathbf{Q}}$
+\end_inset
+
+ is rectangular, i.e.
+ if the 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{i}$
+\end_inset
+
+ are vectors in an 
+\begin_inset Formula $m$
+\end_inset
+
+–dimensional Euclidean space, for 
+\begin_inset Formula $m>n.$
+\end_inset
+
+ Also, as 
+\begin_inset Formula $\mathrm{\mathbf{I}}_{n}^{\prime}=\mathrm{\mathbf{I}}_{n}$
+\end_inset
+
+, it follows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{Q}}^{\prime}\,\mathrm{\mathbf{Q}}=\mathrm{\mathbf{Q}}\,\mathrm{\mathbf{Q}}^{\prime}.\label{eq:QtransposeQ_2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remarkably, 
+\emph on
+any
+\emph default
+ matrix whose columns are linearly independent can be decomposed into a
+ product of a orthonormal matrix and an invertible upper triangular matrix
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Normally, an upper triangular matrix would be represented by 
+\begin_inset Formula $\mathrm{\mathbf{U}}$
+\end_inset
+
+, but it has become the norm to represent it in this particular factorization
+ by 
+\begin_inset Formula $\mathrm{\mathbf{R}}$
+\end_inset
+
+, possibly because all its entries lie to the right of the principal diagonal.
+\end_layout
+
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{Q}}\,\mathrm{\mathbf{R}}\label{eq:QRdecomposition}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathrm{\mathbf{Q}}$
+\end_inset
+
+ is orthonormal and 
+\begin_inset Formula $\mathrm{\mathbf{R}}$
+\end_inset
+
+ is invertible and upper triangular.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Gram–Schmidt
+\emph default
+ procedure is a constructive algorithm for creating 
+\begin_inset Formula $\mathrm{\mathbf{Q}}$
+\end_inset
+
+ from any full rank matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Let
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\mathrm{\mathbf{a}}_{1}\,\cdots\,\mathrm{\mathbf{a}}_{n}\right].\label{eq:Amatrix}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix of full rank.
+\end_layout
+
+\begin_layout Standard
+If we divide each column of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ by its norm, we get an equivalent
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Equivalent in the sense that the column space of 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{1}$
+\end_inset
+
+ is identical to the column space of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathrm{\mathbf{A}}_{1}$
+\end_inset
+
+, whose columns all have norm 1.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{A}}_{1} & =\left[\frac{\mathrm{\mathbf{a}}_{1}}{\left\Vert \mathrm{\mathbf{a}}_{1}\right\Vert }\,\cdots\,\frac{\mathrm{\mathbf{a}}_{n}}{\left\Vert \mathrm{\mathbf{a}}_{n}\right\Vert }\right]\nonumber \\
+ & \triangleq\left[\mathrm{\mathbf{a}}_{1}^{1}\,\cdots\,\mathrm{\mathbf{a}}_{n}^{1}\right].\label{eq:A1matrix}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To construct 
+\begin_inset Formula $\mathbf{Q}$
+\end_inset
+
+ using the Gram–Schmidt procedure, we first set 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{1}=\mathrm{\mathbf{a}}_{1}^{1}$
+\end_inset
+
+, and then iteratively subtract the projections of 
+\begin_inset Formula $\mathrm{\mathbf{a}}_{i}^{1}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=2,\,3,\,\cdots\,,\,n$
+\end_inset
+
+ onto 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{1},\,\cdots\,,\,\mathrm{\mathbf{q}}_{i-1}$
+\end_inset
+
+ from itself, and finally normalize the resulting vector to create a new
+ vector that is orthonormal to all the preceding vectors.
+ Formally,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{cl}
+\mathrm{\mathbf{q}}_{1} & =\mathrm{\mathbf{a}}_{1}^{1}\\
+\mathrm{\mathbf{q}}_{2} & =\frac{\mathbf{\mathrm{\mathbf{a}}}_{2}^{1}\,-\,\left\langle \mathbf{\mathrm{\mathbf{a}}}_{2}^{1},\,\mathrm{\mathbf{q}}_{1}\right\rangle \mathrm{\mathbf{q}}_{1}}{\left\Vert \mathbf{\mathrm{\mathbf{a}}}_{2}^{1}\,-\,\left\langle \mathbf{\mathrm{\mathbf{a}}}_{2}^{1},\,\mathrm{\mathbf{q}}_{1}\right\rangle \mathrm{\mathbf{q}}_{1}\right\Vert }\\
+ & \vdots\\
+\mathrm{\mathbf{q}}_{n} & =\frac{\mathbf{\mathrm{\mathbf{a}}}_{n}^{1}\,-\,\sum_{i\,=\,1}^{n\,-\,1}\left\langle \mathbf{\mathrm{\mathbf{a}}}_{n}^{1},\,\mathrm{\mathbf{q}}_{i}\right\rangle \mathrm{\mathbf{q}}_{i}}{\left\Vert \mathbf{\mathrm{\mathbf{a}}}_{n}^{1}\,-\,\sum_{i\,=\,1}^{n\,-\,1}\left\langle \mathbf{\mathrm{\mathbf{a}}}_{n}^{1},\,\mathrm{\mathbf{q}}_{i}\right\rangle \mathrm{\mathbf{q}}_{i}\right\Vert }
+\end{array}\label{eq:GramSchmidt}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is easy to check that the 
+\begin_inset Formula $\mathrm{\mathbf{q}}_{i}$
+\end_inset
+
+ satisfy 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:Orthonormality"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and that the column space of 
+\begin_inset Formula $\mathrm{\mathbf{Q}}$
+\end_inset
+
+ is identical to the column space of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ Keep in mind that the Gram–Schmidt procedure does not return a unique orthonorm
+al matrix – if, for example, the columns of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ are resequenced, it will return a different orthonormal matrix.
+\end_layout
+
+\begin_layout Standard
+Even though the Gram–Schmidt procedure makes clear the conceptual basis
+ of orthonormalization, it is rarely used in practice on account of its
+ numerically instability when the columns of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ are almost collinear.
+ And though its numerical stability can be improved by resequencing its
+ computations (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Gentle2017"
+literal "false"
+
+\end_inset
+
+ for details), 
+\emph on
+Householder transformations
+\emph default
+ and 
+\emph on
+Givens rotations
+\emph default
+ are more widely used in practice to create 
+\begin_inset Formula $\mathrm{\mathbf{Q}}\mathbf{R}$
+\end_inset
+
+ decompositions, which see widespread use in the solution of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:AxEQb"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The fact that the transpose of an orthonormal matrix is its inverse leads
+ to a subtly different notion of similarity: two matrices, 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{B}}$
+\end_inset
+
+, are said to be 
+\emph on
+orthogonally similar
+\emph default
+ if there exists an orthonormal matrix 
+\begin_inset Formula $\mathrm{\mathbf{F}}$
+\end_inset
+
+ such that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}^{\prime}\,\mathbf{A\,}\mathbf{\mathbf{F}}=\mathbf{B}.\label{eq:SimilarMatrices3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ is upper triangular, then 
+\begin_inset Formula $\mathbf{F}\,\mathbf{B\,\mathbf{F}^{\prime}}$
+\end_inset
+
+is known as the 
+\emph on
+Schur factorization
+\emph default
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+The Singular Value Decomposition
+\end_layout
+
+\begin_layout Standard
+In the special case when 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is square and symmetric, it can be represented as the Gramian of some 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ with rank 
+\begin_inset Formula $r\leqslant\min\left(m,n\right)$
+\end_inset
+
+ (think of the columns of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ as time series of returns of securities, some of which may admit a riskless
+ arbitrage), i.e.,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\mathbf{A}}=\mathbf{B}^{\prime}\,\mathbf{B}.\label{eq:GramianOfPD}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The rank of 
+\begin_inset Formula $\mathbf{\mathbf{A}}$
+\end_inset
+
+ is also 
+\begin_inset Formula $r$
+\end_inset
+
+, and it possesses a set of orthonormal eigenvectors that diagonalize it,
+ i.e.
+ its spectral representation is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathbf{\mathbf{A}} & =\mathbf{Q}\,\mathbf{D}_{\lambda}\,\mathbf{Q}^{\prime},\label{eq:PDSpectralRepresentation}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{Q}$
+\end_inset
+
+ is an orthonormal matrix whose columns are the normalized eigenvectors
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{D}_{\lambda}$
+\end_inset
+
+ is a diagonal matrix whose entries are the eigenvalues of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+Singular Value Decomposition
+\emph default
+ (SVD) generalizes and extends 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PDSpectralRepresentation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to 
+\emph on
+all
+\emph default
+ matrices, and diagonalizes 
+\begin_inset Formula $\mathbf{\mathbf{A}}_{n\times m}$
+\end_inset
+
+ using its 
+\emph on
+singular vectors
+\emph default
+ instead of its eigenvalues.
+ The resulting decomposition represents any 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix as a product of three matrices
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\mathbf{A}}_{n\,\times\,m}=\mathbf{U}_{n\,\times\,n}\,\mathbf{\Sigma}_{n\,\times\,m}\,\mathbf{V}_{m\,\times\,m}^{\prime},\label{eq:SVD}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ are orthonormal matrices, and 
+\begin_inset Formula $\mathbf{\mathbf{\Sigma}}$
+\end_inset
+
+ is diagonal in the following sense:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{ij}=\begin{cases}
+\sigma_{i}>0 & 1\leqslant i=j\leqslant\mathrm{rank}\left(\mathbf{A}\right)\\
+0 & \mathrm{otherwise}.
+\end{cases}\label{eq:DiagMatrixInSVD}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+ are known as 
+\emph on
+singular values
+\emph default
+, and are the square roots of the non-zero eigenvalues of 
+\begin_inset Formula $\mathbf{A}^{\prime}\,\mathbf{A}$
+\end_inset
+
+.
+ Correspondingly, the columns of 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ are the orthonormal eigenvectors of 
+\begin_inset Formula $\mathbf{A}\,\mathbf{A}^{\prime}$
+\end_inset
+
+ and those of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ are the orthonormal eigenvectors of 
+\begin_inset Formula $\mathbf{A}^{\prime}\,\mathbf{A}$
+\end_inset
+
+.
+ They are known as the 
+\emph on
+left
+\emph default
+ and 
+\emph on
+right singular vectors
+\emph default
+, respectively, of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+.
+ For symmetric, square, matrices, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ reduces to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PDSpectralRepresentation"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Recognizing that 
+\begin_inset Formula $\mathbf{V}^{-1}=\mathbf{V}^{\prime},$
+\end_inset
+
+we can rewrite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\mathbf{A}}_{n\,\times\,m}\,\mathbf{V}_{m\,\times\,m}=\mathbf{U}_{n\,\times\,n}\,\mathbf{\Sigma}_{n\,\times\,m},\label{eq:SVD1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that 
+\begin_inset Formula $\mathbf{\mathbf{A}}$
+\end_inset
+
+ maps the columns of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ to scaled versions of the columns of 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+.
+ Addtionally, we can partition 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ into two adjacent block matrices 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\mathbf{U} & =\left[\mathrm{\mathbf{U}}_{1}\ |\ \mathrm{\mathbf{U}}_{2}\right]=\left[\begin{array}{ccc}
+\mathrm{\mathbf{u}}_{1} & \,\cdots & \ \mathrm{\mathbf{u}}_{r}\ |\ \mathrm{\mathbf{u}}_{r+1}\,\cdots\ \mathrm{\mathbf{u}}_{n}\end{array}\right]\label{eq:SVDu}\\[0.5em]
+\mathbf{V} & =\left[\mathrm{\mathbf{V}}_{1}\ |\ \mathrm{\mathbf{V}}_{2}\right]=\left[\begin{array}{ccc}
+\mathrm{\mathbf{v}}_{1} & \,\cdots & \ \mathrm{\mathbf{v}}_{r}\ |\ \mathrm{\mathbf{v}}_{r+1}\,\cdots\ \mathrm{\mathbf{v}}_{m}\end{array}\right],\label{eq:SVDv}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and it can be shown that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cl}
+\mathbf{U}_{1} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{u}}_{1} & \,\cdots\  & \mathrm{\mathbf{u}}_{r}\end{array}\right]\hspace{0.315cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ the\ \mathit{\mathit{column}\ space}\ of\ \mathbf{\mathbf{A}}}\\
+\mathbf{U}_{2} & =\left[\mathrm{\mathbf{u}}_{r\,+\,1}\,\cdots\ \mathrm{\mathbf{u}}_{n}\right]\hspace{0.12cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ \mathbf{\mathcal{{N}}\left(\mathrm{\mathbf{A}}^{\prime}\right)},\ the\ \mathit{left\ null\ space}\ of}\ \mathrm{\mathbf{A}}\\
+\mathbf{V}_{1} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{v}}_{1} & \,\cdots\  & \mathrm{\mathbf{v}}_{r}\end{array}\right]\hspace{0.335cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ the}\ row\ \mathit{space}\ \mathrm{of}\ \mathbf{\mathbf{A}}\\
+\mathbf{V}_{2} & =\left[\mathrm{\mathbf{v}}_{r\,+\,1}\,\cdots\ \mathrm{\mathbf{v}}_{m}\right]\ \mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ \mathbf{\mathcal{{N}}\left(\mathrm{\mathbf{A}}\right)},\ the}\ \mathit{null\ space}\ \mathrm{of}\ \mathbf{A}.
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we write out 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SVD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in terms of the left and right singular vectors 
+\begin_inset Formula $\mathrm{\mathbf{u}}_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{v}}_{i}$
+\end_inset
+
+ contained in 
+\begin_inset Formula $\mathbf{U}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{V}_{1}$
+\end_inset
+
+ (the orthonormal bases for its column space and row space respectively),
+ we see that the SVD allows us to represent
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ as a sum of rank 1 matrices:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\mathbf{A}}=\sum_{i\,=\,1}^{r}\sigma_{i}\,\mathrm{\mathbf{u}}_{i}\,\mathbf{v}_{i}^{\prime}.\label{eq:SVD2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we further reorder the terms on the right hand side of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SVD2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in descending order of 
+\begin_inset Formula $\sigma_{i}$
+\end_inset
+
+, we obtain a decomposition of 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ in which the terms are ranked in descending order of importance, and we
+ can obtain a sequence of increasingly accurate approximations to 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ by computing the partial sums of the first 
+\begin_inset Formula $p<r$
+\end_inset
+
+ terms of this reordered sequence.
+ 
+\end_layout
+
+\begin_layout Standard
+This is, in fact, the way in which the SVD is most often used – a small,
+ but important, subset of the terms in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:SVD2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is used to construct an adequate approximation to 
+\begin_inset Formula $\mathrm{\mathbf{A}}$
+\end_inset
+
+ that greatly simplifies computations using it.
+ In many real life applications, matrices with many millions of entries
+ are well approximated by a partial sum with ten or twenty terms, speeding
+ up computations by many orders of magnitude.
+\end_layout
+
+\begin_layout Section
+Some Results on Functions
+\end_layout
+
+\begin_layout Subsection
+Derivatives of Functions
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ be a differentiable function of 
+\begin_inset Formula $n$
+\end_inset
+
+ variables 
+\begin_inset Formula $x_{1},\,x_{2},\cdots\,,\,x_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\emph on
+gradient
+\emph default
+ of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right),\ \nabla f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+, is a vector of its partial derivatives, and is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=\left[\begin{array}{c}
+\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}}\\
+\vdots\\
+\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}}
+\end{array}\right].\label{eq:GradientFx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The gradient vector points in the direction in which 
+\begin_inset Formula $f$
+\end_inset
+
+'s rate of change is maximal.
+ In the special case when 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\sum_{i\,=\,1}^{n}a_{i}\,x_{i}\nonumber \\
+ & =\mathrm{\mathbf{a}}\cdotp\mathrm{\mathbf{x}},\label{eq:fx_dot_product}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+it is easily seen that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=\mathrm{\mathbf{a}}.\label{eq:GradientDotProduct}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, if 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is a 
+\emph on
+quadratic form
+\emph default
+, i.e.
+ if
+\begin_inset Formula 
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\sum_{i\,=\,1}^{n}\sum_{j\,=\,1}^{n}a_{ij}\,x_{i}\,x_{j}\nonumber \\
+ & =\mathrm{\mathbf{x}}^{\prime}\,\mathbf{A}\,\mathrm{\mathbf{x}},\label{eq:fx_quadratic_form}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ are constants, it can be seen by differentiating and gathering terms that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=2\,\mathbf{A}\,\mathrm{\mathbf{x}}.\label{eq:GradientQuadraticForm}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is twice differentiable, its Hessian, 
+\begin_inset Formula $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+\end_inset
+
+, is a symmetric square matrix of its second partial derivatives:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right) & =\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial\mathrm{\mathbf{x}}\partial\mathrm{\mathbf{x}}^{\prime}}\nonumber \\
+ & =\left[\begin{array}{cccc}
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}^{2}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}\,\partial x_{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}\,\partial x_{n}}\\
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}\,\partial x_{1}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}^{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}\,\partial x_{n}}\\
+\vdots & \vdots & \ddots & \vdots\\
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}\,\partial x_{1}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}\,\partial x_{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}^{2}}
+\end{array}\right]\label{eq:Hessian}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The Hessian matrix reflects the magnitude, as well as the principal axes,
+ of the local curvature of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{g}}\left(x\right)=\left[\begin{array}{c}
+g_{1}\left(x\right)\\
+\vdots\\
+g_{n}\left(x\right)
+\end{array}\right]\label{eq:VectorOfFunctions}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is a vector of 
+\begin_inset Formula $k$
+\end_inset
+
+–times differentiable functions, 
+\begin_inset Formula $g_{1}\left(x\right),\,g_{2}\left(x\right),\,\cdots\,,\,g_{n}\left(x\right)$
+\end_inset
+
+, of a single variable 
+\begin_inset Formula $x$
+\end_inset
+
+, then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d^{k}\mathrm{\mathbf{g}}\left(x\right)}{dx^{k}}=\left[\begin{array}{c}
+\frac{d^{k}g_{1}\left(x\right)}{dx^{k}}\\
+\vdots\\
+\frac{d^{k}g_{n}\left(x\right)}{dx^{k}}
+\end{array}\right].\label{eq:VectorOfDerivatives}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:VectorOfDerivatives"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ generalizes naturally to matrices.
+ If 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{G}}\left(x\right)=\left[\begin{array}{ccc}
+g_{11}\left(x\right) & \,\cdots\, & g_{1m}\left(x\right)\\
+\vdots & \vdots & \vdots\\
+g_{n1}\left(x\right) & \,\cdots\, & g_{nm}\left(x\right)
+\end{array}\right]\label{eq:MatrixOfFunctions}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is a matrix of 
+\begin_inset Formula $k$
+\end_inset
+
+–times differentiable functions, 
+\begin_inset Formula $g_{11}\left(x\right),\,\cdots\,,\,g_{nm}\left(x\right)$
+\end_inset
+
+, of a single variable 
+\begin_inset Formula $x$
+\end_inset
+
+, then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d^{k}\mathrm{\mathbf{G}}\left(x\right)}{dx^{k}}=\left[\begin{array}{ccc}
+\frac{d^{k}g_{11}\left(x\right)}{dx^{k}} & \,\cdots\, & \frac{dg_{1m}^{k}\left(x\right)}{dx^{k}}\\
+\vdots & \vdots & \vdots\\
+\frac{d^{k}g_{n1}\left(x\right)}{dx^{k}} & \,\cdots\, & \frac{d^{k}g_{nm}\left(x\right)}{dx^{k}}
+\end{array}\right].\label{eq:MatrixOfDerivatives}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Taylor Series
+\end_layout
+
+\begin_layout Standard
+Taylor series provide a way in which to approximate infinitely differentiable
+ functions around a point.
+ The Taylor series of an infinitely differentiable function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ of a single variable around a point 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f\left(x\right) & =f\left(x_{0}\right)+\sum_{i\,\geqslant\,1}\left.\frac{1}{i!}\left(x\,-\,x_{0}\right)^{i}\frac{d^{i}f\left(x\right)}{dx^{i}}\right|_{x\,=\,x_{0}}\nonumber \\
+ & =f\left(x_{0}\right)+\sum_{i\,=\,1}^{k}\left.\frac{1}{i!}\left(x\,-\,x_{0}\right)^{i}\frac{d^{i}f\left(x\right)}{dx^{i}}\right|_{x\,=\,x_{0}}+r_{k\,+\,1}(x),\label{eq:UnivariateTaylorSeries}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $r_{k+1}(x)$
+\end_inset
+
+ is a remainder term.
+ 
+\end_layout
+
+\begin_layout Standard
+Often, we assume that the remainder term can be ignored, focus on just the
+ first three terms of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UnivariateTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f\left(x\right)\approx f\left(x_{0}\right)+\left(x\,-\,x_{0}\right)\left.\frac{df\left(x\right)}{dx}\right|_{x\,=\,x_{0}}+\frac{1}{2}\left(x\,-\,x_{0}\right)^{2}\left.\frac{d^{2}f\left(x\right)}{dx^{2}}\right|_{x\,=\,x_{0}}.\label{eq:TwoTermUnivariateTaylorSeries}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+While a multivariate extension of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UnivariateTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ exists, it is a three term expansion, analogous to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TwoTermUnivariateTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, that finds the most use in portfolio construction and risk management:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f\left(\mathrm{\mathbf{x}}\right)\approx f\left(\mathrm{\mathbf{x}}_{0}\right)+\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right)\left.\nabla f\left(\mathrm{\mathbf{x}}\right)\right|_{\mathrm{\mathbf{x}}=\mathrm{\mathbf{x}}_{0}}+\frac{1}{2}\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right)^{\prime}\left.\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)\right|_{x=x_{0}}\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right).\label{eq:TwoTermMultivariateTaylorSeries}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is important to keep in mind that a Taylor series expansion of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is a 
+\emph on
+local
+\emph default
+ expansion, and is typically valid only in a small region centered at 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{0}$
+\end_inset
+
+.
+ As 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{0}$
+\end_inset
+
+ changes, so does its Taylor series, as well as its gradient and its Hessian.
+ 
+\end_layout
+
+\begin_layout Subsection
+Convex and Concave Functions
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:ConvexFunctions"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ of single variable is 
+\emph on
+concave
+\emph default
+ if for any 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, and for all 
+\begin_inset Formula $x,y$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f((1\,-\,\alpha)\,x\,+\,\alpha\,y)\geqslant(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y).\label{eq:ConcaveFunction}
+\end{equation}
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is 
+\emph on
+strictly concave
+\emph default
+ if the strict inequality 
+\begin_inset Formula $f((1\,-\,\alpha)\,x\,+\,\alpha\,y)>(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)$
+\end_inset
+
+ holds for any 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $x\ne y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A differentiable function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is (strictly) concave on an interval if and only if its derivative 
+\begin_inset Formula $f^{\prime}(x)$
+\end_inset
+
+ is (strictly) monotonically decreasing on that interval.
+ If a function 
+\begin_inset Formula $f$
+\end_inset
+
+ has a second derivative 
+\begin_inset Formula $f^{\prime\prime}(x)$
+\end_inset
+
+ on an interval, then 
+\begin_inset Formula $f$
+\end_inset
+
+ is (strictly) concave if and only if 
+\begin_inset Formula $f^{\prime\prime}(x)$
+\end_inset
+
+ is (negative) non–positive on that interval.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is concave and differentiable, then it is bounded above by its first–order
+ Taylor approximation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(x)\leqslant f(x_{0})\,+\,f^{\prime}(x_{0})\,\cdot\,(x\,-\,x_{0})\ \forall x,\,x_{0},\label{eq:ConcaveFunctionUpperBound}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and has a global 
+\emph on
+maximum
+\emph default
+ that is achieved at one of the two boundaries of the interval or at a point
+ 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ for which 
+\begin_inset Formula $f^{\prime}(x_{0})=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ of single variable is 
+\emph on
+convex
+\emph default
+ if 
+\begin_inset Formula $-f(x)$
+\end_inset
+
+ is concave, i.e.
+ for any 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, and for all 
+\begin_inset Formula $x,y$
+\end_inset
+
+,  
+\begin_inset Formula $f((1\,-\,\alpha)\,x\,+\,\alpha\,y)\leqslant(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)$
+\end_inset
+
+.
+ The function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is 
+\emph on
+strictly convex
+\emph default
+ if 
+\begin_inset Formula $f((1\,-\,\alpha)\,x\,+\,\alpha\,y)<(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)\ \forall\alpha\in(0,1)$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $x\ne y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A differentiable function 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ is (strictly) convex on an interval if and only if its derivative 
+\begin_inset Formula $f^{\prime}(x)$
+\end_inset
+
+ is (strictly) monotonically increasing on that interval.
+ If a function 
+\begin_inset Formula $f$
+\end_inset
+
+ has a second derivative 
+\begin_inset Formula $f^{\prime\prime}(x)$
+\end_inset
+
+ on an interval then 
+\begin_inset Formula $f$
+\end_inset
+
+ is (strictly) convex if and only if 
+\begin_inset Formula $f^{\prime\prime}(x)$
+\end_inset
+
+ is (positive) non–negative on that interval.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is convex and differentiable, it is bounded below by its first-order Taylor
+ approximation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(x)\geqslant f(x_{0})\,+\,f^{\prime}(x_{0})\cdot(x\,-\,x_{0})\ \forall\,x,\,x_{0},\label{eq:ConvexFunctionLowerBound}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and has a global 
+\emph on
+minimum
+\emph default
+ that is achieved at one of the two boundaries of the interval or at a point
+ 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ for which 
+\begin_inset Formula $f^{\prime}(x_{0})=0.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Jensen's inequality
+\emph default
+, which sees extensive use in continuous time finance, concerns the expected
+ value of convex and concave functions of a random variable, states that
+ for any random variable 
+\begin_inset Formula $Z$
+\end_inset
+
+, and for any convex function 
+\begin_inset Formula $f$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E\left[f\left(Z\right)\right]\geqslant f\left(E\left[Z\right]\right).\label{eq:JensensInequalityConvexFunction}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $f$
+\end_inset
+
+ is concave, the direction of the inequality is reversed.
+ 
+\end_layout
+
+\begin_layout Standard
+Jensen's inequality is easily seen to be true by setting 
+\begin_inset Formula $x_{0}=E\left[Z\right]$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ConcaveFunctionUpperBound"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ConvexFunctionLowerBound"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and then taking the expectation of both sides.
+\end_layout
+
+\begin_layout Subsection
+Multivariate Convex and Concave Functions
+\end_layout
+
+\begin_layout Standard
+To extend the notions of convexity and concavity to functions of many variables,
+ we need to define a 
+\emph on
+convex set
+\emph default
+.
+ A set 
+\begin_inset Formula $S$
+\end_inset
+
+ is said to be convex if for any 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+, and for all 
+\begin_inset Formula $\mathrm{\mathbf{x}},\mathrm{\mathbf{y}}\in S$
+\end_inset
+
+, the line segment joining 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+ lies within, or on the boundary of, 
+\begin_inset Formula $S$
+\end_inset
+
+, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(1\,-\,\alpha)\,\mathbf{x}\,+\,\alpha\,\mathrm{\mathbf{y}}\in S.\label{Convex set}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A multivariable function 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ that is defined on a convex set 
+\begin_inset Formula $S$
+\end_inset
+
+ is said to be concave if it satisfies 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ConcaveFunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the scalars 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ being replaced by vectors 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{\mathbf{y}}$
+\end_inset
+
+.
+ Replacing scalars with vectors allows us to similarly define strictly concave,
+ convex and strictly convex functions by analogy to their definitions in
+ Section 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "subsec:ConvexFunctions"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A twice–differentiable function 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is convex (strictly convex) if its Hessian, 
+\begin_inset Formula $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+\end_inset
+
+, is positive semi–definite (positive definite), and concave (strictly concave)
+ if its Hessian is negative semi–definite (negative definite).
+ Intuitively, a strictly convex function must lie above, and a strictly
+ concave function must lie below, a hyperplane that is tangent to its surface
+ at any point 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{0}$
+\end_inset
+
+.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TwoTermMultivariateTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ makes clear that this can only be guaranteed for sufficiently small 
+\begin_inset Formula $\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}$
+\end_inset
+
+ if the Hessian is positive definite (for convex functions) or negative
+ definite (for concave functions).
+\end_layout
+
+\begin_layout Subsection
+Euler's Theorem for Homogeneous Functions
+\end_layout
+
+\begin_layout Standard
+A function 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is said to be homogeneous of degree 
+\begin_inset Formula $𝑘>0$
+\end_inset
+
+ if 
+\begin_inset Formula $f\left(c\mathrm{\mathbf{x}}\right)=c^{k}f\left(\mathrm{\mathbf{x}}\right)\ \forall c>0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Euler’s theorem for homogeneous functions states that 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is homogeneous of degree 
+\begin_inset Formula $𝑘$
+\end_inset
+
+ if and only if 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f\left(\mathrm{\mathbf{x}}\right)=\frac{1}{k}\sum_{i\,=\,1}^{n}x_{i}\,\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{i}}.\label{eq:EulersTheorem1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By way of example, 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)=x_{1}^{2}\,+\,x_{2}^{2}$
+\end_inset
+
+ is homogenous of degree 2 because
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f\left(c\,\mathrm{\mathbf{x}}\right) & =c^{2}\left(x_{1}^{2}\,+\,x_{2}^{2}\right)\nonumber \\
+ & =c^{2}f\left(\mathrm{\mathbf{x}}\right)\label{eq:EulersTheorem2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and it is easily seen that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\frac{1}{2}\left(x_{1}\cdotp2x_{1}\,+\,x_{2}\cdotp2x_{2}\right)\nonumber \\
+ & =\frac{1}{2}\left(x_{1}\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}}\,+\,x_{2}\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}}\right).\label{eq:EulersTheorem3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Optimization
+\end_layout
+
+\begin_layout Subsection
+The General Problem of Optimization
+\end_layout
+
+\begin_layout Standard
+A very general statement of an optimization problem is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{aligned}\mathrm{maximize}\ \  & f\left(\mathrm{\mathbf{x}}\right)\\
+\mathrm{subject\ to}\\
+g\left(\mathrm{\mathbf{x}}\right) & \geqslant0\\
+h\left(\mathrm{\mathbf{x}}\right) & =\mathrm{\mathbf{b}}\\
+\mathrm{\mathbf{x}} & \in S.
+\end{aligned}
+\label{eq:GeneralOptimizationProblem}
+\end{equation}
+
+\end_inset
+
+This problem is virtually limitless in both its scope and its difficulty:
+ 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right),\ g\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $h\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ may be both nonlinear and discontinuous in their arguments, and 
+\begin_inset Formula $S$
+\end_inset
+
+ may be bounded, non–convex, finite or countable (e.g.
+ some or all the components of 
+\begin_inset Formula $\mathrm{\mathbf{x}}$
+\end_inset
+
+ may be restricted to be integers); 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ may have multiple local maxima that are not easily distinguished from its
+ global maximum, and its evaluation may be numerically unstable and computationa
+lly demanding.
+ 
+\end_layout
+
+\begin_layout Standard
+We therefore focus here only on the optimization of sufficiently smooth
+ (i.e.
+ twice differentiable) concave (or convex) functions defined on 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ with linear equality constraints.
+ Fortunately, this covers many of the problems that actually arise in portfolio
+ management.
+\end_layout
+
+\begin_layout Subsection
+Optimizing Twice–Differentiable Convex Functions
+\end_layout
+
+\begin_layout Standard
+Twice–differentiable convex (concave) functions with positive (negative)
+ definite Hessians play a central role in portfolio construction as they
+ are easily optimized when 
+\begin_inset Formula $S$
+\end_inset
+
+, the convex set on which they are defined, is unbounded.
+ Any extremum of such a function must necessarily be a minimum or a maximum,
+ depending on whether the Hessian is positive or negative definite.
+ The sole condition for an extremum is
+\begin_inset Formula 
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}_{opt}\right)=\mathbf{0},\label{eq:GradientFxEq0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\nabla f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GradientFx"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+\end_inset
+
+ is positive (negative) definite, 
+\begin_inset Formula $f$
+\end_inset
+
+ is minimized (maximized) at 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{opt}$
+\end_inset
+
+.
+ Intuitively, this follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:TwoTermMultivariateTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: as the gradient is 0 at 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{opt}$
+\end_inset
+
+, the linear term disappears, and only the quadratic term survives, so that
+ the function must increase (decrease) as one moves away from 
+\begin_inset Formula $\mathrm{\mathbf{x}}_{opt}$
+\end_inset
+
+ in any direction according to whether 
+\begin_inset Formula $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+\end_inset
+
+ is positive (negative) definite.
+\end_layout
+
+\begin_layout Subsection
+The Method of Lagrange Multipliers
+\end_layout
+
+\begin_layout Standard
+We next extend our technique for optimizing twice–differentiable convex
+ (concave) functions with positive (negative) definite Hessians to permit
+ the inclusion of a single linear equality constraint of the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathbf{a^{\prime}\,x}}=b\mathrm{,}\label{eq:EqualityConstraints}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\mathrm{\mathbf{a}}$
+\end_inset
+
+ is a vector with constant real entries.
+\end_layout
+
+\begin_layout Standard
+The method of 
+\emph on
+Lagrange multipliers,
+\emph default
+ which maps a constrained optimization to a related unconstrained optimization,
+ is a powerful technique for solving problems such as this.
+ It starts by constructing a new function, the 
+\emph on
+Lagrangian
+\emph default
+, that combines the function and the linear constraint:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=f\left(\mathrm{\mathbf{x}}\right)\,-\,\theta\left(\mathrm{\mathbf{a^{\prime}\,x}}\,-\,b\right).\label{eq:Lagrangian}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is known as a Lagrange multiplier, and at a stationary point of 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+, we must have 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=\mathbf{0},\label{eq:GradientLagrangianEq0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=\left[\begin{array}{c}
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial x_{1}}\\
+\vdots\\
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial x_{n}}\\
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial\theta}
+\end{array}\right].\label{eq:GradientLagrangianDefinition}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The equality constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:EqualityConstraints"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ must be satisfied at any stationary point of 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+, as, if it is not, we can increase the value of 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+ by choosing a different value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, contradicting our assumption that it is a stationary point.
+ 
+\end_layout
+
+\begin_layout Standard
+Observe that for any fixed value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the Hessian of 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+ is identical to that of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+, as differentiating 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+ twice with respect to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ for 
+\begin_inset Formula $\theta$
+\end_inset
+
+ fixed eliminates all the terms contributed by the linear constraint.
+ In particular, if the Hessian of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is positive (negative) definite, so is that of 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+.
+ It follows that if the Hessian of 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ is negative definite, 
+\begin_inset Formula $f\left(\mathrm{\mathbf{x}}\right)$
+\end_inset
+
+ achieves its constrained maximum at a stationary point of 
+\begin_inset Formula $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+An identical argument allows for the constrained minimization of functions
+ with positive definite Hessians, and this technique is easily extended
+ to multiple linear equality constraints – we need only add one Lagrange
+ multiplier per constraint, and ensure that the derivative of the Lagrangian
+ with respect to each Lagrange multiplier is 0.
+\end_layout
+
+\begin_layout Standard
+Once we allow for the inclusion of inequality constraints or non–linear
+ (typically quadratic) constraints, the optimization problem becomes much
+ harder, and we refer the reader to specialized textbooks on optimization
+ such as 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LuenbergerYe2008"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "CornuejolsEtAl2018"
+literal "false"
+
+\end_inset
+
+.
+ Additionally, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kwan2007"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Kwan2018"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MarkowitzStarerFramGerber2020"
+literal "false"
+
+\end_inset
+
+ provide useful expositions of optimization models that are of particular
+ relevance to portfolio management, along with Python and R code, as well
+ as Excel spreadsheets, to assist in their implementation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined,C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined,C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined"
+options "biblatex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

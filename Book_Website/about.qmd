@@ -1,0 +1,91 @@
+---
+title: "About"
+subtitle: "Authors, Book Information, and Contact"
+toc: false
+---
+
+## The Book
+
+*Portfolio Construction and Risk Analysis* (PCRA) is a graduate-level textbook providing a rigorous, unified treatment of quantitative investment management. It is planned for publication in 2026 by Springer.
+
+The book integrates the classical theory of mean-variance optimization, the Capital Asset Pricing Model, and the Arbitrage Pricing Theory with modern statistical methodology — including robust estimation, regularized regression, time-series factor models, and machine learning — all grounded in practical portfolio construction.
+
+---
+
+## Authors
+
+::: {.author-card}
+::: {.author-info}
+### R. Douglas Martin
+
+Professor Emeritus of Applied Mathematics and Statistics at the University of Washington. Pioneer in robust statistics with applications to finance; co-creator of the S-PLUS and R `robust` and related packages. Author of numerous papers on robust portfolio construction and risk management.
+:::
+:::
+
+::: {.author-card}
+::: {.author-info}
+### Thomas K. Philips
+
+Quantitative investment practitioner and researcher with decades of experience in asset management. His work spans equity portfolio construction, factor investing, and the application of statistical methods to financial markets.
+:::
+:::
+
+::: {.author-card}
+::: {.author-info}
+### Bernd Scherer
+
+Professor and quantitative investment researcher. Author of *Portfolio Construction and Risk Budgeting* (Risk Books) and other leading texts in quantitative finance. Research focuses on portfolio optimization, risk management, and factor investing.
+:::
+:::
+
+::: {.author-card}
+::: {.author-info}
+### Kirk Li
+
+Quantitative researcher and practitioner specializing in systematic investment strategies, factor models, and the application of machine learning to portfolio management.
+:::
+:::
+
+---
+
+## This Website
+
+This site hosts the five technical appendices to PCRA:
+
+| Appendix | Title | PDF |
+|---|---|---|
+| A | Mathematical Tools for PCRA | [Download](Appendix%20A%20Math%20for%20PCRA.pdf){target="_blank"} |
+| B | Probability & Statistics for PCRA | [Download](Appendix%20B%20ProbStat%20for%20PCRA.pdf){target="_blank"} |
+| C | Utility Theory | [Download](Appendix%20C%20Utility%20Theory.pdf){target="_blank"} |
+| D | Portfolio Theory | [Download](Appendix%20D%20Portfolio%20Theory.pdf){target="_blank"} |
+| E | Machine Learning | [Download](Appendix%20E%20Machine%20Learning.pdf){target="_blank"} |
+
+---
+
+## Citation
+
+To cite the book:
+
+```
+Martin, R. D., Philips, T. K., Scherer, B., and Li, K. (2026).
+Portfolio Construction and Risk Analysis. Springer. (In press.)
+```
+
+BibTeX:
+
+```bibtex
+@book{MartinPhilipsSchererLi2026,
+  author    = {Martin, R. Douglas and Philips, Thomas K. and
+               Scherer, Bernd and Li, Kirk},
+  title     = {Portfolio Construction and Risk Analysis},
+  publisher = {Springer},
+  year      = {2026},
+  note      = {In press}
+}
+```
+
+---
+
+## Copyright
+
+All material on this site is planned for publication in 2026 by R. Douglas Martin, Thomas K. Philips, Bernd Scherer, and Kirk Li. **All rights reserved. © Copyright 2025.** No part of this material may be reproduced, distributed, or transmitted in any form without prior written permission from the authors.

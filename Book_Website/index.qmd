@@ -1,0 +1,107 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+::: {.hero-block}
+# Portfolio Construction and Risk Analysis
+
+::: {.subtitle}
+A rigorous treatment of quantitative methods for investment management
+:::
+
+::: {.authors}
+R. Douglas Martin &nbsp;·&nbsp; Thomas K. Philips &nbsp;·&nbsp; Bernd Scherer &nbsp;·&nbsp; Kirk Li
+:::
+
+::: {.publisher-badge}
+Springer &nbsp;|&nbsp; Planned Publication: 2026
+:::
+:::
+
+::: {.copyright-notice}
+**Copyright Notice.** Material on this site is planned for publication in 2026 by R. Douglas Martin, Thomas K. Philips, Bernd Scherer, and Kirk Li. All rights reserved. © Copyright 2025.
+:::
+
+## About the Book
+
+*Portfolio Construction and Risk Analysis* (PCRA) provides a comprehensive and rigorous account of the quantitative foundations of modern portfolio management. The book develops the mathematical, statistical, and computational tools needed to construct, evaluate, and risk-manage investment portfolios in a principled way.
+
+The text integrates classical theory — mean-variance optimization, the Capital Asset Pricing Model, the Arbitrage Pricing Theory — with modern statistical methodology including robust estimation, regularized regression, and machine learning. Throughout, the authors emphasize practical implementation alongside theoretical justification.
+
+## Online Appendices
+
+This site hosts the five technical appendices to PCRA. Each appendix provides self-contained background material that underpins the methods and results developed in the main text. Full PDF downloads are available on each appendix page.
+
+::: {.appendix-grid}
+
+::: {.appendix-card}
+::: {.label}
+Appendix A
+:::
+### Mathematical Tools for PCRA
+Vectors and vector spaces, matrix algebra, eigendecompositions, convex analysis, and constrained optimization — the essential mathematical infrastructure for portfolio mathematics.
+
+[Read Appendix A](appendix-a.qmd){.btn-appendix}
+:::
+
+::: {.appendix-card}
+::: {.label}
+Appendix B
+:::
+### Probability & Statistics for PCRA
+Location-scale distributions, least squares (OLS, WLS, GLS), maximum likelihood estimation, asymptotic theory, delta methods, and the Fisher information framework.
+
+[Read Appendix B](appendix-b.qmd){.btn-appendix}
+:::
+
+::: {.appendix-card}
+::: {.label}
+Appendix C
+:::
+### Utility Theory
+Expected utility maximization, concave utility and risk aversion, certainty equivalents, absolute and relative risk aversion, and the relationship between expected utility and mean-variance optimization.
+
+[Read Appendix C](appendix-c.qmd){.btn-appendix}
+:::
+
+::: {.appendix-card}
+::: {.label}
+Appendix D
+:::
+### Portfolio Theory
+Minimum-variance frontier mathematics, the tangent portfolio, CAPM proofs, zero-beta portfolios, APT derivation, and robust estimation details.
+
+[Read Appendix D](appendix-d.qmd){.btn-appendix}
+:::
+
+::: {.appendix-card}
+::: {.label}
+Appendix E
+:::
+### Machine Learning
+Supervised learning, regularization (Ridge, Lasso, Elastic Net), cross-validation, robust regularized regression, logistic regression, and projection pursuit / neural networks.
+
+[Read Appendix E](appendix-e.qmd){.btn-appendix}
+:::
+
+:::
+
+---
+
+## How to Use This Site
+
+Each appendix page provides:
+
+- A structured outline of topics covered
+- Key figures from the appendix rendered inline
+- A downloadable PDF of the full appendix
+
+The appendices are designed to be read alongside the main chapters of PCRA, or independently as reference material. Cross-references to specific sections of the main text appear throughout.
+
+## Citation
+
+If you use material from these appendices in your own work, please cite the book:
+
+> Martin, R. D., Philips, T. K., Scherer, B., and Li, K. (2026). *Portfolio Construction and Risk Analysis*. Springer. (In press.)

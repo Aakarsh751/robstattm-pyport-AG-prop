@@ -1,0 +1,5444 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass svmono
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{makeidx}% allows index generation
+% standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}% used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%\usepackage[ style=authoryear,natbib=true,giveninits=true,backend=biber,maxcitenames=2]{biblatex}
+\usepackage[style=authoryear,natbib=true,firstinits=false,backend=biber,maxcitenames=2]{biblatex}
+
+
+\setlength{\bibitemsep}{0.5\baselineskip}
+\DeclareNameAlias{sortname}{family-given}
+
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}
+{\addbibresource[location=local]{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}
+    {\addbibresource[location=local]{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}
+        {\addbibresource[location=local]{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}}
+        {   \IfFileExists{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}
+            {\addbibresource[location=local]{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}}
+            {}
+        }
+    }
+}
+\renewcommand\cite{\citet}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[p,osf]{stickstootext}
+\usepackage[stix2,vvarbb]{newtxmath}
+\usepackage[varqu,varl]{inconsolata}
+% \usepackage{txfonts}
+\usepackage{upgreek}
+
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+{\input{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+    {\input{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+        {\input{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+        {   \IfFileExists{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+            {\input{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+            {}
+        }
+    }
+}
+
+\belowsink=90pt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options graybox,envcountchap,sectrefs
+\use_default_options false
+\master svmono_book-master.lyx
+\begin_modules
+knitr
+subequations
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding global
+\font_roman "times" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfstartview=XYZ null null 1.25,pdfpagemode=UseNone"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblio_options round
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification false
+\use_refstyle 0
+\use_minted 0
+\branch use_only_in_child
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<include=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(
+\end_layout
+
+\begin_layout Plain Layout
+
+	keep.source=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy=TRUE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	message=FALSE, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.path='Plots/', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.align='center', 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.width=4, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.height=3, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.keep='last',
+\end_layout
+
+\begin_layout Plain Layout
+
+	fig.show='hide',
+\end_layout
+
+\begin_layout Plain Layout
+
+	dev.args=list(pointsize=10),
+\end_layout
+
+\begin_layout Plain Layout
+
+	cache=FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	tidy.opts=list(width.cutoff=40))
+\end_layout
+
+\begin_layout Plain Layout
+
+options(width=70)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(PCRA)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(tidyverse)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(kableExtra)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{chapter}{2} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+UTILITY THEORY
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:AppendixC"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Planned for publication in 2026 by R.
+ Douglas Martin, Thomas K.
+ Philips, Bernd Scherer and Kirk Li.
+ All rights reserved.
+ © Copyright 2025
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+10/12/25
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocchpnum=30pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsecnum=33pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsecnum=40pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubsubsecnum=48pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocparanum=55pt 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocsubparanum=63pt
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+calctocindent
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Investor Preferences and Utility Functions 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: investorPreferencesConcaveUtilityFncs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The question of how to choose among investment opportunities (or, more generally
+, among uncertain prospects) has a rich history, with interdisciplinary
+ contributions by gamblers, economists, mathematicians and psychologists
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Mathematicians and gamblers worked more closely than one might imagine –
+ mathematicians often derived results and sold them to gamblers for immediate
+ use in the field!
+\end_layout
+
+\end_inset
+
+.
+ Early on, it was broadly accepted that the fair price of entry to a game
+ of chance was the expected value of its payoff.
+ By way of example, if the flip of a coin returned $0 or $2 with equal probabili
+ty, the fair price for participation in this game was held to be 
+\begin_inset Formula $0.5\cdot\$0+0.5\cdot\$2=\$1$
+\end_inset
+
+.
+ But in 1710, Nicolaus Bernoulli described a simple game, now known as the
+ St.
+ Petersburg game, that threw this belief into doubt.
+ The St.
+ Petersburg game is played as follows: 
+\end_layout
+
+\begin_layout Standard
+A fair coin is repeatedly flipped, and the number of flips till the first
+ appearance of a head, which we denote by 
+\begin_inset Formula $k$
+\end_inset
+
+, is noted.
+ The gambler is then paid 
+\begin_inset Formula $\$2^{k}$
+\end_inset
+
+ for participating in the game.
+ As the probability of first seeing a head on the 
+\begin_inset Formula $k^{th}$
+\end_inset
+
+ flip is 
+\begin_inset Formula $\nicefrac{1}{2^{k}}$
+\end_inset
+
+, the expected payoff from this game is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+E\left[\mathrm{Payoff}\right] & =\sum_{k\,\geqslant\,1}\frac{1}{2^{k}}\cdot\$2^{k}\nonumber \\
+ & =\infty.\label{eq:StPetersburgPayoff}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But no gambler would pay an infinite amount to participate in this game.
+ In practice, gamblers seem to be willing to pay no more than about $20
+ for the privilege of participating in the St.
+ Petersburg game, a paradox if there ever was one! 
+\end_layout
+
+\begin_layout Standard
+Nicolas Bernoulli's cousin Daniel
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The Bernoullis were a remarkable family, as well known for their contributions
+ to mathematics as for their feuds.
+\end_layout
+
+\end_inset
+
+ attempted to resolve the paradox by positing that the pleaure (or 
+\emph on
+utility
+\emph default
+) associated with a $1 increase in wealth would be the reciprocal of the
+ initial level of wealth, and that gamblers could therefore be expected
+ to have logarithmic utility for wealth
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+As we shall see, these two views are mathematically equivalent.
+ In modern language, Daniel Bernoulli asserted that the marginal utility
+ of wealth was the reciprocal of wealth.
+\end_layout
+
+\end_inset
+
+.
+ The expected utility from participating in the St.
+ Petersburg game is therefore
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+E\left[\ln\left(\mathrm{Payoff}\right)\right] & =\sum_{k\,\geqslant\,1}\frac{1}{2^{k}}\cdot\ln\left(2^{k}\right)\nonumber \\
+ & =\sum_{k\,\geqslant\,1}\frac{k}{2^{k}}\cdot\ln\left(2\right)\nonumber \\
+ & =2\ln\left(2\right),\label{eq:StPetersburgUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is finite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Moscati2019"
+literal "false"
+
+\end_inset
+
+ traces the evolution of resolutions to this paradox, and also exposes the
+ vigorous debates between competing schools of thought that finally settled
+ down in the decade following the publication of an axiomatic theory of
+ utility by John von Neumann and Oskar Morgenstern (VNM) in 1947.
+ The VNM axioms are expressed in terms of preferences over random outcomes
+ (or 
+\begin_inset Quotes eld
+\end_inset
+
+lotteries
+\begin_inset Quotes erd
+\end_inset
+
+).
+ We write 
+\begin_inset Formula $X\succ Y$
+\end_inset
+
+ to express a strong preference for lottery 
+\begin_inset Formula $X$
+\end_inset
+
+ over lottery 
+\begin_inset Formula $Y$
+\end_inset
+
+, and 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+ to express indifference between the two lotteries.
+ Likewise, we write 
+\begin_inset Formula $X\succeq Y$
+\end_inset
+
+ to express a weak preference for lottery 
+\begin_inset Formula $X$
+\end_inset
+
+ over lottery 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ By definition, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X\succeq Y\equiv X\succ Y\ \mathrm{or}\ X\sim Y.\label{eq:XWeaklyPreferredToY}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+Axiom 1 (Completeness)
+\series default
+: All lotteries can be ranked.
+ For any pair of lotteries 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+, either 
+\begin_inset Formula $X\succ Y$
+\end_inset
+
+, or 
+\begin_inset Formula $Y\succ X$
+\end_inset
+
+, or 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\series bold
+Axiom 2 (Transitivity)
+\series default
+: For any three lotteries 
+\begin_inset Formula $X,\ Y$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+, if 
+\begin_inset Formula $X\succeq Y$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\succeq Z$
+\end_inset
+
+, then 
+\begin_inset Formula $X\succeq Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+
+\series bold
+Axiom 3 (Substitution)
+\series default
+: For any three lotteries 
+\begin_inset Formula $X,\ Y$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+, if 
+\begin_inset Formula $X\succeq Y\succeq Z$
+\end_inset
+
+, then 
+\begin_inset Formula $Y\sim p\,X+(1-p)\,Z$
+\end_inset
+
+ for some 
+\begin_inset Formula $p\in[0,1]$
+\end_inset
+
+, where 
+\begin_inset Formula $p\,X+(1-p)\,Z$
+\end_inset
+
+ is interpreted as participation in lottery 
+\begin_inset Formula $X$
+\end_inset
+
+ with probability 
+\begin_inset Formula $p$
+\end_inset
+
+ and participation in lottery 
+\begin_inset Formula $Z$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1-p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "VonNeumann1947"
+literal "false"
+
+\end_inset
+
+ proved that if investors' preferences satisfied these three axioms, they
+ would choose among risky alternatives so as to maximize their expected
+ utility, and in spite of many fits, starts, and paradoxes, 
+\emph on
+Expected Utility Maximization
+\emph default
+ (EUM) has come to be the dominant paradigm for modeling choice in economics
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Some authors use a more fine-grained set of axioms, see for example the
+ discussions of utility theory in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Levy2016"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Broadly speaking, the theoretical underpinnings of EUM rest on two key assumptio
+ns:
+\end_layout
+
+\begin_layout Description
+P1: Non-satiation: Investors prefer more wealth to less, and
+\end_layout
+
+\begin_layout Description
+P2: Risk aversion: Investors prefer less uncertainty to more.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+EUM requires investors to express their preferences via a 
+\emph on
+cardinal utility function
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Cardinal utility assign a real number to each outcome of interest.
+ Ordinal utility, in contrast, only specifies if one outcome is preferred
+ to another.
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $U(\mathit{\mathrm{v}})$
+\end_inset
+
+ that is a dimensionless function of investment end–of–period wealth 
+\begin_inset Formula $\mathit{\mathrm{v}}$
+\end_inset
+
+, and which is invariant under an affine transformation, 
+\begin_inset Formula $\check{U}(\mathit{\mathrm{v}})=a+b\cdot\mathit{U}(\mathit{\mathrm{v}}),\ b>0$
+\end_inset
+
+, in the sense that 
+\begin_inset Formula $\check{U}$
+\end_inset
+
+ and 
+\begin_inset Formula $U(\mathit{\mathrm{v}})$
+\end_inset
+
+ provide the same ranking among investment alternatives.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose an investor's preferences can be captured by such a utility function,
+ whose values are sometimes referred to as 
+\emph on
+utils
+\emph default
+, and she chooses an investment that maximizes expected end–of–period utility
+ 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{V})\right]$
+\end_inset
+
+.
+ The form of the utility function 
+\begin_inset Formula $U$
+\end_inset
+
+ will depend on the assumptions one makes about her preferences, and we
+ next determine the implications of two simple and reasonable assumptions
+ concerning investor preferences for utility functions:
+\end_layout
+
+\begin_layout Description
+P1: 
+\series bold
+Non-satiation
+\series default
+: At any level of wealth 
+\begin_inset Formula $\mathrm{v}_{1}$
+\end_inset
+
+, the investor prefers a strictly larger wealth 
+\begin_inset Formula $\mathrm{v}_{2}>\mathrm{v}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+P2: 
+\series bold
+Risk Aversion
+\series default
+: The investor maximizes her expected utility, and is
+\emph on
+ risk averse
+\emph default
+ in the following sense: she always prefers a fixed end of period wealth,
+ 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+, to a 
+\emph on
+fair game
+\emph default
+ in which end of period wealth is the random amount 
+\begin_inset Formula $\mathrm{V}=\mathrm{v}_{0}+\text{H}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This is one of those occasions where it is useful to represent a random
+ variable with a capital letter to distinguish it from an variable that
+ is non–random (such as a particular realization) and so represented by
+ a lower case letter.
+\end_layout
+
+\end_inset
+
+, where 
+\begin_inset Formula $\mathrm{H}$
+\end_inset
+
+ has mean zero and variance 
+\begin_inset Formula $\sigma^{2}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We note in passing that investors are said to 
+\emph on
+weakly risk averse 
+\emph default
+if they are indifferent to participating in such a fair game.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Much of the utility theory literature uses the term 
+\begin_inset Quotes eld
+\end_inset
+
+strictly risk averse
+\begin_inset Quotes erd
+\end_inset
+
+ where we use 
+\begin_inset Quotes eld
+\end_inset
+
+risk averse
+\begin_inset Quotes erd
+\end_inset
+
+, and uses 
+\begin_inset Quotes eld
+\end_inset
+
+risk averse
+\begin_inset Quotes erd
+\end_inset
+
+ where we use 
+\begin_inset Quotes eld
+\end_inset
+
+weakly risk averse
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+These assumptions are not all–encompassing – the near–universal existence
+ of casinos and lotteries indicates that there is no shortage of individuals
+ who prefer (or sadly, are addicted to) the expected losses and uncertain
+ outcomes that are endemic to gambling.
+ Even more interesting, risk–averse and risk–seeking behavior can co-exist
+ in the same individual: a great many people buy both life insurance and
+ lottery tickets!
+\end_layout
+
+\begin_layout Standard
+An investor with preferences P1 and P2 will use a utility function with
+ the following properties:
+\end_layout
+
+\begin_layout Description
+U1.
+ 
+\begin_inset Formula $U(\mathit{\mathrm{v}})$
+\end_inset
+
+ is strictly increasing in 
+\begin_inset Formula $\mathit{\mathrm{v}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Description
+U2.
+ 
+\begin_inset Formula $U(\mathit{\mathrm{v}})$
+\end_inset
+
+ is strictly concave
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A 
+\emph on
+strictly concave
+\emph default
+ function is one for which a straight line connecting two distinct points
+ on the 
+\begin_inset Formula $U(\mathit{\mathrm{v}})$
+\end_inset
+
+ curve lies strictly below the curve, except at the two end-points where
+ the line joins the curve, as in the left–hand plot in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: ShapesOfUtilityFunctions"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The mathematical definitions of concave and concave functions are given
+ in Appendix A.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The utility property U1 follows immediately from P1.
+ The concavity property U2 follows from P2 and Jensen's inequality
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See the discussion of convex and concave functions, as well as of Jensen's
+ inequality, in Appendix A
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/concave utility risk prefs.png
+	lyxscale 20
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Shapes of Utility Functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: ShapesOfUtilityFunctions"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The commonly occurring utility functions described in the next subsection
+ have both first and second derivatives, and for such utility functions
+ the properties U1 and U2 are equivalent to the following derivative properties:
+\end_layout
+
+\begin_layout Description
+U1E: 
+\begin_inset Formula $U^{\prime}(\mathit{\mathrm{v}})>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+U2E: 
+\begin_inset Formula $U^{\prime\prime}(\mathit{\mathrm{v}})<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first derivative of 
+\begin_inset Formula $U$
+\end_inset
+
+ is known as its 
+\emph on
+marginal utility
+\emph default
+, and represents the increase in utility obtained from an additional dollar
+ of wealth.
+ While a
+\emph on
+ 
+\emph default
+risk averse EUM investor is one whose differentiable utility function is
+ concave, a 
+\emph on
+risk seeking
+\emph default
+ EUM investor is one whose utility function is strictly convex
+\emph on
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A 
+\emph on
+strictly convex
+\emph default
+ utility function is one that satisfies the U2E property with the inequality
+ sign reversed.
+ 
+\end_layout
+
+\end_inset
+
+.
+
+\emph default
+ An investor with a utility function that has a constant first derivative,
+ and hence a zero second derivative, is said to be 
+\emph on
+risk neutral
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Section
+Concave Utility Functions and Risk Aversion
+\end_layout
+
+\begin_layout Standard
+With property P2 in mind, consider the fair investment game with end-of-period
+ wealth 
+\begin_inset Formula $\mathrm{V}=\mathrm{v}_{0}+\mathrm{H}$
+\end_inset
+
+, where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{H}=\left\{ \begin{array}{cl}
+\,\,\,\mathrm{h}_{1}:\ -\mathrm{v}_{0}<\mathrm{h}_{1}<0, & \mbox{with probability \ensuremath{p}}\\
+\mathrm{h}_{2}:\ 0<\mathrm{h}_{2},\ \ \ \ \ \ \ \ \ \, & \mbox{with probability \ensuremath{1-p}}
+\end{array}\right.\label{eq: fairGame}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with any fixed 
+\begin_inset Formula $\mathrm{h}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathrm{h}_{2}$
+\end_inset
+
+ such that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{E}\left[\mathrm{H}\right]=p\,\mathrm{h}_{1}+(1-p)\,\mathrm{h}_{2}=0,\label{eq:E_H_eq_0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that 
+\begin_inset Formula $\mathrm{E}\left[\mathrm{V}\right]=\mathrm{v}_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For this fair game, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{E}\left[U\left(\mathrm{V}\right)\right]=p\cdot U\left(\mathrm{v}_{0}+\mathrm{h}_{1}\right)+\left(1-p\right)\cdot U\left(\mathrm{v}_{0}+\mathrm{h}_{2}\right),\label{eq:E_U_of_V}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and since 
+\begin_inset Formula $U(\mathrm{v}_{0})=\mathrm{E}\left[U(\mathrm{v}_{0})\right]$
+\end_inset
+
+, we also have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{E}\left[U(\mathrm{v}_{0})\right]=U\left(p\cdot\left(\mathrm{v}_{0}+\mathrm{h}_{1}\right)+\left(1-p\right)\cdot\left(\mathrm{v}_{0}+\mathrm{h}_{2}\right)\right).\label{eq:E_U_of_V_0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since by P2 our EUM investor is risk averse, she prefers the sure outcome
+ 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+ to the risky outcome 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+, and as she is also an expected utility maximizer, it must be that 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{v}_{0})\right]>\mathrm{E}\left[U(\mathrm{V})\right]$
+\end_inset
+
+, and accordingly we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U\left(p\cdot\left(\mathrm{v}_{0}+\mathrm{h}_{1}\right)+\left(1-p\right)\cdot\left(\mathrm{v}_{0}+\mathrm{h}_{2}\right)\right)>p\cdot U\left(\mathrm{v}_{0}+\mathrm{h}_{1}\right)+\left(1-p\right)\cdot U\left(\mathrm{v}_{0}+\mathrm{h}_{2}\right)\label{eq:E_U_V_0_gt_U_E_V_0}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for all combinations of 
+\begin_inset Formula $\mathrm{v}_{0},\ -\mathrm{v}_{0}<\mathrm{h}_{1}<0$
+\end_inset
+
+, and 
+\begin_inset Formula $0<\mathrm{h}_{2}$
+\end_inset
+
+ that satisfy 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:E_H_eq_0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which is the same as asserting that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U\left(p\cdot\mathrm{v}_{1}+(1-p)\cdot\mathrm{v}_{2}\right)>p\cdot U\left(\mathrm{v}_{1}\right)+(1-p)\cdot U\left(\mathrm{v}_{2}\right),\ \forall\,\mathrm{v_{1}}<\mathrm{v}_{2}.\label{eq: strictConcavityCondition}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But the above inequality is equivalent to the statement that 
+\begin_inset Formula $U$
+\end_inset
+
+ is a strictly concave function.
+ 
+\end_layout
+
+\begin_layout Section
+Certainty Equivalent Value and the Risk Premium
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sometimes portfolio managers want to compare portfolios that have different
+ expected utilities in terms of monetary units rather the dimensionless
+ units of utility functions.
+ One way in which to do so is to define a dollar amount, 
+\begin_inset Formula $\mathit{\mathrm{v}}_{c}$
+\end_inset
+
+, known as the 
+\emph on
+Certainty Equivalent Value
+\emph default
+, that satisfies the equation: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+U(\mathit{\mathrm{v}}_{c}) & =\mathrm{E}[U(\mathrm{V})]\nonumber \\
+ & \implies\mathit{\mathrm{v}}_{c}=U^{-1}\left(\mathrm{E}[U(\mathrm{V})]\right).\label{eq: certaintyEquivalent}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We interpret 
+\begin_inset Formula $\mathit{\mathrm{v}}_{c}$
+\end_inset
+
+ as the lower, sure, value that a risk–averse investor would accept in place
+ of the risky payoff 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+, with higher expected value 
+\begin_inset Formula $\mathrm{E}\left[\mathrm{V}\right]$
+\end_inset
+
+, in order to avoid the uncertainty associated with the random character
+ of 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: certaintyEquivValue"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows graphically how such a value is obtained for a risk–averse investor
+ when end–of–period random wealth 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+ has expected utility 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{V})\right]$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $\mathit{\mathrm{v}}_{c}$
+\end_inset
+
+ is less than 
+\begin_inset Formula $\mathrm{E}\left[\mathrm{V}\right]$
+\end_inset
+
+, in accordance with Jensen's equality for a (strictly) concave function,
+ which asserts that 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{V})\right]<U\left(\mathrm{E}\left[\mathrm{V}\right]\right)$
+\end_inset
+
+ (see Appendix A).
+ Thus
+\begin_inset Formula 
+\[
+U(\mathrm{v}_{c})=\mathrm{E}\left[U(\mathrm{V})\right]<U\left(\mathrm{E}\left[\mathrm{V}\right]\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and since 
+\begin_inset Formula $U$
+\end_inset
+
+ is strictly increasing, it follows that 
+\begin_inset Formula $\mathrm{v}_{c}<\mathrm{E}[\mathrm{V}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Plots/certaintyEquivalent.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Certainty Equivalent Value for Expected Utility
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: certaintyEquivValue"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The interpretation of a certainty equivalent value 
+\begin_inset Formula $\mathit{\mathrm{v}}_{c}$
+\end_inset
+
+ is that a risk–averse investor would give up a higher expected value 
+\begin_inset Formula $E\left[\mathrm{V}\right]$
+\end_inset
+
+ of terminal value of wealth for the smaller, sure, value 
+\begin_inset Formula $\mathit{\mathrm{v}}_{c}$
+\end_inset
+
+ in order to avoid the risk associated with the random character of 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Correspondingly, the 
+\emph on
+Absolute Risk Premium
+\emph default
+, 
+\begin_inset Formula $\pi_{A}\left(\mathrm{v}\right)$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{A}\left(\mathrm{E}\left[\mathrm{V}\right]\right)=\mathrm{E}\left[\mathrm{V}\right]-\mathit{\mathrm{v}}_{c},\label{eq:AbsoluteRiskPremium}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and this can be interpreted as the amount of wealth the investor is willing
+ to forego (or the insurance premium she is willing to pay) to avoid the
+ risk of a fair investment game.
+ It can also be interpreted as the payment she would require in order to
+ induce her to participate in a fair game.
+\end_layout
+
+\begin_layout Standard
+Closely related to the Absolute Risk Premium is the 
+\emph on
+Relative Risk Premium
+\emph default
+, or the fraction of her wealth that a risk averse investor would pay to
+ avoid the risk of a fair investment game (or would have to be paid in order
+ to induce her to participate in a fair investment game):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\pi_{R}\left(\mathrm{E}\left[\mathrm{V}\right]\right) & =\frac{\pi_{A}\left(\mathrm{E}\left[\mathrm{V}\right]\right)}{\mathrm{E}\left[\mathrm{V}\right]}\nonumber \\
+ & =\frac{\mathrm{E}\left[\mathrm{V}\right]-\mathit{\mathrm{v}}_{c}}{\mathrm{E}\left[\mathrm{V}\right]}.\label{eq:RelativeRiskPremium}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Absolute and Relative Risk Aversion
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: derivationOfRiskAversionFncs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The risk premium is a function both of how uncertain an investment is and
+ the shape of the investor's utility curve, and we so separate the contributions
+ of these two influences.
+ Once again, let 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+ be an initial level of wealth, let 
+\begin_inset Formula $\mathrm{V}=\mathrm{v}_{0}+\mathrm{H}$
+\end_inset
+
+ with random payoff 
+\begin_inset Formula $\mathrm{H}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ be the
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ end-of-period random wealth
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, and let 
+\begin_inset Formula $U({\rm V})$
+\end_inset
+
+ be the investor's utility function.
+ Suppose further that the investment is a fair game with 
+\begin_inset Formula $\mathrm{E}\left[\mathrm{H}\right]=0$
+\end_inset
+
+, and let 
+\begin_inset Formula $\sigma_{{\rm V}}^{2}$
+\end_inset
+
+ be the variance of 
+\begin_inset Formula ${\rm H}.$
+\end_inset
+
+ Let 
+\begin_inset Formula $\mathrm{v}_{c}$
+\end_inset
+
+ be the certainty equivalent for 
+\begin_inset Formula $\mathrm{E}\left[{\rm V}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{A}\left(\mathrm{V}\right)$
+\end_inset
+
+ be the associated absolute risk premium.
+ 
+\end_layout
+
+\begin_layout Standard
+If we expand 
+\begin_inset Formula $U(\mathrm{V})$
+\end_inset
+
+ in a two–term Taylor series around its mean, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+U(\mathrm{V}) & \thickapprox U(\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]})\,+\,U^{\prime}(\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]})\left(\mathrm{V}-\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]}\right)\,+\,\frac{1}{2}\cdot U^{\prime\prime}(\mathrm{V})\left(\mathrm{V}-\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]}\right)^{2}\nonumber \\
+ & =U(\mathrm{v}_{0})\,+\,U^{\prime}(\mathrm{\mathrm{v}_{0}})\left(\mathrm{V}-\mathrm{\mathrm{v}_{0}}\right)\,+\,\frac{1}{2}\cdot U^{\prime\prime}(\mathrm{v}_{0})\left(\mathrm{V}-\mathrm{\mathrm{v}_{0}}\right)^{2}\label{eq:UtilityTaylorSeries1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the second line follows from the observation that 
+\begin_inset Formula $\mathrm{E}\left[\mathrm{V}\right]=\mathrm{v}_{0}+\mathrm{E}\left[\mathrm{H}\right]=\mathrm{v}_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Likewise, we can perform a one-term Taylor series expansion of 
+\begin_inset Formula $U(\mathrm{V})$
+\end_inset
+
+ around its mean and write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+U(\mathrm{\mathit{\mathrm{v}}_{c}}) & \thickapprox U(\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]})\,+\,U^{\prime}(\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]})\left(\mathrm{\mathit{\mathrm{v}}_{c}}-\mathrm{\mathit{\mathrm{E}}\left[\mathrm{V}\right]}\right)\nonumber \\
+ & =U(\mathrm{v}_{0})\,+\,U^{\prime}(\mathrm{\mathrm{v}_{0}})\left(\mathrm{\mathit{\mathrm{v}}_{c}}-\mathrm{\mathrm{v}_{0}}\right).\label{eq:UtilityTaylorSeries2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On taking the expectation of both sides of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UtilityTaylorSeries1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, we see that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{E}\left[U(\mathrm{V})\right] & \triangleq U(\mathrm{v}_{c})\nonumber \\
+ & \thickapprox U(\mathrm{v}_{0})\,+\,\frac{1}{2}\cdot U^{\prime\prime}(\mathrm{v}_{0})\cdot\sigma_{H}^{2}\label{eq:UtilityTaylorSeries3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equating 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UtilityTaylorSeries2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:UtilityTaylorSeries3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and simplifying, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathit{\mathrm{v}}_{0}}-\mathrm{\mathrm{v}_{c}} & \triangleq\pi_{A}\left(\mathrm{\mathit{\mathrm{v}}_{0}}\right)\nonumber \\
+ & =-\frac{1}{2}\cdot\frac{U^{\prime\prime}(\mathrm{v}_{0})}{U^{\prime}(\mathrm{v}_{0})}\cdot\sigma_{H}^{2}\nonumber \\
+ & =\frac{1}{2}\cdot\mathrm{\mathit{ARA}(\mathrm{v}_{0})}\cdot\sigma_{H}^{2},\label{eq:UtilityTaylorSeries5}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where Absolute Risk Aversion is defined to be 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathit{ARA}(\mathit{\mathrm{v}})}=-\frac{\mathrm{\mathit{U}''(\mathrm{v})}}{\mathrm{\mathit{U}'(\mathit{\mathrm{v}})}}.\label{eq: ARAfunction}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can derive a similar expression for Relative Risk Aversion starting with
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RelativeRiskPremium"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\pi_{R}\left(\mathrm{v}_{0}\right) & =\frac{\pi_{A}\left(\mathrm{v}_{0}\right)}{\mathrm{v}_{0}}\nonumber \\
+ & =-\frac{1}{2}\cdot\frac{U^{\prime\prime}(\mathrm{v}_{0})}{U^{\prime}(\mathrm{v}_{0})}\cdot\frac{\mathrm{v}_{0}}{\mathrm{v}_{0}^{2}}\cdot\sigma_{H}^{2}\nonumber \\
+ & =-\frac{1}{2}\cdot\frac{U^{\prime\prime}(\mathrm{v}_{0})\cdot\mathrm{v}_{0}}{U^{\prime}(\mathrm{v}_{0})}\cdot\sigma_{\nicefrac{H}{\mathrm{v}_{0}}}^{2}\nonumber \\
+ & =\frac{1}{2}\cdot\mathrm{\mathit{RRA}(\mathrm{v}_{0})\cdot\sigma_{\nicefrac{H}{\mathrm{v}_{0}}}^{2}}\label{eq:UtilityTaylorSeries6}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where Relative Risk Aversion (RRA) is defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathit{RRA}(\mathit{\mathrm{v}})} & =\mathrm{v}\cdot ARA(\mathit{\mathrm{v}})\nonumber \\
+ & =-\frac{\mathrm{v}\cdot\mathrm{\mathit{U}^{\prime\prime}(\mathrm{v})}}{\mathrm{\mathit{U}^{\prime}(\mathit{\mathrm{v}})}}.\label{eq:RRAFunction}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given the relationship between ARA and RRA functions in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RRAFunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, it is clear that a constant relative risk aversion (CRRA) investor must
+ exhibit decreasing ARA.
+\end_layout
+
+\begin_layout Standard
+Both ARA and RRA characterize utility functions locally, but it is their
+ global behavior for all possible values of 
+\begin_inset Formula $\mathrm{v}$
+\end_inset
+
+ that makes them useful in practice.
+ Empirical evidence suggests that most investors exhibit decreasing absolute
+ risk aversion (i.e.
+ they are more willing to risk a fixed amount of money as their wealth increases
+), but Relative Risk Aversion is known to depend in a complex way on age,
+ sex, and wealth, among other characteristics (see 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BellanteGreen2004"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HalekEisenhauer2001"
+literal "false"
+
+\end_inset
+
+ for good discussions of this important point).
+ It is therefore common practice to simply assume that investors exhibit
+ Constant Relative Risk Aversion (i.e.
+ to assume that the fraction of their wealth that they are willing to risk
+ is independent of its level).
+ 
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection*
+Derivation of Relative Risk Aversion Function
+\end_layout
+
+\begin_layout Plain Layout
+Whereas absolute risk aversion was defined as 
+\begin_inset Formula $ARA={\rm v_{0}}-{\rm v_{c}}$
+\end_inset
+
+, 
+\emph on
+relative risk aversion
+\emph default
+ is defined as:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+RRA=\dfrac{{\rm v_{0}}-{\rm v_{c}}}{{\rm v}_{0}}\label{eq: RRA}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+where 
+\begin_inset Formula ${\rm v_{c}}$
+\end_inset
+
+is the certainty equivalent as before, and the above definition allows one
+ to write:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+U({\rm v_{c})={\it U({\rm v_{0}-v_{0}{\it RRA{\rm )}}}.}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula ${\rm Z}$
+\end_inset
+
+ be a random payoff per unit of initial investment 
+\begin_inset Formula ${\rm v_{0}}$
+\end_inset
+
+where 
+\begin_inset Formula $E({\rm Z})=1$
+\end_inset
+
+ and 
+\begin_inset Formula $var({\rm Z})=\sigma_{{\rm Z}}^{2}$
+\end_inset
+
+.
+ Then the positive random payoff 
+\begin_inset Formula ${\rm V}={\rm v_{0}}{\rm Z}$
+\end_inset
+
+ is a fair game gamble.
+ Assume the investor is indifferent on a utility basis between receiving
+ 
+\begin_inset Formula ${\rm v}_{c}={\rm v}_{0}-{\rm v}_{0}{\it RRA}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\rm V}={\rm v_{0}}{\rm Z}$
+\end_inset
+
+, in the sense that:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathrm{E}\left[U({\rm v_{0}}{\rm Z})\right]=U\left({\rm v_{0}(1-{\it RRA})}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+The quantity 
+\begin_inset Formula $RRA$
+\end_inset
+
+ represents the fraction of the wealth an investor is willing to give up
+ to avoid the risk of an investment fair game gamble.
+ Alternatively it is the
+\emph on
+ risk
+\emph default
+ 
+\emph on
+premium
+\emph default
+ as a fraction of the wealth the investor will pay to avoid the risk of
+ the gamble.
+\end_layout
+
+\begin_layout Plain Layout
+One can now proceed as in the case of 
+\begin_inset Formula $ARR$
+\end_inset
+
+ by equating the two term Taylor series of the 
+\begin_inset Formula $\mathrm{E}\left[U({\rm v_{0}}{\rm Z})\right]$
+\end_inset
+
+ at 
+\begin_inset Formula $Z=1$
+\end_inset
+
+ and the one term Taylor series of 
+\begin_inset Formula $U\left({\rm v_{0}(1-{\it RRA})}\right)$
+\end_inset
+
+ about 
+\begin_inset Formula $RRA=0$
+\end_inset
+
+, solving the resulting equation for 
+\begin_inset Formula $RRA$
+\end_inset
+
+, and ignoring a multiplicative factor.
+ The result (left as an Exercise) is:
+\begin_inset Formula 
+\begin{equation}
+RRA({\rm v})=-{\rm v}\dfrac{U^{\prime\prime}(\mathrm{v})}{U^{\prime}({\rm v)}}.\label{eq: rraFnc}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Marginal Utility and Risk Aversion of Common Utility Functions
+\end_layout
+
+\begin_layout Standard
+We next explore the marginal utility, as well as the absolute and relative
+ risk aversions, of some common utility functions.
+ As risk aversion is rooted both in human psychology and in our environment
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Investors often become more risk seeking in good times (such as the run
+ up to the Internet bubble in the late 1990s) and more risk averse in bad
+ times (such as the period immediately following the start of the Great
+ Financial Crisis in 2008).
+\end_layout
+
+\end_inset
+
+, it is not easy to divine the true shape of an investor's utility function
+ or degree of risk aversion.
+ It has therefore become common practice to focus attention on utility functions
+ that are analytically tractable, or which correspond to easily visualized
+ economic goals.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Logarithmic (or Log) Utility
+\end_layout
+
+\begin_layout Standard
+For log utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathit{U}(\mathit{\mathrm{v}})=\ln(\mathrm{v}),\ \mathrm{v}>0,\label{eq:LogUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that 
+\begin_inset Formula $\mathit{U^{\prime}}(\mathit{\mathrm{v}})=\nicefrac{1}{\mathrm{v}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathit{U^{\prime\prime}}(\mathit{\mathrm{v}})=-\nicefrac{1}{\mathrm{v}^{2}}$
+\end_inset
+
+ for positive 
+\begin_inset Formula $\mathrm{v}$
+\end_inset
+
+, and from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: ARAfunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RRAFunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+ARA\left(\mathrm{v}\right) & =\frac{1}{\mathrm{v}},\label{eq:ARALogUtility}\\
+RRA\left(\mathrm{v}\right) & =1.\label{eq:RRALogUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal utility of wealth, 
+\begin_inset Formula $\mathit{U^{\prime}}(\mathit{\mathrm{v}})$
+\end_inset
+
+, is 
+\begin_inset Formula $\nicefrac{1}{\mathrm{v}}$
+\end_inset
+
+, just as Daniel Bernoulli posited.
+ Logarithmic utility plays an important role in finance, as it is closely
+ related to the geometric mean, and we explore the link between the two
+ in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:MakingUtiliyTheoryPractical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Generalized Logarithmic (or GLUM) Utility
+\end_layout
+
+\begin_layout Standard
+Generalized logarithmic utility is an exceptionally powerful and underappreciate
+d variant of log utility.
+ It was introduced in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rubinstein1976"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Rubinstein1977"
+literal "false"
+
+\end_inset
+
+ as a flexible alternative to the CAPM, but did not achieve widespread popularit
+y.
+ It allows for a wide range of investor preferences, and lends itself naturally
+ to the management of assets and liabilities, as both are easily interpreted
+ as terms in the utility function.
+ Formally
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathit{U}(\mathit{\mathrm{v}})=\ln(\mathrm{v}+A),\ \mathrm{v}>-A,\label{eq:GLUMUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that 
+\begin_inset Formula $\mathit{U^{\prime}}(\mathit{\mathrm{v}})=\nicefrac{1}{\left(\mathit{\mathrm{v}}+A\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathit{U^{\prime\prime}}(\mathit{\mathrm{v}})=-\nicefrac{1}{\left(\mathit{\mathrm{v}}+A\right)^{2}}$
+\end_inset
+
+ for 
+\begin_inset Formula $\mathrm{v}>-A$
+\end_inset
+
+, and from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: ARAfunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:RRAFunction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+ARA\left(\mathrm{v}\right) & =\frac{1}{\mathrm{v}+A},\label{eq:ARAGLUMUtility}\\
+RRA\left(\mathrm{v}\right) & =\frac{\mathrm{v}}{\mathrm{v}+A}.\label{eq:RRAGLUMUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal utility of wealth, 
+\begin_inset Formula $\mathit{U^{\prime}}(\mathit{\mathrm{v}})$
+\end_inset
+
+, is clearly decreasing in wealth, as is Absolute Risk Aversion.
+ More importantly, Relative Risk Aversion is increasing, constant, or decreasing
+ in wealth according to whether 
+\begin_inset Formula $A$
+\end_inset
+
+ is positive, zero, or negative, allowing a wide range of investor preferences
+ to be parsimoniously modeled.
+ If we interpret 
+\begin_inset Formula $-A$
+\end_inset
+
+ as the present value of the investor's liabilities, 
+\begin_inset Formula $\mathrm{v}+A$
+\end_inset
+
+ is her 
+\emph on
+actuarial surplus
+\emph default
+, or 
+\emph on
+discretionary wealth
+\emph default
+: she could, in principle at least, lose all of it, and still be able to
+ meet her spending commitments.
+ This is equivalent to the requirement that 
+\begin_inset Formula $\mathrm{v}+A>0$
+\end_inset
+
+.The Generalized Logarithmic Utility function is therefore of great importance
+ when modeling the wealth of households, and of insurers, who have large
+ portfolios of assets that are offset by similar large portfolios of liabilities.
+\end_layout
+
+\begin_layout Standard
+Generalized logarithmic utility is sometimes expressed in terms of returns
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathit{U}(r)=\frac{\ln(1+\lambda\,r)}{\lambda},\ r>-\frac{1}{\lambda},\ \lambda>0,\label{eq:GLUMreturn}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and expanding 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GLUMreturn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in a two-term Taylor series around 
+\begin_inset Formula $r=0$
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U(r)\approx r\,-\,\frac{\lambda}{2}r^{2}.\label{eq:GLUMexpansion}
+\end{equation}
+
+\end_inset
+
+Taking expecations on both sides of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GLUMreturn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+E\left[U(r)\right] & \approx E\left[r\right]\,-\,\frac{\lambda}{2}\left(\sigma^{2}\,+\,E\left[r\right]^{2}\right)\nonumber \\
+ & \approx E\left[r\right]\,-\,\frac{\lambda}{2}\,\sigma^{2}\label{eq:GLUMexpansion2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which closely mimics the form of the Quadratic Utility function described
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+MVOSection
+\end_layout
+
+\end_inset
+
+, allowing us to identify 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ as a measure of risk aversion.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "WilcoxZieffSatchell2025"
+literal "false"
+
+\end_inset
+
+ use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GLUMreturn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GLUMexpansion2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to allow the identification of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ by asking an investor a single question: 
+\begin_inset Quotes eld
+\end_inset
+
+What is 
+\begin_inset Formula $f_{max}$
+\end_inset
+
+, the largest fraction of your 
+\emph on
+financial
+\emph default
+ wealth you can lose without it ruining your life?
+\begin_inset Quotes erd
+\end_inset
+
+ Viewed through the lens of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GLUMreturn"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, this is equivalent to identifying the most negative return 
+\begin_inset Formula $r_{max}=-f_{max}$
+\end_inset
+
+ that the investor can tolerate; at this return, her financial wealth is
+ reduced to 0 and her utility becomes infinitely negative.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "WilcoxZieffSatchell2025"
+literal "false"
+
+\end_inset
+
+ argue that it proves effective in practice to set 
+\begin_inset Formula $\lambda=\nicefrac{1}{f_{max}}$
+\end_inset
+
+.
+ If the investor can lose all her financial wealth, 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+, and she will invest log-optimally.
+ Many investors say that they can lose between one-quarter and one-half
+ of their financial wealth, corresponding to values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ between 2 and 4, which corresponds remarkably well to the range of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ obtained through the use of more complex and comprehensive questionnaires.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Power Utility
+\end_layout
+
+\begin_layout Standard
+A power utility function has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathsf{\mathit{U}}(v;\,\gamma)}=\dfrac{\mathrm{v}^{1-\gamma}}{1-\gamma},\quad\mathrm{v}>0,\quad\gamma>0,\quad\gamma\neq1\label{eq:PowerUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is an easy exercise to show that power utility has the risk aversion
+ functions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+ARA\left(\mathrm{v}\right) & =\frac{\gamma}{\mathit{\mathrm{\mathrm{v}}}},\label{eq:ARAPowerUtility}\\
+RRA\left(\mathrm{v}\right) & =\gamma.\label{eq:RRAPowerUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and marginal utility
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathit{U^{\prime}}(\mathit{\mathrm{v}})=\mathrm{v}^{-\gamma}.\label{eq:MarginalPowerUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As 
+\begin_inset Formula $\gamma\longrightarrow1$
+\end_inset
+
+, power utility converges to logarithmic utility, and this is easily seen
+ by applying L'Hospital's rule to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:PowerUtility"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Investors who are attracted to the CRRA and long run growth properties
+ of logarithmic utility, but who find it too risky for their taste, will
+ find that power utility offers much of what logarithmic utility does, but
+ with the ability to control risk by making an appropriate choice for 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Exponential Utility
+\end_layout
+
+\begin_layout Standard
+The exponential utility function has the form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U(\mathrm{v})=\frac{1-\mathrm{exp}(-c\cdot\mathrm{v})}{c},\,c>0,\mathrm{v}\geqslant0,\label{eq:ExponentialUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $c$
+\end_inset
+
+ being a constant, so that its marginal utility is 
+\begin_inset Formula $\mathrm{exp}(-c\cdot\mathrm{v})$
+\end_inset
+
+, and its risk aversion functions are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+ARA\left(\mathrm{v}\right) & =c\label{eq:ARAExponentialUtility}\\
+RRA\left(\mathrm{v}\right) & =c\mathrm{v}.\label{eq:RRAExponentialUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Even though these do not correspond to commonly accepted views on investor
+ risk aversions, exponential utility is sometimes used in economics on account
+ of its analytic tractability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Quadratic Utility Functions
+\end_layout
+
+\begin_layout Standard
+A quadratic utility function has the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{\mathit{U}(\mathit{\mathrm{v}})}= & \mathit{\mathrm{\mathrm{v}}}-\mathrm{\mathit{c}\,\mathit{\mathrm{v}}^{2},\,\mathit{c}>0,\mathit{\mathrm{v}}>0},\label{eq:QuadraticUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $c$
+\end_inset
+
+ being a constant, so that its marginal utility is 
+\begin_inset Formula $1-2\,c\,\mathrm{v}$
+\end_inset
+
+, and its risk aversion functions are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+ARA\left(\mathrm{v}\right) & =\frac{2\,c}{1-2\,c\,\mathit{\mathrm{\mathrm{v}}}}\label{eq:ARAQuadraticUtility}\\
+RRA\left(\mathrm{v}\right) & =\frac{2\,c\,\mathit{\mathrm{\mathrm{v}}}}{1-2\,c\,\mathit{\mathrm{\mathrm{v}}}}.\label{eq:RRAQuadraticUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But these risk aversion functions are infinite for 
+\begin_inset Formula $\mathit{\mathrm{\mathrm{v}}}=1/2\,b$
+\end_inset
+
+ and negative for 
+\begin_inset Formula $\mathit{\mathrm{\mathrm{v}}}>1/2\,b$
+\end_inset
+
+, and the quadratic utility function is therefore useless for such values
+ of 
+\begin_inset Formula $\mathit{\mathrm{\mathrm{v}}}$
+\end_inset
+
+.
+ In spite of these severe limitations, quadratic utility plays an important
+ role in portfolio management because most any utility function can be approxima
+ted reasonably well by a two-term Taylor series expansion around the current
+ level of wealth.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All these five utility functions belong to the class of 
+\bar under
+H
+\bar default
+yperbolic 
+\bar under
+A
+\bar default
+bsolute 
+\bar under
+R
+\bar default
+isk 
+\bar under
+A
+\bar default
+version (HARA) utility functions, which are characterized by the fact that
+ their reciprocals are linear functions of wealth, i.e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ARA\left(\mathrm{v}\right)=\frac{1}{\gamma\,\mathrm{v}\,+\,\delta}.\label{eq:HARAUtility}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+HARA utility functions are often used on account of their analytic tractability,
+ even when a careful analysis of their properties suggests caution with
+ their use.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:UtilityRiskAversion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays the risk aversion properties of these five utility functions,
+ where these properties for quadratic utility only hold for 
+\begin_inset Formula $\mathrm{v}<\nicefrac{1}{2c}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In our view, the first three utility functions best model rational human
+ economic behavior, while quadratic utility is a local approximation that
+ works surprisingly well in practice for a variety of problems in portfolio
+ management, even though it was characterized by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Arrow1971"
+literal "false"
+
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+absurd".
+ As for exponential utility, it is egregious in failing to reflect typical
+ investor behavior with respect to both ARA and RRA, but it sometimes used
+ to justify mean–variance analysis for normally distributed security returns.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Replace the LYX table below with a nice kableExtra table.
+ DONE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Absolute and Relative Risk Aversion for Various Utility Functions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup 
+\backslash
+def
+\backslash
+table{
+\backslash
+begin{center}
+\backslash
+fontsize{10}{12}
+\backslash
+selectfont} 
+\backslash
+def
+\backslash
+endtable{
+\backslash
+end{center}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<results = 
+\begin_inset Quotes eld
+\end_inset
+
+asis
+\begin_inset Quotes erd
+\end_inset
+
+,echo = F, warning = FALSE, tidy=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(kableExtra)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Create a table
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties 	<- data.frame(matrix(
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+, nrow = 5, ncol = 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X1  <- c(
+\begin_inset Quotes eld
+\end_inset
+
+Logarithmic
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Generalized Logarithmic
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Power
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+						    
+\begin_inset Quotes eld
+\end_inset
+
+Exponential
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Quadratic
+\begin_inset Quotes eld
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X2  <- c(
+\begin_inset Quotes eld
+\end_inset
+
+Decreasing ARA and constant RRA
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+Decreasing ARA and increasing, constant, or decreasing RRA
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+Decreasing ARA and constant RRA
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+Constant ARA and linearly increasing RRA
+\begin_inset Quotes eld
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+Increasing ARA and increasing RRA
+\begin_inset Quotes eld
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Format the table
+\end_layout
+
+\begin_layout Plain Layout
+
+colnames(Utility_Properties) <- c(
+\begin_inset Quotes eld
+\end_inset
+
+Utility Function
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Absolute and Relative Risk Aversion
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+kable(Utility_Properties,  format = "latex", booktabs = T, linesep = "",
+ row.names = FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	  align = c("l", "l"), escape = FALSE) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+      kable_styling(full_width = F, font_size = 11 ) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+        column_spec( 1,  width = "12em" ) %>%   
+\end_layout
+
+\begin_layout Plain Layout
+
+        column_spec( 2,  width = "26em" ) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	    add_indent(1:5)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:UtilityRiskAversion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:UtilityRiskAversion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ show that a CRRA investor would use a log or power utility function, and
+ would not use a quadratic or exponential utility function.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+** Tom, Possibly add a short bit here on Hyperbolic Absolute Risk Aversion
+ utility functions, with an Exercise, or just give it as an exercise.
+ See pdf file in same folder as this document.** DONE IN THE BODY
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Expected Utility Maximization and Mean Variance Optimization
+\end_layout
+
+\begin_layout Subsection*
+EUM with Certain Families of Returns Distributions
+\end_layout
+
+\begin_layout Standard
+If asset returns are multivariate normal, then portfolio return 
+\begin_inset Formula $r_{P}={\bf w^{\mathrm{\prime}}r}$
+\end_inset
+
+ has a normal distribution with a mean 
+\begin_inset Formula $\mu_{P}={\bf w^{\prime}\boldsymbol{\mu}}$
+\end_inset
+
+ and variance 
+\begin_inset Formula $\sigma_{P}^{2}={\bf w^{\prime}}\boldsymbol{\boldsymbol{\Sigma}}{\bf w}$
+\end_inset
+
+.
+ In this case the expected utility 
+\begin_inset Formula $\mathrm{E}\left[U\left(\mathrm{v}_{0}\cdot(1+r_{P})\right)\right]$
+\end_inset
+
+ will be a deterministic function 
+\begin_inset Formula $g($
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mu_{P},\,\sigma_{P})$
+\end_inset
+
+ of the portfolio's mean return and standard deviation.
+ When 
+\begin_inset Formula $U$
+\end_inset
+
+ is strictly increasing, it can be shown that 
+\begin_inset Formula $g(\mu_{P},\,\sigma_{P})$
+\end_inset
+
+ is increasing in 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ and decreasing in 
+\begin_inset Formula $\sigma_{P}$
+\end_inset
+
+, and the EUM investor holds MinVar portfolios
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The necessary details are provided in Chapter 4 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ingersoll1987"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For the sake of having a mathematical example where EUM does lead directly
+ to mean-variance optimization, some quantitative finance papers and books
+ discuss the fact that if an exponential utility function is used, and portfolio
+ returns are normally distributed, then EUM leads to the quadratic utility
+ form of MVO.
+ But in this case, we have not only the weakness of the normal portfolio
+ returns assumption, but also the inappropriateness of the exponential utility
+ function due to its constant ARA and increasing RRA.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BenvenisteKolmRitter2024"
+literal "false"
+
+\end_inset
+
+ provide a more robust defence of mean-variance optimization for a class
+ of 
+\emph on
+standard utility functions
+\emph default
+ that are increasing, strictly concave and continuously differentiable.
+ They prove that utility maximization for any standard utility function
+ is equivalent to mean-variance optimization for some level of risk aversion
+ if and only if the security returns vector 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ admits the representation 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{r}=\bumu\,Z+\bueps,\label{eq:rRepresenation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\bumu$
+\end_inset
+
+ is a vector, 
+\begin_inset Formula $Z$
+\end_inset
+
+ is a scalar random variable with 
+\begin_inset Formula $E\left[Z\right]=1$
+\end_inset
+
+, and 
+\begin_inset Formula $\bueps$
+\end_inset
+
+ is a random vector with
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+E\left[\bueps^{\prime}\,\busigma^{-1}\,\,\bumu\right] & =0\label{eq:rRepresentation_1}\\
+E\left[\bueps\,|\,Z\right] & =\mathbf{0}\label{eq:rRepresentation_2}\\
+\mathbf{C}_{\bueps} & =\busigma\,-\,var(Z)\,\bumu\,\bumu^{\prime}\label{eq:rRepresentation_3}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for some Positive Semi-Definite covariance matrix 
+\begin_inset Formula $\busigma=\mathbf{C}_{\mathbf{r}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+An empirical justification for quadratic utility is provided by the frequently
+ referenced study by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LevyMarkowitz1979"
+literal "false"
+
+\end_inset
+
+, who compared the performance of log utility with that of an approximation
+ based on quadratic utility, using actual returns for 149 investment companies
+ from 1958 to 1967.
+ While their conclusions indicate that quadratic utility provides a reasonable
+ approximation to log utility, the results are based on a limited data set
+ and must be applied with care to modern markets in which a wide range of
+ derivatives are traded.
+ Consequently, their results, while useful, do not provide convincing evidence
+ for the adequacy of the quadratic utility approximation to expected log
+ utility in the context of modern financial markets.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KrollLevyMarkowitz1984"
+literal "false"
+
+\end_inset
+
+ expands on 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Levy1979"
+literal "false"
+
+\end_inset
+
+ – it considers a wide range of utility functions, and also explores the
+ use of individual securities in place of funds, but, like its predecessor,
+ does not explore the use of options or other derivatives.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Additionally, security returns do not follow a multivariate normal distribution:
+ there is considerable empirical evidence that such an assumption is not
+ justified for the majority of assets.
+ For example, the returns of small-cap stocks and hedge fund returns are
+ often highly non-normal, exhibiting both skewness and kurtosis.
+ Elliptical distributions are somewhat more promising, but their elliptical
+ contours of constant probability also often fail to adequately capture
+ the reality of multivariate returns distributions that occur in practice.
+\end_layout
+
+\begin_layout Standard
+Last, but not least, one should keep in mind that since arithmetic returns
+ are bounded below by 
+\begin_inset Formula $-100\%$
+\end_inset
+
+, no standard distribution (e.g.
+ normal distribution, t– or skew–t distribution) that assigns positive probabili
+ty to all intervals will be entirely adequate.
+ One way in which to address this problem is to use log–normal returns,
+ which are bounded below by 
+\begin_inset Formula $-100\%$
+\end_inset
+
+ and which compound correctly over time, but which do not aggregate to a
+ log–normal distribution when weighted and aggregated across portfolio assets.
+\end_layout
+
+\begin_layout Subsection*
+Expected Utility Taylor Series Approximation and Quadratic Utility 
+\end_layout
+
+\begin_layout Standard
+A common alternative approach to assuming portfolio normal returns is to
+ assume that the investor uses a constant relative risk aversion (CRRA)
+ utility function, and use a two-term plus remainder Taylor series expansion
+ of the utility function to show that EUM leads to MVO portfolios.
+ In doing so, one needs to decide what value to do the Taylor series expansion
+ about, and the two natural choices are either to expand expected utility
+ about portfolio mean return 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ or expand it about 
+\begin_inset Formula $r_{P}=0$
+\end_inset
+
+.
+ Using the latter choice gives
+\begin_inset Formula 
+\begin{equation}
+U(\mathrm{v}_{0}\cdot(1+\mathit{r_{P}}))=U(\mathrm{v}_{0})+U^{\prime}(\mathrm{v}_{0})\cdot r_{P}+\dfrac{1}{2}U^{\prime\prime}(\mathrm{v}_{0}\cdot(1+\mathit{\mu_{P}}))\cdot r_{P}^{2}+HOT\label{eq: utilityTaylorSeries}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where the higher-order terms 
+\begin_inset Formula $HOT$
+\end_inset
+
+ depend on the higher order moments of 
+\begin_inset Formula $r_{P}$
+\end_inset
+
+.
+ Taking expectations gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{E}\left[U(\mathrm{v}_{0}\cdot(1+\mathit{r_{P}}))\right] & =U(\mathrm{v}_{0})+U^{\prime}(\mathrm{v}_{0})\cdot\mathrm{E}\left[r_{P}\right]+\dfrac{1}{2}U^{\prime\prime}(\mathrm{v}_{0})\cdot\mathrm{E}\left[r_{P}^{2}\right]+\mathrm{E}\left(HOT\right)\nonumber \\
+ & =U(\mathrm{v}_{0})+U^{\prime}(\mathrm{v}_{0})\cdot\mu_{P}+\dfrac{1}{2}U^{\prime\prime}(\mathrm{v}_{0})\cdot\left(\sigma_{P}^{2}+\mu_{P}^{2}\right)+\mathrm{E}\left(HOT\right)\label{eq: expectedUtilityTaylorWithHOT}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ignoring the expected value of the higher order terms, and recalling that
+ the argument of the utility function on the left hand side is the end of
+ period portfolio value 
+\begin_inset Formula $\mathrm{V}$
+\end_inset
+
+, we have the approximation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{E}\left[U(\mathrm{V})\right] & \thickapprox U(\mathrm{v}_{0})\,+\,U^{\prime}(\mathrm{v}_{0})\,\left(\mu_{P}\,+\,\dfrac{1}{2}\cdot\dfrac{U^{\prime\prime}(\mathrm{v}_{0})}{U^{\prime}(\mathrm{v}_{0})}\cdot\left(\sigma_{P}^{2}\,+\,\mu_{P}^{2}\right)\right)\nonumber \\
+ & =U(\mathrm{v}_{0})\,+\,U^{\prime}(\mathrm{v}_{0})\,\left(\mu_{P}\,-\,\dfrac{1}{2}\,ARA_{U}(\mathrm{v}_{0})\cdot\left(\sigma_{P}^{2}\,+\,\mu_{P}^{2}\right)\right)\label{eq: equivalentExpectedUtilityAroundZeroApprox}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $ARA_{U}(\mathrm{v}_{0})$
+\end_inset
+
+ is the absolute risk aversion function for the utility function 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+So long as 
+\begin_inset Formula $U^{\prime}(\mathrm{v}_{0})$
+\end_inset
+
+ is positive, which will be the case for any strictly increasing utility
+ function, maximizing 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{V})\right]$
+\end_inset
+
+ is equivalent to maximizing the mean-variance objective function with a
+ special value of the risk aversion parameter that is determined by the
+ utility function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q_{U}(\mu_{P},\,\sigma_{P})=\mu_{P}-\dfrac{1}{2}ARA_{U}(\mathrm{v}_{0})\cdot\left(\sigma_{P}^{2}+\mu_{P}^{2}\right).\label{eq: equivalentxpectedUtilityTwoTermTaylor}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Note that the above mean-variance objective function coincides with the
+ quadratic utility functions of Section 2.3 only if, in addition to replacing
+ 
+\begin_inset Formula $ARA(\mathrm{v}_{0})$
+\end_inset
+
+ above by the general risk aversion parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, one assumes (as is often the case) that the portfolio mean return is so
+ small relative to the portfolio standard deviation that the 
+\begin_inset Formula $\mu_{P}^{2}$
+\end_inset
+
+ can be dropped in the expression for 
+\begin_inset Formula $Q_{U}(\mu_{P},\,\sigma_{P})$
+\end_inset
+
+.
+ In this case we are back to the quadratic utility version of MVO discussed
+ extensively in that section.
+\end_layout
+
+\begin_layout Standard
+\noindent
+However, the dropping of the expected values of the higher order terms in
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: utilityTaylorSeries"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is in general questionable in view of the empirical evidence that asset
+ returns are non–normally distributed, and often exhibit skewness and fat
+ tails to a greater or lesser degree, particularly in the case of small-cap
+ and micro-cap stocks, and in hedge fund returns.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, we mention that the Taylor series expansion of a utility function
+ about a portfolio mean return 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ results in an expression that depends on 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{P}$
+\end_inset
+
+ differently than 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: equivalentExpectedUtilityAroundZeroApprox"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but which in general depends on 
+\begin_inset Formula $\mu_{P}$
+\end_inset
+
+ in a utility function dependent manner.
+ 
+\end_layout
+
+\begin_layout Section
+Expected Quadratic Utility and QP Optimization
+\end_layout
+
+\begin_layout Standard
+We note that direct use of a quadratic utility function of wealth, expressed
+ via portfolio return gives:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{E}\left[U_{quadratic}(\mathrm{V})\right]= & \mathrm{E}\left[\mathrm{v}_{0}\,(1\,+\,\mbox{r_{P}})\,-\,b\,\mathrm{v}_{0}^{2}\,(1\,+\,\mathit{r_{P}})^{2}\right]\nonumber \\
+= & \mathrm{v}_{0}\,\mathrm{E}\left[1\,+\,\mbox{r_{P}}\,-\,b\cdot\mathrm{v}_{0}\,(1\,+\,2\mathit{r_{P}}\,+\,r_{P}^{2})\right]\nonumber \\
+= & \mathrm{v}_{0}\,(1\,-\,\mathrm{v}_{0}\,b)\,+\,(1\,-\,2\,b\,\mathrm{v}_{0})\,\mathrm{E}\left[r_{P}\right]\,-\,b\,\mathrm{v}_{0}\,\mathrm{E}\left[r_{P}^{2}\right]\nonumber \\
+= & \mathrm{v}_{0}\,(1\,-\,\mathrm{v}_{0}\,b)\,+\,(1\,-\,2\,b\,\mathrm{v}_{0})\,\left[\mu_{P}\,-\,\dfrac{b\,\mathrm{v}_{0}}{1-2\,b\,\mathrm{v}_{0}}\,(\sigma_{P}^{2}\,+\,\mu_{P}^{2})\right].\label{eq: expectedQuadraticUtility}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $\mathrm{v}_{0}<2b$
+\end_inset
+
+, maximization of 
+\begin_inset Formula $\mathrm{E}\left[U(\mathrm{V})\right]$
+\end_inset
+
+ is equivalent to maximization of the quantity in the square bracket above,
+ which is not surprisingly a special case of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: equivalentExpectedUtilityAroundZeroApprox"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with 
+\begin_inset Formula $U$
+\end_inset
+
+ being the quadratic utility function.
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+Expected Quadratic Utility QP Problem
+\end_layout
+
+\begin_layout Standard
+Re-writing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: equivalentxpectedUtilityTwoTermTaylor"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with the ARA factor replaced by a general risk aversion parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{Q}_{U}(\mu_{P},\,\sigma_{P}) & =\mu_{P}-\dfrac{1}{2}\lambda\left(\sigma_{P}^{2}+\mu_{P}^{2}\right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which in terms of 
+\begin_inset Formula $\mu_{P}={\bf w'\boldsymbol{\mu}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{P}^{2}={\bf w'}\mathbf{C}{\bf w},$
+\end_inset
+
+ with 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ being the returns covariance matrix, is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathrm{\mathrm{Q}_{\mathit{U}}(\mu_{\mathit{P}},\,\sigma_{\mathit{P}})} & ={\bf w^{\prime}\boldsymbol{\mu}}-\lambda\cdot(\mathbf{w}^{\prime}\mathbf{C}{\bf w+w^{\prime}\boldsymbol{\mu\mu}'{\bf w)}}\\
+ & ={\bf w^{\prime}\boldsymbol{\mu}}-\lambda\cdot w^{\prime}\check{\mathbf{C}}\mathbf{w}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+where 
+\begin_inset Formula $\check{\mathbf{C}}=\mathbf{C}+\bumu\bumu^{\prime}=E\left[\mathbf{r}\mathbf{r}^{\prime}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In other words, the use of a quadratic utility function in the EUM framework
+ leads to an objective function that differs from the standard QU objective
+ function only by virtue of replacing the covariance matrix 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ in the latter with the second moment matrix 
+\begin_inset Formula $\check{\mathbf{C}}=\mathrm{E}\left[\mathbf{r}\mathbf{r}^{\prime}\right]$
+\end_inset
+
+.
+ Keeping in mind the fact that many practitioners estimate the returns covarianc
+e by assuming zero mean for the returns, this is perhaps not a significant
+ difference between maximizing the expected value of quadratic utility and
+ use of the QU optimization form of MVO.
+ 
+\end_layout
+
+\begin_layout Section
+Objections to Utility Theory
+\end_layout
+
+\begin_layout Standard
+In spite of its impeccable pedigree, EUM has long been plagued by paradoxes
+ and inconsistent choices made by participants in controlled laboratory
+ experiments.
+ These experiments are most often expressed in the form of choices between
+ lotteries that look superficially different, but which, upon reflection,
+ prove to be similar.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Alchian1953"
+literal "false"
+
+\end_inset
+
+ offers the following example, which he attributes to Markowitz.
+\end_layout
+
+\begin_layout Standard
+A friend offers you the choice of participation in one of three lotteries:
+\end_layout
+
+\begin_layout Itemize
+Lottery A consists of 2,000 tickets, two of which are marked $1,000 and
+ the rest are marked $0.
+\end_layout
+
+\begin_layout Itemize
+Lottery B consists of 2,000 tickets, twenty of which are marked $100 and
+ the rest are marked $0.
+\end_layout
+
+\begin_layout Itemize
+Lottery C consists of 2,000 tickets, one of which is marked $1,000, ten
+ of which are marked $100, and the rest are marked $0.
+\end_layout
+
+\begin_layout Standard
+How would you rank these lotteries, and why? 
+\end_layout
+
+\begin_layout Standard
+A simple calculation shows that lottery C can be synthesized by flipping
+ a fair coin that forces participation in lottery A or lottery B, each with
+ a probability of 50%.
+ Under the VNM axioms, it cannot therefore be rationally preferred to both
+ lotteries A and B.
+ In practice, however, a surprising number of people who are presented with
+ this choice rank lottery C either first or third among these three lotteries!
+ It is an easy matter to determine that the expected payoff from each of
+ these lotteries is $1, so that the error is not driven by their expected
+ payoffs.
+\end_layout
+
+\begin_layout Standard
+Chapter 15 of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Levy2016"
+literal "false"
+
+\end_inset
+
+ documents a variety of similar paradoxes due to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Allais1953"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Ellsberg1961"
+literal "false"
+
+\end_inset
+
+, and others, in which volunteers systematically make choices that violate
+ the EUM paradigm.
+ Many, but not all, of these paradoxes are driven by the presence of rare
+ outcomes which prove disproportionately attractive or repellent to participants
+, or by a presentation that disguises the common aspects of seemingly different
+ choices; but some, such as Ellsberg's paradox, are also driven by a human
+ aversion to ambiguity.
+\end_layout
+
+\begin_layout Standard
+Ellsberg's paradox can be illustrated by a simple coin tossing game in which
+ the coin that is tossed can be chosen by the participant.
+ The first coin that is offered to the participant is known to be fair,
+ i.e
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p_{Head,\,1}=p_{Tail,\,1}=\frac{1}{2}.\label{eq:FairCoin1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second coin is known to be fair in expectation – the probability that
+ it comes up heads not known to the participant, who knows only that it
+ is uniformly distributed on 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ It is easily seen that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathrm{E}\left[p_{Head,\,2}\right]=\mathrm{E}\left[p_{Tail,\,2}\right]=\frac{1}{2}.\label{eq:FairCoin2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regardless of which coin she chooses, she wins $1 if the coin comes up heads,
+ and loses $1 if it comes up tails.
+ The expected value of both games is 0, and their expected utilities are
+ identical for any level of initial wealth, and for any well–defined utility
+ function, but individuals who are offered this choice overwhelmingly choose
+ the first coin, and exhibit a deep aversion to the uncertainty associated
+ with the second coin.
+ 
+\end_layout
+
+\begin_layout Standard
+No perfect resolution to these paradoxes exist, as they appear to be deeply
+ rooted in the way the human mind works
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KahnemanTversky2011"
+literal "false"
+
+\end_inset
+
+ offers a comprehensive and readable account of many of these paradoxes
+ and their relationship to the way in which our minds work (or are currently
+ thought to work).
+ 
+\end_layout
+
+\end_inset
+
+.
+ In early work, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Markowitz1952b"
+literal "false"
+
+\end_inset
+
+ suggests that utility would be determined by a change in, rather than the
+ absolute level of, an investor's wealth, and it is worth re–examining the
+ St.
+ Petersburg Paradox in this light.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider an investor with initial wealth 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+, and logarithmic utility function 
+\begin_inset Formula $U\left(\mathrm{v}\right)=\ln\left(\mathrm{v}\right)$
+\end_inset
+
+.
+ The change in her expected utility from playing the St.
+ Petersburg game without paying any entrance fee is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\Delta U_{Free}\left(\mathrm{v}_{0}\right) & =\mathrm{E}\left[U\left(\mathrm{V}\right)\right]\,-\,U\left(\mathrm{v_{0}}\right)\nonumber \\
+ & =\sum_{k\,\geqslant\,1}\frac{1}{2^{k}}\cdot\ln\left(\mathrm{v}_{0}+2^{k}\right)\,-\,U\left(\mathrm{v_{0}}\right).\label{eq:DeltaUStPetersburgFree}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If, on the other hand, she must pay a fixed amount, say 
+\begin_inset Formula $\$P\left(\mathrm{v}_{0}\right)$
+\end_inset
+
+, for the privilege of playing the game, the change in her expected utility
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\Delta U_{Paid}\left(\mathrm{v}_{0}\right) & =\mathrm{E}\left[U\left(\mathrm{V}\right)\right]\,-\,U\left(\mathrm{v_{0}}\right)\nonumber \\
+ & =\sum_{k\,\geqslant\,1}\frac{1}{2^{k}}\cdot\ln\left(\mathrm{v}_{0}+2^{k}-P\left(\mathrm{v}_{0}\right)\right)\,-\,U\left(\mathrm{v_{0}}\right),\label{eq:DeltaUStPetersburgPriced}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and we can use search techniques to determine the value of 
+\begin_inset Formula $P\left(\mathrm{v}_{0}\right)$
+\end_inset
+
+ that forces 
+\begin_inset Formula $\Delta U_{Paid}\left(\mathrm{v}_{0}\right)$
+\end_inset
+
+ to equal 0 (i.e.
+ for no change in utility) for any value of 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:StPetersburgRevisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ displays 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\,\Delta U_{Free}\left(\mathrm{v}_{0}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\,P\left(\mathrm{v}_{0}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\nicefrac{P\left(\mathrm{v}_{0}\right)}{\mathrm{v}_{0}}$
+\end_inset
+
+ for values of 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+ ranging from $1 to $8,192.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The St.
+ Petersburg Game With Varying Initial Levels of Wealth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup 
+\backslash
+def
+\backslash
+table{
+\backslash
+begin{center}
+\backslash
+fontsize{10}{12}
+\backslash
+selectfont} 
+\backslash
+def
+\backslash
+endtable{
+\backslash
+end{center}} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<results = 
+\begin_inset Quotes eld
+\end_inset
+
+asis
+\begin_inset Quotes erd
+\end_inset
+
+,echo = F, warning = FALSE, tidy=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+library(kableExtra)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Create a table
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties 	<- data.frame(matrix(
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+, nrow = 14, ncol = 4))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X1  <- c(
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$1
+\begin_inset Quotes erd
+\end_inset
+
+,     
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$2
+\begin_inset Quotes erd
+\end_inset
+
+,     
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$4
+\begin_inset Quotes erd
+\end_inset
+
+,     
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$8
+\begin_inset Quotes erd
+\end_inset
+
+,    
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$16
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$32
+\begin_inset Quotes erd
+\end_inset
+
+,    
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$64
+\begin_inset Quotes erd
+\end_inset
+
+,    
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$128
+\begin_inset Quotes erd
+\end_inset
+
+,   
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$256
+\begin_inset Quotes erd
+\end_inset
+
+,  
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$512
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$1,024
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$2,048
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$4,096
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\backslash
+
+\backslash
+$8,192
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X2  <- c(
+\begin_inset Quotes eld
+\end_inset
+
+$1.6646
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$1.1789
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.7922
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+$0.5077
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.3127
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.1867
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+$0.1087
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.0621
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.0349
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+$0.0194
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.0107
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.0058
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+							
+\begin_inset Quotes eld
+\end_inset
+
+$0.0032
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$0.0017
+\backslash
+
+\backslash
+hphantom{00}$
+\begin_inset Quotes eld
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X3  <- c(2.8160, 3.3476,  4.0000,  4.7245,  5.5052,  6.3360,
+  7.2100,
+\end_layout
+
+\begin_layout Plain Layout
+
+							8.1196, 9.0569, 10.0148, 10.9873, 11.9698, 12.9589, 13.9522)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Utility_Properties$X4  <- c(2.8160, 1.6738,  1.0000,  0.5906,  0.3441,  0.1980,
+  0.1127,    
+\end_layout
+
+\begin_layout Plain Layout
+
+							0.0634, 0.0354,  0.0196,  0.0107,  0.0058,  0.0032,  0.0017)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#Format the table
+\end_layout
+
+\begin_layout Plain Layout
+
+colnames(Utility_Properties) <- c(
+\begin_inset Quotes eld
+\end_inset
+
+$
+\backslash
+
+\backslash
+mathrm{v}_{0}$
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+$
+\backslash
+
+\backslash
+Delta U_{Free}
+\backslash
+
+\backslash
+left(
+\backslash
+
+\backslash
+mathrm{v}_{0}
+\backslash
+
+\backslash
+right)$
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+								  
+\begin_inset Quotes eld
+\end_inset
+
+$P
+\backslash
+
+\backslash
+left(
+\backslash
+
+\backslash
+mathrm{v}_{0}
+\backslash
+
+\backslash
+right)
+\backslash
+
+\backslash
+hphantom{l}$
+\begin_inset Quotes erd
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+
+								  
+\begin_inset Quotes eld
+\end_inset
+
+$
+\backslash
+
+\backslash
+frac{P
+\backslash
+
+\backslash
+left(
+\backslash
+
+\backslash
+mathrm{v}_{0}
+\backslash
+
+\backslash
+right)}{
+\backslash
+
+\backslash
+mathrm{v}_{0}}
+\backslash
+
+\backslash
+hphantom{0}$
+\begin_inset Quotes erd
+\end_inset
+
+ )
+\end_layout
+
+\begin_layout Plain Layout
+
+kable(Utility_Properties,  format = "latex", booktabs = T, linesep = "",
+ row.names = FALSE,
+\end_layout
+
+\begin_layout Plain Layout
+
+	  align = c("r", "r", "r", "r"), escape = FALSE) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+      kable_styling(full_width = F, font_size = 11 ) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+        column_spec( 1,   width = "4em" )%>%
+\end_layout
+
+\begin_layout Plain Layout
+
+        column_spec( 2:4, width = "6em" )%>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	    add_indent(1:14)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:StPetersburgRevisited"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As wealth increases, the incremental utility gained by participation in
+ the game becomes vanishingly small, and the maximum price that an investor
+ would pay for the privilege of participation grows slowly (approximately
+ logarithmically) with wealth.
+ Strikingly, a participant with a wealth of $4 would be willing to risk
+ 
+\emph on
+all
+\emph default
+ her wealth on the St.
+ Petersburg game, while one with a wealth of $1 would actually borrow $1.816
+ and pay $2.816 for the privilege of participating! At the other extreme,
+ an investor with $8,192 would pay only $13.95 to participate in this game.
+ The results in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:StPetersburgRevisited"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ accord reasonably well with the results of experiments conducted with actual
+ subjects with varying degrees of wealth.
+ Also of interest is the fact that the additional utility gained by participatin
+g in the St.
+ Petersburg game converges to the fraction of her wealth that she would
+ pay for the privilege of participating.
+ 
+\end_layout
+
+\begin_layout Standard
+Markowitz's insight that utility should be driven by changes in wealth,
+ and not by the level of wealth, is the starting point for a variety of
+ proposed resolutions to these paradoxes.
+ 
+\emph on
+Prospect Theory
+\emph default
+, introduced in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KahnemanTversky1979"
+literal "false"
+
+\end_inset
+
+, proposes that at any level of wealth, investors will evaluate lotteries
+ through the lens of a sharply kinked and S–shaped 
+\emph on
+Value function
+\emph default
+ that is gently increasing (and concave) in gains and sharply decreasing
+ (and convex) in losses, both measured from the current level of wealth.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "HanSuiYang2026"
+literal "false"
+
+\end_inset
+
+ show that investors appear to apply Prospect Theory in their evaluation
+ of mutual funds for investment, and in rough accordance with the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "TverskyKahneman1992"
+literal "false"
+
+\end_inset
+
+ value function applied to each fund's past returns.
+\end_layout
+
+\begin_layout Standard
+Almost contemporaneously, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LoomesSudgen1982"
+literal "false"
+
+\end_inset
+
+ proposed 
+\emph on
+Regret Theory
+\emph default
+, which constructs a modified utility function that captures the regret
+ or joy that an investor might feel on account of both the choices they
+ make and the results they achieve.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "BleichrodtWakker2015"
+literal "false"
+
+\end_inset
+
+ provide an excellent retrospective on Regret Theory and compare the insights
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LoomesSudgen1982"
+literal "false"
+
+\end_inset
+
+ to those in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "KahnemanTversky1979"
+literal "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "LevyKroll1976"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Levy2016"
+literal "false"
+
+\end_inset
+
+ propose stochastic dominance as the appropriate lens through which to compare
+ investments, and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "TverskyKahneman1992"
+literal "false"
+
+\end_inset
+
+ present an updated version of their theory, now called 
+\emph on
+Cumulative Prospect Theory
+\emph default
+, to better accommodates multiple outcomes and also to correct some of its
+ failures that relate to stochastic dominance.
+ 
+\end_layout
+
+\begin_layout Standard
+While these approaches have all attracted significant attention, and almost
+ universally argue that the VNM axioms are an overly restrictive definition
+ of rational behavior, they have not had a significant practical impact
+ on portfolio construction for a variety of reasons, including:
+\end_layout
+
+\begin_layout Enumerate
+Most investors cannot specify their personal utility function with any degree
+ of precision,
+\end_layout
+
+\begin_layout Enumerate
+These theories tend to focus on lotteries with a few discrete outcomes,
+ while security returns are a continuous random variable,
+\end_layout
+
+\begin_layout Enumerate
+The joint distribution of security returns is not stable – it exhibits significa
+nt time variation, and is not easily modeled, complicating the computation
+ of expected utility, and
+\end_layout
+
+\begin_layout Enumerate
+The distribution of a portfolio's returns must be obtained from that of
+ its constituents by evaluating a high–order convolution integral over the
+ joint distribution of individual security returns, again complicating the
+ computation of expected utility.
+\end_layout
+
+\begin_layout Standard
+Thus, in spite of its enormous clarifying impact on the the underpinnings
+ of portfolio theory, utility theory has not transformed the practice of
+ portfolio management, and, in the next section, we discuss how some of
+ its insights can be used in practice to good effect.
+ 
+\end_layout
+
+\begin_layout Section
+Making Utility Theory Practical
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MakingUtiliyTheoryPractical"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The biggest single stumbling block to the use of utility theory in portfolio
+ construction is the almost universal inability to specify one's utility
+ function.
+ We therefore suggest focusing on a few utility functions that translate
+ naturally to reasonable economic objectives.
+\end_layout
+
+\begin_layout Standard
+We recommend thinking about utility functions in terms of their Relative
+ Risk Aversion, and not their Absolute Risk Aversion, because most investors
+ think naturally in terms of return and risk, and not in terms of lotteries.
+ Given that the expected returns of most asset classes are not large, an
+ investor's wealth will not vary significantly from one period to the next,
+ and it seems to us that it most natural to focus on utility functions with
+ Constant Relative Risk Aversion, particularly logarithmic and power utility.
+ When one wishes to model assets as well as liabilities, Generalized Logarithmic
+ utility is almost always the best choice, as the constant 
+\begin_inset Formula $A$
+\end_inset
+
+ can be thought of as the negative of the present value of one's liabilities.
+ 
+\end_layout
+
+\begin_layout Standard
+There is a rich literature (and a correspondingly angry debate) on log utility
+ and log–optimal investment, as maximizing log utility is equivalent to
+ maximizing geometric return, and thus to maximizing terminal wealth.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MacleanThorpZiemba2010"
+literal "false"
+
+\end_inset
+
+ provide a concise introduction to the theory and practice of log–optimal
+ investment, as well as useful guide to the controversies that surround
+ it.
+ To expose the central idea, we let 
+\begin_inset Formula $r_{1},\,r_{2},\,\cdots,\,r_{T}$
+\end_inset
+
+ be the return of a portfolio with an initial value of 
+\begin_inset Formula $\mathrm{v}_{0}$
+\end_inset
+
+.
+ The portfolio's terminal value, 
+\begin_inset Formula $\mathrm{V}_{T}$
+\end_inset
+
+ is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{V}_{T} & =\mathrm{v}_{0}\cdot\prod_{i\,=\,1}^{T}\left(1+r_{i}\right)\nonumber \\
+ & =\mathrm{v}_{0}\cdot\left(1+g\right)^{T}\label{eq:GeometricReturn1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $g$
+\end_inset
+
+, the geometric return, is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+g=\left(\prod_{i\,=\,1}^{T}\left(1+r_{i}\right)\right)^{\frac{1}{T}}-1.\label{eq:GeometricReturn2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can also write 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:GeometricReturn1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathrm{V}_{T} & =\mathrm{v}_{0}\cdot\exp\left(\sum_{i\,=\,1}^{T}\ln\left(1+r_{i}\right)\right)\nonumber \\
+ & =\mathrm{v}_{0}\cdot\exp\left(\sum_{i\,=\,1}^{T}\widetilde{r}_{i}\right)\nonumber \\
+ & =\mathrm{v}_{0}\cdot\exp\left(T\cdot\frac{1}{T}\sum_{i=1}^{T}\widetilde{r}_{i}\right)\nonumber \\
+ & \longrightarrow\mathrm{v}_{0}\cdot\exp\left(T\cdot\mathrm{E}\left[\widetilde{r}\right]\right),\label{eq:LogUtility1}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where the last step rests on the assumption that the distribution of returns
+ is stable over time.
+ As 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ is monotonically increasing in 
+\begin_inset Formula $x$
+\end_inset
+
+, it is clear that maximizing terminal wealth is equivalent to maximizing
+ expected logarithmic return, or equivalently, to maximizing expected log
+ utility for the portfolio.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AssetReturnsChapter
+\end_layout
+
+\end_inset
+
+, it is shown that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+g\thickapprox\mu_{r}\,-\,\frac{1}{2}\,\sigma_{r}^{2},\label{eq:LogUtility2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so that maximizing 
+\begin_inset Formula $g$
+\end_inset
+
+ is approximately equivalent to a mean–variance optimization with 
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If this level of relative risk aversion seems too low, we can explore power
+ utility functions with higher levels of risk aversion, and experiments
+ have shown that RRA lies between 2 and 4 for a large fraction of the population.
+ Having chosen a utility function, we proceed in one of two ways:
+\end_layout
+
+\begin_layout Enumerate
+Set the parameters of the chosen utility function to match the investor's
+ RRA (this is often determined via a questionnaire or by analyzing her choices
+ in one or more lotteries), and construct mean–variance optimal portfolios
+ with the same level of risk aversion.
+ In effect, we construct a local approximation to our preferred utility
+ function, allowing the entire machinery of mean–variance analysis to be
+ brought to bear on the problem.
+\end_layout
+
+\begin_layout Enumerate
+Insert the chosen utility function into a simulation and historical back–testing
+ engine, and then identify the utility maximizing optimal portfolio using
+ sampling or some form or gradient search.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "AdlerKritzman2007"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Sharpe2007"
+literal "false"
+
+\end_inset
+
+ describe simple approaches to utility maximization in an asset–only setting,
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wilcox2019"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "WilcoxSatchell2021"
+literal "false"
+
+\end_inset
+
+ show how to optimize the growth of actual surplus using Generalized Logarithmic
+ Utility.
+\end_layout
+
+\begin_layout Standard
+Each method has its advantages, though satisfactory results can be obtained
+ from either one when simple securities with relatively little skew or kurtosis
+ are the only financial instruments used.
+ When securities with skewed and fat–tailed distributions, such as small–cap
+ stocks, high–yield bonds, options and other non–linear derivatives, are
+ used, the second method dominates.
+ 
+\end_layout
+
+\begin_layout Standard
+Regardless of the method used, it is vital to start with good, forward–looking,
+ estimates of expected returns of the various markets in which one can invest
+ and to ensure that one's estimates of individual security returns and volatilit
+ies are consistent with these estimates
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The expected return of an index is the market–value weighted average of
+ the expected return of its constituents, and its volatility is given by
+ a quadratic form that uses as inputs the market–value weights and the covarianc
+e matrix of its constituents.
+\end_layout
+
+\end_inset
+
+, as estimation errors can cause extreme instability in optimal portfolios,
+ particularly at low levels of risk aversion, effectively nullifying any
+ theoretical advantage of direct utility maximization.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ChopraZiemba1993"
+literal "false"
+
+\end_inset
+
+ show that the estimation errors in expected returns have ten times the
+ impact of estimation errors in variances, and twenty times the impact of
+ estimation errors in covariances.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch use_only_in_child
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined,C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined,C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined"
+options "biblatex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

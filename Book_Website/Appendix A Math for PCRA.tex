@@ -1,0 +1,2587 @@
+\batchmode
+\makeatletter
+\def\input@path{{"C:/Users/tkpme/Dropbox/BookPCRA/Springer Production March 2026/Ch Appendix A Math for PCRA/"}}
+\makeatother
+\documentclass[graybox,envcountchap,sectrefs]{svmono}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlsng}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hldef}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{mathptmx}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{float}
+\usepackage{units}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview=XYZ null null 1.25,pdfpagemode=UseNone}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\lyxmathsym}[1]{\ifmmode\begingroup\def\b@ld{bold}
+  \text{\ifx\math@version\b@ld\bfseries\fi#1}\endgroup\else#1\fi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%%%%%%%%%%%%%%%%%%%% book.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for the chapters of your "monograph"
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{makeidx}% allows index generation
+% standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}% used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\usepackage{hyperref}
+\def\UrlBreaks{\do\/\do-}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+
+%\usepackage[ style=authoryear,natbib=true,giveninits=true,backend=biber,maxcitenames=2]{biblatex}
+\usepackage[style=authoryear,natbib=true,firstinits=false,backend=biber,maxcitenames=2]{biblatex}
+
+
+\setlength{\bibitemsep}{0.5\baselineskip}
+\DeclareNameAlias{sortname}{family-given}
+
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}
+{\addbibresource[location=local]{C:/Users/Doug/Dropbox/BookPCRA/mpslbookCombined.bib}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}
+    {\addbibresource[location=local]{C:/Users/tkpme/Dropbox/BookPCRA/mpslbookCombined.bib}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}
+        {\addbibresource[location=local]{C:/Users/stoya/Dropbox/BookPCRA/mpslbookCombined.bib}}
+        {   \IfFileExists{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}
+            {\addbibresource[location=local]{C:/Users/4thauthor/Dropbox/BookPCRA/mpslbookCombined.bib}}
+            {}
+        }
+    }
+}
+\renewcommand\cite{\citet}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[p,osf]{stickstootext}
+\usepackage[stix2,vvarbb]{newtxmath}
+\usepackage[varqu,varl]{inconsolata}
+% \usepackage{txfonts}
+\usepackage{upgreek}
+
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{appendix}
+
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+{\input{C:/Users/Doug/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+{   \IfFileExists{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+    {\input{C:/Users/tkpme/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+    {   \IfFileExists{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+        {\input{C:/Users/stoya/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+        {   \IfFileExists{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}
+            {\input{C:/Users/4thAuthor/Dropbox/BookPCRA/macroSP_August_05_2021.tex}}
+            {}
+        }
+    }
+}
+
+\belowsink=90pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatother
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\begin{appendices}
+
+
+\setcounter{chapter}{0} 
+
+\chapter{MATHEMATICAL TOOLS FOR PCRA\label{chap:AppendixA}}
+
+\vspace{0.3in}
+
+\textbf{Planned for publication in 2026 by R. Douglas Martin, Thomas
+K. Philips, Bernd Scherer and Kirk Li. All rights reserved. © Copyright
+2025}
+
+\vspace{0.3in}
+
+\begin{center}
+10/12/25
+\par\end{center}
+
+\tocchpnum=30pt 
+\tocsecnum=33pt 
+\tocsubsecnum=40pt 
+\tocsubsubsecnum=48pt 
+\tocparanum=55pt 
+\tocsubparanum=63pt
+\calctocindent
+
+\tableofcontents{}\newpage{}
+
+This Appendix contains a variety of basic mathematical results that
+prove useful in the context of portfolio construction and risk management.
+We expect that much of the material provided here will be used primarily
+to refresh the reader's memory, thereby facilitating its use throughout
+this book. Our treatment of matrices and Linear Algebra owes a great
+deal to \citet{Gentle2017} and \citet{Strang2016}, and we strongly
+recommend both books to anyone with an interest in this under rated
+field. In addition, we refer readers who have an interest in optimization
+to \citet{LuenbergerYe2008}.
+
+\section{Vectors and Vector Spaces}
+
+\subsection{Vectors}
+
+A \emph{vector} is a collection of objects that supports two arithmetic
+operations: vector addition (denoted +) and scalar multiplication
+(denoted $\cdot$). It is useful to think of a vector as a list of
+$n$ real numbers that correspond to a point in $n$--dimensional
+Euclidean space with $n$ orthogonal axes, as this interpretation
+clearly supports elementwise addition provided both vectors have the
+same number of elements, i.e., if
+
+\begin{equation}
+\mathrm{\mathbf{u}}=\left[\begin{array}{c}
+u_{1}\\
+\vdots\\
+u_{n}
+\end{array}\right],\ \mathrm{\mathbf{v}}=\left[\begin{array}{c}
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]\label{eq:Vector1}
+\end{equation}
+
+then
+
+\begin{align}
+\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}} & =\left[\begin{array}{c}
+u_{1}\\
+\vdots\\
+u_{n}
+\end{array}\right]\,+\,\left[\begin{array}{c}
+v_{1}\\
+\vdots\\
+v_{n}
+\end{array}\right]\label{eq:Vector2}\\[0.5em]
+ & =\left[\begin{array}{c}
+u_{1}\,+\,v_{1}\\
+\vdots\\
+u_{n}\,+\,v_{n}
+\end{array}\right].\label{eq:Vector3}
+\end{align}
+
+In addition, it supports scalar multiplication according to
+
+\begin{equation}
+c\,\cdot\,\mathrm{\mathbf{u}}=\left[\begin{array}{c}
+c\,u_{1}\\
+\vdots\\
+c\,u_{n}
+\end{array}\right].\label{eq:Vector4}
+\end{equation}
+
+However, not all vectors are defined in this way. In particular, polynomials
+and square--integrable functions of one real variable are also vectors,
+as both support vector addition\footnote{The sum of two polynomials is also a polynomial, and the same is true
+for square--integrable functions of one real variable.} and scalar multiplication. 
+
+One type of vector that we repeatedly encounter in this book is a
+vector of \emph{security returns}, each element of which is lower
+bounded by $-100\%$. Another is a vector of \emph{security weights}
+associated with a portfolio. These weights may be \emph{constrained}
+(e.g. the long--only constraint requires all weights to be positive
+and to sum to 1) or \emph{unconstrained} (i.e. the weights may be
+positive or negative, and may not sum to 1, as is often the case when
+a portfolio is levered).
+
+Vectors also support vector multiplication via the \emph{dot product,
+}or \emph{inner product}\footnote{The term dot product is typically used when the vector space under
+consideration is $n$--dimensional Euclidean space. In more general
+vector spaces, the term inner product is more commonly used. There
+is another type of vector product, the \emph{cross product}, which
+sees application mainly in physics. We ignore it here.}. The dot product of two vectors of equal length, $\mathrm{\mathbf{u}}$
+and $\mathrm{\mathbf{v}}$, is defined to be\footnote{This definition of an inner product can be extended to cover complex
+numbers as well, but we restrict our attention to real numbers as
+complex numbers are exceedingly rare in portfolio construction.}
+
+\begin{equation}
+\mathrm{\mathbf{u}}\,\cdotp\,\mathrm{\mathbf{v}}=\sum_{i\,=\,1}^{n}u_{i}\,v_{i}.\label{eq:DotProduct}
+\end{equation}
+
+More generally, the inner product of $\mathrm{\mathbf{u}}$ and $\mathrm{\mathbf{v}}$
+is written as $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle $,
+and is a real number that satisfies the following criteria:
+\begin{enumerate}
+\item Non--negativity: $\mathrm{\mathbf{\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{0}}\right\rangle =}\,0\ \forall\,\mathrm{\mathbf{u}}},$
+and $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{u}}\right\rangle >0$
+if $\mathrm{\mathbf{u}}\ne\mathbf{0}$
+\item Commutativity: $\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =\left\langle \mathrm{\mathbf{v}},\,\mathrm{\mathbf{u}}\right\rangle $
+\item Scalar multiplication: $\left\langle c\,\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =c\,\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle $
+for all scalars $c$
+\item Distributivity: $\left\langle \mathrm{\mathbf{u}\,+\,}\mathbf{w},\,\mathrm{\mathbf{v}}\right\rangle =\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle \,+\,\left\langle \mathrm{\mathbf{w}},\,\mathrm{\mathbf{v}}\right\rangle $
+\end{enumerate}
+Two vectors, $\mathrm{\mathbf{u}}$ and $\mathrm{\mathbf{v}}$, are
+said to be \emph{orthogonal} if 
+
+\begin{equation}
+\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\right\rangle =0.\label{eq:OrthogonalVectors}
+\end{equation}
+
+The \emph{norm} of a vector is the square root of its inner product
+with itself.
+
+\begin{equation}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert =\sqrt{\left\langle \mathrm{\mathbf{u}},\,\mathrm{\mathbf{u}}\right\rangle }.\label{eq:NormU}
+\end{equation}
+
+In Euclidean space, the norm of a vector is equal to its length.
+
+\subsection{The Distance Between Two Vectors}
+
+The vector
+
+\begin{equation}
+\mathrm{\mathbf{u}}=\left[\begin{array}{r}
+1\\
+-2
+\end{array}\right]\label{eq:VectorWith2Elements}
+\end{equation}
+
+corresponds to the point $x=1,\,y=-2$ in the $X-Y$ plane. We can
+apply Pythagoras' Theorem to compute its norm, or the distance from
+the origin to the point $\left(1,\,-2\right)$:
+
+\begin{align}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert  & =\sqrt{1^{2}\,+\,\left(-2\right)^{2}}\nonumber \\
+ & =\sqrt{5}.\label{eq:LengthOfVectorWith2Elements}
+\end{align}
+
+In general, the norm of a vector with $n$ elements in Euclidean space
+is
+
+\begin{equation}
+\left\Vert \mathrm{\mathbf{u}}\right\Vert =\sqrt{u_{1}^{2}\,+\,\cdots\,+\,u_{n}^{2}},\label{eq:LengthOfVector}
+\end{equation}
+
+and this concept is easily generalized to obtain the \emph{distance}
+between two vectors:
+
+\begin{align}
+d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}} & \triangleq\left\Vert \mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right\Vert \nonumber \\
+ & =\sqrt{\left(u_{1}-v_{1}\right)^{2}\,+\,\cdots\,+\,\left(u_{n}-v_{n}\right)^{2}}.\label{eq:DistanceBetweenVectors}
+\end{align}
+
+It is important to note that this definition of distance is not unique:
+the distance between two square--integrable functions of one real
+variable, $f(x)$ and $g(x)$, for example, can be written as
+
+\begin{equation}
+d_{f,\,g}=\sqrt{\int\left(f(x)\,-\,g(x)\right)^{2}dx}.\label{eq:DistanceBetweenTwoFunctions}
+\end{equation}
+
+Regardless of how it is defined, a valid measure of distance must
+satisfy three properties:
+\begin{enumerate}
+\item Non-negativity: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\ d_{\mathrm{\mathbf{u}},\mathrm{\,\mathbf{v}}}\geqslant0.$
+\item Symmetry: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\ d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}}=d_{\mathrm{\mathbf{v}},\,\mathrm{\mathbf{u}}}$.
+\item Triangle Inequality: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}},\,\mathrm{\mathbf{w}},\ d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{w}}}\leqslant d_{\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}}\,+\,d_{\mathrm{\mathbf{v}},\,\mathrm{\mathbf{w}}}.$ 
+\end{enumerate}
+The triangle inequality get its name from its geometric interpretation:
+the sum of the lengths of any two sides of a triangle must be at least
+as large as its third side. When the vectors in question are lists
+of real numbers, and the measure of distance between vectors is the
+Euclidean distance, the triangle inequality is equivalent to the Cauchy--Schwarz
+inequality for real numbers:
+
+\begin{equation}
+\left(\sum_{i\,=\,1}^{n}u_{i}\,v_{i}\right)^{2}\leqslant\sum_{i\,=\,1}^{n}u_{i}^{2}\,\cdotp\,\sum_{i\,=\,1}^{n}v_{i}^{2},\label{eq:CauchySchwarz}
+\end{equation}
+with equality if and only if $v_{i}=c\,u_{i}$ for some constant $c$.
+
+While proofs of these inequalities abound, we recommend reviewing
+their treatment in \citet{Steele2004}, which is both comprehensive
+and accessible to the non--specialist.  The dot product admits an
+equivalent, geometric, definition:
+
+\begin{equation}
+\mathrm{\mathbf{u}}\,\cdotp\,\mathrm{\mathbf{v}}=\left\Vert \mathrm{\mathbf{u}}\right\Vert \,\left\Vert \mathrm{\mathbf{v}}\right\Vert \,\cos\theta,\label{eq:DotProduct2}
+\end{equation}
+where $\theta$ is the angle between $\mathrm{\mathbf{u}}$ and $\mathrm{\mathbf{v}}$.
+Orthogonality is equivalent to condition that $\theta=90^{\lyxmathsym{\textdegree}}$.
+
+\subsection{Vector Spaces}
+
+A \emph{vector space} adds structure to sets of vectors and the arithmetic
+operations associated with them. A vector space $\mathcal{{S}}$ has
+the following properties:
+\begin{enumerate}
+\item Additive Closure: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$.
+\item Multiplicative Closure: For all vectors $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+and for all scalars $c,\ c\,\cdot\,\mathbf{u}\in\mathcal{{S}}$.
+\item Additive commutativity: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}=\mathrm{\mathbf{v}}\,+\,\mathrm{\mathbf{u}}$
+. 
+\item Distributivity with respect to scalar and vector addition: For all
+vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$,
+and for all scalars $c,\,d,\ (c\,+\,d)\cdot\left(\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\right)=\mathit{c}\cdot\mathbf{\mathrm{\mathbf{u}}}\,+\,\mathit{c}\,\cdot\,\mathrm{\mathbf{v}}\,+\,\mathit{d}\,\cdot\,\mathrm{\mathbf{u}}\,+\,\mathit{d}\,\cdot\,\mathrm{\mathbf{v}}\in\mathcal{{S}}$.
+\item Additive Associativity: For all vectors $\mathrm{\mathbf{u}},\,\mathrm{\mathbf{v},}\,\mathrm{\mathbf{w}}\in\mathcal{{S}},\ \left(\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{v}}\right)\,+\,\mathrm{\mathbf{w}}=\mathrm{\mathbf{u}}\,+\,\left(\mathrm{\mathbf{v}}\,+\,\mathrm{\mathbf{w}}\right).$
+\item Multiplicative Associativity: For all vectors $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+and for all scalars $c,\,d$, $\mathrm{\ }\left(c\,d\right)\,\cdot\,\mathrm{\mathbf{w}}=c\,\cdot\,\left(d\,\cdot\,\mathrm{\mathbf{w}}\right).$
+\item Existence of additive and multiplicative identities. There exists
+a vector $\mathbf{\mathrm{\mathbf{0}}}\in\mathcal{{S}}$ and a scalar
+1, such that for all $\mathrm{\mathbf{u}}\in\mathcal{{S}},\ \mathrm{\mathbf{u}\mathrm{\,+\,\mathbf{0}}}=\mathrm{\mathbf{u}}$
+and $1\,\cdot\,\mathbf{u}=\mathbf{u}$.
+\item Existence of an additive inverse. For all vectors, $\mathrm{\mathbf{u}}\in\mathcal{{S}},$
+there exists a vector $\mathrm{\mathbf{-u}}\in\mathcal{{S}}$ such
+that $\mathrm{\mathbf{u}}\,+\,\mathrm{\mathbf{-u}}=\mathrm{\mathbf{0}}$.
+\end{enumerate}
+It is important to check that each of these properties is satisfied
+before declaring a set of vectors to be a vector space. For example,
+if $\mathrm{\mathbf{u}}$ is a vector of security returns, and if
+$c$ is a real number, and if vector addition and scalar multiplication
+are defined elementwise and follow the normal rules of arithmetic,
+$c\,\cdotp\,\mathrm{\mathbf{u}}$ does not always satisfy a basic
+property of returns: they cannot be smaller than $-100\%$. If, on
+the other hand, $\mathrm{\mathbf{u}}$ is a vector of \emph{logarithmic}
+\emph{returns} (see \AssetReturnsChapter\  for a discussion of various
+types of returns) it is easy to see that $\mathcal{{S}}$ is a vector
+space.
+
+An \emph{inner product space} is a vector space in which the inner
+product is well defined.
+
+A \emph{subspace} of a vector space is a subset of $\mathcal{{S}}$
+that satisfies all the requirements of a vector space. In particular,
+vector addition and scalar multiplication must always result in a
+vector that lies in the subspace. 
+
+For example, let $\mathcal{{S}}_{XY}$ be the set of all vectors with
+2 real components, i.e. vectors in the $X\lyxmathsym{–}Y$ plane,
+with elementwise vector addition and scalar multiplication. $\mathcal{{S}}_{Y}$,
+the subset of vectors whose first component is 0 (i.e. vectors that
+lie on the $Y$ axis), is a subspace of $\mathcal{{S}}_{XY}$, as
+is $\mathcal{{S}}_{X}$, the subset of vectors whose second component
+is 0 (i.e. vectors that lie on the $X$ axis). 
+
+Formally, a set of vectors $\mathrm{\mathbf{v}}_{1,},\mathrm{\mathbf{v}}_{2},\cdots,\mathrm{\mathbf{v}}_{k}$
+which are not all equal to $\mathbf{0}$ is said to be linearly independent
+if
+
+\begin{equation}
+c_{1}\,\mathrm{\mathbf{v}}_{1}\,+\,c_{2}\,\mathrm{\mathbf{v}}_{2}\,+\,\cdots\,+\,c_{k}\,\mathrm{\mathbf{v}}_{k}=\mathbf{0}\Longleftrightarrow c_{1}\,=\,c_{2}\,=\,\cdots\,=\,c_{k}\,=\,0.\label{eq:VectorSpaceDimension}
+\end{equation}
+
+The \emph{dimension} of a vector space is the maximum number of linearly
+independent vectors contained in it, and the dimension of a subspace
+cannot exceed that of its parent space. 
+
+A set of linearly independent vectors $\mathcal{{B}}$ is said to
+be a \emph{basis} for $\mathcal{{S}}$, or to \emph{span} $\mathcal{{S}}$,
+if any vector $\mathrm{\mathbf{v}}\in\mathcal{{S}}$ can be written
+as a unique linear combination of the vectors in $\mathcal{{B}}$.
+Bases are not unique, though one basis may prove more convenient than
+another in a particular application. All bases must have the same
+number of elements, and this must equal the dimension of the vector
+space. 
+
+If the vectors in a basis are all orthogonal to each other, the basis
+is called an \emph{orthogonal basis}. If, in addition, the length
+of each basis vector is 1, it is said to be an \emph{orthonormal basis}.
+
+It is easy to see why $\mathcal{{S}}_{XY}$ is a two dimensional vector
+space: there are no non--zero values of $c_{1}$ and $c_{2}$ such
+that
+
+\begin{equation}
+c_{1}\left[\begin{array}{c}
+0\\
+1
+\end{array}\right]\,+\,c_{2}\left[\begin{array}{c}
+1\\
+0
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\label{eq:2DVectorSpace}
+\end{equation}
+
+and every vector in the $X-Y$ plane can be represented as a unique
+combination of $c_{1}$ and $c_{2}$. It follows that 
+
+\begin{equation}
+{B}=\left\{ \left[\begin{array}{c}
+0\\
+1
+\end{array}\right],\ \left[\begin{array}{c}
+1\\
+0
+\end{array}\right]\right\} \label{eq:BasisForXYplane}
+\end{equation}
+ is an orthonormal basis for $\mathcal{{S}}_{XY}$\footnote{Likewise, the monomials $\left\{ 1,\,x,\,x^{2,},\cdots\right\} $form
+a basis for the vector space of polynomials.}.
+
+Likewise, it is easy to see why $\mathcal{{S}}_{Y}$ is one--dimensional:
+for any two vectors whose first component is 0, 
+
+\begin{equation}
+c_{1}\left[\begin{array}{c}
+0\\
+a
+\end{array}\right]\,-\,\frac{ac_{1}}{b}\,\left[\begin{array}{c}
+0\\
+b
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+0
+\end{array}\right],\label{eq:1DVectorSpace}
+\end{equation}
+
+provided that $a$ and $b$ are not 0. Furthermore, any point on the
+$Y$ axis can be represented as a multiple of either vector. Exchanging
+the first and the second components of both vectors makes clear that
+the same argument applies to ${S}_{X}$.
+
+\subsection{Projections of a Vector Space}
+
+Exact, but computationally demanding, calculations using vectors in
+a high dimensional vector space $\mathcal{{S}}_{1}$ are often approximated
+using representations of the vectors in a lower dimensional subspace
+$\mathcal{{S}}_{2}$. If $\mathcal{{B}}_{2}$ is an orthogonal basis
+for $\mathcal{{S}}_{2}$, the best approximate representation of a
+vector $\mathrm{\mathbf{u}_{1}}\in\mathcal{{S}}_{1}$ in $\mathcal{{S}}_{2}$
+is its \emph{projection}, $\mathrm{\mathbf{p}}_{1}$, which is given
+by
+\begin{equation}
+\mathrm{\mathbf{p}}_{1}=\sum_{\mathrm{\mathbf{b}}_{i}\in\mathcal{{B}}_{2}}\dfrac{\left\langle \mathrm{\mathbf{u}}_{1},\,\mathrm{\mathbf{b}}_{i}\right\rangle }{\left\Vert \mathrm{\mathbf{b}}_{i}\right\Vert ^{2}}\mathrm{\mathbf{b}}_{i}\label{eq:Projection}
+\end{equation}
+
+In essence, the projection first captures, and then aggregates, all
+that $\mathrm{\mathbf{u}}_{1}$ has in common with each of the orthogonal
+basis vectors of $\mathcal{{S}}_{2}$. The residual 
+
+\begin{align}
+\mathbf{r}_{1} & =\mathbf{u}_{1}\,-\,\mathbf{p}_{1}\nonumber \\
+ & =\mathbf{u}_{1}\,-\,\sum_{\mathrm{\mathbf{b}}_{i}\in\mathcal{{B}}_{2}}\dfrac{\left\langle \mathrm{\mathbf{u}}_{1},\,\mathrm{\mathbf{b}}_{i}\right\rangle }{\left\Vert \mathrm{\mathbf{b}}_{i}\right\Vert ^{2}}\mathrm{\mathbf{b}}_{i}\label{eq:ProjectionResidual}
+\end{align}
+must therefore be orthogonal to each basis vector, and must lie in
+$\mathcal{{S}}_{2}^{\bot}$, the \emph{orthogonal complement} to $\mathcal{{S}}_{2}$\footnote{The orthogonal complement of a subspace is a vector space comprised
+of all vectors that are orthogonal to the subspace.}. Seen in this light, projecting a vector from $\mathcal{{S}}_{XY}$
+to $\mathcal{{S}}_{Y}$ is equivalent to zeroing out its first component
+and preserving its second; the residual of this projection lies entirely
+in $\mathcal{{S}}_{X}$, which is the orthogonal complement to $\mathcal{{S}}_{Y}$. 
+
+\section{Matrices and Matrix Arithmetic}
+
+\subsection{Some Basic Definitions}
+
+We can stack $m$ vectors\footnote{We continue to require that all components of these vectors be real
+numbers, though much of this section can be generalized to complex
+numbers and finite fields.} with $n$ elements each side by side to form an $n\times m$ \emph{matrix}
+as follows\footnote{We follow the notation in \citet{Gentle2017}, and use $n$ to denote
+the number of rows and $m$ to denote the number of columns. Other
+authors exchange $n$ and $m$, but still put the number of rows before
+the number of columns.}:
+
+\begin{align}
+\mathrm{\mathbf{A}} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{a}}_{1} & \cdots & \mathrm{\mathbf{a}}_{m}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{ccc}
+a_{11} & \cdots & a_{1m}\\[0.5em]
+\vdots & \vdots & \vdots\\
+a_{n1} & \cdots & a_{nm}
+\end{array}\right].\label{eq:Matrix}
+\end{align}
+If $n\neq m$, the matrix is said to be \emph{rectangular}, and if
+$n=m$, it is said to be \emph{square}. Rectangular matrices often
+arise when we model the returns of many securities using a few cross--sectional
+or time--series factors, while square matrices arise when representing
+the interaction between all possible pairs of securities or factors.
+A covariance matrix, for example, is square.
+
+The transpose of a matrix $\mathrm{\mathbf{A}}$, denoted $\mathrm{\mathbf{A}}^{\prime}$,
+is obtained by exchanging its rows and columns, i.e.
+
+\begin{equation}
+\mathrm{\mathbf{A}}^{\prime}=\left[\begin{array}{ccc}
+a_{11} & \cdots & a_{n1}\\
+\vdots & \vdots & \vdots\\
+a_{1m} & \cdots & a_{nm}
+\end{array}\right].\label{eq:Atranspose}
+\end{equation}
+
+Transposition transforms an $n\times m$ matrix into a $m\times n$
+matrix.
+
+\subsection{The Rank of a Matrix}
+
+The \emph{column space} of a matrix is the vector space spanned by
+its columns, while its \emph{row space} is the vector space spanned
+by its rows. The row space of a matrix is the column space of its
+transpose. The \emph{null space }of a matrix\emph{, $\mathcal{{N}}(\mathrm{\mathbf{A}})$,}
+as well as its \emph{left null space,} \emph{$\mathcal{{N}}(\mathrm{\mathbf{A}^{\prime}})$,}
+are vector spaces that are orthogonal to its column and row spaces
+respectively. They are defined by the fact that vectors in the null
+space and left null space are mapped to $\mathbf{0}$ by $\mathrm{\mathbf{A}}$
+and $\mathrm{\mathbf{A}}^{\prime}$ respectively, i.e.
+
+\begin{subequations}
+\begin{align}
+\mathcal{{N}}\left(\mathrm{\mathbf{A}}\right) & =\left\{ \mathrm{\mathbf{x}}\,|\,\mathrm{\mathbf{A}}\mathrm{\mathbf{x}}=\mathrm{\mathbf{0}}\right\} \label{eq:NullSpace}\\
+\mathcal{{N}}\left(\mathrm{\mathbf{A}}^{\prime}\right) & =\left\{ \mathrm{\mathbf{y}}\,|\,\mathrm{\mathbf{A}}^{\prime}\mathrm{\mathbf{y}}=\mathrm{\mathbf{0}}\right\} ,\label{eq:LeftNullSpace}
+\end{align}
+\end{subequations}
+
+where the product of a matrix and a vector is defined in \eqref{eq:MatrixVectorProduct}.
+
+Closely related to the dimension of a vector space (the maximum number
+of linearly independent vectors contained in it) are the \emph{row
+rank} of a matrix, or the maximum number of linearly independent \emph{rows}
+contained in it, and its \emph{column rank}, or the maximum number
+of linearly independent \emph{columns} contained in it. Although one
+might think that the row and column ranks of a matrix will in general
+be different, it is surprisingly true that they are always equal.
+A proof of this non--intuitive result can be found in \citet{Gentle2017}.
+It follows that 
+
+\begin{equation}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\leqslant\min\left(n,\,m\right).\label{eq:MatrixRank}
+\end{equation}
+
+Furthermore
+
+\begin{subequations}
+\begin{align}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\,+\,\mathrm{rank}\left(\mathcal{{N}}\left(\mathrm{\mathbf{A}}_{n\times m}\right)\right) & =m\label{eq:SumOfRanksA}\\
+\mathrm{rank}\left(\mathrm{\mathbf{A}^{\prime}}_{m\times n}\right)\,+\,\mathrm{rank}\left(\mathcal{{N}}\left(\mathrm{\mathbf{A}}_{m\times n}^{\prime}\right)\right) & =n,\label{eq:SumOfRanksB}
+\end{align}
+\end{subequations}
+
+and 
+
+\begin{subequations}
+\begin{align}
+\mathrm{rank}\left(\mathrm{\mathbf{A}}\,+\,\mathbf{B}\right) & \leqslant\mathrm{rank}\left(\mathrm{\mathbf{A}}\right)\,+\,\mathrm{rank}\left(\mathbf{B}\right)\label{eq:RankOfSums}\\
+\mathrm{rank}\left(\mathrm{\mathbf{A}}\mathbf{B}\right) & \leqslant\min\left(\mathrm{rank}\left(\mathrm{\mathbf{A}}\right),\,\mathrm{rank}\left(\mathbf{B}\right)\right),\label{eq:RankOfProduct}
+\end{align}
+\end{subequations}
+
+where matrix addition and multiplication are defined in \eqref{eq:MatrixAddition}
+and \eqref{eq:MatrixMultiplication} respectively.
+
+
+\subsection{Matrix Addition and Multiplication}
+
+We can add two matrices elementwise if they have the same numbers
+of rows and columns
+
+\begin{equation}
+\mathrm{\mathbf{A}}\,+\,\mathrm{\mathbf{B}}=\left[\begin{array}{ccc}
+a_{11}\,+\,b_{11} & \ \cdots\  & a_{1m}\,+\,b_{1m}\\
+\vdots & \vdots & \vdots\\
+a_{n1}\,+\,b_{n1} & \ \cdots\  & a_{nm}\,+\,b_{nm}
+\end{array}\right],\label{eq:MatrixAddition}
+\end{equation}
+and multiply a matrix by a scalar, just as we did with vectors:
+
+\begin{equation}
+c\cdotp\mathrm{\mathbf{A}}=\left[\begin{array}{ccc}
+c\thinspace a_{11} & \ \cdots\  & c\thinspace a_{1m}\\
+\vdots & \vdots & \vdots\\
+c\thinspace a_{n1} & \ \cdots\  & c\thinspace a_{nm}
+\end{array}\right].\label{eq:MatrixScaling}
+\end{equation}
+
+A matrix may also be multiplied by a vector, to give rise to another
+vector. The product $\mathrm{\mathbf{Ax}}$ is a \emph{linear transformation}
+of the vector $\mathrm{\mathbf{x}}$, and can also be viewed as a
+linear combination of the columns of the matrix, with the weights
+being given by the vector $\mathrm{\mathbf{x}}$. The number of columns
+in $\mathrm{\mathbf{A}}$ must equal the number of elements in $\mathrm{\mathbf{x}}$
+if the product is to be valid:
+
+\begin{align}
+\mathrm{\mathbf{Ax}} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{a}}_{1} & \cdots & \mathrm{\mathbf{a}}_{m}\end{array}\right]\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{m}
+\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{c}
+x_{1}\,\mathrm{\mathbf{a}}_{1}\,+\,\cdots\,+\,x_{m}\,\mathrm{\mathbf{a}}_{m}\end{array}\right]\nonumber \\
+ & =\left[\begin{array}{c}
+a_{11}\thinspace x_{1}+\cdots+a_{1m}\thinspace x_{m}\\
+\vdots\\
+a_{n1}\thinspace x_{1}+\cdots+a_{nm}\thinspace x_{m}
+\end{array}\right].\label{eq:MatrixVectorProduct}
+\end{align}
+
+As a matrix is just a stacked set of vectors, \eqref{eq:MatrixVectorProduct}
+generalizes naturally to allow for the multiplication of two matrices
+that are conformable -- the number of columns in the first matrix
+must equal the number of rows in the second:
+
+\begin{align}
+\mathrm{\mathbf{AB}} & =\mathrm{\mathbf{A}}\left[\begin{array}{c}
+\mathrm{\mathbf{b}}_{1}\cdots\mathrm{\mathbf{b}}_{p}\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c}
+\mathrm{\mathbf{A}}\mathrm{\mathbf{b}}_{1}\cdots\mathrm{\mathrm{\mathbf{A}}\mathbf{b}}_{p}\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{ccc}
+a_{11}\thinspace b_{11}\,+\,\cdots\,+\,a_{1m}\thinspace b_{m1} & \ \cdots\  & a_{11}\thinspace b_{1p}\,+\,\cdots\,+\,a_{1n}\thinspace b_{mp}\\
+\vdots & \vdots & \vdots\\
+a_{n1}\thinspace b_{11}\,+\,\cdots\,+\,a_{nm}\thinspace b_{n1} & \ \cdots\  & a_{n1}\thinspace b_{1p}\,+\,\cdots\,+\,a_{nm}\thinspace b_{mp}
+\end{array}\right].\label{eq:MatrixMultiplication}
+\end{align}
+
+If $\mathrm{\mathbf{A}}$ is $n\,\times\,m$, and $\mathrm{\mathbf{B}}$
+is $m\,\times\,p$, the product $\mathrm{\mathbf{A\,B}}$ is $n\,\times\,p$.
+Additionally
+
+\begin{equation}
+\left(\mathrm{\mathbf{A\,B}}\right)^{\prime}=\mathrm{\mathbf{B}}^{\prime}\,\mathrm{\mathbf{A}}^{\prime}.\label{eq:ABtranspose}
+\end{equation}
+
+We note in passing that $\mathrm{\mathbf{AB}}$ can also be viewed
+as a linear combination of the rows of $\mathrm{\mathbf{B}}$, with
+the weights being given by the rows of $\mathrm{\mathbf{A}}.$ In
+general
+
+\begin{equation}
+\mathrm{\mathbf{A\,B}}\ne\mathrm{\mathbf{B\,A}.}\label{eq:ABneBA}
+\end{equation}
+
+Matrices prove particularly useful when solving sets of linear equations.
+If we set 
+
+\begin{equation}
+\mathrm{\mathbf{A\,x}}=\mathrm{\mathbf{b},}\label{eq:AxEQb}
+\end{equation}
+
+where $\mathbf{b}$ is a column vector, we have a compact representation
+of a collection of linear equations that can be interpreted in one
+of two ways:
+\begin{enumerate}
+\item Row perspective: Each row of \eqref{eq:AxEQb} corresponds to a \emph{hyperplane}\footnote{In $n$--dimensional Euclidean space, a hyperplane is a subspace
+whose dimension is one less than the dimension of the space. In 2
+and 3 dimensions, hyperplanes are lines and planes respectively.}, and solving \eqref{eq:AxEQb} entails finding a vector $\mathrm{\mathbf{x}}$
+that lies at the intersection of these $n$ hyperplanes
+\item Column perspective: Each column of $\mathrm{\mathbf{A}}$ is a vector,
+and solving \eqref{eq:AxEQb} entails finding a vector $\mathrm{\mathbf{x}}$
+that makes the two sides of \eqref{eq:AxEQb} equal.
+\end{enumerate}
+Sometimes, \eqref{eq:AxEQb} possesses a unique solution, while at
+other times, it can have an infinite number of solutions or no solution
+at all. The existence of a unique solution is governed by whether
+or not $\mathrm{\mathbf{A}}$ is invertible, a topic we will return
+to shortly.
+
+\subsection{Some Special Matrices}
+
+Some matrices have a special structure that greatly simplifies operations
+on them\footnote{A comprehensive list of matrices with special structures and their
+names can be found at \url{https://en.wikipedia.org/wiki/List_of_named_matrices}.}. 
+
+If a matrix is square, and if $a_{ij}=a_{ji}$ for all $i,\,j$, it
+is said to be \emph{symmetric}. If, in addition, $a_{ij}=0\ \forall i\neq j$,
+it is said to be \emph{diagonal}.The transpose of a symmetric matrix
+is equal to itself. Clearly, all diagonal matrices are symmetric,
+but the converse is not true.
+
+The \emph{Zero matrix} $\mathrm{\mathbf{0}}_{n}$ is an $n\times n$
+matrix with 0's everywhere, i.e.
+
+\begin{equation}
+\mathrm{\mathbf{0}}_{n}=\left[\begin{array}{ccc}
+0 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & 0
+\end{array}\right].\label{eq:ZeroMatrix}
+\end{equation}
+
+The \emph{Identity matrix} $\mathrm{\mathbf{I}}_{n}$ is an $n\times n$
+diagonal matrix with 1's along the diagonal and 0's elsewhere, i.e.
+
+\begin{equation}
+\mathrm{\mathbf{I}}_{n}=\left[\begin{array}{ccc}
+1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & 1
+\end{array}\right].\label{eq:IdentityMatrix}
+\end{equation}
+
+$\mathrm{\mathbf{J}}_{n}$, the $n\times n$ matrix with all 1's can
+be constructed by mutliplying a vector of $n$ 1's by its transpose
+
+\begin{align}
+\mathrm{\mathbf{J}}_{n} & =\mathrm{\mathbf{1}}_{n}\,\mathrm{\mathbf{1}}_{n}^{\prime}\nonumber \\
+ & =\left[\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right]\left[\begin{array}{c}
+1\\
+\vdots\\
+1
+\end{array}\right]^{\prime}\nonumber \\
+ & =\left[\begin{array}{ccc}
+1 & \cdots & 1\\
+\vdots & \ddots & \vdots\\
+1 & \cdots & 1
+\end{array}\right].\label{eq:AllOneMatrix}
+\end{align}
+
+An $n\times m$ matrix is said to be \emph{Orthogonal} if
+
+\begin{equation}
+\mathrm{\mathbf{A}}^{\prime}\,\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{m},\label{eq:OrthogonalMatrix}
+\end{equation}
+
+and it is useful to think of such a matrix as a stacked collection
+of vectors that lie at right angles to each other in Euclidean space.
+The product $\mathrm{\mathbf{A}}^{\prime}\mathrm{\mathbf{A}}$ is
+a symmetric matrix that is known as the \emph{Gramian}, and whose
+rank is the same as the rank of $\mathrm{\mathbf{A}}$.
+
+A martrix $\mathrm{\mathbf{A}}$ can be raised to an integer power
+$k$ by multiplying together $k$ copies of itself. For example
+
+\begin{equation}
+\mathrm{\mathbf{A}}^{2}=\mathrm{\mathbf{A}}\,\mathrm{\mathbf{A}},\label{eq:ASquared}
+\end{equation}
+
+and is said to be \emph{nilpotent of index k} if
+
+\begin{subequations}
+\begin{align}
+\mathrm{\mathbf{A}}^{k} & =\mathbf{0}_{n}\label{eq:NilpotentMatrixA}\\
+\mathrm{\mathbf{A}}^{j} & \ne\mathbf{0}_{n}\ \mathrm{for}\ 1\leqslant j<k.\label{eq:NilpotentMatrixB}
+\end{align}
+\end{subequations}
+
+
+\subsection{Toeplitz Matrices}
+
+A \emph{Toeplitz} matrix is a square matrix with constant offset diagonals,
+i.e.
+
+\begin{equation}
+a_{i,\,j}=a_{i\,+\,1,\,j\,+\,1},\ 1\leqslant i,\,j\leqslant n-1\label{eq:ToeplitzMatrix1}
+\end{equation}
+
+e.g.,
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+6 & 1 & 2 & 3 & 4\\
+7 & 6 & 1 & 2 & 3\\
+8 & 7 & 6 & 1 & 2\\
+9 & 8 & 7 & 6 & 1
+\end{array}\right].\label{eq:ToeplitzMatrix2}
+\end{equation}
+
+In the special case when each row is a cyclic shift of the prior row,
+the matrix is referred to as a \emph{circulant} matrix, e.g.
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right].\label{eq:CirculantMatrix}
+\end{equation}
+
+Every circulant matrix is a Toeplitz matrix, but the converse is not
+true.
+
+\subsection{Block Matrices}
+
+A matrix can often usefully be partitioned into a set of adjacent
+\emph{blocks, }with the boundaries between blocks being identified
+by vertical and horizontal lines. The circulant matrix displayed in
+\eqref{eq:CirculantMatrix}, for example, can be partitioned into
+four blocks in a variety of ways as can be seen in \eqref{eq:PartitionedMatrix1}--\eqref{eq:PartitionedMatrix4}.
+Observe that the various submatrices are not necessarily square --
+in particular, \emph{none} of the submatrices in \eqref{eq:PartitionedMatrix4}
+are square. 
+
+Even though a matrix can have multiple blocks, we illustrate block
+matrix operations using matrices that are partitioned into four adjacent
+blocks. The results presented here generalize naturally to larger
+numbers of blocks, and we refer the interested reader to the comprehensive
+treatment in \citet{Gentle2017}.
+
+\begin{subequations}
+\begin{align}
+\mathrm{\mathbf{A}} & =\left[\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix1}\\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]\label{eq:PartitionedMatrix2}\\[0.5em]
+ & =\left[\begin{array}{cc|ccc}
+1 & 2 & 3 & 4 & 5\\
+5 & 1 & 2 & 3 & 4\\
+\hline 4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix3}\\[0.5em]
+ & =\left[\begin{array}{ccc|cc}
+1 & 2 & 3 & 4 & 5\\
+\hline 5 & 1 & 2 & 3 & 4\\
+4 & 5 & 1 & 2 & 3\\
+3 & 4 & 5 & 1 & 2\\
+2 & 3 & 4 & 5 & 1
+\end{array}\right]\label{eq:PartitionedMatrix4}
+\end{align}
+\end{subequations}
+
+It is useful to think of the blocks along the main diagonal as representing
+the influence of a tightly coupled set of items on each other (e.g.
+stocks within a sector, with one block per sector), while blocks off
+the main diagonal represent interactions between different sets of
+items (i.e. between sectors in an index). Sometimes, the off--diagonal
+blocks have entries that are much smaller in magnitude than the blocks
+on the diagonal, and may be set to 0 to simplify the matrix. A matrix
+whose off--diagonal blocks are all zero is called a \emph{block diagonal}
+matrix.
+
+The transpose of a block matrix is obtained by block transposition
+of the transposes of each of the blocks:
+
+\begin{align}
+\mathrm{\mathbf{A}}^{\prime} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11} & \mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21} & \mathrm{\mathbf{A}}_{22}
+\end{array}\right]^{\prime}\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}^{\prime} & \mathrm{\mathbf{A}}_{21}^{\prime}\\
+\hline \mathrm{\mathbf{A}}_{12}^{\prime} & \mathrm{\mathbf{A}}_{22}^{\prime}
+\end{array}\right].\label{eq:BlockTranspose}
+\end{align}
+
+Just as matrices allow addition and multiplication if their dimensions
+are conformable, so do block matrices allow block addition and block
+multiplication provided that the dimensions of the various blocks
+are conformable, e.g. 
+
+\begin{align}
+\mathrm{\mathbf{A+B}} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]+\left[\begin{array}{c|c}
+\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{B}}_{22}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\,+\,\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\,+\,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\,+\,\mathrm{\mathbf{B}}_{21}\, & \,\mathbf{A}_{22}\,+\,\mathrm{\mathbf{B}}_{22}
+\end{array}\right],\label{eq:BlockMatrixAddition}
+\end{align}
+
+and
+
+\begin{align}
+\mathrm{\mathbf{A\,B}} & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\, & \,\mathrm{\mathbf{A}}_{12}\\
+\hline \mathrm{\mathbf{A}}_{21}\, & \,\mathrm{\mathbf{A}}_{22}
+\end{array}\right]\left[\begin{array}{c|c}
+\mathrm{\mathbf{B}}_{11}\, & \,\mathrm{\mathbf{B}}_{12}\\
+\hline \mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{B}}_{22}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\left[\begin{array}{c|c}
+\mathrm{\mathbf{A}}_{11}\mathrm{\mathbf{B}}_{11}\,+\,\mathrm{\mathbf{A}}_{12}\mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{A}}_{11}\mathrm{\mathbf{B}}_{12}\,+\,\mathrm{\mathbf{A}}_{12}\mathrm{\mathbf{B}}_{22}\\
+\hline \mathrm{\mathbf{A}}_{21}\mathrm{\mathbf{B}}_{11}\,+\,\mathrm{\mathbf{A}}_{22}\mathrm{\mathbf{B}}_{21}\, & \,\mathrm{\mathbf{A}}_{21}\mathrm{\mathbf{B}}_{12}\,+\,\mathrm{\mathbf{A}}_{22}\mathrm{\mathbf{B}}_{22}
+\end{array}\right].\label{eq:BlockMatrixMultiplication}
+\end{align}
+
+The partitioned matrix in \eqref{eq:PartitionedMatrix3} can be multiplied
+by itself in accordance with \eqref{eq:BlockMatrixMultiplication},
+but the partition in \eqref{eq:PartitionedMatrix4} cannot be block
+multiplied by itself or by the partition in \eqref{eq:PartitionedMatrix3}.
+
+
+\subsection{Echelon Form and LU Factorization}
+
+Computing the rank of a matrix has much in common with solving the
+set of linear equations specified in \eqref{eq:AxEQb}. Using Gaussian
+elimination\footnote{Gaussian elimination attempts to triangularize a matrix by iteratively
+subtracting a multiple of each row, starting from the first row and
+working downwards, from all the rows below so as to cancel their leading
+entry. The process transforms a matrix into row echelon form, and
+ideally into an upper triangular matrix.}, one can transform $\mathrm{\mathbf{A}}$ into a matrix $\mathbf{E}$
+in \emph{row echelon form} with the following properties
+\begin{enumerate}
+\item All non-zero rows of $\mathbf{E}$ lie above all rows with only zeros
+\item The first non--zero entry in each row lies strictly to the right
+of the first non--zero entry in the row above it, and
+\item All entries below the first non--zero entry in each row are 0.
+\end{enumerate}
+The rank of $\mathbf{A}$ is the number of non--zero rows in $\mathbf{E}$.
+It is also the dimension of its column and row spaces. The sum of
+the dimensions of the column space and the null space must equal the
+number of columns, while the sum of the dimensions of the row space
+and the left null space must equal the number of rows.
+
+If $\mathrm{\mathbf{A}}$ is square and of full rank, it can be represented
+as the product of lower and upper triangular matrices $\mathrm{\mathbf{L}}$
+and $\mathrm{\mathbf{U}}$, i.e.
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{L}}\,\mathrm{\mathbf{U},}\label{eq:AequalsLU}
+\end{equation}
+
+where $\mathrm{\mathbf{L}}$ has only 1's on the diagonal, permitting
+a rapid solution to \eqref{eq:AxEQb}. A particular useful form of
+the LU factorization is the LDU factorization
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{L}}\,\mathrm{\mathbf{D}}\,\mathbf{U},\label{eq:AequalsLDU}
+\end{equation}
+
+where $\mathrm{\mathbf{D}}$ is a diagonal matrix, and both $\mathrm{\mathbf{L}}$
+and $\mathrm{\mathbf{U}}$ have only 1's on the diagonal. 
+
+\subsection{The Determinant of a Matrix}
+
+The determinant of a square matrix $\mathrm{\mathbf{A}}$, denoted
+$det\left(\mathrm{\mathbf{A}}\right)$, is the signed volume of a
+parallelepiped whose vertices are the $2^{n}$ possible sums of the
+rows of $\mathrm{\mathbf{A}}$\footnote{The origin, which corresponds to the sum of none of the rows, is one
+of the vertices of the parallelepiped.}. Unlike the volume of a physical object, which is always positive,
+the determinant of a matrix has both sign and magnitude. In this regard,
+it has something in common with vectors. If $det\left(\mathrm{\mathbf{A}}\right)=0$,
+$\mathrm{\mathbf{A}}$ is said to be \emph{singular}. 
+
+It is particularly easy to compute the determinant of a diagonal matrix
+$\mathrm{\mathbf{D}}$, as its $2^{n}$ possible row sums represent
+an $n-$dimensional hypercube with orthogonal sides. Its volume (and
+determinant) are therefore given by
+
+\begin{equation}
+det\left(\mathrm{\mathbf{D}}\right)=\prod_{i\,=\,1}^{n}d_{ii}.\label{eq:DiagonalDeterminant}
+\end{equation}
+
+The row sums of the $n\times n$ identity matrix $\mathrm{\mathbf{I}}_{n}$
+represent a unit hypercube, and its determinant must therefore be
+1. 
+
+More generally, the determinant of a block diagonal matrix is the
+product of the determinants of each of its diagonal blocks, i.e.
+\begin{equation}
+det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{D}}_{11} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{0}}\\
+\mathrm{\mathbf{0}} & \ddots &  & \mathrm{\mathbf{0}}\\
+\vdots &  &  & \vdots\\
+\mathrm{\mathbf{0}} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{D}}_{nn}
+\end{array}\right]=\prod_{i\,=\,1}^{n}det\left(\mathrm{\mathbf{D}}_{ii}\right).\label{eq:BlockDiagonalDeterminant}
+\end{equation}
+
+A $2\times2$ matrix vividly illustrates many properties of determinants,
+though it is not always possible to project the insights it affords
+to understand larger matrices. It is easy to show that the area of
+a quadrilateral with vertices $(0,\,0)$, $(a,\,b)$, $(c,\,d)$ and
+$(a+c,\,b+d)$ is $ad-bc$, and it follows that
+
+\begin{equation}
+det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}=ad\,-\,bc.\label{eq:Det2by2}
+\end{equation}
+
+If any two rows of $\mathrm{\mathbf{A}}$ are interchanged, the magnitude
+of its determinant remains unchanged, but its sign reverses -- indicating
+that we are visiting the vertices of the hypercube in a different
+sequence, e.g.
+
+\begin{align}
+det\mathrm{\,\left[\begin{array}{cc}
+\mathit{c}\, & \,\mathit{d}\\
+\mathit{a}\, & \text{\,}\mathit{b}
+\end{array}\right]} & =bc\,-\,ad\nonumber \\[0.5em]
+ & =-\,det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}.\label{eq:RowExchange2by2}
+\end{align}
+
+Furthermore, if any two rows of $\mathrm{\mathbf{A}}$ are identical,
+its determinant must be 0. This follows from the observation that
+exchanging two rows must reverse the sign of the determinant. But
+if the rows are identical, the determinant must remain the same, and
+this can only happen if it is 0.
+
+Multiplying any single row of $\mathrm{\mathbf{A}}$ by a constant
+$c$ scales its determinant by $c$ as well -- the volume of a hypercube
+is proportional to the length of each of its sides. It follows that
+if the entire matrix is multiplied by $c$, its determinant is scaled
+by $c^{n}$, i.e.
+
+\begin{equation}
+det\left(c\mathrm{\mathbf{A}}\right)=c^{n}det\left(\mathrm{\mathbf{A}}\right).\label{eq:ScaledMatixDeterminant}
+\end{equation}
+
+If any row of $\mathrm{\mathbf{A}}$ is 0, so is its determinant,
+as this is equivalent to multiplying that row by 0.
+
+Matrix transposition does not impact the value of the determinant,
+i.e.
+
+\begin{equation}
+det\left(\mathrm{\mathbf{A}^{\prime}}\right)=det\left(\mathrm{\mathbf{A}}\right),\label{eq:DeterminantofTranspose}
+\end{equation}
+
+and by way of example, it is easy to check that the area of a quadrilateral
+with vertices $(0,\,0)$, $(a,\,d)$, $(b,\,c)$ and $(a+b,\,c+d)$
+is $ad-bc$. This is \emph{not} the same quadrilateral as that associated
+with \eqref{eq:Det2by2}, but their areas are identical.
+
+Additionally, adding a multiple of any row to any other row (or any
+column to any other column) does not change the value of the determinant,
+e.g.
+
+\begin{align}
+det\,\left[\begin{array}{cc}
+\mathit{a} & \mathit{b}\\
+\mathit{c}\,+\,na\, & \,\mathit{d\,+\,nb}
+\end{array}\right] & =a\left(d\,+\,nb\right)\,-\,b\left(c\,+\,na\right)\nonumber \\[0.5em]
+ & =ad\,-\,bc\nonumber \\[0.5em]
+ & =det\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\,+\,ma\\
+\mathit{c}\, & \,\mathit{d\,+\,mc}
+\end{array}\right]\nonumber \\[0.5em]
+ & =det\mathrm{\,\left[\begin{array}{cc}
+\mathit{a}\, & \,\mathit{b}\\
+\mathit{c}\, & \,\mathit{d}
+\end{array}\right]}.\label{eq:RowAddition2by2}
+\end{align}
+
+In particular, if $a\ne0$ and $n=-\nicefrac{c}{a}$ in \eqref{eq:RowAddition2by2},
+the matrix becomes upper triangular, and its determinant is just the
+product of its diagonal entries. 
+
+\begin{equation}
+det\mathrm{\,\left[\begin{array}{cl}
+\mathit{a}\, & \,\mathit{b}\\
+0\, & \,\mathit{\frac{ad\,-\,bc}{a}}
+\end{array}\right]}=ad\,-\,bc.\label{eq:Det2by2Triangular}
+\end{equation}
+
+More generally, 
+
+\begin{align}
+det\,\left[\begin{array}{cccc}
+\mathit{t_{11}} & t_{12} & \cdots & t_{1n}\\
+0 & t_{22} &  & t_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & t_{nn}
+\end{array}\right] & =det\,\left[\begin{array}{cccc}
+\mathit{t_{11}} & 0 & \cdots & 0\\
+t_{21} & t_{22} &  & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+t_{n1} & t_{n2} & \cdots & t_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\prod_{i\,=\,1}^{n}t_{ii}.\label{eq:TriangularMatrixDerminant}
+\end{align}
+
+This follows from the observation that elementary row operations can
+be used to to combine rows and diagonalize a triangular matrix without
+changing its determinant. In a like manner, the determinant of a block
+triangular matrix is the product of the determinants of its diagonal
+blocks:
+
+\begin{align}
+det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{T}}_{11} & \mathrm{\mathbf{T}}_{12} & \cdots & \mathrm{\mathbf{T}}_{1n}\\
+\mathrm{\mathbf{0}} & \mathrm{\mathbf{T}}_{22} &  & \mathrm{\mathbf{T}}_{2n}\\
+\vdots &  & \ddots & \vdots\\
+\mathbf{0} & \mathbf{0} & \cdots & \mathrm{\mathbf{T}}_{nn}
+\end{array}\right] & =det\,\left[\begin{array}{cccc}
+\mathrm{\mathbf{T}}_{11} & \mathrm{\mathbf{0}} & \cdots & \mathrm{\mathbf{0}}\\
+\mathrm{\mathbf{T}}_{21} & \mathrm{\mathbf{T}}_{22} &  & \mathrm{\mathbf{0}}\\
+\vdots &  & \ddots & \vdots\\
+\mathrm{\mathbf{T}}_{n1} & \mathrm{\mathbf{T}}_{n2} & \cdots & \mathrm{\mathbf{T}}_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+ & =\prod_{i\,=\,1}^{n}det\left(\mathrm{\mathbf{T}}_{ii}\right).\label{eq:BlockTriangularDeterminant}
+\end{align}
+
+Determinants are multiplicative:
+
+\begin{equation}
+det\left(\mathbf{A}\mathbf{B}\right)=det\left(\mathrm{\mathbf{A}}\right)\,det\left(\mathrm{\mathbf{B}}\right),\label{eq:DeterminantOfProducts}
+\end{equation}
+
+and, as a consequence, the LDU factorization of a matrix, which is
+of great practical importance, preserves the value of its determinant.
+The determinants of all three matrices are given by the product of
+their diagonal entries, and the determinants of both $\mathrm{\mathbf{L}}$
+and $\mathrm{\mathbf{U}}$ are 1, so that the determinant of $\mathrm{\mathbf{D}}$
+must be identical to that of $\mathrm{\mathbf{A}}$.
+
+\subsection{The Inverse of a Matrix}
+
+If an $n\times n$ square matrix $\mathbf{A}$ is of full rank, its
+determinant is non--zero, and it is said to \emph{invertible}; there
+exists a unique $n\times n$ square matrix, denoted $\mathbf{A}^{-1}$,
+such that
+
+\begin{align}
+\mathbf{A}^{-1}\,\mathbf{A} & =\mathbf{A}\,\mathbf{A}^{-1}\nonumber \\
+ & =\mathbf{I}_{n}.\label{eq:AinverseAeqI}
+\end{align}
+
+Matrix inversion can be thought of as the generalization of the reciprocal
+to matrices, and this interpretation is clearly visible when inverting
+a diagonal matrix . If
+
+\begin{align}
+\mathrm{\mathbf{D}} & =\left[\begin{array}{cccc}
+d_{11} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & d_{nn}
+\end{array}\right]\nonumber \\[0.5em]
+\mathrm{\mathbf{D}}^{-1} & =\left[\begin{array}{cccc}
+\frac{1}{d_{11}} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \frac{1}{d_{nn}}
+\end{array}\right]\nonumber \\
+ & =\frac{1}{det\left(\mathrm{\mathbf{D}}\right)}\left[\begin{array}{cccc}
+\prod_{i\,\ne\,1}d_{ii} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \prod_{i\,\ne\,n}d_{ii}
+\end{array}\right].\label{eq:Dinverse}
+\end{align}
+
+In general, the inverse of a matrix is given by the ratio of the transpose
+of its \emph{cofactor matrix} \footnote{We use the letter $\mathrm{\mathbf{F}}$ to denote the cofactor matrix
+as $\mathrm{\mathbf{C}}$ is used to denote the covariance matrix.} and its determinant
+
+\begin{equation}
+\mathrm{\mathbf{A}}^{-1}=\frac{\mathrm{\mathbf{F}}^{\prime}}{det\left(\mathrm{\mathbf{A}}\right)},\label{eq:CofactorExpansion}
+\end{equation}
+
+where $f_{ij}$ is $\left(-1\right)^{i+j}$ times the determinant
+of $\mathrm{\mathbf{A}}$ with its $i^{th}$ row and $j^{th}$column
+removed. The inverse of a $2\times2$ matrix, for example, is
+
+\begin{equation}
+\left[\begin{array}{cc}
+a\, & \,b\\
+c\, & \,d
+\end{array}\right]^{-1}=\frac{1}{ad\,-\,bc}\left[\begin{array}{rr}
+d\, & \,-b\\
+-c\, & \,a
+\end{array}\right].\label{eq:TwoByTwoInverse}
+\end{equation}
+
+The inverse of a product of two matrices exhibits the same ``reverse
+order'' property we saw earlier for its transpose:
+
+\begin{equation}
+\left(\mathrm{\mathbf{A\,B}}\right)^{-1}=\mathrm{\mathbf{B}}^{-1}\,\mathrm{\mathbf{A}}^{-1},\label{eq:ABinverse}
+\end{equation}
+
+and the availability of an inverse allows a closed form solution to
+\eqref{eq:AxEQb}:
+
+\begin{equation}
+\mathrm{\mathbf{x}}=\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{b}}.\label{eq:xEqAinverseB}
+\end{equation}
+
+Somewhat surprisingly, and in spite of its great conceptual importance,
+matrix inversion is rarely used when solving linear equations on account
+of the fact that the the computation of the cofactor matrix is both
+tedious and numerically unstable. Instead, Gaussian elimination and
+LU factorization are used to solve \eqref{eq:AxEQb} directly.
+
+\subsection{Inverses of Special Matrices }
+
+There appears to be a virtually inexhaustible supply of results involving
+the inverses of block matrices of various types -- the results we
+present here are those most likely to prove useful in portfolio construction
+and risk management and are drawn from \citet{LuShiou2002}. $2\times2$
+block matrices prove particularly useful, as they are often used to
+split securities into two subsets (loosely speaking, a set of securities
+of interest and another set containing all other securities). Formulas
+involving the inverse of a submatrix are valid only if the inverse
+exists. Likewise, formulas that involve the product of matrices are
+valid only if the relevant submatrices are conformable.
+
+We start by stating results for the inverses of diagonal and anti--diagonal
+block matrices\footnote{We take the liberty of naming the blocks $\mathrm{\mathbf{A}},\ \mathbf{B},\ \mathrm{\mathbf{C}}$
+and $\mathrm{\mathbf{D}}$ and not $\mathrm{\mathbf{A}}_{11},\ \mathrm{\mathbf{A}}_{12},\ \mathrm{\mathbf{A}}_{21}$
+and $\mathrm{\mathbf{A}}_{22}$ solely for clarity of exposition.}, and indicate their sizes via subscripts:
+
+\begin{subequations}
+\begin{align}
+\left[\begin{array}{rl}
+\mathbf{A}_{n\,\times\,n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \boldsymbol{\hphantom{-}\mathbf{B}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{rl}
+\mathbf{A}_{n\,\times\,n}^{-1} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathbf{B}_{m\,\times\,m}^{-1}
+\end{array}\right]\label{eq:SpecialInverse1a}\\[0.5em]
+\left[\begin{array}{lr}
+\mathbf{0}_{n\,\times\,m} & \hphantom{-}\mathbf{A}_{n\,\times\,n}\\
+\mathbf{B}_{m\,\times\,m} & \hphantom{-}\mathbf{0}_{m\,\times\,n}
+\end{array}\right]^{-1} & =\left[\begin{array}{rl}
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathbf{B}_{m\,\times\,m}^{-1}\\
+\mathbf{A}_{n\,\times\,n}^{-1} & \hphantom{-}\mathbf{0}_{n\,\times\,m}
+\end{array}\right].\label{eq:SpecialInverese1b}
+\end{align}
+\end{subequations}
+
+We next provide expressions for the inverses of upper and lower triangular
+matrices that are valid if $\mathrm{\mathbf{A}}$ and $\mathrm{\mathbf{C}}$
+are invertible:
+
+\begin{subequations}
+\begin{align}
+\left[\begin{array}{ll}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \hphantom{-}\mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{C}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\mathbf{A}^{-1} & \mathrm{\hphantom{-}-\mathbf{A}^{-1}}\,\mathbf{B}\,\mathrm{\mathbf{C}}^{-1}\\
+\mathbf{0}_{m\times n} & \hphantom{-}\mathrm{\hphantom{-}}\mathbf{C}^{-1}
+\end{array}\right]\label{eq:SpecialInverse2a}\\[0.5em]
+\left[\begin{array}{ll}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{C}}_{m\,\times\,m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\hphantom{-}\mathrm{\mathbf{\mathbf{A}^{-1}}} & \hphantom{-}\mathbf{0}_{n\times m}\\
+-\mathrm{\mathbf{C}}^{-1}\,\mathbf{B}\,\mathbf{A}^{-1} & \mathrm{\hphantom{-}}\mathbf{C}^{-1}
+\end{array}\right].\label{eq:SpecialInverse2b}
+\end{align}
+\end{subequations}
+
+In the important special case when $\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{n}$
+and $\mathrm{\mathbf{C}}=\mathrm{\mathbf{I}}_{m}$, \eqref{eq:SpecialInverse2a}
+and \eqref{eq:SpecialInverse2b} simplify to
+
+\begin{subequations}
+\begin{align}
+\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \mathrm{\hphantom{-}-\mathbf{B}}_{n\,\times\,m}\\
+\mathbf{0}_{m\,\times\,n} & \hphantom{-}\mathrm{\hphantom{-}\mathbf{I}}_{m}
+\end{array}\right]\label{eq:SpecialInverse3a}\\[0.5em]
+\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]^{-1} & =\left[\begin{array}{ll}
+\hphantom{-}\mathrm{\mathbf{I}}_{n} & \hphantom{-}\hphantom{-}\mathbf{0}_{n\,\times\,m}\\
+-\mathrm{\mathbf{B}}_{m\,\times\,n} & \hphantom{-}\mathrm{\hphantom{-}\mathbf{I}}_{m}
+\end{array}\right].\label{eq:SpecialInverse3b}
+\end{align}
+\end{subequations}
+
+In the general case when all 4 matrices are non-zero, the inverse
+is obtained by inverting each of the matrices in a block LDU or UDL
+representations using \eqref{eq:SpecialInverse1a}, \eqref{eq:SpecialInverse3a}
+and \eqref{eq:SpecialInverse3b}, and finally combining their inverses
+using \eqref{eq:ABinverse}:
+
+\begin{subequations}
+\begin{align}
+\left[\begin{array}{cc}
+\mathrm{\mathbf{A}}_{n\,\times\,n} & \mathrm{\mathbf{B}}_{n\,\times\,m}\\
+\mathrm{\mathbf{C}}_{m\,\times\,n} & \mathrm{\mathbf{D}}_{m\,\times\,m}
+\end{array}\right] & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{C}\,}\mathrm{\mathbf{A}}^{-1} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{A}} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \mathrm{\hphantom{-}\mathbf{D}}\,-\,\mathrm{\mathbf{C}}\,\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{B}}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{A}}^{-1}\,\mathrm{\mathbf{B}}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\label{eq:SpecialInverse4a}\\[0.5em]
+ & =\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{B}}\,\mathrm{\mathbf{D}}^{-1}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{A}\,-\,\mathrm{\mathbf{B}}\,\mathrm{\mathbf{D}}^{-1}\,\mathrm{\mathbf{C}}} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{0}}_{m\,\times\,n} & \hphantom{-}\mathbf{D}
+\end{array}\right]\left[\begin{array}{ll}
+\mathrm{\mathbf{I}}_{n} & \hphantom{-}\mathrm{\mathbf{0}}_{n\,\times\,m}\\
+\mathrm{\mathbf{D}}^{-1}\,\mathrm{\mathbf{C}} & \hphantom{-}\mathrm{\mathbf{I}}_{m}
+\end{array}\right].\label{eq:SpecialInverse4b}
+\end{align}
+\end{subequations}
+
+The choice of which expansion to use will depend on whether $\mathrm{\mathbf{A}}$
+or $\mathrm{\mathbf{D}}$ is invertible. Furthermore, if the matrix
+is to be inverted, either $\mathrm{\mathbf{D}}-\mathrm{\mathbf{C}}\mathrm{\mathbf{A}}^{-1}\mathrm{\mathbf{B}}$
+or $\mathrm{\mathbf{A}-\mathrm{\mathbf{B}}\mathrm{\mathbf{D}}^{-1}\mathrm{\mathbf{C}}}$
+must additionally be invertible.
+
+While formulae are known for the inverse of Toeplitz matrices (see
+\citet{LvHuang2007}), they are cumbersome. In general, the inverse
+of a Toeplitz matrix is not necessarily a Toeplitz matrix, but the
+inverse of a circulant matrix is also a circulant matrix. One Toeplitz
+matrix that sees extensive use in time series work and its inverse
+are 
+
+\begin{equation}
+\left[\begin{array}{cccccc}
+1 & \rho & \rho^{2} & \cdots &  & \rho^{n-1}\\
+\rho & 1 & \rho & \cdots &  & \rho^{n-2}\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+\rho^{n-2} & \rho^{n-3} & \rho^{n-4} & \cdots & 1 & \rho\\
+\rho^{n-1} & \rho^{n-2} & \rho^{n-3} & \cdots & \rho & 1
+\end{array}\right]^{-1}=\left[\begin{array}{cccccc}
+1 & -\rho & 0 & 0 & \cdots & 0\\
+-\rho & \,1\,+\,\rho^{2}\, & -\rho & 0 & \cdots & 0\\
+0 & -\rho & \,1\,+\,\rho^{2}\, & -\rho & \vdots & \vdots\\
+\vdots & \vdots & -\rho & \,1\,+\,\rho^{2}\, & -\rho & 0\\
+0 & 0 & \cdots & -\rho & \,1\,+\,\rho^{2}\, & -\rho\\
+0 & 0 & \cdots & 0 & -\rho & 1
+\end{array}\right].\label{eq:ToeplitzInverse}
+\end{equation}
+
+
+\subsubsection*{}
+
+\subsection{The Sherman--Morrison--Woodbury Matrix Inversion Lemma}
+
+The following identities see wide application in factor models, as
+well as in statistics and signal processing. They are variously known
+as the Sherman--Morrison--Woodbury matrix inversion lemma, the Sherman--Morrison
+formula, and the Woodbury matrix identity. The fact that they are
+attributed to many authors is likely a reflection of the fact that
+they were discovered independently by a multitude of researchers at
+about the same time. 
+
+Broadly speaking, they provide an affirmative answer to the following
+question: If, after computing the inverse of $\mathrm{\mathbf{A}}$,
+we perturb it with a low rank (as opposed to a low magnitude) perturbation,
+can we efficiently compute the inverse of the perturbed matrix by
+perturbing $\mathrm{\mathbf{A}}^{-1}$ with a related low rank perturbation\footnote{Proofs of these, and other related, identities can be found at \url{https://en.wikipedia.org/wiki/Woodbury_matrix_identity}.}? 
+
+We start with the special case when the perturbation has rank 1. 
+
+Let $\mathbf{A}$ be an invertible $n\times n$ matrix, let $\mathbf{x}$
+and $\mathbf{y}$ be column vectors of length $n$ (and hence of rank
+1), and let $c$ be any scalar. Then:
+
+\begin{equation}
+\left(\mathbf{A}\,+\,c\,\mathbf{x}\,\mathbf{y}^{\prime}\right)^{-1}=\mathbf{A}^{-1}\,-\,\frac{c\,\mathbf{A}^{-1}\,\mathbf{x}\,\mathbf{y}^{\prime}\,\mathbf{A}^{-1}}{1\,+\,c\,\mathbf{x}^{\prime}\,\mathbf{A}^{-1}\mathbf{y}}.\label{eq:ShermanMorrison1}
+\end{equation}
+
+Equation \eqref{eq:ShermanMorrison1} simplifies even further when
+$\mathrm{\mathbf{A}}=\mathrm{\mathbf{I}}_{n}$, for in this case,
+$\mathbf{A}^{-1}=\mathbf{A}$, and we get
+
+\begin{equation}
+\left(\mathbf{I}_{n}\,+\,c\,\mathbf{x}\,\mathbf{y}^{\prime}\right)^{-1}=\mathbf{I}_{n}\,-\,\frac{c\mathbf{\,x}\,\mathbf{y}^{\prime}}{1\,+\,c\,\mathbf{x}^{\prime}\,\mathbf{y}}.\label{eq:ShermanMorrison2}
+\end{equation}
+
+Both \eqref{eq:ShermanMorrison1} and \eqref{eq:ShermanMorrison2}
+can be evaluated in $O\left(n^{2}\right)$ arithmetic operations (direct
+matrix inversion using Gaussian elimination requires $O\left(n^{3}\right)$
+operations), and even more importantly, they are numerically stable
+-- small changes to any of the parameters on the left hand sides
+of \eqref{eq:ShermanMorrison1} and \eqref{eq:ShermanMorrison2} result
+in small changes to their right hand sides. 
+
+More generally, let $\mathbf{A}$ be $n\times n$, $\mathbf{U}$ be
+$n\times k$, $\mathbf{C}$ be $k\times k$, and $\mathbf{V}$ be
+$k\times n$. Then
+
+\begin{equation}
+\left(\mathbf{A}\,+\,\mathbf{U\,\mathbf{C\mathbf{\,V}}}\right)^{-1}=\mathbf{A}^{-1}\,-\,\mathbf{A}^{-1}\,\mathbf{U}\left(\mathbf{C}^{-1}\,+\,\mathbf{V}\,\mathbf{A}^{-1}\,\mathbf{U}\right)^{-1}\,\mathbf{V}\,\mathbf{A}^{-1}\label{eq:Woodbury}
+\end{equation}
+
+where it is assumed that the inverses all exist. Typically, $k\ll n$,
+making the inversion of $\mathrm{\mathbf{C}}$ far less tedious than
+direct recomputation of $\mathbf{A}^{-1}$.
+
+\citet{HendersonSearle1981} and \citet{Hager1989} provide a useful
+compendium of results related to \eqref{eq:ShermanMorrison1}, \eqref{eq:ShermanMorrison2},
+and \eqref{eq:Woodbury}, as well as a comprehensive summary of how
+they are applied in a variety of settings. One such result is
+
+\begin{align}
+\left[\begin{array}{cccc}
+a & b & \cdots & b\\
+b & a & \cdots & b\\
+\vdots & \vdots & \ddots & \vdots\\
+b & b & \cdots & a
+\end{array}\right]^{-1} & =\left[\left(a\,-\,b\right)\mathrm{\mathbf{I}}_{n}\,+\,b\,\mathbf{1}_{n}\,\mathbf{1}_{n}^{\prime}\right]^{-1}\nonumber \\
+ & =\frac{1}{a\,-\,b}\left[\mathrm{\mathbf{I}}_{n}\,-\,\frac{b}{a\,+\,\left(n\,-\,1\right)\,b}\,\mathbf{J}_{n}\right].\label{eq:SingleFactorShermanMorrison}
+\end{align}
+
+where $\mathbf{J}_{n}=\mathbf{1}_{n}\mathbf{1}_{n}^{\prime}$ is defined
+in \eqref{eq:AllOneMatrix}, and provided that $a\,\ne\,b$ and $a\,+\,(n-1)\,b\ne0$. 
+
+This result proves particularly useful when analyzing constant correlation
+matrices with $a=1$ and $b=\rho$ for $\nicefrac{-1\,}{\,\left(n-1\right)}<\rho<1$\footnote{Outside this range, the matrix may be invertible, but it is not positive
+definite.}, i.e.
+
+\begin{align}
+\left[\begin{array}{cccc}
+1 & \rho & \cdots & \rho\\
+\rho & 1 & \cdots & \rho\\
+\vdots & \vdots & \ddots & \vdots\\
+\rho & \rho & \cdots & 1
+\end{array}\right]^{-1} & =\frac{1}{1\,-\,\rho}\left[\mathrm{\mathbf{I}}_{n}\,-\,\frac{\rho}{1\,+\,\left(n\,-\,1\right)\,\rho}\,\mathbf{J}_{n}\right]\nonumber \\
+ & =\frac{\left(1\,+\,\left(n\,-\,1\right)\,\rho\right)\mathrm{\mathbf{I}}_{n}\,-\,\rho\,\mathbf{J}_{n}}{\left(1\,-\,\rho\right)\left(1\,+\,\left(n\,-\,1\right)\,\rho\right)}.\label{eq:ConstantCorrelationShermanMorrison}
+\end{align}
+
+
+\subsection{The Inverse of a Covariance Matrix}
+
+Sometime, a closed form inverse of a matrix yields useful insights
+into the nature of its entries, and \citet{Stevens1998} provides
+a particularly good example of this. Assume that we have a set of
+$n$ securities. The covariance matrix of their returns can be partitioned
+as
+
+\begin{align}
+\mathrm{\mathbf{C}}_{n} & =\left[\begin{array}{c|c}
+\mathrm{\sigma}_{1}^{2}\, & \,\mathbf{\Sigma}_{12}\\
+\hline \mathbf{\Sigma}_{21}\, & \,\mathrm{\mathbf{C}}_{n\,-\,1}
+\end{array}\right],\label{eq:GuyStevensCovMat}
+\end{align}
+
+where $\sigma_{1}^{2}$ is the variance of security 1, $\mathbf{\Sigma}_{12}$
+is a $1\times(n-1)$ vector that contains the covariances of security
+1 with the remaining $n-1$ securities, $\mathbf{\Sigma}_{21}=\mathbf{\Sigma}_{12}^{\prime}$,
+and $\mathrm{\mathbf{C}}_{n\,-\,1}$ is the covariance matrix of the
+remaining $n-1$ securities. We can partition $\mathrm{\mathbf{C}}_{n}^{-1}$
+in the same way we partition $\mathrm{\mathbf{C}}_{n}$:
+
+\begin{equation}
+\mathrm{\mathbf{C}}_{n}^{-1}=\left[\begin{array}{c|c}
+a_{11}\, & \,\mathbf{\Lambda}{}_{12}\\
+\hline \mathrm{\mathbf{\Lambda}}_{21}\, & \,\mathrm{\mathbf{\Lambda}}_{22}
+\end{array}\right].\label{eq:GuyStevensInverse1}
+\end{equation}
+
+As 
+
+\begin{align}
+\mathrm{\mathbf{C}}_{n}^{-1}\mathrm{\mathbf{C}}_{n} & =\mathrm{\mathbf{I}}_{n},\nonumber \\
+ & =\left[\begin{array}{c|c}
+1\, & \,\mathbf{0}\\
+\hline \mathbf{0}\, & \,\mathrm{\mathbf{I}}_{n\,-\,1}
+\end{array}\right]\label{eq:GuyStevensInverse2}
+\end{align}
+we can write
+
+\begin{subequations}
+\begin{align}
+a_{11}\,\mathrm{\sigma}_{1}^{2}\,+\,\mathbf{\Lambda}_{12}\,\mathbf{\Sigma}_{21} & =1\label{eq:GuyStevensInverse3}\\[0.5em]
+a_{11}\,\mathbf{\Sigma}_{12}\,+\,\mathbf{\Lambda}_{12}\,\mathrm{\mathbf{C}}_{n-1} & =\mathbf{0}.\label{eq:GuyStevensInverse4}
+\end{align}
+\end{subequations}
+
+On solving \eqref{eq:GuyStevensInverse4} for $\mathbf{\Lambda}_{12}$,
+substituting into \eqref{eq:GuyStevensInverse3} and simplifying,
+we get
+
+\begin{align}
+a_{11} & =\frac{1}{\mathrm{\sigma}_{1}^{2}\,-\,\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}\,\mathbf{\Sigma}_{21}}\nonumber \\
+ & =\frac{1}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)}\nonumber \\
+ & =\frac{1}{\mathrm{\sigma}_{\epsilon}^{2}},\label{eq:GuyStevensA11}
+\end{align}
+
+where $R_{1}^{2}$ is the fraction of the variance of security 1 that
+is explained by securities $2,3,\cdots,n$ when its returns are regressed
+against theirs, and $\mathrm{\sigma}_{\epsilon}^{2}$ is the variance
+of the regression residuals. These are well known results in the theory
+of least squares, and are discussed in \citet{Stevens1997} and \citet{Hayashi2000}.
+Next, we write
+
+\begin{align}
+\mathbf{\Lambda}_{12} & =-a_{11}\,\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}\nonumber \\
+ & =\frac{-\mathbf{\Sigma}_{12}\,\mathrm{\mathbf{C}}_{n\,-\,1}^{-1}}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)}\nonumber \\
+ & =\frac{-\mathrm{\boldsymbol{\beta}_{1}}}{\mathrm{\sigma}_{1}^{2}\,\left(1\,-\,R_{1}^{2}\right)},\label{eq:GuyStevensBeta1}
+\end{align}
+
+where $\boldsymbol{\beta}_{1}$ is the vector of regression coefficients
+obtained when security 1's returns are regressed against those of
+securities $1,\cdots,\,i-1,\,i+1,\cdots,\,n$. 
+
+But since our choice of security 1 is arbitrary, all the rows must
+have exactly the same form, and the inverse of the covariance matrix
+must be
+
+\begin{equation}
+\mathrm{\mathbf{C}}_{n}^{-1}=\left[\begin{array}{cccc}
+\frac{1}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\, & \,\frac{-\beta_{12}}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\, & \,\cdots\, & \,\frac{-\beta_{1n}}{\mathrm{\sigma}_{1}^{2}\left(1\,-\,R_{1}^{2}\right)}\\
+\frac{-\beta_{21}}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\, & \,\frac{1}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\, &  & \,\frac{-\beta_{2n}}{\mathrm{\sigma}_{2}^{2}\left(1\,-\,R_{2}^{2}\right)}\\
+\vdots & \vdots & \,\ddots\, & \vdots\\
+\frac{-\beta_{n1}}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}\, & \,\frac{-\beta_{n2}}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}\, &  & \,\frac{1}{\mathrm{\sigma}_{n}^{2}\left(1\,-\,R_{n}^{2}\right)}
+\end{array}\right].\label{eq:GuyStevensInverse5}
+\end{equation}
+
+Even though we would not ever invert a covariance matrix in this way
+(both the data requirements and the computational effort are huge,
+and the procedure is not numerically stable), the insights it affords
+are valuable, and helps clarify our thinking about the structure of
+the inverse of a covariance matrix.
+
+\subsection{The Mahanalobis Distance}
+
+It sometimes proves useful to measure the distance between two random
+vectors that are drawn from the same \emph{joint} distribution, but
+whose \emph{marginal} distributions are very different. For example,
+vectors $\mathrm{\mathbf{u}}$ and $\mathrm{\mathbf{v}}$ may contain
+the returns of all the stocks in the S\&P 500 on two adjacent days,
+but the marginal distribution of their first entries (a volatile small
+cap biotech firm) may be very different than that of their last entry
+(a steadily growing consumer goods company). In such cases, it proves
+useful to first express the distance between each component of the
+two vectors in standard deviation units, and to then compute a standardized
+distance between them using a variant of \eqref{eq:DistanceBetweenVectors}.
+In the special case when all the components of $\mathrm{\mathbf{u}}$
+and $\mathrm{\mathbf{v}}$ are independent, this gives us
+
+\begin{equation}
+d_{\mathrm{\mathbf{u}},\mathrm{\mathbf{v}}}=\sqrt{\left(\frac{u_{1}\,-\,v_{1}}{\sigma_{1}}\right)^{2}\,+\,\cdots\,+\,\left(\frac{u_{n}\,-\,v_{n}}{\sigma_{n}}\right)^{2}}.\label{eq:DistanceScaledBySigma}
+\end{equation}
+
+More generally, the \emph{Mahalanobis distance} takes into account
+the covariances between the components of the vectors, and is defined
+as
+
+\begin{equation}
+d_{\mathrm{\mathbf{u}},\mathrm{\mathbf{v}}}^{M}=\sqrt{\left(\mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right)^{\prime}\,\mathrm{\mathbf{C}}^{-1}\,\left(\mathrm{\mathbf{u}}-\mathrm{\mathbf{v}}\right)},\label{eq:MahanalobisDistance}
+\end{equation}
+
+where $C$ is the covariance matrix of the components of $\mathrm{\mathbf{u}}$
+(and $\mathrm{\mathbf{v}}$). If the covariance matrix is diagonal
+(i.e. if all the components of a vector are uncorrelated with each
+other), \eqref{eq:MahanalobisDistance} reduces to \eqref{eq:DistanceScaledBySigma}.
+
+\subsection{Eigenvalues and Eigenvectors}
+
+In \eqref{eq:AxEQb}, a matrix $\mathrm{\mathbf{A}}$ maps a non--zero
+vector $\mathrm{\mathbf{x}}$ to another vector $\mathrm{\mathbf{b}}$
+which may lie at a great distance from $\mathrm{\mathbf{x}}$. But
+not all matrices push vectors far away: the identity matrix $\mathrm{\mathbf{I}}_{n}$,
+for example, maps every vector to itself, and a scalar multiple of
+$\mathrm{\mathbf{I}}_{n}$ maps a vector to the same scalar multiple
+of itself. This property is not unique to $\mathrm{\mathbf{I}}_{n}$
+-- all square matrices map certain special vectors to scaled versions
+of themselves, i.e
+
+\begin{equation}
+\mathrm{\mathbf{A}\,\mathrm{\mathbf{e}}=\lambda\,\mathrm{\mathbf{e}}.}\label{eq:Eigenvector1}
+\end{equation}
+
+The vector $\mathrm{\mathbf{e}}$ is known as an \emph{eigenvector}
+of $\mathrm{\mathbf{A}}$, the scalar $\lambda$ is its corresponding
+\emph{eigenvalue}, and they are collectively referred to as an \emph{eigenpair}.
+Note that $\mathrm{\mathbf{e}}$ is not unique -- any scalar multiple
+of $\mathrm{\mathbf{e}}$ is also an eigenvector of $\mathrm{\mathbf{A}}$.
+Often, an eigenvector is scaled so that its norm is 1, and the resulting
+eigenvector is known as a \emph{unit eigenvector} or a \emph{normalized
+eigenvector}.
+
+If we rewrite \eqref{eq:Eigenvector1} as
+
+\begin{equation}
+\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)\mathrm{\mathbf{e}}=\mathrm{\mathbf{0},}\label{eq:Eigenvector2}
+\end{equation}
+
+the eigenvalues of $\mathbf{A}$ can be seen to be those values of
+$\lambda$ for which $\mathbf{A}-\lambda\mathrm{\mathbf{I}}$ is singular,
+or non--invertible, and therefore has a null space, or \emph{eigenspace};
+any vector $\mathbf{e}$ that lies in the eigenspace associated with
+a particular eigenvalue is an eigenvector of $\mathrm{\mathbf{A}}$.
+It follows from the definition of invertibility that 
+\begin{equation}
+det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)=0,\label{eq:Eigenenvector3}
+\end{equation}
+
+Let $\lambda_{i},1\leqslant i\leqslant n$ be an eigenvalue of an
+$n\times n$ matrix $\mathrm{\mathbf{A}}$. Then
+
+\begin{align}
+\sum_{i\,=\,1}^{n}\lambda_{i} & =\sum_{i\,=\,1}^{n}a_{ii}\nonumber \\
+ & \triangleq trace\left(\mathrm{\mathbf{A}}\right),\label{eq:SumOfEigenvalues}
+\end{align}
+
+and
+
+\begin{equation}
+\prod_{i\,=\,1}^{n}\lambda_{i}=det\left(\mathrm{\mathbf{A}}\right).\label{eq:ProductOfEigenvalues}
+\end{equation}
+
+The set of eigenvalues of a matrix $\mathrm{\mathbf{A}}$ is known
+as its \emph{spectrum}, and its spectral radius, $\rho\left(\mathbf{A}\right)$,
+is defined to be 
+
+\begin{equation}
+\rho\left(\mathbf{A}\right)=\max_{i}\left|\lambda_{i}\right|,\label{eq:SpectralRadius1}
+\end{equation}
+
+and it can be shown that
+
+\begin{equation}
+\rho\left(\mathbf{A}\right)\leqslant\min\left(\max_{i}\sum_{j\,=\,1}^{n}\left|a_{ij}\right|,\ \max_{j}\sum_{i\,=\,1}^{n}\left|a_{ij}\right|\right).\label{eq:SpectralRadius2}
+\end{equation}
+
+A few useful facts about the eigenpairs $\lambda_{i}$ and $\mathrm{\mathbf{e}}_{i}$
+of an $n\times n$ matrix $\mathbf{A}$ follow:
+\begin{enumerate}
+\item If $\mathbf{A}$ is invertible, $\nicefrac{1}{\lambda_{i}}$ and $\mathrm{\mathbf{e}}_{i}$
+are an eigenpair of $\mathbf{A}^{-1}.$ 
+\item The eigenvalues (but not necessarily the eigenvectors) of $\mathrm{\mathbf{A}^{\prime}}$
+are identical to the eigenvalues of $\mathrm{\mathbf{A}}.$
+\item $\lambda_{i}^{k}$ and $\mathrm{\mathbf{e}}_{i}$ are an eigenpair
+of $\mathbf{A}^{k},\ k>1$.
+\item If $\mathbf{A}$ is triangular or diagonal, then $\lambda_{i}=a_{ii},\ 1\leqslant i\leqslant n$
+.
+\item $\lambda_{i}\,-\,k$ and $\mathrm{\mathbf{e}}_{i}$ are an eigenpair
+of $\mathbf{A\,-\,}k\,\mathrm{\mathbf{I}}_{n}$.
+\item If $\mathbf{B}$ is an invertible $n\times n$ matrix, the eigenvalues
+(but not necessarily the eigenvectors) of $\mathbf{B}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{B}}$
+are identical to those of $\mathbf{A}$.
+\item If the eigenvalues of $\mathbf{A}$ are distinct, or if $\mathbf{A}$
+is symmetric and has only real entries (covariance and correlation
+matrices are good examples of this second, weaker, condition), the
+matrix $\mathbf{P}$ formed by stacking its normalized (i.e. of length
+1) eigenvectors side by side diagonalizes $\mathbf{A}$, i.e.
+\end{enumerate}
+\begin{equation}
+\mathbf{P}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{P}}=\mathbf{D}_{\lambda}\label{eq:EigenvaluesDiagonalizeA}
+\end{equation}
+
+where
+
+\begin{equation}
+\mathbf{D}_{\lambda}=\left[\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \lambda_{n}
+\end{array}\right].\label{eq:Dlambda}
+\end{equation}
+
+Equation \eqref{eq:EigenvaluesDiagonalizeA} is often written as
+
+\begin{equation}
+\mathbf{\mathbf{A}=\mathbf{P}\,\mathbf{D}_{\lambda}\,\mathbf{P}^{-1}},\label{eq:SpectralRepresentation}
+\end{equation}
+
+where it is called the \emph{eigendecomposition}, or the \emph{spectral}
+\emph{representation}, of $\mathrm{\mathbf{A}}$. 
+
+It can further be shown that when the eigenvalues of $\mathbf{A}$
+are distinct, or if $\mathbf{A}$ is symmetric and has only real entries, 
+
+\[
+\mathbf{P}^{-1}=\mathbf{P}^{\prime},
+\]
+
+so that \eqref{eq:SpectralRepresentation} can usefully be rewritten
+as
+
+\begin{align}
+\mathbf{\mathbf{A}} & =\mathbf{P}\,\mathbf{D}_{\lambda}\,\mathbf{P}^{\prime}\nonumber \\
+ & =\sum_{i=1}^{n}\lambda_{i}\,\mathrm{\mathbf{p}}_{i}\,\mathrm{\mathbf{p}}_{i}^{\prime},\label{eq:SpectralRepresentation1}
+\end{align}
+
+where $\mathrm{\mathbf{p}}_{i}$ is the $i^{th}$ column of $\mathbf{P}$. 
+
+Clearly, $\mathrm{\mathbf{A}}$ is invertible only if $\mathbf{D}_{\lambda}$
+is invertible, and $\mathbf{D}_{\lambda}$ in turn is invertible if
+and only if all its eigenvalues are non--zero. Direct multiplication
+shows that
+
+\begin{align}
+\mathrm{\mathbf{A}}^{k} & =\mathbf{P}\,\mathbf{D}_{\lambda}^{k}\,\mathbf{P}^{-1}\nonumber \\
+ & =\mathbf{P}\,\mathbf{D}_{\lambda}^{k}\,\mathbf{P}^{\prime}\nonumber \\
+ & =\sum_{i\,=\,1}^{n}\lambda_{i}^{k}\,\mathrm{\mathbf{p}}_{i}\,\mathrm{\mathbf{p}}_{i}^{\prime},\ k\geqslant2,\label{eq:SpectralRepresentationOfPowers}
+\end{align}
+
+under the above conditions, and it is also true that
+
+\begin{align}
+\exp\left(\mathrm{\mathbf{A}}\right) & =\mathbf{P}\,\exp\left(\mathbf{D}_{\lambda}\right)\,\mathbf{P}^{-1}\nonumber \\
+ & =\mathbf{P}\,\exp\left(\mathbf{D}_{\lambda}\right)\,\mathbf{P}^{\prime},\label{eq:SpectralRepresentationOfExpA}
+\end{align}
+
+where 
+
+\begin{equation}
+\exp\left(\mathrm{\mathbf{A}}\right)\triangleq\mathbf{I}_{n}\,+\,\sum_{i\,>\,0}\frac{1}{i!}\mathrm{\mathbf{A}}^{i}\label{eq:MatrixExponential}
+\end{equation}
+ 
+
+is known as the \emph{matrix exponential}. 
+
+It follows that
+
+\begin{equation}
+\exp\left(\mathrm{\mathbf{0}}_{n}\right)=\mathbf{I}_{n}.\label{eq:MatrixExponential0}
+\end{equation}
+
+In the special case when $\mathbf{A}$ and $\mathbf{B}$ commute,
+i.e. when $\mathbf{A}\,\mathbf{B}=\mathbf{B}\,\mathbf{A}$,
+
+\begin{align}
+\exp\left(\mathrm{\mathbf{A}}\right)\exp\left(\mathrm{\mathbf{B}}\right) & =\exp\left(\mathrm{\mathbf{B}}\right)\,\exp\left(\mathrm{\mathbf{A}}\right)\nonumber \\
+ & =\exp\left(\mathrm{\mathbf{A}}\,+\,\mathrm{\mathbf{B}}\right).\label{eq:MatrixExponentialProduct}
+\end{align}
+
+In particular, as $\mathrm{\mathbf{A}}$ commutes with itself, and
+as $\mathrm{\mathbf{A}\,+}\,\left(-\mathrm{\mathbf{A}}\right)=\mathbf{0}_{n}$
+
+\begin{equation}
+\exp\left(\mathrm{\mathbf{A}}\right)^{-1}=\exp\left(-\mathrm{\mathbf{A}}\right).\label{eq:MatrixExponentialInverse}
+\end{equation}
+
+Equation \eqref{eq:EigenvaluesDiagonalizeA} can be generalized: two
+matrices, $\mathrm{\mathbf{A}}$ and $\mathrm{\mathbf{B}}$, are said
+to be \emph{similar} if there exists an invertible matrix $\mathrm{\mathbf{E}}$
+such that 
+
+\begin{equation}
+\mathbf{E}^{-1}\,\mathbf{A}\,\mathbf{\mathbf{E}}=\mathbf{B}.\label{eq:SimilarMatrices1}
+\end{equation}
+
+Similar matrices have identical eigenvalues, as
+
+\begin{align}
+det\left(\mathbf{B}\,-\,\lambda\mathrm{\mathbf{I}}\right) & =det\left(\mathbf{\mathbf{E}^{-1}}\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)\mathbf{\mathbf{E}}\right)\nonumber \\
+ & =det\left(\mathbf{\mathbf{E}^{-1}}\right)det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right)det\left(\mathbf{\mathbf{E}}\right)\nonumber \\
+ & =det\left(\mathbf{A}\,-\,\lambda\,\mathrm{\mathbf{I}}\right).\label{eq:SimilarMatrices2}
+\end{align}
+
+
+\subsection{Positive Definite Matrices}
+
+A matrix $\mathbf{A}$ is said to be \emph{positive definite} if 
+
+\begin{equation}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{A\,x}}>\mathrm{\mathbf{0}}\ \forall\mathrm{\mathbf{x}}\ne\mathrm{\mathbf{0}}.\label{eq:PositiveDefinite}
+\end{equation}
+An equivalent condition for positive definiteness is that all the
+eigenvalues of $\mathbf{A}$ are strictly positive. If we relax the
+inequality slightly, i.e. if
+
+\begin{equation}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{A\,x}}\geqslant\mathrm{\mathbf{0}}\ \forall\mathrm{\mathbf{x}}\ne\mathrm{\mathbf{0}},\label{eq:PositiveSemiDefinite}
+\end{equation}
+
+$\mathbf{A}$ is said to be \emph{positive semi--definite}. 
+
+Negating each entry in a positive definitive (or positive semi--definite)
+matrix results in a \emph{negative definite} (or \emph{negative semi--definite})
+matrix -- the inequalities in \eqref{eq:PositiveDefinite} and \eqref{eq:PositiveSemiDefinite}
+are reversed.
+
+The Gramian matrix $\mathbf{A}^{\prime}\mathrm{\mathbf{A}}$ is non--negative
+definite, as
+
+\begin{align}
+\mathrm{\mathbf{x}}^{\prime}\,\mathrm{\mathbf{\mathbf{A}^{\prime}\,\mathrm{\mathbf{A}\,}x}} & =\left(\mathbf{\mathbf{A\,}x}\right)^{\prime}\left(\mathbf{\mathbf{A\,}x}\right)\nonumber \\
+ & \geqslant\mathrm{\mathbf{0}\ \forall\mathrm{\mathbf{x}}}.\label{eq:GramianNonNegativeDefinite}
+\end{align}
+
+Furthermore, the rank of the Gramian is identical to the rank of $\mathbf{\mathbf{A}}$.
+
+If $\mathbf{A}$ is symmetric and positive semi--definite, its eigenvalues
+are non--negative. If it is symmetric and positive definite, its
+eigenvalues are strictly positive.
+
+Positive definite matrices are of great importance in portfolio management
+because they are used to compute the variance of a portfolio from
+the variances and covariances of its constituent securities (the variance
+of a portfolio is, by definition, non--negative), and also find use
+when identifying extrema of multivariate functions. 
+
+As a positive definite covariance matrix is symmetric and has only
+real entries, \eqref{eq:EigenvaluesDiagonalizeA}--\eqref{eq:SpectralRepresentation1}
+apply, and we can write
+
+\begin{equation}
+\mathbf{P}^{\prime}\,\mathbf{A}\,\mathbf{P}=\mathbf{D}_{\lambda},\label{eq:PDMatrixDiagonalization}
+\end{equation}
+
+where $\mathbf{P}$ is an orthonormal matrix whose columns are the
+normalized eigenvalues of $\mathbf{A}$ and $\mathbf{D}_{\lambda}$
+is a diagonal matrix of eigenvalues -- see \eqref{eq:Dlambda}. If
+we define
+
+\begin{equation}
+\sqrt{\mathbf{D}_{\lambda}^{-1}}=\left[\begin{array}{cccc}
+\nicefrac{1}{\sqrt{\lambda_{1}}} & 0 & \cdots & 0\\
+0 & \ddots &  & \vdots\\
+\vdots &  & \ddots & 0\\
+0 & \cdots & 0 & \nicefrac{1}{\sqrt{\lambda_{n}}}
+\end{array}\right]\label{eq:SqrtDlambdaInv}
+\end{equation}
+
+and
+
+\begin{equation}
+\mathbf{Q}=\mathbf{P}\,\sqrt{\mathbf{D}_{\lambda}^{-1}},\label{eq:QFromP}
+\end{equation}
+
+we can write
+
+\begin{equation}
+\mathbf{Q}^{\prime}\,\mathbf{A}\,\mathbf{Q}=\mathbf{I}_{n}.\label{eq:CovarianceMatrixInverse}
+\end{equation}
+
+Using straightforward properties of Cholesky factorization and products
+of orthogonal matrices, it can be shown that $\mathbf{Q}$ diagonalizes
+\emph{any} positive definite covariance matrix, say $\mathbf{B}$,
+i.e.
+
+\begin{equation}
+\mathbf{Q}^{\prime}\,\mathbf{B}\,\mathbf{Q}=\mathbf{D}_{1},\label{eq:PdiagonalizesB}
+\end{equation}
+
+where $\mathbf{D}_{1}$ is a diagonal matrix, though its entries are
+not the eigenvalues of $\mathbf{B}$. The matrices $\mathbf{A}$ and
+$\mathbf{B}$ are said to be simultaneously diagonalizable.
+
+
+\subsection{QR Decomposition and the Gram--Schmidt Procedure\label{subsec:QR_Decomposition}}
+
+Assume that we have a set of vectors $\mathrm{\mathbf{q}}_{1},\,\mathrm{\mathbf{q}}_{2,}\,\cdots\,,\mathrm{\mathbf{q}}_{n}$
+which form an orthonormal basis\footnote{An orthogonal basis can be transformed into an orthonormal basis by
+dividing each vector by its norm.} for an $n$--dimensional vector space $\mathcal{{S}}$ . From the
+definition of orthonormality,
+
+\begin{equation}
+\left\langle \mathrm{\mathbf{q}}_{i},\,\mathrm{\mathbf{q}}_{j}\right\rangle =\begin{cases}
+1 & i=j\\
+0 & i\ne j.
+\end{cases}\label{eq:Orthonormality}
+\end{equation}
+
+If the $\mathrm{\mathbf{q}}_{i}$ are vectors in $n$--dimensional
+Euclidean space, we can stack them side by side to form an $n\times n$
+matrix
+
+\begin{equation}
+\mathrm{\mathbf{Q}}=\left[\mathrm{\mathbf{q}}_{1}\,\cdots\,\mathrm{\mathbf{q}}_{n}\right],\label{eq:Qmatrix}
+\end{equation}
+
+and it is easily seen that 
+
+\begin{align}
+\mathrm{\mathbf{Q}}^{\prime}\,\mathrm{\mathbf{Q}} & =\mathrm{\mathbf{I}}_{n}.\label{eq:QtransposeQequalsIn}
+\end{align}
+
+We can post--multiply both sides of \eqref{eq:QtransposeQequalsIn}
+by $\mathrm{\mathbf{Q}}^{-1}$ to obtain
+
+\begin{equation}
+\mathrm{\mathbf{Q}}^{-1}=\mathrm{\mathbf{Q}}^{\prime},\label{eq:QinverseEqualsQtranspose}
+\end{equation}
+
+but it is important to note that \eqref{eq:QtransposeQequalsIn} (but
+not \eqref{eq:QinverseEqualsQtranspose}) holds even if $\mathrm{\mathbf{Q}}$
+is rectangular, i.e. if the $\mathrm{\mathbf{q}}_{i}$ are vectors
+in an $m$--dimensional Euclidean space, for $m>n.$ Also, as $\mathrm{\mathbf{I}}_{n}^{\prime}=\mathrm{\mathbf{I}}_{n}$,
+it follows that
+
+\begin{equation}
+\mathrm{\mathbf{Q}}^{\prime}\,\mathrm{\mathbf{Q}}=\mathrm{\mathbf{Q}}\,\mathrm{\mathbf{Q}}^{\prime}.\label{eq:QtransposeQ_2}
+\end{equation}
+
+Remarkably, \emph{any} matrix whose columns are linearly independent
+can be decomposed into a product of a orthonormal matrix and an invertible
+upper triangular matrix\footnote{Normally, an upper triangular matrix would be represented by $\mathrm{\mathbf{U}}$,
+but it has become the norm to represent it in this particular factorization
+by $\mathrm{\mathbf{R}}$, possibly because all its entries lie to
+the right of the principal diagonal.}, i.e.
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\mathrm{\mathbf{Q}}\,\mathrm{\mathbf{R}}\label{eq:QRdecomposition}
+\end{equation}
+
+where $\mathrm{\mathbf{Q}}$ is orthonormal and $\mathrm{\mathbf{R}}$
+is invertible and upper triangular.
+
+The \emph{Gram--Schmidt} procedure is a constructive algorithm for
+creating $\mathrm{\mathbf{Q}}$ from any full rank matrix $\mathrm{\mathbf{A}}$. 
+
+Let
+
+\begin{equation}
+\mathrm{\mathbf{A}}=\left[\mathrm{\mathbf{a}}_{1}\,\cdots\,\mathrm{\mathbf{a}}_{n}\right].\label{eq:Amatrix}
+\end{equation}
+
+be an $n\times n$ matrix of full rank.
+
+If we divide each column of $\mathrm{\mathbf{A}}$ by its norm, we
+get an equivalent\footnote{Equivalent in the sense that the column space of $\mathrm{\mathbf{A}}_{1}$
+is identical to the column space of $\mathrm{\mathbf{A}}$.} matrix $\mathrm{\mathbf{A}}_{1}$, whose columns all have norm 1. 
+
+\begin{align}
+\mathrm{\mathbf{A}}_{1} & =\left[\frac{\mathrm{\mathbf{a}}_{1}}{\left\Vert \mathrm{\mathbf{a}}_{1}\right\Vert }\,\cdots\,\frac{\mathrm{\mathbf{a}}_{n}}{\left\Vert \mathrm{\mathbf{a}}_{n}\right\Vert }\right]\nonumber \\
+ & \triangleq\left[\mathrm{\mathbf{a}}_{1}^{1}\,\cdots\,\mathrm{\mathbf{a}}_{n}^{1}\right].\label{eq:A1matrix}
+\end{align}
+
+To construct $\mathbf{Q}$ using the Gram--Schmidt procedure, we
+first set $\mathrm{\mathbf{q}}_{1}=\mathrm{\mathbf{a}}_{1}^{1}$,
+and then iteratively subtract the projections of $\mathrm{\mathbf{a}}_{i}^{1}$
+for $i=2,\,3,\,\cdots\,,\,n$ onto $\mathrm{\mathbf{q}}_{1},\,\cdots\,,\,\mathrm{\mathbf{q}}_{i-1}$
+from itself, and finally normalize the resulting vector to create
+a new vector that is orthonormal to all the preceding vectors. Formally,
+
+\begin{equation}
+\begin{array}{cl}
+\mathrm{\mathbf{q}}_{1} & =\mathrm{\mathbf{a}}_{1}^{1}\\
+\mathrm{\mathbf{q}}_{2} & =\frac{\mathbf{\mathrm{\mathbf{a}}}_{2}^{1}\,-\,\left\langle \mathbf{\mathrm{\mathbf{a}}}_{2}^{1},\,\mathrm{\mathbf{q}}_{1}\right\rangle \mathrm{\mathbf{q}}_{1}}{\left\Vert \mathbf{\mathrm{\mathbf{a}}}_{2}^{1}\,-\,\left\langle \mathbf{\mathrm{\mathbf{a}}}_{2}^{1},\,\mathrm{\mathbf{q}}_{1}\right\rangle \mathrm{\mathbf{q}}_{1}\right\Vert }\\
+ & \vdots\\
+\mathrm{\mathbf{q}}_{n} & =\frac{\mathbf{\mathrm{\mathbf{a}}}_{n}^{1}\,-\,\sum_{i\,=\,1}^{n\,-\,1}\left\langle \mathbf{\mathrm{\mathbf{a}}}_{n}^{1},\,\mathrm{\mathbf{q}}_{i}\right\rangle \mathrm{\mathbf{q}}_{i}}{\left\Vert \mathbf{\mathrm{\mathbf{a}}}_{n}^{1}\,-\,\sum_{i\,=\,1}^{n\,-\,1}\left\langle \mathbf{\mathrm{\mathbf{a}}}_{n}^{1},\,\mathrm{\mathbf{q}}_{i}\right\rangle \mathrm{\mathbf{q}}_{i}\right\Vert }
+\end{array}\label{eq:GramSchmidt}
+\end{equation}
+
+It is easy to check that the $\mathrm{\mathbf{q}}_{i}$ satisfy \eqref{eq:Orthonormality},
+and that the column space of $\mathrm{\mathbf{Q}}$ is identical to
+the column space of $\mathrm{\mathbf{A}}$. Keep in mind that the
+Gram--Schmidt procedure does not return a unique orthonormal matrix
+-- if, for example, the columns of $\mathrm{\mathbf{A}}$ are resequenced,
+it will return a different orthonormal matrix.
+
+Even though the Gram--Schmidt procedure makes clear the conceptual
+basis of orthonormalization, it is rarely used in practice on account
+of its numerically instability when the columns of $\mathrm{\mathbf{A}}$
+are almost collinear. And though its numerical stability can be improved
+by resequencing its computations (see \citet{Gentle2017} for details),
+\emph{Householder transformations} and \emph{Givens rotations} are
+more widely used in practice to create $\mathrm{\mathbf{Q}}\mathbf{R}$
+decompositions, which see widespread use in the solution of \eqref{eq:AxEQb}. 
+
+The fact that the transpose of an orthonormal matrix is its inverse
+leads to a subtly different notion of similarity: two matrices, $\mathrm{\mathbf{A}}$
+and $\mathrm{\mathbf{B}}$, are said to be \emph{orthogonally similar}
+if there exists an orthonormal matrix $\mathrm{\mathbf{F}}$ such
+that 
+
+\begin{equation}
+\mathbf{F}^{\prime}\,\mathbf{A\,}\mathbf{\mathbf{F}}=\mathbf{B}.\label{eq:SimilarMatrices3}
+\end{equation}
+
+If $\mathbf{B}$ is upper triangular, then $\mathbf{F}\,\mathbf{B\,\mathbf{F}^{\prime}}$is
+known as the \emph{Schur factorization} of $\mathbf{A}$.
+
+\subsection{The Singular Value Decomposition}
+
+In the special case when $\mathbf{A}$ is square and symmetric, it
+can be represented as the Gramian of some $n\times m$ matrix $\mathbf{B}$
+with rank $r\leqslant\min\left(m,n\right)$ (think of the columns
+of $\mathbf{B}$ as time series of returns of securities, some of
+which may admit a riskless arbitrage), i.e.,
+
+\begin{equation}
+\mathbf{\mathbf{A}}=\mathbf{B}^{\prime}\,\mathbf{B}.\label{eq:GramianOfPD}
+\end{equation}
+
+The rank of $\mathbf{\mathbf{A}}$ is also $r$, and it possesses
+a set of orthonormal eigenvectors that diagonalize it, i.e. its spectral
+representation is
+
+\begin{align}
+\mathbf{\mathbf{A}} & =\mathbf{Q}\,\mathbf{D}_{\lambda}\,\mathbf{Q}^{\prime},\label{eq:PDSpectralRepresentation}
+\end{align}
+
+where $\mathbf{Q}$ is an orthonormal matrix whose columns are the
+normalized eigenvectors of $\mathbf{A}$, and $\mathbf{D}_{\lambda}$
+is a diagonal matrix whose entries are the eigenvalues of $\mathbf{A}$.
+
+The \emph{Singular Value Decomposition} (SVD) generalizes and extends
+\eqref{eq:PDSpectralRepresentation} to \emph{all} matrices, and diagonalizes
+$\mathbf{\mathbf{A}}_{n\times m}$ using its \emph{singular vectors}
+instead of its eigenvalues. The resulting decomposition represents
+any $n\times m$ matrix as a product of three matrices
+
+\begin{equation}
+\mathbf{\mathbf{A}}_{n\,\times\,m}=\mathbf{U}_{n\,\times\,n}\,\mathbf{\Sigma}_{n\,\times\,m}\,\mathbf{V}_{m\,\times\,m}^{\prime},\label{eq:SVD}
+\end{equation}
+
+where $\mathbf{U}$ and $\mathbf{V}$ are orthonormal matrices, and
+$\mathbf{\mathbf{\Sigma}}$ is diagonal in the following sense:
+
+\begin{equation}
+\sigma_{ij}=\begin{cases}
+\sigma_{i}>0 & 1\leqslant i=j\leqslant\mathrm{rank}\left(\mathbf{A}\right)\\
+0 & \mathrm{otherwise}.
+\end{cases}\label{eq:DiagMatrixInSVD}
+\end{equation}
+
+The $\sigma_{i}$ are known as \emph{singular values}, and are the
+square roots of the non-zero eigenvalues of $\mathbf{A}^{\prime}\,\mathbf{A}$.
+Correspondingly, the columns of $\mathbf{U}$ are the orthonormal
+eigenvectors of $\mathbf{A}\,\mathbf{A}^{\prime}$ and those of $\mathbf{V}$
+are the orthonormal eigenvectors of $\mathbf{A}^{\prime}\,\mathbf{A}$.
+They are known as the \emph{left} and \emph{right singular vectors},
+respectively, of $\mathrm{\mathbf{A}}$. For symmetric, square, matrices,
+\eqref{eq:SVD} reduces to \eqref{eq:PDSpectralRepresentation}.
+
+Recognizing that $\mathbf{V}^{-1}=\mathbf{V}^{\prime},$we can rewrite
+\eqref{eq:SVD} as
+
+\begin{equation}
+\mathbf{\mathbf{A}}_{n\,\times\,m}\,\mathbf{V}_{m\,\times\,m}=\mathbf{U}_{n\,\times\,n}\,\mathbf{\Sigma}_{n\,\times\,m},\label{eq:SVD1}
+\end{equation}
+
+so that $\mathbf{\mathbf{A}}$ maps the columns of $\mathbf{V}$ to
+scaled versions of the columns of $\mathbf{U}$. Addtionally, we can
+partition $\mathbf{U}$ and $\mathbf{V}$ into two adjacent block
+matrices 
+
+\begin{subequations}
+\begin{align}
+\mathbf{U} & =\left[\mathrm{\mathbf{U}}_{1}\ |\ \mathrm{\mathbf{U}}_{2}\right]=\left[\begin{array}{ccc}
+\mathrm{\mathbf{u}}_{1} & \,\cdots & \ \mathrm{\mathbf{u}}_{r}\ |\ \mathrm{\mathbf{u}}_{r+1}\,\cdots\ \mathrm{\mathbf{u}}_{n}\end{array}\right]\label{eq:SVDu}\\[0.5em]
+\mathbf{V} & =\left[\mathrm{\mathbf{V}}_{1}\ |\ \mathrm{\mathbf{V}}_{2}\right]=\left[\begin{array}{ccc}
+\mathrm{\mathbf{v}}_{1} & \,\cdots & \ \mathrm{\mathbf{v}}_{r}\ |\ \mathrm{\mathbf{v}}_{r+1}\,\cdots\ \mathrm{\mathbf{v}}_{m}\end{array}\right],\label{eq:SVDv}
+\end{align}
+\end{subequations}
+
+and it can be shown that
+
+\[
+\begin{array}{cl}
+\mathbf{U}_{1} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{u}}_{1} & \,\cdots\  & \mathrm{\mathbf{u}}_{r}\end{array}\right]\hspace{0.315cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ the\ \mathit{\mathit{column}\ space}\ of\ \mathbf{\mathbf{A}}}\\
+\mathbf{U}_{2} & =\left[\mathrm{\mathbf{u}}_{r\,+\,1}\,\cdots\ \mathrm{\mathbf{u}}_{n}\right]\hspace{0.12cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ \mathbf{\mathcal{{N}}\left(\mathrm{\mathbf{A}}^{\prime}\right)},\ the\ \mathit{left\ null\ space}\ of}\ \mathrm{\mathbf{A}}\\
+\mathbf{V}_{1} & =\left[\begin{array}{ccc}
+\mathrm{\mathbf{v}}_{1} & \,\cdots\  & \mathrm{\mathbf{v}}_{r}\end{array}\right]\hspace{0.335cm}\mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ the}\ row\ \mathit{space}\ \mathrm{of}\ \mathbf{\mathbf{A}}\\
+\mathbf{V}_{2} & =\left[\mathrm{\mathbf{v}}_{r\,+\,1}\,\cdots\ \mathrm{\mathbf{v}}_{m}\right]\ \mathrm{is\ an\ orthonormal\boldsymbol{\ }basis\ for\ \mathbf{\mathcal{{N}}\left(\mathrm{\mathbf{A}}\right)},\ the}\ \mathit{null\ space}\ \mathrm{of}\ \mathbf{A}.
+\end{array}
+\]
+
+If we write out \eqref{eq:SVD} in terms of the left and right singular
+vectors $\mathrm{\mathbf{u}}_{i}$ and $\mathrm{\mathbf{v}}_{i}$
+contained in $\mathbf{U}_{1}$ and $\mathbf{V}_{1}$ (the orthonormal
+bases for its column space and row space respectively), we see that
+the SVD allows us to represent$\mathrm{\mathbf{A}}$ as a sum of rank
+1 matrices:
+
+\begin{equation}
+\mathbf{\mathbf{A}}=\sum_{i\,=\,1}^{r}\sigma_{i}\,\mathrm{\mathbf{u}}_{i}\,\mathbf{v}_{i}^{\prime}.\label{eq:SVD2}
+\end{equation}
+
+If we further reorder the terms on the right hand side of \eqref{eq:SVD2}
+in descending order of $\sigma_{i}$, we obtain a decomposition of
+$\mathrm{\mathbf{A}}$ in which the terms are ranked in descending
+order of importance, and we can obtain a sequence of increasingly
+accurate approximations to $\mathrm{\mathbf{A}}$ by computing the
+partial sums of the first $p<r$ terms of this reordered sequence. 
+
+This is, in fact, the way in which the SVD is most often used --
+a small, but important, subset of the terms in \eqref{eq:SVD2} is
+used to construct an adequate approximation to $\mathrm{\mathbf{A}}$
+that greatly simplifies computations using it. In many real life applications,
+matrices with many millions of entries are well approximated by a
+partial sum with ten or twenty terms, speeding up computations by
+many orders of magnitude.
+
+\section{Some Results on Functions}
+
+\subsection{Derivatives of Functions}
+
+Let $f\left(\mathrm{\mathbf{x}}\right)$ be a differentiable function
+of $n$ variables $x_{1},\,x_{2},\cdots\,,\,x_{n}$.
+
+The \emph{gradient} of $f\left(\mathrm{\mathbf{x}}\right),\ \nabla f\left(\mathrm{\mathbf{x}}\right)$,
+is a vector of its partial derivatives, and is given by
+
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=\left[\begin{array}{c}
+\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}}\\
+\vdots\\
+\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}}
+\end{array}\right].\label{eq:GradientFx}
+\end{equation}
+
+The gradient vector points in the direction in which $f$'s rate of
+change is maximal. In the special case when 
+
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\sum_{i\,=\,1}^{n}a_{i}\,x_{i}\nonumber \\
+ & =\mathrm{\mathbf{a}}\cdotp\mathrm{\mathbf{x}},\label{eq:fx_dot_product}
+\end{align}
+
+it is easily seen that
+
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=\mathrm{\mathbf{a}}.\label{eq:GradientDotProduct}
+\end{equation}
+
+Next, if $f\left(\mathrm{\mathbf{x}}\right)$ is a \emph{quadratic
+form}, i.e. if
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\sum_{i\,=\,1}^{n}\sum_{j\,=\,1}^{n}a_{ij}\,x_{i}\,x_{j}\nonumber \\
+ & =\mathrm{\mathbf{x}}^{\prime}\,\mathbf{A}\,\mathrm{\mathbf{x}},\label{eq:fx_quadratic_form}
+\end{align}
+
+where the $a_{ij}$ are constants, it can be seen by differentiating
+and gathering terms that
+
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}\right)=2\,\mathbf{A}\,\mathrm{\mathbf{x}}.\label{eq:GradientQuadraticForm}
+\end{equation}
+
+If $f\left(\mathrm{\mathbf{x}}\right)$ is twice differentiable, its
+Hessian, $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$,
+is a symmetric square matrix of its second partial derivatives:
+
+\begin{align}
+\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right) & =\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial\mathrm{\mathbf{x}}\partial\mathrm{\mathbf{x}}^{\prime}}\nonumber \\
+ & =\left[\begin{array}{cccc}
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}^{2}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}\,\partial x_{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}\,\partial x_{n}}\\
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}\,\partial x_{1}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}^{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}\,\partial x_{n}}\\
+\vdots & \vdots & \ddots & \vdots\\
+\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}\,\partial x_{1}}\, & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}\,\partial x_{2}}\, & \cdots & \,\frac{\partial^{2}f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{n}^{2}}
+\end{array}\right]\label{eq:Hessian}
+\end{align}
+
+The Hessian matrix reflects the magnitude, as well as the principal
+axes, of the local curvature of $f\left(\mathrm{\mathbf{x}}\right)$.
+
+If 
+
+\begin{equation}
+\mathrm{\mathbf{g}}\left(x\right)=\left[\begin{array}{c}
+g_{1}\left(x\right)\\
+\vdots\\
+g_{n}\left(x\right)
+\end{array}\right]\label{eq:VectorOfFunctions}
+\end{equation}
+
+is a vector of $k$--times differentiable functions, $g_{1}\left(x\right),\,g_{2}\left(x\right),\,\cdots\,,\,g_{n}\left(x\right)$,
+of a single variable $x$, then 
+
+\begin{equation}
+\frac{d^{k}\mathrm{\mathbf{g}}\left(x\right)}{dx^{k}}=\left[\begin{array}{c}
+\frac{d^{k}g_{1}\left(x\right)}{dx^{k}}\\
+\vdots\\
+\frac{d^{k}g_{n}\left(x\right)}{dx^{k}}
+\end{array}\right].\label{eq:VectorOfDerivatives}
+\end{equation}
+
+Equation \eqref{eq:VectorOfDerivatives} generalizes naturally to
+matrices. If 
+
+\begin{equation}
+\mathrm{\mathbf{G}}\left(x\right)=\left[\begin{array}{ccc}
+g_{11}\left(x\right) & \,\cdots\, & g_{1m}\left(x\right)\\
+\vdots & \vdots & \vdots\\
+g_{n1}\left(x\right) & \,\cdots\, & g_{nm}\left(x\right)
+\end{array}\right]\label{eq:MatrixOfFunctions}
+\end{equation}
+
+is a matrix of $k$--times differentiable functions, $g_{11}\left(x\right),\,\cdots\,,\,g_{nm}\left(x\right)$,
+of a single variable $x$, then
+
+\begin{equation}
+\frac{d^{k}\mathrm{\mathbf{G}}\left(x\right)}{dx^{k}}=\left[\begin{array}{ccc}
+\frac{d^{k}g_{11}\left(x\right)}{dx^{k}} & \,\cdots\, & \frac{dg_{1m}^{k}\left(x\right)}{dx^{k}}\\
+\vdots & \vdots & \vdots\\
+\frac{d^{k}g_{n1}\left(x\right)}{dx^{k}} & \,\cdots\, & \frac{d^{k}g_{nm}\left(x\right)}{dx^{k}}
+\end{array}\right].\label{eq:MatrixOfDerivatives}
+\end{equation}
+
+
+\subsection{Taylor Series}
+
+Taylor series provide a way in which to approximate infinitely differentiable
+functions around a point. The Taylor series of an infinitely differentiable
+function $f(x)$ of a single variable around a point $x_{0}$ is
+
+\begin{align}
+f\left(x\right) & =f\left(x_{0}\right)+\sum_{i\,\geqslant\,1}\left.\frac{1}{i!}\left(x\,-\,x_{0}\right)^{i}\frac{d^{i}f\left(x\right)}{dx^{i}}\right|_{x\,=\,x_{0}}\nonumber \\
+ & =f\left(x_{0}\right)+\sum_{i\,=\,1}^{k}\left.\frac{1}{i!}\left(x\,-\,x_{0}\right)^{i}\frac{d^{i}f\left(x\right)}{dx^{i}}\right|_{x\,=\,x_{0}}+r_{k\,+\,1}(x),\label{eq:UnivariateTaylorSeries}
+\end{align}
+
+where $r_{k+1}(x)$ is a remainder term. 
+
+Often, we assume that the remainder term can be ignored, focus on
+just the first three terms of \eqref{eq:UnivariateTaylorSeries},
+and write
+
+\begin{equation}
+f\left(x\right)\approx f\left(x_{0}\right)+\left(x\,-\,x_{0}\right)\left.\frac{df\left(x\right)}{dx}\right|_{x\,=\,x_{0}}+\frac{1}{2}\left(x\,-\,x_{0}\right)^{2}\left.\frac{d^{2}f\left(x\right)}{dx^{2}}\right|_{x\,=\,x_{0}}.\label{eq:TwoTermUnivariateTaylorSeries}
+\end{equation}
+
+While a multivariate extension of \eqref{eq:UnivariateTaylorSeries}
+exists, it is a three term expansion, analogous to \eqref{eq:TwoTermUnivariateTaylorSeries},
+that finds the most use in portfolio construction and risk management:
+
+\begin{equation}
+f\left(\mathrm{\mathbf{x}}\right)\approx f\left(\mathrm{\mathbf{x}}_{0}\right)+\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right)\left.\nabla f\left(\mathrm{\mathbf{x}}\right)\right|_{\mathrm{\mathbf{x}}=\mathrm{\mathbf{x}}_{0}}+\frac{1}{2}\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right)^{\prime}\left.\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)\right|_{x=x_{0}}\left(\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}\right).\label{eq:TwoTermMultivariateTaylorSeries}
+\end{equation}
+
+It is important to keep in mind that a Taylor series expansion of
+$f\left(\mathrm{\mathbf{x}}\right)$ is a \emph{local} expansion,
+and is typically valid only in a small region centered at $\mathrm{\mathbf{x}}_{0}$.
+As $\mathrm{\mathbf{x}}_{0}$ changes, so does its Taylor series,
+as well as its gradient and its Hessian. 
+
+\subsection{Convex and Concave Functions\label{subsec:ConvexFunctions} }
+
+A function $f(x)$ of single variable is \emph{concave} if for any
+$\alpha\in[0,1]$, and for all $x,y$, 
+
+\begin{equation}
+f((1\,-\,\alpha)\,x\,+\,\alpha\,y)\geqslant(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y).\label{eq:ConcaveFunction}
+\end{equation}
+. 
+
+The function $f(x)$ is \emph{strictly concave} if the strict inequality
+$f((1\,-\,\alpha)\,x\,+\,\alpha\,y)>(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)$
+holds for any $\alpha\in(0,1)$ and $x\ne y$.
+
+A differentiable function $f(x)$ is (strictly) concave on an interval
+if and only if its derivative $f^{\prime}(x)$ is (strictly) monotonically
+decreasing on that interval. If a function $f$ has a second derivative
+$f^{\prime\prime}(x)$ on an interval, then $f$ is (strictly) concave
+if and only if $f^{\prime\prime}(x)$ is (negative) non--positive
+on that interval.
+
+If $f$ is concave and differentiable, then it is bounded above by
+its first--order Taylor approximation:
+
+\begin{equation}
+f(x)\leqslant f(x_{0})\,+\,f^{\prime}(x_{0})\,\cdot\,(x\,-\,x_{0})\ \forall x,\,x_{0},\label{eq:ConcaveFunctionUpperBound}
+\end{equation}
+
+and has a global \emph{maximum} that is achieved at one of the two
+boundaries of the interval or at a point $x_{0}$ for which $f^{\prime}(x_{0})=0.$ 
+
+A function $f(x)$ of single variable is \emph{convex} if $-f(x)$
+is concave, i.e. for any $\alpha\in[0,1]$, and for all $x,y$,  $f((1\,-\,\alpha)\,x\,+\,\alpha\,y)\leqslant(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)$.
+The function $f(x)$ is \emph{strictly convex} if $f((1\,-\,\alpha)\,x\,+\,\alpha\,y)<(1\,-\,\alpha)\,f(x)\,+\,\alpha\,f(y)\ \forall\alpha\in(0,1)$
+and $x\ne y$.
+
+A differentiable function $f(x)$ is (strictly) convex on an interval
+if and only if its derivative $f^{\prime}(x)$ is (strictly) monotonically
+increasing on that interval. If a function $f$ has a second derivative
+$f^{\prime\prime}(x)$ on an interval then $f$ is (strictly) convex
+if and only if $f^{\prime\prime}(x)$ is (positive) non--negative
+on that interval.
+
+If $f$ is convex and differentiable, it is bounded below by its first-order
+Taylor approximation:
+
+\begin{equation}
+f(x)\geqslant f(x_{0})\,+\,f^{\prime}(x_{0})\cdot(x\,-\,x_{0})\ \forall\,x,\,x_{0},\label{eq:ConvexFunctionLowerBound}
+\end{equation}
+
+and has a global \emph{minimum} that is achieved at one of the two
+boundaries of the interval or at a point $x_{0}$ for which $f^{\prime}(x_{0})=0.$ 
+
+\emph{Jensen's inequality}, which sees extensive use in continuous
+time finance, concerns the expected value of convex and concave functions
+of a random variable, states that for any random variable $Z$, and
+for any convex function $f$,
+
+\begin{equation}
+E\left[f\left(Z\right)\right]\geqslant f\left(E\left[Z\right]\right).\label{eq:JensensInequalityConvexFunction}
+\end{equation}
+
+If $f$ is concave, the direction of the inequality is reversed. 
+
+Jensen's inequality is easily seen to be true by setting $x_{0}=E\left[Z\right]$
+in \eqref{eq:ConcaveFunctionUpperBound} and \eqref{eq:ConvexFunctionLowerBound},
+and then taking the expectation of both sides.
+
+\subsection{Multivariate Convex and Concave Functions}
+
+To extend the notions of convexity and concavity to functions of many
+variables, we need to define a \emph{convex set}. A set $S$ is said
+to be convex if for any $\alpha\in[0,1]$, and for all $\mathrm{\mathbf{x}},\mathrm{\mathbf{y}}\in S$,
+the line segment joining $\mathrm{\mathbf{x}}$ and $\mathrm{\mathbf{y}}$
+lies within, or on the boundary of, $S$, i.e.
+
+\begin{equation}
+(1\,-\,\alpha)\,\mathbf{x}\,+\,\alpha\,\mathrm{\mathbf{y}}\in S.\label{Convex set}
+\end{equation}
+
+A multivariable function $f\left(\mathrm{\mathbf{x}}\right)$ that
+is defined on a convex set $S$ is said to be concave if it satisfies
+\eqref{eq:ConcaveFunction} with the scalars $x$ and $y$ being replaced
+by vectors $\mathrm{\mathbf{x}}$ and $\mathrm{\mathbf{y}}$. Replacing
+scalars with vectors allows us to similarly define strictly concave,
+convex and strictly convex functions by analogy to their definitions
+in Section \eqref{subsec:ConvexFunctions}. 
+
+A twice--differentiable function $f\left(\mathrm{\mathbf{x}}\right)$
+is convex (strictly convex) if its Hessian, $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$,
+is positive semi--definite (positive definite), and concave (strictly
+concave) if its Hessian is negative semi--definite (negative definite).
+Intuitively, a strictly convex function must lie above, and a strictly
+concave function must lie below, a hyperplane that is tangent to its
+surface at any point $\mathrm{\mathbf{x}}_{0}$. Equation \eqref{eq:TwoTermMultivariateTaylorSeries}
+makes clear that this can only be guaranteed for sufficiently small
+$\mathrm{\mathbf{x}}\,-\,\mathrm{\mathbf{x}}_{0}$ if the Hessian
+is positive definite (for convex functions) or negative definite (for
+concave functions).
+
+\subsection{Euler's Theorem for Homogeneous Functions}
+
+A function $f\left(\mathrm{\mathbf{x}}\right)$ is said to be homogeneous
+of degree $k>0$ if $f\left(c\mathrm{\mathbf{x}}\right)=c^{k}f\left(\mathrm{\mathbf{x}}\right)\ \forall c>0$. 
+
+Euler’s theorem for homogeneous functions states that $f\left(\mathrm{\mathbf{x}}\right)$
+is homogeneous of degree $k$ if and only if 
+
+\begin{equation}
+f\left(\mathrm{\mathbf{x}}\right)=\frac{1}{k}\sum_{i\,=\,1}^{n}x_{i}\,\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{i}}.\label{eq:EulersTheorem1}
+\end{equation}
+
+By way of example, $f\left(\mathrm{\mathbf{x}}\right)=x_{1}^{2}\,+\,x_{2}^{2}$
+is homogenous of degree 2 because
+
+\begin{align}
+f\left(c\,\mathrm{\mathbf{x}}\right) & =c^{2}\left(x_{1}^{2}\,+\,x_{2}^{2}\right)\nonumber \\
+ & =c^{2}f\left(\mathrm{\mathbf{x}}\right)\label{eq:EulersTheorem2}
+\end{align}
+
+and it is easily seen that
+
+\begin{align}
+f\left(\mathrm{\mathbf{x}}\right) & =\frac{1}{2}\left(x_{1}\cdotp2x_{1}\,+\,x_{2}\cdotp2x_{2}\right)\nonumber \\
+ & =\frac{1}{2}\left(x_{1}\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{1}}\,+\,x_{2}\frac{\partial f\left(\mathrm{\mathbf{x}}\right)}{\partial x_{2}}\right).\label{eq:EulersTheorem3}
+\end{align}
+
+
+\section{Optimization}
+
+\subsection{The General Problem of Optimization}
+
+A very general statement of an optimization problem is
+
+\begin{equation}
+\begin{aligned}\mathrm{maximize}\ \  & f\left(\mathrm{\mathbf{x}}\right)\\
+\mathrm{subject\ to}\\
+g\left(\mathrm{\mathbf{x}}\right) & \geqslant0\\
+h\left(\mathrm{\mathbf{x}}\right) & =\mathrm{\mathbf{b}}\\
+\mathrm{\mathbf{x}} & \in S.
+\end{aligned}
+\label{eq:GeneralOptimizationProblem}
+\end{equation}
+This problem is virtually limitless in both its scope and its difficulty:
+$f\left(\mathrm{\mathbf{x}}\right),\ g\left(\mathrm{\mathbf{x}}\right)$
+and $h\left(\mathrm{\mathbf{x}}\right)$ may be both nonlinear and
+discontinuous in their arguments, and $S$ may be bounded, non--convex,
+finite or countable (e.g. some or all the components of $\mathrm{\mathbf{x}}$
+may be restricted to be integers); $f\left(\mathrm{\mathbf{x}}\right)$
+may have multiple local maxima that are not easily distinguished from
+its global maximum, and its evaluation may be numerically unstable
+and computationally demanding. 
+
+We therefore focus here only on the optimization of sufficiently smooth
+(i.e. twice differentiable) concave (or convex) functions defined
+on $\mathbb{R}^{n}$ with linear equality constraints. Fortunately,
+this covers many of the problems that actually arise in portfolio
+management.
+
+\subsection{Optimizing Twice--Differentiable Convex Functions}
+
+Twice--differentiable convex (concave) functions with positive (negative)
+definite Hessians play a central role in portfolio construction as
+they are easily optimized when $S$, the convex set on which they
+are defined, is unbounded. Any extremum of such a function must necessarily
+be a minimum or a maximum, depending on whether the Hessian is positive
+or negative definite. The sole condition for an extremum is
+\begin{equation}
+\nabla f\left(\mathrm{\mathbf{x}}_{opt}\right)=\mathbf{0},\label{eq:GradientFxEq0}
+\end{equation}
+
+where $\nabla f\left(\mathrm{\mathbf{x}}\right)$ is defined in \eqref{eq:GradientFx}.
+If $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+is positive (negative) definite, $f$ is minimized (maximized) at
+$\mathrm{\mathbf{x}}_{opt}$. Intuitively, this follows from \eqref{eq:TwoTermMultivariateTaylorSeries}:
+as the gradient is 0 at $\mathrm{\mathbf{x}}_{opt}$, the linear term
+disappears, and only the quadratic term survives, so that the function
+must increase (decrease) as one moves away from $\mathrm{\mathbf{x}}_{opt}$
+in any direction according to whether $\mathrm{\mathbf{H}}\left(f\left(\mathrm{\mathbf{x}}\right)\right)$
+is positive (negative) definite.
+
+\subsection{The Method of Lagrange Multipliers}
+
+We next extend our technique for optimizing twice--differentiable
+convex (concave) functions with positive (negative) definite Hessians
+to permit the inclusion of a single linear equality constraint of
+the form
+
+\begin{equation}
+\mathrm{\mathbf{a^{\prime}\,x}}=b\mathrm{,}\label{eq:EqualityConstraints}
+\end{equation}
+
+where $\mathrm{\mathbf{a}}$ is a vector with constant real entries.
+
+The method of \emph{Lagrange multipliers,} which maps a constrained
+optimization to a related unconstrained optimization, is a powerful
+technique for solving problems such as this. It starts by constructing
+a new function, the \emph{Lagrangian}, that combines the function
+and the linear constraint:
+
+\begin{equation}
+\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=f\left(\mathrm{\mathbf{x}}\right)\,-\,\theta\left(\mathrm{\mathbf{a^{\prime}\,x}}\,-\,b\right).\label{eq:Lagrangian}
+\end{equation}
+
+The parameter $\theta$ is known as a Lagrange multiplier, and at
+a stationary point of $\mathcal{L}$, we must have 
+
+\begin{equation}
+\nabla\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=\mathbf{0},\label{eq:GradientLagrangianEq0}
+\end{equation}
+
+where
+
+\begin{equation}
+\nabla\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)=\left[\begin{array}{c}
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial x_{1}}\\
+\vdots\\
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial x_{n}}\\
+\frac{\partial\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)}{\partial\theta}
+\end{array}\right].\label{eq:GradientLagrangianDefinition}
+\end{equation}
+
+The equality constraint \eqref{eq:EqualityConstraints} must be satisfied
+at any stationary point of $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$,
+as, if it is not, we can increase the value of $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+by choosing a different value of $\theta$, contradicting our assumption
+that it is a stationary point. 
+
+Observe that for any fixed value of $\theta$, the Hessian of $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$
+is identical to that of $f\left(\mathrm{\mathbf{x}}\right)$, as differentiating
+$\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$ twice with
+respect to $x_{i}$ and $x_{j}$ for $\theta$ fixed eliminates all
+the terms contributed by the linear constraint. In particular, if
+the Hessian of $f\left(\mathrm{\mathbf{x}}\right)$ is positive (negative)
+definite, so is that of $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$.
+It follows that if the Hessian of $f\left(\mathrm{\mathbf{x}}\right)$
+is negative definite, $f\left(\mathrm{\mathbf{x}}\right)$ achieves
+its constrained maximum at a stationary point of $\mathcal{L}\left(\mathrm{\mathbf{x}},\,\theta\right)$. 
+
+An identical argument allows for the constrained minimization of functions
+with positive definite Hessians, and this technique is easily extended
+to multiple linear equality constraints -- we need only add one Lagrange
+multiplier per constraint, and ensure that the derivative of the Lagrangian
+with respect to each Lagrange multiplier is 0.
+
+Once we allow for the inclusion of inequality constraints or non--linear
+(typically quadratic) constraints, the optimization problem becomes
+much harder, and we refer the reader to specialized textbooks on optimization
+such as \citet{LuenbergerYe2008} and \citet{CornuejolsEtAl2018}.
+Additionally, \citet{Kwan2007}, \citet{Kwan2018} and \citet{MarkowitzStarerFramGerber2020}
+provide useful expositions of optimization models that are of particular
+relevance to portfolio management, along with Python and R code, as
+well as Excel spreadsheets, to assist in their implementation.
+
+\end{appendices}
+
+\pagebreak{}
+
+\begin{flushleft}
+\printbibliography
+\par\end{flushleft}
+
+\newpage
+\end{document}

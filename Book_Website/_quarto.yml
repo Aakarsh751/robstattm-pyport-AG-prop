@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Portfolio Construction and Risk Analysis"
+  description: >
+    Online appendices for the forthcoming Springer textbook by
+    R. Douglas Martin, Thomas K. Philips, Bernd Scherer, and Kirk Li.
+
+  navbar:
+    background: dark
+    foreground: light
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Appendices"
+        menu:
+          - text: "A — Mathematical Tools"
+            href: appendix-a.qmd
+          - text: "B — Probability & Statistics"
+            href: appendix-b.qmd
+          - text: "C — Utility Theory"
+            href: appendix-c.qmd
+          - text: "D — Portfolio Theory"
+            href: appendix-d.qmd
+          - text: "E — Machine Learning"
+            href: appendix-e.qmd
+      - text: "About"
+        href: about.qmd
+
+  page-footer:
+    background: light
+    left: |
+      © 2025 R. Douglas Martin, Thomas K. Philips, Bernd Scherer, Kirk Li.
+      All rights reserved.
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+  search: true
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.css
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    toc-expand: 2
+    number-sections: false
+    html-math-method: mathjax
+    smooth-scroll: true
+    link-external-newpage: true
+    link-external-icon: true
+    fig-cap-location: bottom
+    fig-align: center
+    fig-responsive: true
+    code-fold: false
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false

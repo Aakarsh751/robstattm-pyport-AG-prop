@@ -1,0 +1,136 @@
+---
+title: "Appendix A: Mathematical Tools for PCRA"
+subtitle: "Vectors, Matrices, Functions, and Optimization"
+---
+
+::: {.copyright-notice}
+**Copyright Notice.** Planned for publication in 2026 by R. Douglas Martin, Thomas K. Philips, Bernd Scherer, and Kirk Li. All rights reserved. © Copyright 2025.
+:::
+
+::: {.pdf-callout}
+::: {.pdf-icon}
+&#128196;
+:::
+::: {.pdf-text}
+**Full appendix available as PDF.**
+[Download Appendix A — Mathematical Tools for PCRA](Appendix%20A%20Math%20for%20PCRA.pdf){target="_blank"}
+:::
+:::
+
+## Overview
+
+This appendix collects the mathematical tools that appear repeatedly in *Portfolio Construction and Risk Analysis*. The treatment assumes familiarity with calculus and introductory linear algebra; the goal is to refresh and extend that background to cover the specific techniques used in portfolio mathematics.
+
+The appendix draws substantially on @Gentle2017 and @Strang2016 for matrix algebra, and on @LuenbergerYe2008 for optimization.
+
+---
+
+## A.1 — Vectors and Vector Spaces
+
+::: {.section-list}
+**Topics covered:**
+
+- Definition and arithmetic of vectors (addition, scalar multiplication, dot product)
+- Security return vectors and portfolio weight vectors; long-only vs. unconstrained portfolios
+- Vector norms and the distance between two vectors
+- Vector spaces: definition, subspaces, linear independence, and basis
+- Projections: orthogonal projection onto a subspace
+:::
+
+A *vector* is a collection of objects supporting addition and scalar multiplication. In the portfolio context the two most important vector types are:
+
+- **Return vectors** $\mathbf{r} \in \mathbb{R}^n$, whose $i$-th entry is the return of asset $i$, and
+- **Weight vectors** $\mathbf{w} \in \mathbb{R}^n$, satisfying $\mathbf{w}^\prime \mathbf{1} = 1$ for fully invested portfolios.
+
+The **dot product** (inner product) of two equal-length vectors $\mathbf{u}$ and $\mathbf{v}$ is
+$$
+\mathbf{u} \cdot \mathbf{v} = \sum_{i=1}^{n} u_i v_i.
+$$
+Portfolio return is thus $R_P = \mathbf{w}^\prime \mathbf{r}$, and portfolio variance is $\sigma_P^2 = \mathbf{w}^\prime \mathbf{C} \mathbf{w}$ where $\mathbf{C}$ is the covariance matrix.
+
+---
+
+## A.2 — Matrices and Matrix Arithmetic
+
+::: {.section-list}
+**Topics covered:**
+
+- Basic definitions: rows, columns, rank
+- Matrix addition and multiplication
+- Special matrices: symmetric, orthogonal, diagonal, identity, Toeplitz, block matrices
+- Echelon form and LU factorization
+- Determinants
+- Matrix inversion: direct, special-case formulas (inverse of partitioned matrix, etc.)
+- The Sherman–Morrison–Woodbury identity
+- Inverse of a covariance matrix
+- The Mahalanobis distance
+- Eigenvalues and eigenvectors
+- Positive definite matrices
+- QR decomposition and the Gram–Schmidt procedure
+- Singular Value Decomposition (SVD)
+:::
+
+The **Sherman–Morrison–Woodbury identity** is particularly important in portfolio optimization when the covariance matrix has factor structure. If $\mathbf{C} = \mathbf{B} + \mathbf{U}\mathbf{D}\mathbf{V}^\prime$, then
+
+$$
+(\mathbf{B} + \mathbf{U}\mathbf{D}\mathbf{V}^\prime)^{-1}
+= \mathbf{B}^{-1}
+- \mathbf{B}^{-1}\mathbf{U}\bigl(\mathbf{D}^{-1} + \mathbf{V}^\prime\mathbf{B}^{-1}\mathbf{U}\bigr)^{-1}\mathbf{V}^\prime\mathbf{B}^{-1}.
+$$
+
+This reduces a high-dimensional inverse to a low-dimensional one when the number of factors is small relative to $n$.
+
+The **Mahalanobis distance** between observation $\mathbf{x}$ and center $\boldsymbol{\mu}$ with covariance $\mathbf{C}$ is
+
+$$
+d(\mathbf{x}, \boldsymbol{\mu}) = \sqrt{(\mathbf{x} - \boldsymbol{\mu})^\prime \mathbf{C}^{-1} (\mathbf{x} - \boldsymbol{\mu})},
+$$
+
+a key building block for robust multivariate estimators.
+
+---
+
+## A.3 — Some Results on Functions
+
+::: {.section-list}
+**Topics covered:**
+
+- Derivatives and the chain rule
+- Taylor series expansions (univariate and multivariate)
+- Convex and concave functions; Jensen's inequality
+- Multivariate convex and concave functions; the Hessian
+- Euler's theorem for homogeneous functions
+:::
+
+**Convexity** is central to portfolio optimization: a convex objective with convex constraints guarantees that any local minimum is global. The variance $\sigma_P^2 = \mathbf{w}^\prime \mathbf{C} \mathbf{w}$ is convex in $\mathbf{w}$ when $\mathbf{C}$ is positive semi-definite.
+
+---
+
+## A.4 — Optimization
+
+::: {.section-list}
+**Topics covered:**
+
+- The general optimization problem: objective, constraints, feasible set
+- Optimizing twice-differentiable convex functions
+- The method of Lagrange multipliers
+:::
+
+The **method of Lagrange multipliers** underpins mean-variance portfolio construction. The minimum-variance portfolio with target return $\mu_P$ and full investment $\mathbf{w}^\prime \mathbf{1} = 1$ is found by minimizing the Lagrangian
+
+$$
+\mathcal{L}(\mathbf{w}, \lambda_1, \lambda_2)
+= \mathbf{w}^\prime \mathbf{C}\mathbf{w}
+- \lambda_1 (\mathbf{w}^\prime \boldsymbol{\mu} - \mu_P)
+- \lambda_2 (\mathbf{w}^\prime \mathbf{1} - 1).
+$$
+
+The closed-form solution and the derivation of the efficient frontier are presented in Appendix D.
+
+---
+
+::: {.callout-note}
+## How to Read This Appendix
+
+The mathematical content is densely cross-referenced with the main chapters of PCRA. Readers familiar with linear algebra may focus on sections A.2.8 (Sherman–Morrison–Woodbury), A.2.10 (Mahalanobis distance), and A.4 (Optimization), which are used most heavily in portfolio construction. The full PDF includes all proofs and worked examples.
+:::
